@@ -22,8 +22,6 @@
                 <configuration>
                     <repositoryId>github</repositoryId>
                     <url>https://maven.pkg.github.com/twoddr/maven</url>
-                    <username>${env.GH_ACTOR}</username>
-                    <password>${env.GH_TOKEN}</password>
                 </configuration>
             </plugin>
         </plugins>
