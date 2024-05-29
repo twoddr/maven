@@ -32,7 +32,7 @@
         <repository>
             <id>github</id>
             <name>GitHub twoddr Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/twoddr/Communs</url>
+            <url>https://maven.pkg.github.com/twoddr/maven</url>
         </repository>
     </distributionManagement>
 </project>
