@@ -28,7 +28,16 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Set up Maven settings
-        run: echo "${{ secrets.MAVEN_SETTINGS }}" > ~/.m2/settings.xml
+        run: |
+          echo "<settings xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns='http://maven.apache.org/SETTINGS/1.0.0' xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd'>
+                  <servers>
+                    <server>
+                      <id>github</id>
+                      <username>${{ secrets.GH_ACTOR }}</username>
+                      <password>${{ secrets.GH_TOKEN }}</password>
+                    </server>
+                  </servers>
+                </settings>" > ~/.m2/settings.xml
 
       - name: Build and deploy
         run: mvn deploy -s ~/.m2/settings.xml
