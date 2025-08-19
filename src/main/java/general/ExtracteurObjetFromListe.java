@@ -2,7 +2,7 @@ package general;
 
 import java.util.List;
 
-public class ExtracteurObjet {
+public class ExtracteurObjetFromListe {
     public static ObjetDi extraire_par_id(List liste, int id) {
         for (Object objet : liste) {
             if (objet instanceof ObjetDi &&

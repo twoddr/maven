@@ -2,7 +2,7 @@ package general.calendrier;
 
 import general.ExtracteurHashMap;
 import general.InformateurObjet;
-import general.ObjetDi;
+import general.ObjetCSA;
 import general.RGBConverter;
 
 import java.awt.*;
@@ -13,7 +13,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Evenement extends ObjetDi {
+public class Evenement extends ObjetCSA {
 
     protected String COULEUR_CADRE, COULEUR_FOND, COULEUR_TEXTE, NOM_LIEU, EXTERNAL_DUREE,
             nomDEBUT, nomFIN, nomIDPROPRIETAIRE;
@@ -184,7 +184,7 @@ public class Evenement extends ObjetDi {
     }
 
     public String getLieu() {
-        return ExtracteurHashMap.extraire_string(get(NOM_LIEU));
+        return ExtracteurHashMap.extraire_string(getSimpleData(NOM_LIEU));
     }
 
     public void setLieu(String description) {
@@ -192,7 +192,7 @@ public class Evenement extends ObjetDi {
     }
 
     public LocalDateTime getDebut() {
-        return ExtracteurHashMap.extraire_dateHeure(get(nomDEBUT));
+        return ExtracteurHashMap.extraire_dateHeure(getSimpleData(nomDEBUT));
     }
 
     /**
@@ -203,9 +203,13 @@ public class Evenement extends ObjetDi {
      * @param debut la nouvelle dateHeure de début
      */
     public void setDebut(LocalDateTime debut) {
+        if (debut == null) {
+            System.err.println("Mouf ! ne fais pas un setDebut avec un NULL !");
+            return;
+        }
         if (isFinSet) {
             LocalDateTime fin = getFin();
-            if (fin.isBefore(debut)) {
+            if (fin != null && fin.isBefore(debut)) {
                 String texte = "Attention setDebut/EvenementIHM " + getClass().getSimpleName() + " " + getDescription()
                         + " reçoit une date de début (" + debut + ") après la date "
                         + "de fin (" + fin + ". Demande ignorée ! => " + this;
@@ -253,7 +257,7 @@ public class Evenement extends ObjetDi {
     }
 
     public LocalDateTime getFin() {
-        return ExtracteurHashMap.extraire_dateHeure(get(nomFIN));
+        return ExtracteurHashMap.extraire_dateHeure(getSimpleData(nomFIN));
     }
 
     /**
@@ -264,9 +268,12 @@ public class Evenement extends ObjetDi {
      * @param fin la nouvelle dateHeure de début
      */
     public void setFin(LocalDateTime fin) {
+        if (fin == null) {
+            return;
+        }
         if (isDebutSet) {
             LocalDateTime debut = getDebut();
-            if (fin.isBefore(debut)) {
+            if (debut != null && fin.isBefore(debut)) {
                 String texte = "Attention setDebut/EvenementIHM " + getClass().getSimpleName() + " " + getDescription()
                         + " reçoit une date de fin (" + fin + ") précédant la date "
                         + "de début (" + debut + ". Demande ignorée ! => " + this;
@@ -284,7 +291,10 @@ public class Evenement extends ObjetDi {
     }
 
     public int getIdProprietaire() {
-        return ExtracteurHashMap.extraire_int(get(nomIDPROPRIETAIRE));
+        if (nomIDPROPRIETAIRE != null) {
+            return ExtracteurHashMap.extraire_int(getSimpleData(nomIDPROPRIETAIRE));
+        }
+        return 0;
     }
 
     public void setIdProprietaire(int idProprietaire) {
@@ -303,15 +313,20 @@ public class Evenement extends ObjetDi {
     public int compareTo(Object o) {
         if (o instanceof Evenement) {
             Evenement autreEvenement = (Evenement) o;
-            int i = getDebut().compareTo(autreEvenement.getDebut());
-            if (i == 0) {
-                int j = getFin().compareTo(autreEvenement.getFin());
-                if (j == 0) {
-                    Integer monHash = hashCode();
-                    Integer sonHash = autreEvenement.hashCode();
-                    return monHash.compareTo(sonHash);
+            int i = 0;
+            try {
+                i = getDebut().compareTo(autreEvenement.getDebut());
+                if (i == 0) {
+                    int j = getFin().compareTo(autreEvenement.getFin());
+                    if (j == 0) {
+                        Integer monHash = hashCode();
+                        Integer sonHash = autreEvenement.hashCode();
+                        return monHash.compareTo(sonHash);
+                    }
+                    return j;
                 }
-                return j;
+            } catch (Exception e) {
+                return -1;
             }
             return i;
         }
@@ -323,14 +338,18 @@ public class Evenement extends ObjetDi {
     public boolean equals(Object o) {
         if (o instanceof Evenement) {
             Evenement autre = (Evenement) o;
-            boolean memeHoraire = getDebut().equals(autre.getDebut()) &&
-                    getFin().equals(autre.getFin());
-            boolean memeID = getId() == autre.getId();
-            boolean memeDescription = getDescription().equals(autre.getDescription());
-            boolean memeEtat = isVerrouille() == autre.isVerrouille();
-            boolean memeProprio = getIdProprietaire() == autre.getIdProprietaire();
+            try {
+                boolean memeHoraire = getDebut().equals(autre.getDebut()) &&
+                        getFin().equals(autre.getFin());
+                boolean memeID = getId() == autre.getId();
+                boolean memeDescription = getDescription().equals(autre.getDescription());
+                boolean memeEtat = isVerrouille() == autre.isVerrouille();
+                boolean memeProprio = getIdProprietaire() == autre.getIdProprietaire();
 
-            return memeDescription && memeEtat && memeHoraire && memeID && memeProprio;
+                return memeDescription && memeEtat && memeHoraire && memeID && memeProprio;
+            } catch (Exception e) {
+                return false;
+            }
         }
         return false;
     }
@@ -385,7 +404,7 @@ public class Evenement extends ObjetDi {
                 COULEUR_CADRE,
                 COULEUR_FOND,
                 NOM_LIEU, informateurObjet);
-        appointment.setData(getData(), true);
+        appointment.setData(new HashMap<>(getData()), true);
         return appointment;
     }
 
@@ -396,7 +415,7 @@ public class Evenement extends ObjetDi {
     }
 
     @Override
-    public ObjetDi getObjetFromType(String nomType) {
+    public ObjetCSA getObjetFromType(String nomType) {
         if (informateurObjet == null) {
             System.err.println("*** Evenement : Didier, il faut indiquer comment générer un HashObjet");
             return null;
@@ -405,7 +424,7 @@ public class Evenement extends ObjetDi {
     }
 
     public Boolean isWholeDay() {
-        return ExtracteurHashMap.extraire_booleen(get("allday"));
+        return ExtracteurHashMap.extraire_booleen(getSimpleData("allday"));
     }
 
     public Integer getDuree() {
@@ -445,6 +464,7 @@ public class Evenement extends ObjetDi {
         dureeTmp = minutes;
     }
 
+    @Override
     public String toExport() {
         return getDescription() + " (" + getId() + ") "
                 + getDebut().format(DateTimeFormatter.ofPattern("dd/MM/yy-HH:mm"))
@@ -463,6 +483,17 @@ public class Evenement extends ObjetDi {
             return;
         }
         super.addModification(nom);
+    }
+
+    @Override
+    public ObjetCSA getParent() {
+        return null;
+    }
+
+
+    @Override
+    public void setParent(ObjetCSA parent) {
+
     }
 
     @Override
@@ -572,7 +603,7 @@ public class Evenement extends ObjetDi {
     }
 
     public int getCouleurTexte() {
-        return ExtracteurHashMap.extraire_int(get(COULEUR_TEXTE));
+        return ExtracteurHashMap.extraire_int(getSimpleData(COULEUR_TEXTE));
     }
 
     public void setCouleurTexte(int couleur) {
@@ -580,7 +611,7 @@ public class Evenement extends ObjetDi {
     }
 
     public void setCouleurTexte(Color couleur) {
-        inserer_valeur(COULEUR_TEXTE, (new RGBConverter().convert_color_2_int(couleur)));
+        inserer_valeur(COULEUR_TEXTE, (RGBConverter.convert_color_2_int(couleur)));
     }
 
     @Override
@@ -601,8 +632,8 @@ public class Evenement extends ObjetDi {
     }
 
     @Override
-    public HashMap<String, Object> getHashModifications(boolean x) {
-        HashMap<String, Object> retour = super.getHashModifications(x);
+    public HashMap<String, Object> getHashModifications() {
+        HashMap<String, Object> retour = super.getHashModifications();
         if (EXTERNAL_DUREE == null) {
             return retour;
         }
@@ -613,7 +644,7 @@ public class Evenement extends ObjetDi {
     }
 
     public int getCouleurFond() {
-        return ExtracteurHashMap.extraire_int(get(COULEUR_FOND));
+        return ExtracteurHashMap.extraire_int(getSimpleData(COULEUR_FOND));
     }
 
     public void setCouleurFond(int couleur) {
@@ -621,16 +652,16 @@ public class Evenement extends ObjetDi {
     }
 
     public void setCouleurFond(Color couleur) {
-        inserer_valeur(COULEUR_FOND, (new RGBConverter().convert_color_2_int(couleur)));
+        inserer_valeur(COULEUR_FOND, (RGBConverter.convert_color_2_int(couleur)));
     }
 
     public int getCouleurCadre() {
-        return new ExtracteurHashMap().extraire_int(get(COULEUR_CADRE));
+        return ExtracteurHashMap.extraire_int(getSimpleData(COULEUR_CADRE));
     }
 
 
     public void setCouleurCadre(Color couleur) {
-        inserer_valeur(COULEUR_CADRE, new RGBConverter().convert_color_2_int(couleur));
+        inserer_valeur(COULEUR_CADRE, RGBConverter.convert_color_2_int(couleur));
     }
 
     public void setCouleurCadre(int couleur) {

@@ -127,7 +127,8 @@ public class DateString {
 
     private static LocalDateTime test_if_frStandard_date(Object date) {
         try {
-            return LocalDateTime.parse(String.valueOf(date), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            LocalDate localDate = LocalDate.parse(String.valueOf(date), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            return localDate.atStartOfDay();
         } catch (Exception e) {
             //System.err.println("DateString/extraire_date : " + date + " n'est pas au format dd/MM/yyyy !!!");
             return null;

@@ -1,5 +1,5 @@
 package general;
 
 public interface InformateurObjet {
-    ObjetDi getObjetFromType(String nomTable);
+    ObjetCSA getObjetFromType(String nomTable);
 }

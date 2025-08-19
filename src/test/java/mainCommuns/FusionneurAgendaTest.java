@@ -2,7 +2,7 @@ package mainCommuns;
 
 
 import general.InformateurObjet;
-import general.ObjetDi;
+import general.ObjetCSA;
 import general.calendrier.Evenement;
 import general.calendrier.FusionneurAgendas;
 import general.calendrier.FusionneurEvenements;
@@ -155,7 +155,7 @@ public class FusionneurAgendaTest implements InformateurObjet {
     }
 
     @Override
-    public ObjetDi getObjetFromType(String nomTable) {
+    public ObjetCSA getObjetFromType(String nomTable) {
         return null;
     }
 }

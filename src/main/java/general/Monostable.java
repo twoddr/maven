@@ -12,7 +12,7 @@ public class Monostable {
      * @param etatInstable valeur initiale à attribuer
      * @param etatStable   valeur finale après le délai (défaut : 1s)
      */
-    public Monostable(boolean etatInstable, boolean etatStable) {
+    public Monostable(Object etatInstable, Object etatStable) {
         this.etatInstable = etatInstable;
         this.etatStable = etatStable;
     }
@@ -22,19 +22,19 @@ public class Monostable {
      * et puis c'est tout
      */
     public void go() {
-        Thread thread = new Thread() {
+        new Thread() {
             @Override
             public void run() {
                 setValue(etatInstable);
                 try {
-                    wait(1000L * duree);
+                    Thread.sleep(1000L * duree);  // Wait for the specified duration (duree in seconds)
                 } catch (InterruptedException e) {
                     System.err.println("*** Monostable/go : La temporisation de " + objet +
                             " a échoué !");
                 }
                 setValue(etatStable);
             }
-        };
+        }.start();
     }
 
     private void setValue(Object etat) {

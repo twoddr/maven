@@ -6,11 +6,14 @@ import java.awt.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Trou extends Evenement {
 
     /**
      * Le trou par défaut dure toute la journée
+     *
+     * @param informateur Celui qui connaît les objets à partir de leurs noms
      */
     public Trou(String nomType,
                 String nomID,
@@ -66,7 +69,7 @@ public class Trou extends Evenement {
                 COULEUR_CADRE,
                 COULEUR_FOND,
                 NOM_LIEU, getInformateurHashObjet());
-        nouveau.setData(getData(), true);
+        nouveau.setData(new HashMap<>(getData()), true);
         nouveau.setPriorite(getPriorite());
         return nouveau;
     }

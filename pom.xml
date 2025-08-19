@@ -4,25 +4,35 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>macy</groupId>
-    <artifactId>Communs</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>communs</artifactId>
+    <version>1.1</version>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
+        <!--<maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+        <maven.compiler.source>1.8</maven.compiler.source> <!-- Updated to Java 8 -->
+        <maven.compiler.target>1.8</maven.compiler.target> <!-- Updated to Java 8 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
         <plugins>
+            <!-- Maven Javadoc Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <repositoryId>github</repositoryId>
-                    <url>https://maven.pkg.github.com/twoddr/maven</url>
-                </configuration>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.0</version> <!-- Use the latest version -->
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <!-- Bind to the 'deploy' phase to run during `mvn deploy` -->
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>jar</goal> <!-- The goal that creates the JAR -->
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -32,6 +42,16 @@
             <id>github</id>
             <name>GitHub twoddr Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/twoddr/maven</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
         </repository>
+        <snapshotRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/twoddr/maven</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </snapshotRepository>
     </distributionManagement>
 </project>

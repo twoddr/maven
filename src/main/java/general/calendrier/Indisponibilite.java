@@ -6,6 +6,7 @@ import java.awt.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Indisponibilite extends Evenement {
 
@@ -77,7 +78,7 @@ public class Indisponibilite extends Evenement {
                 COULEUR_CADRE,
                 COULEUR_FOND,
                 NOM_LIEU, getInformateurHashObjet());
-        nouveau.setData(getData(), true);
+        nouveau.setData(new HashMap<>(getData()), true);
         return nouveau;
     }
 

@@ -2,7 +2,7 @@ package general;
 
 import java.util.ArrayList;
 
-public class RetourBDExe implements GestionnaireRetourBD {
+public class RetourBDExe implements GestionnaireRetour {
     String nomTable;
     int code;
     ThreadRetourBD thread;

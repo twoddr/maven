@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class GestionnaireImbrications {
     private final String nomTablePays, nomIdPaysDansVille, nomTableVille,
             nomIdVilleDansQuartier, nomTableQuartier;
-    ObjetDi quartier,
+    ObjetCSA quartier,
             ville,
             pays;
     private boolean verbose = false;
@@ -42,7 +42,6 @@ public class GestionnaireImbrications {
         ville = informateurObjetDi.getObjetFromType(nomTableVille);
         pays = informateurObjetDi.getObjetFromType(nomPays);
 
-        remplir_donnees(fkquartier, hashLevis);
     }
 
     /**
@@ -72,7 +71,6 @@ public class GestionnaireImbrications {
         ville = informateurObjetDi.getObjetFromType(nomTableVille);
         pays = informateurObjetDi.getObjetFromType(nomPays);
 
-        remplir_donnees(fkville, hashLevis);
     }
     /*
 
@@ -148,6 +146,12 @@ public class GestionnaireImbrications {
      * @return vrai si un changement a été observé
      */
     public boolean remplir_donnees(int id, HashMap<String, Object> hashLevis) {
+        if (id <= 0) {
+            comment("** GestionnaireImbrications/remplir_donnees : Attention ID non positif pour " +
+                    nomTablePays + "/" + nomTableVille + "/" + nomTableQuartier, "err");
+            return false;
+        }
+
         if (nomTableQuartier == null) {
             return chercher_ville(nomTablePays, nomIdPaysDansVille,
                     nomTableVille, id,
@@ -243,85 +247,30 @@ public class GestionnaireImbrications {
     public boolean aChange() {
         return change;
     }
-/*
 
-    private ArrayList<ObjetDi> chercher_liste_villes(String cleLevis, String nomVille, HashMap<String, Object> hashLevis) {
-        Object hypo_liste = hashLevis.get(cleLevis);
-        if (hypo_liste instanceof ArrayList &&
-                ((ArrayList<?>) hypo_liste).size() > 0) {
-            ArrayList listeLevis = (ArrayList<?>) hypo_liste;
-            String nomLevis = String.valueOf(listeLevis.get(0));
-            List hypo_listeVilles = listeLevis.subList(1, listeLevis.size());
-            listeVilles.clear();
-            if (nomLevis.equals(nomVille)) {
-                for (Object elt : hypo_listeVilles) {
-                    if (elt instanceof ObjetDi) {
-                        listeVilles.add((ObjetDi) elt);
-                    } else if (elt instanceof HashMap) {
-                        ObjetDi newVille = ville.getNewInstance();
-                        newVille.setData((HashMap<String, Object>) elt, null, true, verbose);
-                        listeVilles.add(newVille);
-                    }
-                }
-                pays.put(nomTableVille, listeVilles);
-                comment("* GestionnaireImbrications : Liste villes du pays d'id " + pays.getId() + " : Taille : "
-                        + listeVilles.size(), "out");
-                return new ArrayList<>(listeVilles);
-            }
-        }
-        return new ArrayList<>();
-    }
 
-    private ArrayList<ObjetDi> chercher_liste_quartiers(String cleLevis, String nomQuartier,
-                                                        HashMap<String, Object> hashLevis) {
-        Object hypo_liste = hashLevis.get(cleLevis);
-        if (hypo_liste instanceof ArrayList &&
-                ((ArrayList<?>) hypo_liste).size() > 0) {
-            ArrayList listeLevis = (ArrayList<?>) hypo_liste;
-            String nomLevis = String.valueOf(listeLevis.get(0));
-            List hypo_listeQuartiers = listeLevis.subList(1, listeLevis.size());
-            if (nomLevis.equals(nomQuartier)) {
-                for (Object elt : hypo_listeQuartiers) {
-                    if (elt instanceof ObjetDi) {
-                        listeQuartiers.add((ObjetDi) elt);
-                    } else if (elt instanceof HashMap) {
-                        ObjetDi nouveauQuartier = quartier.getNewInstance();
-                        nouveauQuartier.setData((HashMap<String, Object>) elt, null, true, verbose);
-                        listeQuartiers.add(nouveauQuartier);
-                    }
-                }
-                ville.put(nomTableQuartier, listeQuartiers);
-                comment("* GestionnaireImbrications : Liste quartiers de la ville d'id " + ville.getId() + " : Taille : "
-                        + listeQuartiers.size(), "out");
-                return new ArrayList<>(listeQuartiers);
-            }
-        }
-        return new ArrayList<>();
-    }
-*/
-
-    public ObjetDi getPays() {
+    public ObjetCSA getPays() {
         return pays;
     }
 
-    public ObjetDi getVille() {
+    public ObjetCSA getVille() {
         return ville;
     }
 
-    public ObjetDi getQuartier() {
+    public ObjetCSA getQuartier() {
         return quartier;
     }
 
-    public ArrayList<ObjetDi> getListeHashVille() {
-        ArrayList<ObjetDi> villes = pays.getListe(nomTableVille);
+    public ArrayList<ObjetCSA> getListeHashVille() {
+        ArrayList<ObjetCSA> villes = pays.getListe(nomTableVille);
         if (villes == null) {
             return new ArrayList<>();
         }
         return villes;
     }
 
-    public ArrayList<ObjetDi> getListeHashQuartier() {
-        ArrayList<ObjetDi> quartiers = ville.getListe(nomTableQuartier);
+    public ArrayList<ObjetCSA> getListeHashQuartier() {
+        ArrayList<ObjetCSA> quartiers = ville.getListe(nomTableQuartier);
         if (quartiers == null) {
             return new ArrayList<>();
         }
@@ -330,5 +279,15 @@ public class GestionnaireImbrications {
 
     public int getFk() {
         return nomTableQuartier == null ? ville.getId() : quartier.getId();
+    }
+
+    public Object chercher_valeur(String cle) {
+        Object retour = null;
+        if (pays != null) retour = pays.chercher_valeur(cle);
+        if (retour != null) return retour;
+        if (ville != null) retour = ville.chercher_valeur(cle);
+        if (retour != null) return retour;
+        if (quartier != null) retour = quartier.chercher_valeur(cle);
+        return retour;
     }
 }

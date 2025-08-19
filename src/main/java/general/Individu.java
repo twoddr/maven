@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
-public abstract class Individu extends ObjetDi {
+public class Individu extends ObjetCSA {
     private String SEXE = "sexe", PRENOM = "prenom", TEL = "telephone",
             GSM = "gsm", ADRESSE = "adresse", DATE_NAISSANCE = "dateNaissance",
             CODE_POSTAL = "codePostal", COURRIEL = "courriel", FAX = "fax", GRADE = "grade",
@@ -35,6 +35,25 @@ public abstract class Individu extends ObjetDi {
         setCourriel(email);
     }
 
+    @Override
+    public ObjetCSA getParent() {
+        return null;
+    }
+
+    @Override
+    public void setParent(ObjetCSA parent) {
+
+    }
+
+    @Override
+    public ObjetCSA getObjetFromType(String nomType) {
+        return null;
+    }
+
+    @Override
+    public ObjetCSA getNewInstance() {
+        return new Individu("", "", "");
+    }
 
     @Override
     public boolean changer_nom_variable(String ancien, String nouveau) {
@@ -80,7 +99,7 @@ public abstract class Individu extends ObjetDi {
 
 
     public String getSexe() {
-        return (ExtracteurHashMap.extraire_string(get(SEXE)));
+        return (ExtracteurHashMap.extraire_string(getSimpleData(SEXE)));
     }
 
     /**
@@ -155,7 +174,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public Integer getCodePostal() {
-        return ExtracteurHashMap.extraire_int(get(CODE_POSTAL));
+        return ExtracteurHashMap.extraire_int(getSimpleData(CODE_POSTAL));
     }
 
     public void setCodePostal(Integer c) {
@@ -165,7 +184,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public Integer getIdLocalite() {
-        return (new ExtracteurHashMap().extraire_int(get("idLocalite")));
+        return (ExtracteurHashMap.extraire_int(getSimpleData("idLocalite")));
     }
 
     public void setIdLocalite(Integer c) {
@@ -176,7 +195,7 @@ public abstract class Individu extends ObjetDi {
 
 
     public String getTel() {
-        return (ExtracteurHashMap.extraire_string(get(TEL)));
+        return (ExtracteurHashMap.extraire_string(getSimpleData(TEL)));
     }
 
     public void setTel(String tel1) {
@@ -184,7 +203,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getGsm() {
-        return ExtracteurHashMap.extraire_string(get(GSM));
+        return ExtracteurHashMap.extraire_string(getSimpleData(GSM));
     }
 
     /**
@@ -198,7 +217,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getFax() {
-        return ExtracteurHashMap.extraire_string(get(FAX));
+        return ExtracteurHashMap.extraire_string(getSimpleData(FAX));
     }
 
     /**
@@ -212,7 +231,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getCourriel() {
-        return (ExtracteurHashMap.extraire_string(get(COURRIEL)));
+        return (ExtracteurHashMap.extraire_string(getSimpleData(COURRIEL)));
     }
 
     /**
@@ -226,7 +245,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getUrl() {
-        return (ExtracteurHashMap.extraire_string(get(URL)));
+        return (ExtracteurHashMap.extraire_string(getSimpleData(URL)));
     }
 
     public void setUrl(String url1) {
@@ -234,7 +253,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getDivers() {
-        return (ExtracteurHashMap.extraire_string(get(COMMENTAIRES)));
+        return (ExtracteurHashMap.extraire_string(getSimpleData(COMMENTAIRES)));
     }
 
     public void setDivers(String divers1) {
@@ -242,7 +261,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getTva() {
-        return (ExtracteurHashMap.extraire_string(get(TVA)));
+        return (ExtracteurHashMap.extraire_string(getSimpleData(TVA)));
     }
 
     public void setTva(String nTva) {
@@ -250,7 +269,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getTitre() {
-        return ExtracteurHashMap.extraire_string(get(TITRE));
+        return ExtracteurHashMap.extraire_string(getSimpleData(TITRE));
     }
 
     /**
@@ -262,7 +281,7 @@ public abstract class Individu extends ObjetDi {
 
 
     public String getPrenom() {
-        return ExtracteurHashMap.extraire_string(get(PRENOM));
+        return ExtracteurHashMap.extraire_string(getSimpleData(PRENOM));
     }
 
     public void setPrenom(String s) {
@@ -270,7 +289,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public String getAdresse() {
-        return ExtracteurHashMap.extraire_string(get(ADRESSE));
+        return ExtracteurHashMap.extraire_string(getSimpleData(ADRESSE));
     }
 
     /**
@@ -339,7 +358,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public LocalDateTime getDateNaissance() {
-        return ExtracteurHashMap.extraire_dateHeure(get(DATE_NAISSANCE));
+        return ExtracteurHashMap.extraire_dateHeure(getSimpleData(DATE_NAISSANCE));
     }
 
     public void setDateNaissance(LocalDateTime c) {
@@ -416,7 +435,7 @@ public abstract class Individu extends ObjetDi {
      * @return Le mot de passe en md5
      */
     public String getPswd() {
-        return ExtracteurHashMap.extraire_string(get(MOT_DE_PASSE));
+        return ExtracteurHashMap.extraire_string(getSimpleData(MOT_DE_PASSE));
     }
 
     /**
@@ -455,7 +474,7 @@ public abstract class Individu extends ObjetDi {
     }
 
     public int getGrade() {
-        return ExtracteurHashMap.extraire_int(get(GRADE));
+        return ExtracteurHashMap.extraire_int(getSimpleData(GRADE));
     }
 
     public void setGrade(int i) {
@@ -464,7 +483,7 @@ public abstract class Individu extends ObjetDi {
 
 
     public String getLogin() {
-        return ExtracteurHashMap.extraire_string(get(LOGIN));
+        return ExtracteurHashMap.extraire_string(getSimpleData(LOGIN));
     }
 
     public void setLogin(String user) {

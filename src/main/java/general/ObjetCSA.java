@@ -6,41 +6,41 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.*;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public abstract class ObjetDi
+public abstract class ObjetCSA
         implements Comparable, Serializable {
-    private final LinkedHashMap<String, ObjetDi> hashFKs = new LinkedHashMap<>(),
+    private final LinkedHashMap<String, ObjetCSA> hashFKs = new LinkedHashMap<>(),
             hashFKIntermediaire = new LinkedHashMap<>();
     /**
      * ce sont les sous-objets qui contiennent l'objet courant comme sous-objet
      */
-    private final HashMap<String, HashMap<String, Object>> hashDependants = new HashMap<>();
-    private final HashMap<String, String> paires_NomsTables_NomsSpeciaux = new HashMap<>();
-    private final HashMap<String, Object> hashDonnees = new HashMap<>();
+    private final TreeMap<String, TreeMap<String, Object>> hashDependants = new TreeMap<>();
+    private final TreeMap<String, String> paires_NomsTables_NomsSpeciaux = new TreeMap<>();
+    private final TreeMap<String, Object> hashDonnees = new TreeMap<>();
 
     /**
      * ceci est indispensable si on veut avoir des données null mais garder le type !
      * *
      */
-    private final HashMap<String, Class> hashClassesDonnees = new HashMap<>();
-    private final HashMap<String, Object> hashDonneesNonAttendues = new HashMap<>();
-    private final HashMap<String, ArrayList<ObjetDi>> hashListes = new HashMap<>();
-    private final HashMap<String, GestionnaireImbrications> gestionnairesImbrications = new HashMap<>();
+    private final TreeMap<String, Class> hashClassesDonnees = new TreeMap<>();
+    private final TreeMap<String, Object> hashDonneesNonAttendues = new TreeMap<>();
+    private final TreeMap<String, ArrayList<ObjetCSA>> hashListes = new TreeMap<>();
+    private final TreeMap<String, GestionnaireImbrications> gestionnairesImbrications = new TreeMap<>();
     protected String TYPE, nomNOM, nomID;
     protected String COULEUR = "couleur";
     protected LinkedHashSet<String> mandatories = new LinkedHashSet<>();
     protected ArrayList<String> variablesVisibles = new ArrayList<>();
-    protected HashMap<String, String> nomsPublics = new HashMap<>();
+    protected TreeMap<String, String> nomsPublics = new TreeMap<>();
     private LinkedHashSet<String> modifications = new LinkedHashSet<>();
     private String publicName = "Objet non défini";
     private boolean textColorEnable = true;
 
 
     /**
-     * Pour créer un ObjetDi, il faut lui donner les noms des variables nécessaires
+     * Pour créer un ObjetCSA, il faut lui donner les noms des variables nécessaires
      * Les informations nécessaires permettent d'identifier, dans l'hashmap de données,
      * quelles sont celles qu'on observe généralement dans une interface graphique
      * L'id et l'id intermédiaire sont utiles lors des sélections et échanges de liste...
@@ -49,15 +49,15 @@ public abstract class ObjetDi
      * @param nomID    le nom de la variable qui stocke l'id
      * @param nomObjet le nom du nom de la variable nom
      */
-    public ObjetDi(String type,
-                   String nomID,
-                   String nomObjet) {
+    public ObjetCSA(String type,
+                    String nomID,
+                    String nomObjet) {
 
         TYPE = type.isEmpty() ? "Objet" : type;
         this.nomID = nomID.isEmpty() ? "id" : nomID;
         nomNOM = nomObjet.isEmpty() ? "nom" : nomObjet;
 
-        initialiser_objetDi();
+        initialiser_objetCSA();
 
         variablesVisibles.add(nomNOM);
     }
@@ -78,31 +78,31 @@ public abstract class ObjetDi
      *                      * nomDateDu          le nom de la variable dateDu
      *                      *  nomDateAu          le nom de la variable dateAu
      */
-    public ObjetDi(ArrayList<String> nomsVariables) {
+    public ObjetCSA(ArrayList<String> nomsVariables) {
         int taille = nomsVariables.size();
         TYPE = nomsVariables.isEmpty() ? "Objet" : nomsVariables.get(0);
         nomID = taille < 2 ? "id" : nomsVariables.get(1);
         nomNOM = taille < 3 ? "nom" : nomsVariables.get(2);
 
-        initialiser_objetDi();
+        initialiser_objetCSA();
 
         variablesVisibles.add(nomNOM);
     }
 
-    public static ObjetDi creer_objet_vide() {
-        return new ObjetDi("Objet Vide", "id", "Empty Object") {
+    public static ObjetCSA creer_objet_vide() {
+        return new ObjetCSA("Objet Vide", "id", "Empty Object") {
             @Override
-            public ObjetDi getParent() {
+            public ObjetCSA getParent() {
                 return null;
             }
 
             @Override
-            public void setParent(ObjetDi parent) {
+            public void setParent(ObjetCSA parent) {
 
             }
 
             @Override
-            public ObjetDi getObjetFromType(String nomType) {
+            public ObjetCSA getObjetFromType(String nomType) {
                 return null;
             }
 
@@ -111,6 +111,58 @@ public abstract class ObjetDi
 
             }
         };
+    }
+
+    public Object chercher_valeur(String cle) {
+        // recherche dans les champs simples
+        Object objet = getSimpleData(cle);
+        if (objet == null) { // recherche dans les classes; si existe, alors objet initialisé à NULL
+            if (getVariableClass(cle) != null) {
+                return null;
+            }
+        }
+        if (objet == null) objet = getObjetIntermediaire(cle); // recherche dans les intermédiaires
+        if (objet == null) objet = getObjet(cle); // recherche des fk
+        if (objet == null) objet = getObjetDependant(cle); // objets dépendants
+        if (objet == null) objet = getListe(cle); // dans les noms de listes
+        if (objet == null) objet = chercherDansFKIs(cle); // recherche dans les fkIntermediaires
+        if (objet == null) objet = chercherDansFKs(cle); // recherche dans les fk
+        if (objet == null) objet = chercherDansDependants(cle); // recherche dans les objets dépendants
+        if (objet == null) objet = chercherDansGestionnaires(cle); // recherche dans les gestionnaires d'imbrication
+
+        return objet;
+    }
+
+    private Object chercherDansFKIs(String cle) {
+        for (ObjetCSA fki : getFKIs().values()) {
+            Object hypothese = fki.chercher_valeur(cle);
+            if (hypothese != null) return hypothese;
+        }
+        return null;
+    }
+
+    private Object chercherDansFKs(String cle) {
+        for (ObjetCSA fk : getFKs().values()) {
+            Object hypothese = fk.chercher_valeur(cle);
+            if (hypothese != null) return hypothese;
+        }
+        return null;
+    }
+
+    private Object chercherDansDependants(String cle) {
+        for (TreeMap<String, Object> dependant : getHashmapDependants().values()) {
+            Object hypothese = dependant.get(cle);
+            if (hypothese != null) return hypothese;
+        }
+        return null;
+    }
+
+    private Object chercherDansGestionnaires(String cle) {
+        for (GestionnaireImbrications gestionnaire : getGestionnairesImbrications().values()) {
+            Object hypothese = gestionnaire.chercher_valeur(cle);
+            if (hypothese != null) return hypothese;
+        }
+        return null;
     }
 
     /**
@@ -131,7 +183,7 @@ public abstract class ObjetDi
      * @param cle nom de la variable
      * @return null si un tel objet n'existe pas !
      */
-    public ObjetDi getObjet(String cle) {
+    public ObjetCSA getObjet(String cle) {
         return hashFKs.get(cle);
     }
 
@@ -141,7 +193,7 @@ public abstract class ObjetDi
      * @param cle nom de la variable
      * @return null si un tel objet n'existe pas !
      */
-    public ObjetDi getObjetIntermediaire(String cle) {
+    public ObjetCSA getObjetIntermediaire(String cle) {
         return hashFKIntermediaire.get(cle);
     }
 
@@ -151,17 +203,20 @@ public abstract class ObjetDi
      * @param cle nom de la variable
      * @return null si un tel objet n'existe pas !
      */
-    public ObjetDi getObjetDependant(String cle) {
-        HashMap<String, Object> hashMap = hashDependants.get(paires_NomsTables_NomsSpeciaux.get(cle));
+    public ObjetCSA getObjetDependant(String cle) {
+        if (cle == null || paires_NomsTables_NomsSpeciaux.get(cle) == null) {
+            return null;
+        }
+        TreeMap<String, Object> hashMap = hashDependants.get(paires_NomsTables_NomsSpeciaux.get(cle));
         if (hashMap == null) {
             return null;
         }
-        ObjetDi objetDi = getObjetFromType(cle);
+        ObjetCSA objetDi = getObjetFromType(cle);
         if (objetDi == null) {
-            System.err.println("ObjetDi/getObjetDependant : L'objet à la clé " + cle + " contient un objetDi null !");
+            System.err.println("ObjetCSA/getObjetDependant : L'objet à la clé " + cle + " contient un objetDi null !");
             return null;
         }
-        objetDi.setData(hashMap, null, true, true);
+        objetDi.setData(new HashMap<>(hashMap), null, true, true);
         return objetDi;
     }
 
@@ -195,10 +250,10 @@ public abstract class ObjetDi
                     "Je rajoute !", "out");
         }
         AtomicBoolean retour = new AtomicBoolean(true);
-        ArrayList<ObjetDi> objetDis = new ArrayList<>();
+        ArrayList<ObjetCSA> objetDis = new ArrayList<>();
         objets.forEach(objet -> {
-            if (objet instanceof ObjetDi) {
-                objetDis.add((ObjetDi) objet);
+            if (objet instanceof ObjetCSA) {
+                objetDis.add((ObjetCSA) objet);
             } else {
                 retour.set(false);
             }
@@ -216,25 +271,25 @@ public abstract class ObjetDi
      * @param objetDis
      * @return vrai si tout se passe bien
      */
-    public boolean ajouter_dans_liste(String nomTable, ArrayList<ObjetDi> objetDis) {
+    public boolean ajouter_dans_liste(String nomTable, ArrayList<ObjetCSA> objetDis) {
         if (!hashListes.containsKey(nomTable)) {
             comment("rajouter_dans_liste : Cet objet n'attend pas de liste de " + nomTable + " !\n" +
                     "J'en crée une nouvelle, comme l'aurait fait inserer_liste !", "err");
             return inserer_liste(nomTable, objetDis);
         }
-        TreeSet<ObjetDi> oldList = new TreeSet<>(hashListes.get(nomTable));
+        TreeSet<ObjetCSA> oldList = new TreeSet<>(hashListes.get(nomTable));
         oldList.addAll(objetDis);
         return inserer_liste(nomTable, new ArrayList(oldList));
     }
 
-    public boolean inserer_fk(String nomFK, ObjetDi objetDi) {
+    public boolean inserer_fk(String nomFK, ObjetCSA objetDi) {
         if (objetDi == null) {
-            System.err.println("ObjetDi " + this + " /inserer_fk : " +
-                    "L'objetDi rentré ne peut être NULL. Action ignorée !");
+            comment("** ObjetCSA/inserer_fk : Tentative d'insertion de NULL dans" +
+                    " le fk" + nomFK + " de " + this + ". Action ignorée !", "out");
             return false;
         }
         if (hashFKs.containsKey(nomFK)) {
-            ObjetDi ancienObjet = hashFKs.get(nomFK);
+            ObjetCSA ancienObjet = hashFKs.get(nomFK);
             if (!objetDi.equals(ancienObjet)) {
                 addModification(nomFK);
             }
@@ -244,9 +299,9 @@ public abstract class ObjetDi
         return false;
     }
 
-    public void inserer_dependant(String nomFK, ObjetDi objetDi) {
+    public void inserer_dependant(String nomFK, ObjetCSA objetDi) {
         if (objetDi == null) {
-            System.err.println("ObjetDi " + this + " /inserer_inserer_dependant : " +
+            System.err.println("ObjetCSA " + this + " /inserer_inserer_dependant : " +
                     "L'objetDi rentré ne peut être NULL. Action ignorée !");
             return;
         }
@@ -259,7 +314,7 @@ public abstract class ObjetDi
         }
         addModification(nomFK);
         if (nomTable != null) {
-            hashDependants.put(nomTable, objetDi.getData());
+            hashDependants.put(nomTable, new TreeMap<>(objetDi.getData()));
             return;
         }
 
@@ -274,7 +329,7 @@ public abstract class ObjetDi
                     "J'ignore l'insertion de " + valeur + " !", "err");
             return false;
         }
-        ObjetDi objetIntermediaire = hashFKIntermediaire.get(nomVariable);
+        ObjetCSA objetIntermediaire = hashFKIntermediaire.get(nomVariable);
         return objetIntermediaire.inserer_valeur(nomVariable, valeur);
     }
 
@@ -287,12 +342,12 @@ public abstract class ObjetDi
             }
             return true;
         }
-        comment("ObjetDi " + this + " /inserer_dans_gestionnaire : Cet objet : " + this + " n'attend pas de nom " + nomFK + " !\n" +
+        comment("ObjetCSA " + this + " /inserer_dans_gestionnaire : Cet objet : " + this + " n'attend pas de nom " + nomFK + " !\n" +
                 "J'ignore l'insertion !", "err");
         return false;
     }
 
-    public boolean inserer_dans_gestionnaireImbrication(String nomFK, ObjetDi objetDi) {
+    public boolean inserer_dans_gestionnaireImbrication(String nomFK, ObjetCSA objetDi) {
         if (gestionnairesImbrications.containsKey(nomFK)) {
             GestionnaireImbrications gestionnaireTrouve = gestionnairesImbrications.get(nomFK);
             HashMap<String, Object> hashLevis = new HashMap<>();
@@ -307,7 +362,7 @@ public abstract class ObjetDi
             }
             return true;
         }
-        comment("ObjetDi " + this + " /inserer_dans_gestionnaire : Cet objet : " + this + " n'attend pas de nom " + nomFK + " !\n" +
+        comment("ObjetCSA " + this + " /inserer_dans_gestionnaire : Cet objet : " + this + " n'attend pas de nom " + nomFK + " !\n" +
                 "J'ignore l'insertion !", "err");
         return false;
     }
@@ -328,8 +383,8 @@ public abstract class ObjetDi
         }
 
         // fk intermédiaires
-        for (Map.Entry<String, ObjetDi> paire : hashFKIntermediaire.entrySet()) {
-            ObjetDi objetIntermediaire = paire.getValue();
+        for (Map.Entry<String, ObjetCSA> paire : hashFKIntermediaire.entrySet()) {
+            ObjetCSA objetIntermediaire = paire.getValue();
             boolean insertionReussie = objetIntermediaire.set_single_data(nom, valeur);
             if (insertionReussie) {
                 return true;
@@ -338,7 +393,7 @@ public abstract class ObjetDi
 
         // fks
         if (hashFKs.containsKey(nom)) {
-            ObjetDi sousObjet = hashFKs.get(nom);
+            ObjetCSA sousObjet = hashFKs.get(nom);
             // ça ne peut être qu'un id
             if (valeur instanceof Integer && sousObjet != null) {
                 int nouvelId = (int) valeur;
@@ -352,7 +407,7 @@ public abstract class ObjetDi
 
         // listes
         if (hashListes.containsKey(nom)) {
-            ArrayList<ObjetDi> sousObjets = hashListes.get(nom);
+            ArrayList<ObjetCSA> sousObjets = hashListes.get(nom);
             if (valeur instanceof ArrayList) {
                 sousObjets.clear();
                 sousObjets.addAll((Collection) valeur);
@@ -370,7 +425,7 @@ public abstract class ObjetDi
             }
         }
 
-        System.err.println("*** ObjetDi " + this + " /set_single_data : la donnée (" + nom + ", " + valeur + ")" +
+        System.err.println("*** ObjetCSA " + this + " /set_single_data : la donnée (" + nom + ", " + valeur + ")" +
                 " n'a pas pu être insérée dans l'objet " + this);
         return false;
     }
@@ -379,7 +434,7 @@ public abstract class ObjetDi
         return modifications.contains(nom);
     }
 
-    private void initialiser_objetDi() {
+    private void initialiser_objetCSA() {
         hashDonnees.clear();
         hashDonneesNonAttendues.clear();
         initialiser(nomID, 0);
@@ -406,7 +461,7 @@ public abstract class ObjetDi
 
     public void setType(String texte) {
         if (texte.isEmpty()) {
-            System.err.println("*** ObjetDi " + this + " /setType : vous ne pouvez pas insérer un type vide !\n" +
+            System.err.println("*** ObjetCSA " + this + " /setType : vous ne pouvez pas insérer un type vide !\n" +
                     "Ignoré !");
             return;
         }
@@ -429,7 +484,7 @@ public abstract class ObjetDi
     }
 
     public int getCouleur() {
-        return ExtracteurHashMap.extraire_int(get(COULEUR));
+        return ExtracteurHashMap.extraire_int(getSimpleData(COULEUR));
     }
 
     public void setCouleur(int couleurInt) {
@@ -470,10 +525,9 @@ public abstract class ObjetDi
         return getParent().getId();
     }
 
-    public abstract ObjetDi getParent();
+    public abstract ObjetCSA getParent();
 
-    public abstract void setParent(ObjetDi parent);
-
+    public abstract void setParent(ObjetCSA parent);
 
     /**
      * Indique si l'objet est modifié en regardant la liste des modifications
@@ -504,64 +558,101 @@ public abstract class ObjetDi
      */
     public Boolean inserer_valeur(String nom, Object valeur) {
         if (nom.isEmpty()) {
-            System.err.println("** ObjetDi " + this + "  : L'insertion d'une clé vide pour la donnée <" +
+            System.err.println("** ObjetCSA " + this + "  : L'insertion d'une clé vide pour la donnée <" +
                     valeur + "> n'est pas autorisé !");
             throw new UnsupportedOperationException("L'insertion d'une clé vide pour la donnée <" +
                     valeur + "> n'est pas autorisé !");
         }
 
-        if (valeur instanceof ObjetDi || valeur instanceof HashMap) {
-            throw new UnsupportedOperationException("!!! ObjetDi " + this + " /inserer_valeur : on ne peut inserer ce type ici : " + valeur +
+        if (valeur instanceof ObjetCSA || valeur instanceof HashMap) {
+            throw new UnsupportedOperationException("!!! ObjetCSA " + this + " /inserer_valeur : on ne peut inserer ce type ici : " + valeur +
                     " dans " + this + "\n" + "Il faut passer par setData !");
         }
         return inserer_prudemment(nom, valeur);
 
     }
 
+    /**
+     * Idem que inserer_valeur sauf qu'ici on double-check
+     * Ça sert par exemple, lorsqu'on lit un champ qui est un label (contient le nom
+     * de l'objet et pas son ID); cette méthode va tenter d'insérer un string dans un
+     * FK et ce sera ignoré
+     *
+     * @param cle    le nom de la variable
+     * @param valeur la valeur à enregistrer à ce nom
+     * @return vrai si tout s'est bien passé
+     */
     public boolean inserer_souplement_valeur(String cle, Object valeur) {
-        Object ancienneValeur = get(cle);
-        if (ancienneValeur == null && valeur != null) {
-            Class classeVariable = getVariableClass(cle);
-            if (classeVariable != null && classeVariable.equals(valeur.getClass())) {
+        if (cle.startsWith("#")) {
+            System.out.println("* ObjetCSA/inserer_souplement : j'ignore volontairement d'insérer la variable " + cle);
+            return true;
+        }
+        Class classe = hashClassesDonnees.get(cle);
+        if (classe == null) {
+            // la donnée n'est pas attendue, mais peut-être un FK ou autre => ignoré !
+            if (valeur != null) {
+                if (isExpected(cle)) {
+                    // la donnée est rejetée sans warning ! Elle appartient aux fk et autres...
+                    System.err.println("La clé " + cle + " ne peut prendre la valeur " + valeur + " !");
+                    return false;
+                }
+                // ça ira vers les non-attendues
+                System.err.println("La valeur " + valeur + " est insérée dans les non-attendues " +
+                        "sous la clef " + cle);
                 return inserer_valeur(cle, valeur);
             }
-            if (classeVariable != null) {
-                System.err.println("ObjetDi " + this + " /inserer_souplement_valeur : nouvelle valeur " + valeur +
-                        ", non insérée car le type attendu est " + classeVariable.getSimpleName());
-            }
+            System.err.println("ObjetCSA " + this + " /inserer_souplement_valeur : nouvelle valeur NULL," +
+                    " non insérée car la variable " + cle + " n'est pas attendue !");
             return false;
         }
-        if (ancienneValeur != null && valeur != null &&
-                ancienneValeur.getClass().equals(valeur.getClass())) {
+        // la variable est attendue
+        if (valeur == null) {
+            // on ne peut pas insérer NULL ici; c'est uniquement lors de l'initialisation !
+            comment("* Insertion de NULL dans la variable " + cle + ". Simplement ignoré ;-)",
+                    "out");
+            return false;
+        }
+        if (classe.equals(valeur.getClass())) {
             return inserer_valeur(cle, valeur);
         }
-        if (ancienneValeur instanceof Float) {
+        if (classe.equals(Float.class)) {
             return inserer_valeur(cle, extraire_float(valeur));
         }
-        if (ancienneValeur instanceof Integer) {
+        if (classe.equals(Integer.class)) {
             return inserer_valeur(cle, extraire_int(valeur));
         }
-        if (ancienneValeur instanceof LocalDate) {
+        if (classe.equals(LocalDate.class)) {
             if (valeur instanceof LocalDateTime) {
                 return inserer_valeur(cle, valeur);
             }
             return inserer_valeur(cle, extraire_date(String.valueOf(valeur)));
         }
-        if (ancienneValeur instanceof LocalDateTime) {
+        if (classe.equals(LocalDateTime.class)) {
             if (valeur instanceof LocalDate) {
                 return inserer_valeur(cle, ((LocalDate) valeur).atStartOfDay());
             }
             return inserer_valeur(cle, extraire_dateTime(String.valueOf(valeur)));
         }
         // conversion date vers string
-        if (ancienneValeur instanceof String &&
+        if (classe.equals(String.class) &&
                 (valeur instanceof LocalDate || valeur instanceof LocalDateTime)) {
             String nouveauString = String.valueOf(valeur);
             return inserer_valeur(cle, nouveauString);
         }
-        System.err.println("ObjetDi " + this + " /inserer_souplement : je n'ai pas pu insérer " + valeur + " dans " +
-                "la clé " + cle + " (l'ancienne valeur était : " + ancienneValeur + ")");
+
+        System.err.println("ObjetCSA " + this + " /inserer_souplement : je n'ai pas pu insérer " + valeur + " dans " +
+                "la clé " + cle + " (le type attendu est : " + classe.getSimpleName() + ")");
         return false;
+    }
+
+    private boolean isExpected(String cle) {
+        boolean dansDonnees = hashDonnees.containsKey(cle) ||
+                hashClassesDonnees.containsKey(cle);
+        boolean dansIntermediare = hashFKIntermediaire.containsKey(cle);
+        boolean dansFk = hashFKs.containsKey(cle);
+        boolean dansGestionnaire = gestionnairesImbrications.containsKey(cle);
+
+        return dansGestionnaire || dansFk || dansDonnees || dansIntermediare;
     }
 
     private float extraire_float(Object value) {
@@ -580,8 +671,7 @@ public abstract class ObjetDi
         }
     }
 
-    public abstract ObjetDi getObjetFromType(String nomType);
-
+    public abstract ObjetCSA getObjetFromType(String nomType);
 
     /**
      * Permet de faire appel au clear des hashmaps,
@@ -589,7 +679,7 @@ public abstract class ObjetDi
      */
     public final void clear() {
         hashDonnees.clear();
-        initialiser_objetDi();
+        initialiser_objetCSA();
         reinitialiser();
     }
 
@@ -603,7 +693,7 @@ public abstract class ObjetDi
      */
     protected void initialiser(String nom, Object valeur) {
         if (nom.isEmpty()) {
-            System.err.println("** ObjetDi " + this + " /initialiser : L'insersion de <" + valeur + "> dans une variable vide de l'objet " +
+            System.err.println("** ObjetCSA " + this + " /initialiser : L'insersion de <" + valeur + "> dans une variable vide de l'objet " +
                     this + " n'est pas autorisé ! Demande ignorée !");
             return;
         }
@@ -620,23 +710,42 @@ public abstract class ObjetDi
                 return;
             }
             comment("Mauvais type reçu par " + this + ". la variable " + nom +
-                    " doit être de type " + classe, "err");
+                    " doit être de type " + classe + ", mais je recois " + valeur.getClass().getSimpleName(), "err");
             return;
         }
         if (valeur == null) {
-            throw new UnsupportedOperationException("ObjetDi/initialiser : on ne peut initialiser " +
+            throw new UnsupportedOperationException("ObjetCSA/initialiser : on ne peut initialiser " +
                     "une variable (" + nom + ") à null sans avoir initialisé le type (setClass)");
         }
         hashDonnees.put(nom, valeur);
         hashClassesDonnees.put(nom, valeur.getClass());
     }
 
+    /**
+     * Uniquement si la variable est NULL
+     *
+     * @param nomVariable clé
+     * @param classe      la classe de la variable attendue (NULL pour l'instant)
+     */
     public void setVariableClass(String nomVariable, Class classe) {
-        hashClassesDonnees.put(nomVariable, classe);
+        Object variable = hashDonnees.get(nomVariable);
+        if (variable == null) {
+            hashClassesDonnees.put(nomVariable, classe);
+            return;
+        }
+        System.err.println("*** Tentative d'insertion d'une nouvelle classe (" + classe.getSimpleName() +
+                ") alors que la variable " + nomVariable + " a déjà été affectée à " + variable);
     }
 
     public Class getVariableClass(String nomVariable) {
-        return hashClassesDonnees.get(nomVariable);
+        Class classe = hashClassesDonnees.get(nomVariable);
+
+        /*if (classe == null) {
+            System.err.println("** ObjetCSA [" + this + "]/getVariableClass : le type de variable est inconnu pour " + nomVariable +
+                    ". Je le remplace par Object");
+            return Object.class;
+        }*/
+        return classe;
     }
 
     /**
@@ -646,7 +755,7 @@ public abstract class ObjetDi
      */
     protected void initialiser_liste(String nom) {
         if (nom.isEmpty()) {
-            System.err.println("** ObjetDi " + this + "  : Initialisation d'une liste sans nom de variable se l'objet " +
+            System.err.println("** ObjetCSA " + this + "  : Initialisation d'une liste sans nom de variable se l'objet " +
                     this + ". Demande ignorée !");
             return;
         }
@@ -662,14 +771,14 @@ public abstract class ObjetDi
      * @param nomType le nom du type de variable dont l'id est le fk
      */
     public void setFK(String nomfk, String nomType) {
-        ObjetDi sousObjet = getObjetFromType(nomType);
+        ObjetCSA sousObjet = getObjetFromType(nomType);
         if (sousObjet == null) {
-            System.err.println("** ObjetDi " + this + "  : il n'existe pas de sous-objet au nom " + nomType +
+            System.err.println("** ObjetCSA " + this + "  : il n'existe pas de sous-objet au nom " + nomType +
                     " ! Demande ignorée !");
             return;
         }
         if (nomfk.isEmpty()) {
-            System.err.println("** ObjetDi " + this + " /setFK : Le nomFK attribué à la table " + nomType + " est vide ! Demande ignorée !");
+            System.err.println("** ObjetCSA " + this + " /setFK : Le nomFK attribué à la table " + nomType + " est vide ! Demande ignorée !");
             return;
         }
 
@@ -684,9 +793,9 @@ public abstract class ObjetDi
      * @param nomType le nom du type de variable dont l'id est le fk
      */
     public void setFKIntermediaire(String nomType) {
-        ObjetDi sousObjet = getObjetFromType(nomType);
+        ObjetCSA sousObjet = getObjetFromType(nomType);
         if (sousObjet == null) {
-            System.err.println("** ObjetDi " + this + " /setFKIntermediaire : il n'existe pas de sous-objet au nom " + nomType + "" +
+            System.err.println("** ObjetCSA " + this + " /setFKIntermediaire : il n'existe pas de sous-objet au nom " + nomType + "" +
                     " ! Demande ignorée !");
             return;
         }
@@ -703,11 +812,11 @@ public abstract class ObjetDi
      */
     public void setDependant(String nomFK, String nomType) {
         if (nomFK.isEmpty()) {
-            System.err.println("** ObjetDi " + this + " /setDependant : Le nomFK attribué à la table " + nomType + " est vide ! Demande ignorée !");
+            System.err.println("** ObjetCSA " + this + " /setDependant : Le nomFK attribué à la table " + nomType + " est vide ! Demande ignorée !");
             return;
         }
         paires_NomsTables_NomsSpeciaux.put(nomType, nomFK);
-        hashDependants.put(nomType, new HashMap<>());
+        hashDependants.put(nomType, new TreeMap<>());
     }
 
 
@@ -715,7 +824,7 @@ public abstract class ObjetDi
      * Réinitialise tous les sous-objets
      */
     public void clearSousObjets() {
-        for (Map.Entry<String, ObjetDi> fks : hashFKs.entrySet()) {
+        for (Map.Entry<String, ObjetCSA> fks : hashFKs.entrySet()) {
             fks.getValue().reinitialiser();
         }
     }
@@ -729,7 +838,7 @@ public abstract class ObjetDi
 
     /**
      * Permet d'insérer la valeur à la variable stockée
-     * S'il n'existe pas de variable avec le nom indiqué, une nouvelle est créée
+     * S'il n'existe pas de variable avec le nom indiqué, une nouvelle est créée dans les non-attendus
      * avec le type de l'objet valeur. Si le nom existe déjà, le type est vérifié
      *
      * @param nom    le nom de la variable
@@ -737,45 +846,58 @@ public abstract class ObjetDi
      * @return Vrai si tout s'est bien passé, false sinon
      */
     private boolean inserer_prudemment(String nom, Object valeur) {
+        if (nom.startsWith("#")) {
+            System.out.println("* ObjetCSA/inserer_souplement : j'ignore volontairement d'insérer la variable " + nom);
+            return true;
+        }
+        Class classe = hashClassesDonnees.get(nom);
+        if (classe == null) {
+            if (valeur == null) {
+                System.err.println("** ObjetCSA (" + this + ")/inserer_prudemment : Tentative d'insersion de" +
+                        "NULL dans une variable inconnue " + nom + ". Insertion ignorée !");
+                return false;
+            }
+            inserer_directement(nom, valeur, null);
+            return true;
+        }
+        // La variable a déjà été initialisée; il faut savoir quoi y mettre à présent
         Object ancienneValeur = hashDonnees.get(nom);
         if (ancienneValeur == null) {
             ancienneValeur = hashDonneesNonAttendues.get(nom);
         }
         Object nouvelleValeur;
 
-        Class classe = hashClassesDonnees.get(nom);
-        if (ancienneValeur == null && classe != null) {
+        if (ancienneValeur == null) {
             if (valeur != null && valeur.getClass().equals(classe)) {
                 inserer_directement(nom, valeur, null);
                 return true;
             }
-            System.err.println("** ObjetDi (" + this + ")/inserer_prudemment : le type de la nouvelle valeur de " + nom +
-                    " de l'objet " + this
-                    + " est : " + valeur + " alors que le type attendu est" +
+            System.err.println("** ObjetCSA (" + this + ")/inserer_prudemment : le type de la nouvelle valeur de " + nom +
+                    " de l'objet " + this + " est : " + valeur + " alors que le type attendu est" +
                     " : " + classe.getSimpleName() + ". Insertion ignorée !");
             return false;
         }
         // adaptation de types
         // on reçoit un int alors qu'un booléen est attendu
-        if (ancienneValeur instanceof Boolean && valeur instanceof Integer) {
+        if (classe.equals(Boolean.class) && valeur instanceof Integer) {
             int valeurInt = (int) valeur;
             nouvelleValeur = valeurInt != 0;
             // on reçoit un long alors qu'un int est attendu
-        } else if (ancienneValeur instanceof Integer && valeur instanceof Long) {
+        } else if (classe.equals(Integer.class) && valeur instanceof Long) {
             nouvelleValeur = ((Long) valeur).intValue();
 
             // on reçoit un float alors qu'un int est attendu
-        } else if (ancienneValeur instanceof Integer && valeur instanceof Float) {
+        } else if (classe.equals(Integer.class) && valeur instanceof Float) {
             nouvelleValeur = ((Float) valeur).intValue();
 
             // idem pour les dates
-        } else if (ancienneValeur instanceof LocalDateTime && valeur instanceof String) {
+        } else if (classe.equals(LocalDateTime.class) && valeur instanceof String) {
             nouvelleValeur = extraire_dateTime(String.valueOf(valeur));
-        } else if (ancienneValeur instanceof LocalDate && valeur instanceof String) {
+        } else if (classe.equals(LocalDate.class) && valeur instanceof String) {
             nouvelleValeur = extraire_date(String.valueOf(valeur));
-        } else if (ancienneValeur instanceof LocalDateTime && valeur instanceof LocalDate) {
+        } else if (classe.equals(LocalDateTime.class) && valeur instanceof LocalDate) {
             nouvelleValeur = ((LocalDate) valeur).atTime(0, 0);
-        } else if (ancienneValeur instanceof LocalDate && valeur instanceof LocalDateTime) {
+        } else if (classe.equals(LocalDate.class) && valeur instanceof LocalDateTime) {
             nouvelleValeur = ((LocalDateTime) valeur).toLocalDate();
 
             // pour tous les autres
@@ -783,13 +905,12 @@ public abstract class ObjetDi
             nouvelleValeur = valeur;
         }
 
-        if (nouvelleValeur != null && ancienneValeur != null &&
-                !nouvelleValeur.getClass().getSimpleName().equals(ancienneValeur.getClass().getSimpleName())) {
-            System.err.println("** ObjetDi/inserer_prudemment : le type de la nouvelle valeur de " + nom +
+        if (nouvelleValeur != null &&
+                !nouvelleValeur.getClass().equals(classe)) {
+            System.err.println("** ObjetCSA/inserer_prudemment : le type de la nouvelle valeur de " + nom +
                     " de l'objet " + this
                     + " est : " + nouvelleValeur.getClass().getSimpleName() + " alors que l'ancienne " +
-                    "valeur est de type : " + ancienneValeur.getClass().getSimpleName() +
-                    ". Insertion ignorée !");
+                    "valeur est de type : " + classe.getSimpleName() + ". Insertion ignorée !");
             return false;
         }
 
@@ -801,11 +922,11 @@ public abstract class ObjetDi
     private void inserer_directement(String nom, Object nouvelleValeur, Object ancienneValeur) {
         if (hashDonnees.containsKey(nom)) {
             hashDonnees.put(nom, nouvelleValeur);
-        } else {
+            if (nouvelleValeur != null) {
+                hashClassesDonnees.put(nom, nouvelleValeur.getClass());
+            }
+        } else if (!isExpected(nom)) {
             hashDonneesNonAttendues.put(nom, nouvelleValeur);
-        }
-        if (nouvelleValeur != null) {
-            hashClassesDonnees.put(nom, nouvelleValeur.getClass());
         }
         boolean egaux = (String.valueOf(nouvelleValeur).equals(String.valueOf(ancienneValeur)));
         if (!egaux) {
@@ -823,7 +944,7 @@ public abstract class ObjetDi
      *
      * @return l'hashMap de données non-attendues mais enregistrées quand même
      */
-    public HashMap<String, Object> getNonAttendus() {
+    public TreeMap<String, Object> getNonAttendus() {
         return hashDonneesNonAttendues;
     }
 
@@ -873,8 +994,8 @@ public abstract class ObjetDi
         if (o == null) {
             return false;
         }
-        if (o instanceof ObjetDi) {
-            ObjetDi autre = (ObjetDi) o;
+        if (o instanceof ObjetCSA) {
+            ObjetCSA autre = (ObjetCSA) o;
             boolean memeType = autre.getType().equals(getType());
             if (!memeType) {
                 return false;
@@ -885,8 +1006,8 @@ public abstract class ObjetDi
             if (monId > 0) {
                 return autreId == monId;
             }
-            String monNom = getNom();
-            String autreNom = autre.getNom();
+            String monNom = toString();
+            String autreNom = autre.toString();
             if (monNom.isEmpty() && autreNom.isEmpty()) {
                 return super.equals(o);
             }
@@ -910,26 +1031,26 @@ public abstract class ObjetDi
             if (hashDonnees.containsKey(cle)) {
                 donnees.put(cle, hashDonnees.get(cle));
             } else if (hashFKs.containsKey(cle)) {
-                ObjetDi sousObjet = hashFKs.get(cle);
+                ObjetCSA sousObjet = hashFKs.get(cle);
                 int sonId = sousObjet.getId();
                 donnees.put(cle, sonId);
                 donnees.put(sousObjet.getType() + "-" + sonId, sousObjet.getData(nomChamps));
             } else if (hashFKIntermediaire.containsKey(cle)) {
-                ObjetDi objetIntermediaire = hashFKIntermediaire.get(cle);
+                ObjetCSA objetIntermediaire = hashFKIntermediaire.get(cle);
                 int sonId = objetIntermediaire.getId();
                 donnees.put(cle, sonId);
                 donnees.put(objetIntermediaire.getType() + "-" + sonId, objetIntermediaire.getData(nomChamps));
             } else if (hashDependants.containsKey(cle)) {
-                HashMap<String, Object> hashMap = hashDependants.get(cle);
+                TreeMap<String, Object> hashMap = hashDependants.get(cle);
                 if (hashMap != null) {
-                    ObjetDi objetEtranger = getObjetFromType(cle);
-                    objetEtranger.setData(hashMap, null, true, false);
+                    ObjetCSA objetEtranger = getObjetFromType(cle);
+                    objetEtranger.setData(new HashMap<>(hashMap), null, true, false);
                     int sonId = objetEtranger.getId();
                     donnees.put(cle, objetEtranger.getId());
                     donnees.put(objetEtranger.getType() + "-" + sonId, objetEtranger.getData(nomChamps));
                 }
             } else if (hashListes.containsKey(cle)) {
-                ArrayList<ObjetDi> liste = hashListes.get(cle);
+                ArrayList<ObjetCSA> liste = hashListes.get(cle);
                 ArrayList<Object> hashmaps = new ArrayList<>();
                 liste.forEach(objet -> {
                     hashmaps.add(objet.getData(nomChamps));
@@ -978,11 +1099,11 @@ public abstract class ObjetDi
         donnees.put("dependants", new HashMap<>(hashDependants));
 
         // listes
-        HashMap<String, ArrayList<TreeMap<String, Object>>> hashmaps = new HashMap<>();
+        TreeMap<String, ArrayList<TreeMap<String, Object>>> hashmaps = new TreeMap<>();
         hashListes.forEach((nomTable, objetsDi) -> {
             ArrayList<TreeMap<String, Object>> listeHashmaps = new ArrayList<>();
-            objetsDi.forEach(objetDi -> {
-                listeHashmaps.add(objetDi.getAllData());
+            objetsDi.forEach(objetCSA -> {
+                listeHashmaps.add(objetCSA.getAllData());
             });
             hashmaps.put(nomTable, listeHashmaps);
         });
@@ -1029,9 +1150,9 @@ public abstract class ObjetDi
 
         // listes
         hashListes.forEach((nomTable, liste) -> {
-            ArrayList<HashMap<String, Object>> hashMaps = new ArrayList<>();
-            liste.forEach(objetDi -> {
-                hashMaps.add(objetDi.getSimpleData());
+            ArrayList<TreeMap<String, Object>> hashMaps = new ArrayList<>();
+            liste.forEach(objetCSA -> {
+                hashMaps.add(new TreeMap<>(objetCSA.getSimpleData()));
             });
             donnees.put(nomTable, hashMaps);
         });
@@ -1063,8 +1184,10 @@ public abstract class ObjetDi
         hashDetails = hashLevis == null ? new HashMap<>() : new HashMap<>(hashLevis);
         // rajoute les données principales dans les secondaires (car une fois en profondeur,
         // on perd les données principales)
-        Object object = input.get(this.nomID);
-        int idNouveau = object == null ? 0 : ExtracteurHashMap.extraire_int(object);
+        Object object = input.get(this.nomID); // non nul si Levis fournit l'id
+        int idNouveau = object == null ?
+                this.hashCode() : // si pas d'id, on prend le hashcode de l'objet actuel
+                ExtracteurHashMap.extraire_int(object);
         if (hashLevisFourni && idNouveau > 0) {
             String cle = getType() + "-" + idNouveau;
             if (!hashLevis.containsKey(cle)) {
@@ -1088,31 +1211,38 @@ public abstract class ObjetDi
             }
         });
 
-        // fks
-        for (Map.Entry<String, ObjetDi> paire : hashFKs.entrySet()) {
-            String nomFk = paire.getKey();
-            ObjetDi sousObjet = paire.getValue();
-            Object hypoId = reducedInput.get(nomFk);
-            if (hypoId != null) {
-                reducedInput.remove(nomFk);
-                clesUtilisees.add(nomFk);
-                if (hypoId instanceof Integer) {
-                    int id = (Integer) hypoId;
-                    sousObjet.setId(id);
-                    if (hashLevisFourni && id > 0) {
-                        sousObjet.setData(extraire_fk(sousObjet.getType(), id, hashDetails),
-                                hashDetails, true, verbose);
-                    }
-                }
-            }
-        }
-
-        // fk intermédiaires après les fk car s'il y a des noms similaires, il faut
+        // fk intermédiaires après/avant (conflit dans les versions???) les fk car s'il y a des noms similaires, il faut
         // donner la priorité à l'objet principal
         hashFKIntermediaire.forEach((nomTable, sousObjet) -> {
             clesUtilisees.addAll(sousObjet.setData(reducedInput, hashDetails, false, verbose));
             clesUtilisees.forEach(reducedInput::remove);
         });
+
+        // fks
+        for (Map.Entry<String, ObjetCSA> paire : hashFKs.entrySet()) {
+            String nomFk = paire.getKey();
+            ObjetCSA sousObjet = paire.getValue();
+            Object hypoId = reducedInput.get(nomFk);
+            if (hypoId != null) {
+                reducedInput.remove(nomFk);
+                clesUtilisees.add(nomFk);
+                if (hypoId instanceof Number) {
+                    int idSousObjet = ((Number) hypoId).intValue();
+                    commentIf(hypoId instanceof Long, "** ObjetCSA/setData : le fk rentré (" + nomFk + ") est du type long !!\n" +
+                            "Espérons qu'il n'est pas trop long car j'en fais un cast vers int et je continue...", "err");
+                    sousObjet.setId(idSousObjet);
+                    if (hashLevisFourni && idSousObjet > 0) {
+                        sousObjet.setData(extraire_fk(sousObjet.getType(), idSousObjet, hashDetails),
+                                hashDetails, true, verbose);
+                    }
+                } else {
+                    comment("*** ObjetCSA/setData : le fk rentré " + nomFk +
+                            " n'est pas un nombre mais est du type " + hypoId.getClass().getSimpleName() + " !!!\n" +
+                            "Cette information sera ignorée !", "err");
+                }
+            }
+        }
+
         // objets étrangers (non initialisables)
         for (Map.Entry<String, String> paire : paires_NomsTables_NomsSpeciaux.entrySet()) {
             String nomTable = paire.getKey();
@@ -1129,13 +1259,13 @@ public abstract class ObjetDi
                         ArrayList<Object> listeLevis = (ArrayList<Object>) hypoLevis;
                         if (listeLevis.size() > 1) {
                             String nomTableLevis = String.valueOf(listeLevis.get(0));
-                            ObjetDi sousObjet = getObjetFromType(nomTable);
+                            ObjetCSA sousObjet = getObjetFromType(nomTable);
                             if (sousObjet != null &&
                                     nomTableLevis.equals(nomTable) &&
                                     listeLevis.get(1) instanceof HashMap) {
                                 clesUtilisees.addAll(sousObjet.setData((HashMap<String, Object>) listeLevis.get(1),
                                         null, toutPrendre, verbose));
-                                hashDependants.put(nomTable, sousObjet.getSimpleData());
+                                hashDependants.put(nomTable, new TreeMap<>(sousObjet.getSimpleData()));
                             } else {
                                 comment("setData/étrangers (" + nomTable + ", " + nomSpecial + ") : Trouvé un détail liste " + cleLevis +
                                                 " dont le nom " + nomTableLevis + " ne correspond pas à " + nomTable + " " +
@@ -1155,9 +1285,9 @@ public abstract class ObjetDi
         }
 
         // listes
-        for (Map.Entry<String, ArrayList<ObjetDi>> paire : hashListes.entrySet()) {
+        for (Map.Entry<String, ArrayList<ObjetCSA>> paire : hashListes.entrySet()) {
             String nomTable = paire.getKey();
-            ArrayList<ObjetDi> anciensObjets = paire.getValue();
+            ArrayList<ObjetCSA> anciensObjets = paire.getValue();
             int monId = getId();
             String monType = getType();
             if (hashLevisFourni) {
@@ -1171,7 +1301,7 @@ public abstract class ObjetDi
                         String nomTableLevis = String.valueOf(listeLevis.get(0));
                         if (nomTableLevis.equals(nomTable)) {
                             ArrayList<Object> listeRecue = new ArrayList<>(listeLevis.subList(1, listeLevis.size()));
-                            ArrayList<ObjetDi> arrayList = transformer_liste(nomTable, listeRecue, hashDetails);
+                            ArrayList<ObjetCSA> arrayList = transformer_liste(nomTable, listeRecue, hashDetails);
                             anciensObjets.clear();
                             anciensObjets.addAll(arrayList);
                             clesUtilisees.add(nomTable);
@@ -1219,12 +1349,18 @@ public abstract class ObjetDi
         return clesUtilisees;
     }
 
+    private void commentIf(boolean go, String s, String errout) {
+        if (go) {
+            comment(s, errout);
+        }
+    }
+
     public boolean estSupprimable() {
         return true;
     }
 
-    private HashMap<String, Object> extraire_donnees_attendues(HashMap<String, Object> input) {
-        HashMap<String, Object> terug = new HashMap<>();
+    private TreeMap<String, Object> extraire_donnees_attendues(HashMap<String, Object> input) {
+        TreeMap<String, Object> terug = new TreeMap<>();
         input.forEach((cle, valeur) -> {
             if (hashDonnees.containsKey(cle)) {
                 terug.put(cle, valeur);
@@ -1269,7 +1405,7 @@ public abstract class ObjetDi
         return out.toString();
     }
 
-    private String affiche_liste_light(ArrayList<ObjetDi> objetDis) {
+    private String affiche_liste_light(ArrayList<ObjetCSA> objetDis) {
         StringBuilder terug = new StringBuilder();
         objetDis.forEach(objetDi -> {
             terug.append(objetDi.getId()).append("-").append(objetDi.getNom()).append(",");
@@ -1334,17 +1470,17 @@ public abstract class ObjetDi
         comment("*** Fin Rapport", "out");
     }
 
-    private ArrayList<ObjetDi> transformer_liste(String nomTable,
-                                                 ArrayList<Object> listeRecue,
-                                                 HashMap<String, Object> hashLevis) {
-        ArrayList<ObjetDi> terug = new ArrayList<>();
+    private ArrayList<ObjetCSA> transformer_liste(String nomTable,
+                                                  ArrayList<Object> listeRecue,
+                                                  HashMap<String, Object> hashLevis) {
+        ArrayList<ObjetCSA> terug = new ArrayList<>();
         for (Object elt : listeRecue) {
             if (elt instanceof HashMap && !(((HashMap) elt).isEmpty())) {
-                ObjetDi objetDi = getObjetFromType(nomTable);
+                ObjetCSA objetDi = getObjetFromType(nomTable);
                 objetDi.setData((HashMap<String, Object>) elt, hashLevis, false, true);
                 terug.add(objetDi);
-            } else if (elt instanceof ObjetDi) {
-                terug.add((ObjetDi) elt);
+            } else if (elt instanceof ObjetCSA) {
+                terug.add((ObjetCSA) elt);
             }
         }
         return terug;
@@ -1356,7 +1492,7 @@ public abstract class ObjetDi
      * @return null s'il ne trouve pas ou le nomFK du type rentré
      */
     public String getNomFK(String nomType) {
-        for (Map.Entry<String, ObjetDi> paireFK : hashFKs.entrySet()) {
+        for (Map.Entry<String, ObjetCSA> paireFK : hashFKs.entrySet()) {
             if (paireFK.getValue().getType().equals(nomType)) {
                 return paireFK.getKey();
             }
@@ -1364,13 +1500,13 @@ public abstract class ObjetDi
         return null;
     }
 
-    private ArrayList<ObjetDi> transformer_en_objet(String nomTable, ArrayList<?> hypoListe) {
-        ArrayList<ObjetDi> terug = new ArrayList<>();
+    private ArrayList<ObjetCSA> transformer_en_objet(String nomTable, ArrayList<?> hypoListe) {
+        ArrayList<ObjetCSA> terug = new ArrayList<>();
         hypoListe.forEach(elt -> {
-            if (elt instanceof ObjetDi) {
-                terug.add((ObjetDi) elt);
+            if (elt instanceof ObjetCSA) {
+                terug.add((ObjetCSA) elt);
             } else if (elt instanceof HashMap) {
-                ObjetDi objetDi = getObjetFromType(nomTable);
+                ObjetCSA objetDi = getObjetFromType(nomTable);
                 terug.add(objetDi);
             }
         });
@@ -1380,7 +1516,8 @@ public abstract class ObjetDi
     /**
      * Donne une copie du contenu des variables par paires de (nomBD, data)
      * Les noms de variable sont les noms des champs de la BD
-     * Seuls les champs sont fournis ; pas les fk ni même les intermédiaires !
+     * Seuls les champs simples et les non-attendus sont fournis ;
+     * pas les fk ni même les intermédiaires !
      *
      * @return une hashmap de (nom, donnée)
      */
@@ -1397,8 +1534,8 @@ public abstract class ObjetDi
      *
      * @return une hashmap de (nom, donnée)
      */
-    public HashMap<String, Object> getOnlyIDs() {
-        HashMap<String, Object> terug = new HashMap<>();
+    public TreeMap<String, Object> getOnlyIDs() {
+        TreeMap<String, Object> terug = new TreeMap<>();
         terug.put(this.nomID, getId());
         hashFKIntermediaire.forEach((nom, sousObjet) -> {
             terug.put(sousObjet.nomID, sousObjet.getId());
@@ -1435,8 +1572,8 @@ public abstract class ObjetDi
     }
 
 
-    public ObjetDi getCopy() {
-        ObjetDi clone = getNewInstance();
+    public ObjetCSA getCopy() {
+        ObjetCSA clone = getNewInstance();
         clone.hashDonnees.putAll(hashDonnees);
         clone.hashClassesDonnees.putAll(hashClassesDonnees);
         clone.hashDonneesNonAttendues.putAll(hashDonneesNonAttendues);
@@ -1461,7 +1598,7 @@ public abstract class ObjetDi
      */
     public HashMap<String, Object> getHashModifications() {
         HashMap<String, Object> modifs = new HashMap<>();
-        ArrayList<String> mix = new ArrayList<>(modifications);
+        TreeSet<String> mix = new TreeSet<>(modifications);
         mix.addAll(mandatories);
 
         // données d'imbrication (localités)
@@ -1474,6 +1611,71 @@ public abstract class ObjetDi
             }
         }
 
+
+        // modifications observées dans les intermédiaires
+        for (Map.Entry<String, ObjetCSA> paireIntermediaire : hashFKIntermediaire.entrySet()) {
+            ObjetCSA sousObjetIntermediaire = paireIntermediaire.getValue();
+            // idintermédiaire obligatoire !
+            HashMap<String, Object> modifsIntermediaire = sousObjetIntermediaire.getData();
+            modifsIntermediaire.forEach((cle, valeur) -> {
+                Object nul = modifs.put(cle, valeur);
+                alertIfNotNull(nul, cle);
+            });
+        }
+        // FKs
+        ArrayList<String> nomUsagesFK = new ArrayList<>();
+        for (Map.Entry<String, ObjetCSA> paire : hashFKs.entrySet()) {
+            ObjetCSA sousObjet = paire.getValue();
+            String cleFK = paire.getKey();
+            if (mix.contains(cleFK)) {
+                Object nul = modifs.put(cleFK, sousObjet.getId());
+                modifs.put(sousObjet.getType() + "-" + cleFK, sousObjet.getHashModifications());
+                alertIfNotNull(nul, cleFK);
+                nomUsagesFK.add(cleFK);
+            }
+        }
+        nomUsagesFK.forEach(mix::remove); // plus rapide que removeAll apparemment...
+
+        // sous-objets dépendants (non initialisables)
+        ArrayList<String> nomUsagesForeign = new ArrayList<>();
+        for (Map.Entry<String, TreeMap<String, Object>> paireEtrangere : hashDependants.entrySet()) {
+            TreeMap<String, Object> hashMap = paireEtrangere.getValue();
+            String nomTable = paireEtrangere.getKey();
+            if (hashMap != null) {
+                ObjetCSA sousObjet = getObjetFromType(nomTable);
+                sousObjet.setData(new HashMap<>(hashMap), null, true, false);
+                String cleSpeciale = paires_NomsTables_NomsSpeciaux.get(nomTable);
+                if (mix.contains(cleSpeciale)) {
+                    Object nul = modifs.put(cleSpeciale, sousObjet.getId());
+                    modifs.put(nomTable + "-" + cleSpeciale, hashMap);
+                    alertIfNotNull(nul, cleSpeciale);
+                    nomUsagesForeign.add(cleSpeciale);
+                    // ne surtout pas mettre aussi les modifications de l'objet car il est probablement
+                    // fourni plus haut dans l'arborescence de données => losange de la mort !
+                }
+            }
+        }
+        nomUsagesForeign.forEach(mix::remove);
+
+        // listes de sous-objets
+        ArrayList<String> nomUsagesListes = new ArrayList<>();
+        for (Map.Entry<String, ArrayList<ObjetCSA>> paire : hashListes.entrySet()) {
+            ArrayList<ObjetCSA> sousObjets = paire.getValue();
+            String nomTable = paire.getKey();
+            ArrayList<HashMap<String, Object>> sousListe = new ArrayList<>();
+            if (mix.contains(nomTable)) {
+                sousObjets.forEach(sousObjet -> {
+                    sousListe.add(sousObjet.getHashModifications());
+                });
+                nomUsagesListes.add(nomTable);
+            }
+            if (!sousListe.isEmpty()) {
+                modifs.put(nomTable, sousListe);
+            }
+        }
+        nomUsagesListes.forEach(mix::remove);
+
+        // données non-attendues
         ArrayList<String> nomUsages = new ArrayList<>();
         for (String nom : mix) {
             Object valeur = hashDonnees.get(nom);
@@ -1491,70 +1693,7 @@ public abstract class ObjetDi
                 }
             }
         }
-        mix.removeAll(nomUsages);
-
-        // modifications observées dans les sous-objets
-        for (Map.Entry<String, ObjetDi> paireIntermediaire : hashFKIntermediaire.entrySet()) {
-            ObjetDi sousObjetIntermediaire = paireIntermediaire.getValue();
-            // idintermédiaire obligatoire !
-            HashMap<String, Object> modifsIntermediaire = sousObjetIntermediaire.getHashModifications();
-            modifsIntermediaire.forEach((cle, valeur) -> {
-                Object nul = modifs.put(cle, valeur);
-                alertIfNotNull(nul, cle);
-            });
-        }
-        // FKs
-        ArrayList<String> nomUsagesFK = new ArrayList<>();
-        for (Map.Entry<String, ObjetDi> paire : hashFKs.entrySet()) {
-            ObjetDi sousObjet = paire.getValue();
-            String cleFK = paire.getKey();
-            if (mix.contains(cleFK)) {
-                Object nul = modifs.put(cleFK, sousObjet.getId());
-                modifs.put(sousObjet.getType() + "-" + cleFK, sousObjet.getHashModifications());
-                alertIfNotNull(nul, cleFK);
-                nomUsagesFK.add(cleFK);
-            }
-        }
-        mix.removeAll(nomUsagesFK);
-
-        // sous-objets dépendants (non initialisables)
-        ArrayList<String> nomUsagesForeign = new ArrayList<>();
-        for (Map.Entry<String, HashMap<String, Object>> paireEtrangere : hashDependants.entrySet()) {
-            HashMap<String, Object> hashMap = paireEtrangere.getValue();
-            String nomTable = paireEtrangere.getKey();
-            if (hashMap != null) {
-                ObjetDi sousObjet = getObjetFromType(nomTable);
-                sousObjet.setData(hashMap, null, true, false);
-                String cleSpeciale = paires_NomsTables_NomsSpeciaux.get(nomTable);
-                if (mix.contains(cleSpeciale)) {
-                    Object nul = modifs.put(cleSpeciale, sousObjet.getId());
-                    modifs.put(nomTable + "-" + cleSpeciale, hashMap);
-                    alertIfNotNull(nul, cleSpeciale);
-                    nomUsagesForeign.add(cleSpeciale);
-                    // ne surtout pas mettre aussi les modifications de l'objet car il est probablement
-                    // fourni plus haut dans l'arborescence de données => losange de la mort !
-                }
-            }
-        }
-        mix.removeAll(nomUsagesForeign);
-
-        // listes de sous-objets
-        ArrayList<String> nomUsagesListes = new ArrayList<>();
-        for (Map.Entry<String, ArrayList<ObjetDi>> paire : hashListes.entrySet()) {
-            ArrayList<ObjetDi> sousObjets = paire.getValue();
-            String nomTable = paire.getKey();
-            ArrayList<HashMap<String, Object>> sousListe = new ArrayList<>();
-            if (mix.contains(nomTable)) {
-                sousObjets.forEach(sousObjet -> {
-                    sousListe.add(sousObjet.getHashModifications());
-                });
-                nomUsagesListes.add(nomTable);
-            }
-            if (!sousListe.isEmpty()) {
-                modifs.put(nomTable, sousListe);
-            }
-        }
-        mix.removeAll(nomUsagesListes);
+        nomUsages.forEach(mix::remove);
 
         modifs.put(nomID, getId());
         return modifs;
@@ -1604,7 +1743,7 @@ public abstract class ObjetDi
             } else if (hashFKs.containsKey(cle)) {
                 obliges.put(cle, (hashFKs.get(cle)).getId());
             } else {
-                for (ObjetDi objetIntermediaire : hashFKIntermediaire.values()) {
+                for (ObjetCSA objetIntermediaire : hashFKIntermediaire.values()) {
                     Object match = objetIntermediaire.hashDonnees.get(cle);
                     if (match != null) {
                         obliges.put(cle, match);
@@ -1649,7 +1788,7 @@ public abstract class ObjetDi
             }
         });*/
         hashListes.forEach((nom, liste) -> {
-            for (ObjetDi sousObjet : liste) {
+            for (ObjetCSA sousObjet : liste) {
                 sousObjet.clearModifications();
             }
         });
@@ -1696,10 +1835,10 @@ public abstract class ObjetDi
 
     @Override
     public int compareTo(Object o) {
-        if (o instanceof ObjetDi) {
+        if (o instanceof ObjetCSA) {
             int compareNom = toString().compareTo(o.toString());
             if (compareNom == 0) {
-                return getId() - ((ObjetDi) o).getId();
+                return getId() - ((ObjetCSA) o).getId();
             }
             return compareNom;
         }
@@ -1735,11 +1874,11 @@ public abstract class ObjetDi
         }
     }
 
-    public LinkedHashMap<String, ObjetDi> getFKs() {
+    public LinkedHashMap<String, ObjetCSA> getFKs() {
         return new LinkedHashMap<>(hashFKs);
     }
 
-    public HashMap<String, ObjetDi> getFKIs() {
+    public HashMap<String, ObjetCSA> getFKIs() {
         return new HashMap<>(hashFKIntermediaire);
     }
 
@@ -1747,19 +1886,19 @@ public abstract class ObjetDi
         return new HashMap<>(hashListes);
     }
 
-    public HashMap<String, ObjetDi> getHashDependants() {
-        HashMap<String, ObjetDi> retour = new HashMap<>();
+    public HashMap<String, ObjetCSA> getHashDependants() {
+        HashMap<String, ObjetCSA> retour = new HashMap<>();
         hashDependants.forEach((cle, hashmap) -> {
-            ObjetDi objetDi = getObjetFromType(cle);
+            ObjetCSA objetDi = getObjetFromType(cle);
             if (objetDi != null) {
-                objetDi.setData(hashmap, null, true, false);
+                objetDi.setData(new HashMap<>(hashmap), null, true, false);
                 retour.put(cle, objetDi);
             }
         });
         return retour;
     }
 
-    public HashMap<String, HashMap<String, Object>> getHashmapDependants() {
+    public HashMap<String, TreeMap<String, Object>> getHashmapDependants() {
         return new HashMap<>(hashDependants);
     }
 
@@ -1781,8 +1920,8 @@ public abstract class ObjetDi
             nomsPublics.put(nomVariable, nomPublic);
             return true;
         }
-        for (Map.Entry<String, ObjetDi> couple : hashFKIntermediaire.entrySet()) {
-            ObjetDi fk = couple.getValue();
+        for (Map.Entry<String, ObjetCSA> couple : hashFKIntermediaire.entrySet()) {
+            ObjetCSA fk = couple.getValue();
             if (fk.getSimpleData().containsKey(nomVariable)) {
                 nomsPublics.put(nomVariable, nomPublic);
                 return true;
@@ -1801,14 +1940,14 @@ public abstract class ObjetDi
             }
         }
         // On va à l'intérieur des fks !
-        for (Map.Entry<String, ObjetDi> couple : hashFKs.entrySet()) {
-            ObjetDi fk = couple.getValue();
+        for (Map.Entry<String, ObjetCSA> couple : hashFKs.entrySet()) {
+            ObjetCSA fk = couple.getValue();
             if (fk.getSimpleData().containsKey(nomVariable)) {
                 nomsPublics.put(nomVariable, nomPublic);
                 return true;
             }
         }
-        System.err.println("** ObjetDi " + this + " : nom public <" + nomPublic + "> non attribué car variable <" + nomVariable +
+        System.err.println("** ObjetCSA " + this + " : nom public <" + nomPublic + "> non attribué car variable <" + nomVariable +
                 "> inconnue !");
         return false;
     }
@@ -1818,8 +1957,8 @@ public abstract class ObjetDi
             ajouter_variable(nomVariable, variablesVisibles);
             return;
         }
-        for (Map.Entry<String, ObjetDi> couple : hashFKIntermediaire.entrySet()) {
-            ObjetDi fk = couple.getValue();
+        for (Map.Entry<String, ObjetCSA> couple : hashFKIntermediaire.entrySet()) {
+            ObjetCSA fk = couple.getValue();
             if (fk.getSimpleData().containsKey(nomVariable)) {
                 ajouter_variable(nomVariable, variablesVisibles);
                 return;
@@ -1829,8 +1968,8 @@ public abstract class ObjetDi
             ajouter_variable(nomVariable, variablesVisibles);
             return;
         }
-        for (Map.Entry<String, ObjetDi> couple : hashFKs.entrySet()) {
-            ObjetDi fk = couple.getValue();
+        for (Map.Entry<String, ObjetCSA> couple : hashFKs.entrySet()) {
+            ObjetCSA fk = couple.getValue();
             if (fk.getSimpleData().containsKey(nomVariable)) {
                 ajouter_variable(nomVariable, variablesVisibles);
                 return;
@@ -1851,16 +1990,6 @@ public abstract class ObjetDi
         arrayList.add(nomVariable);
     }
 
-    public Class getTypeOfVariable(String nomVariable) {
-        Class classe = hashClassesDonnees.get(nomVariable);
-
-        if (classe == null) {
-            System.err.println("** ObjetDi " + this + " /getTypeOfVariable : le type de variable est inconnu pour " + nomVariable +
-                    ". Je le remplace par Object");
-            return Object.class;
-        }
-        return classe;
-    }
 
     /**
      * Donne la valeur stockée dans le nom de variable rentré
@@ -1880,17 +2009,17 @@ public abstract class ObjetDi
             return null;
         }
         // fks
-        ObjetDi objetDi = getObjet(nomVariable);
+        ObjetCSA objetDi = getObjet(nomVariable);
         if (objetDi != null) {
             return objetDi;
         }
         // fk intermédiaire
-        ObjetDi objetIntermediaire = getObjetIntermediaire(nomVariable);
+        ObjetCSA objetIntermediaire = getObjetIntermediaire(nomVariable);
         if (objetIntermediaire != null) {
             return objetIntermediaire;
         }
         // objet dépendant
-        ObjetDi objetDependant = getObjetDependant(nomVariable);
+        ObjetCSA objetDependant = getObjetDependant(nomVariable);
         if (objetDependant != null) {
             return objetDependant;
         }
@@ -1908,20 +2037,34 @@ public abstract class ObjetDi
         if (hashClassesDonnees.containsKey(nomVariable)) {
             return true;
         }
-        ObjetDi objetDi = getObjet(nomVariable);
+        ObjetCSA objetDi = getObjet(nomVariable);
         if (objetDi != null) {
             return true;
         }
-        ObjetDi objetIntermediaire = getObjetIntermediaire(nomVariable);
+        ObjetCSA objetIntermediaire = getObjetIntermediaire(nomVariable);
         if (objetIntermediaire != null) {
             return true;
         }
-        ObjetDi objetDependant = getObjetDependant(nomVariable);
+        ObjetCSA objetDependant = getObjetDependant(nomVariable);
         if (objetDependant != null) {
             return true;
         }
         ArrayList liste = getListe(nomVariable);
         return liste != null;
+    }
+
+    /**
+     * Indique si le nom de variable est connu dans cet objetDi ou dans un de ses sous-objets
+     * Les listes ne sont pas reprises dans la recherche
+     *
+     * @param nomVariable c'est le nom de variable dont on veut le contenu, s'il existe
+     * @return si trouvé une telle variable dans les variables et sous-objets
+     */
+    public boolean variable_existe_recherche_fine(String nomVariable) {
+        if (hashClassesDonnees.containsKey(nomVariable)) {
+            return true;
+        }
+        return chercher_valeur(nomVariable) != null;
     }
 
 
@@ -1968,7 +2111,7 @@ public abstract class ObjetDi
      */
     public boolean changer_nom_id(String nouveau) {
         if (nouveau.isEmpty()) {
-            System.out.println("* ObjetDi " + this + " /changer_nom_type : impossible de changer puisque " +
+            System.out.println("* ObjetCSA " + this + " /changer_nom_type : impossible de changer puisque " +
                     "le nom de de la variable rentrée est vide !");
             return false;
         }
@@ -1988,7 +2131,7 @@ public abstract class ObjetDi
      */
     public boolean changer_nom_nom(String nouveau) {
         if (nouveau.isEmpty()) {
-            System.err.println("** ObjetDi " + this + " /changer_nom_type : impossible de changer puisque " +
+            System.err.println("** ObjetCSA " + this + " /changer_nom_type : impossible de changer puisque " +
                     "le nom de de la variable rentrée est vide !");
             return false;
         }
@@ -2020,7 +2163,7 @@ public abstract class ObjetDi
                     ArrayList<Object> arrayList = (ArrayList<Object>) liste_levis;
                     String nomSousTable = String.valueOf(arrayList.get(0));
                     if (nomSousTable.equals(type)) {
-                        ArrayList<ObjetDi> listeUpdatee = generer_hashobjets(arrayList.subList(1, arrayList.size()),
+                        ArrayList<ObjetCSA> listeUpdatee = generer_hashobjets(arrayList.subList(1, arrayList.size()),
                                 type, hashLevis);
                         hashListes.put(nomSousTable, listeUpdatee);
                     }
@@ -2036,12 +2179,12 @@ public abstract class ObjetDi
         }
     }
 
-    private ArrayList<ObjetDi> generer_hashobjets(List<Object> list, String nomTable,
-                                                  HashMap<String, Object> hashLevis) {
-        ArrayList<ObjetDi> listeRetour = new ArrayList<>();
+    private ArrayList<ObjetCSA> generer_hashobjets(List<Object> list, String nomTable,
+                                                   HashMap<String, Object> hashLevis) {
+        ArrayList<ObjetCSA> listeRetour = new ArrayList<>();
         for (Object objet : list) {
             if (objet instanceof HashMap) {
-                ObjetDi nouvelObjet = getObjetFromType(nomTable);
+                ObjetCSA nouvelObjet = getObjetFromType(nomTable);
                 nouvelObjet.setData((HashMap<String, Object>) objet, hashLevis, true, false);
                 listeRetour.add(nouvelObjet);
             }
@@ -2052,9 +2195,9 @@ public abstract class ObjetDi
 
     private void comment(String msg, String outCode) {
         if (outCode.contains("err")) {
-            System.err.println("*** ObjetDi [" + this + "] : " + msg);
+            System.err.println("*** ObjetCSA [" + this + "] : " + msg);
         } else {
-            System.out.println("* ObjetDi [" + this + "] : " + msg);
+            System.out.println("* ObjetCSA [" + this + "] : " + msg);
         }
     }
 
@@ -2065,7 +2208,7 @@ public abstract class ObjetDi
      * @param nomTable ne nom de la variable désirée
      * @return null si ce nom-là ne contient pas de liste
      */
-    public ArrayList<ObjetDi> getListe(String nomTable) {
+    public ArrayList<ObjetCSA> getListe(String nomTable) {
         Object valeur = hashListes.get(nomTable);
         if (valeur != null) {
             return new ArrayList<>((ArrayList) valeur);
@@ -2078,11 +2221,11 @@ public abstract class ObjetDi
         return nomID;
     }
 
-    public ObjetDi getNewInstance() {
+    public ObjetCSA getNewInstance() {
         return getObjetFromType(getType());
     }
 
-    public void charger_donnees(HashMap<String, Object> input, HashMap<String, Object> hashLevis) {
+    public void charger_donnees(HashMap<String, Object> input, TreeMap<String, Object> hashLevis) {
 
     }
 
@@ -2093,7 +2236,11 @@ public abstract class ObjetDi
      * @param nomVariable nom de variable
      * @return null si pas trouvé dans hashDonnees ou hashDonneesNonAttendues
      */
-    public Object get(String nomVariable) {
+    public Object getSimpleData(String nomVariable) {
+        if (nomVariable == null) {
+            System.err.println("** Nom de variable null dans " + this + " !!!");
+            return null;
+        }
         Object donneeAttendue = hashDonnees.get(nomVariable);
         if (donneeAttendue != null) {
             return donneeAttendue;

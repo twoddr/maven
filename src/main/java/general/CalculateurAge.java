@@ -28,7 +28,7 @@ public class CalculateurAge {
         boolean aMoinsDUnAn = deltaJours < 365;
         long nbreMois = ChronoUnit.MONTHS.between(date, now);
         int jourDuMois = date.getDayOfMonth();
-        LocalDateTime jourAnniv = LocalDate.of(now.getYear(), now.getMonth(), jourDuMois).atStartOfDay();
+        LocalDateTime jourAnniv = getJourAnniversaire(jourDuMois);
         if (aMoinsDUnAn) {
             if (deltaJours < 31) {
                 return deltaJours + (deltaJours > 1 ? " jours" : " jour");
@@ -59,6 +59,17 @@ public class CalculateurAge {
             return out + ", " + nbreMois + " mois";
         }
         return ageInt + " ans";
+    }
+
+    private LocalDateTime getJourAnniversaire(int jourMois) {
+        LocalDate now = LocalDate.now();
+        if (jourMois < 29) {
+            return LocalDate.of(now.getYear(), now.getMonth(), jourMois).atStartOfDay();
+        }
+        // c'est aumoins le 29
+        int delta = jourMois - 28;
+        LocalDate returnDate = LocalDate.of(now.getYear(), now.getMonth(), 28).plusDays(delta);
+        return returnDate.atStartOfDay();
     }
 
     public long getAge() {
