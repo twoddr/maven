@@ -171,8 +171,8 @@ public class GestionnaireImbrications {
             if (nomLevis.equals(nomTableQuartier)) {
                 if (hypo_hashQuartier instanceof HashMap) {
                     quartier.setData((HashMap<String, Object>) hypo_hashQuartier, hashLevis, true, verbose);
-                    if (quartier.getObjet(nomIdVilleDansQuartier) != null) {
-                        int fkville = quartier.getObjet(nomIdVilleDansQuartier).getId();
+                    if (quartier.getFK(nomIdVilleDansQuartier) != null) {
+                        int fkville = quartier.getFK(nomIdVilleDansQuartier).getId();
                         if (fkville > 0) {
                             comment("* GestionnaireImbrications : Ville du quartier " + id +
                                             " reçu avec id " + fkville,
@@ -223,8 +223,8 @@ public class GestionnaireImbrications {
         if (nomQuartier != null) {
             ville.updater_liste(nomQuartier, hashLevis);
         }
-        if (ville.getObjet(nomIdPaysDansVille) != null) {
-            int fkpays = ville.getObjet(nomIdPaysDansVille).getId();
+        if (ville.getFK(nomIdPaysDansVille) != null) {
+            int fkpays = ville.getFK(nomIdPaysDansVille).getId();
             if (fkpays > 0) {
                 comment("* GestionnaireImbrications : Pays trouvé avec id " + fkpays,
                         "out");

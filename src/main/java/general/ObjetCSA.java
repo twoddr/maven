@@ -122,7 +122,7 @@ public abstract class ObjetCSA
             }
         }
         if (objet == null) objet = getObjetIntermediaire(cle); // recherche dans les intermédiaires
-        if (objet == null) objet = getObjet(cle); // recherche des fk
+        if (objet == null) objet = getFK(cle); // recherche des fk
         if (objet == null) objet = getObjetDependant(cle); // objets dépendants
         if (objet == null) objet = getListe(cle); // dans les noms de listes
         if (objet == null) objet = chercherDansFKIs(cle); // recherche dans les fkIntermediaires
@@ -183,7 +183,7 @@ public abstract class ObjetCSA
      * @param cle nom de la variable
      * @return null si un tel objet n'existe pas !
      */
-    public ObjetCSA getObjet(String cle) {
+    public ObjetCSA getFK(String cle) {
         return hashFKs.get(cle);
     }
 
@@ -220,13 +220,6 @@ public abstract class ObjetCSA
         return objetDi;
     }
 
-    public void putAll(Map<? extends String, ?> m) {
-        for (Map.Entry<? extends String, ?> entry : m.entrySet()) {
-            String cle = entry.getKey();
-            Object valeur = entry.getValue();
-            inserer_valeur(cle, valeur);
-        }
-    }
 
     public boolean isTextColorEnable() {
         return textColorEnable;
@@ -267,8 +260,8 @@ public abstract class ObjetCSA
      * rajoute des éléments dans une liste stockée
      * Attention : les doublons sont ignorés !
      *
-     * @param nomTable
-     * @param objetDis
+     * @param nomTable la table faisant l'objet de la liste
+     * @param objetDis les éléments à insérer
      * @return vrai si tout se passe bien
      */
     public boolean ajouter_dans_liste(String nomTable, ArrayList<ObjetCSA> objetDis) {
@@ -367,14 +360,78 @@ public abstract class ObjetCSA
         return false;
     }
 
-    public void putAllExpected(Map<? extends String, ?> m) {
-        for (Map.Entry<? extends String, ?> entry : m.entrySet()) {
-            String cle = entry.getKey();
-            Object valeur = entry.getValue();
-            if (hashDonnees.containsKey(cle)) {
-                inserer_valeur(cle, valeur);
-            }
+
+    private boolean setSimpleData(String nom, Object valeur) {
+        if (valeur == null) {
+            System.err.println("ObjetCSA (privé) : on ne peut insérer une valeur nulle dans " + nom);
+            return false;
         }
+        if (hashDonnees.containsKey(nom)) {
+            return ecraser_hashmap(hashDonnees, nom, valeur);
+        }
+        if (hashDonneesNonAttendues.containsKey(nom)) {
+            return ecraser_hashmap(hashDonneesNonAttendues, nom, valeur);
+        }
+        return false;
+    }
+
+    private boolean ecraser_hashmap(TreeMap<String, Object> donnees, String nom, Object valeur) {
+        Object ancienneValeur = donnees.get(nom);
+        Object nouvelleValeur = check_classes(ancienneValeur, valeur);
+        if (nouvelleValeur == null) {
+            System.err.println("** ObjetCSA/inserer_xxx : le type de la nouvelle valeur de " + nom +
+                    " de l'objet " + this
+                    + " est : " + valeur.getClass().getSimpleName() + " alors que l'ancienne " +
+                    "valeur est de type : " + ancienneValeur.getClass().getSimpleName() + ". Insertion ignorée !");
+            return false;
+        }
+        donnees.put(nom, nouvelleValeur);
+        if (nouvelleValeur.equals(ancienneValeur)) modifications.add(nom);
+        return true;
+    }
+
+    /**
+     * Permet de s'assurer que l'ancienne et la nouvelle valeur sont compatibles
+     *
+     * @param ancienneValeur la valeur préalablement stockée
+     * @param valeur         la nouvelle valeur
+     * @return la nouvelle valeur adaptée aux contraintes de classe de l'ancienne valeur et
+     * null si les classes sont non compatibles
+     */
+    private Object check_classes(Object ancienneValeur, Object valeur) {
+        Class classe = ancienneValeur.getClass();
+        if (classe.equals(valeur.getClass())) {
+            return valeur;
+        }
+        // Si de type différent, adaptation de types
+        // on reçoit un int alors qu'un booléen est attendu
+        if (classe.equals(Boolean.class) && valeur instanceof Integer) {
+            int valeurInt = (int) valeur;
+            return valeurInt != 0;
+        }
+        // on reçoit un long alors qu'un int est attendu
+        if (classe.equals(Integer.class) && valeur instanceof Long) {
+            return ((Long) valeur).intValue();
+        }
+        // on reçoit un float alors qu'un int est attendu
+        if (classe.equals(Integer.class) && valeur instanceof Float) {
+            return ((Float) valeur).intValue();
+        }
+        // idem pour les dates
+        if (classe.equals(LocalDateTime.class) && valeur instanceof String) {
+            return extraire_dateTime(String.valueOf(valeur));
+        }
+        if (classe.equals(LocalDate.class) && valeur instanceof String) {
+            return extraire_date(String.valueOf(valeur));
+        }
+        if (classe.equals(LocalDateTime.class) && valeur instanceof LocalDate) {
+            return ((LocalDate) valeur).atTime(12, 0);
+        }
+        if (classe.equals(LocalDate.class) && valeur instanceof LocalDateTime) {
+            return ((LocalDateTime) valeur).toLocalDate();
+        }
+        // pour tous les autres
+        return null;
     }
 
     public boolean set_single_data(String nom, Object valeur) {
@@ -549,11 +606,11 @@ public abstract class ObjetCSA
     /**
      * Cette méthode vérifie d'abord que la valeur rentrée est du
      * type attendu avant d'effectuer l'insertion. Autrement, c'est ignoré !
-     * Egalement ignoré si la valeur vaut NULL
-     * Cette méthode modifie : hashDonnees et nonAttendus
+     * L'insertion se fait dans l'objet actuel sinon, continue la recherche dans les sous-objets
+     * Ignoré si la valeur rentrée vaut NULL
      *
      * @param nom    le nom de la variable ; ne peut être vide
-     * @param valeur la valeur à insérer; ne peut être null
+     * @param valeur la valeur à insérer; ne peut être null; ne peut être un ObjetCSA
      * @return vrai si succès, faux sinon
      */
     public Boolean inserer_valeur(String nom, Object valeur) {
@@ -568,82 +625,10 @@ public abstract class ObjetCSA
             throw new UnsupportedOperationException("!!! ObjetCSA " + this + " /inserer_valeur : on ne peut inserer ce type ici : " + valeur +
                     " dans " + this + "\n" + "Il faut passer par setData !");
         }
-        return inserer_prudemment(nom, valeur);
+        return inserer_precisement(nom, valeur);
 
     }
 
-    /**
-     * Idem que inserer_valeur sauf qu'ici on double-check
-     * Ça sert par exemple, lorsqu'on lit un champ qui est un label (contient le nom
-     * de l'objet et pas son ID); cette méthode va tenter d'insérer un string dans un
-     * FK et ce sera ignoré
-     *
-     * @param cle    le nom de la variable
-     * @param valeur la valeur à enregistrer à ce nom
-     * @return vrai si tout s'est bien passé
-     */
-    public boolean inserer_souplement_valeur(String cle, Object valeur) {
-        if (cle.startsWith("#")) {
-            System.out.println("* ObjetCSA/inserer_souplement : j'ignore volontairement d'insérer la variable " + cle);
-            return true;
-        }
-        Class classe = hashClassesDonnees.get(cle);
-        if (classe == null) {
-            // la donnée n'est pas attendue, mais peut-être un FK ou autre => ignoré !
-            if (valeur != null) {
-                if (isExpected(cle)) {
-                    // la donnée est rejetée sans warning ! Elle appartient aux fk et autres...
-                    System.err.println("La clé " + cle + " ne peut prendre la valeur " + valeur + " !");
-                    return false;
-                }
-                // ça ira vers les non-attendues
-                System.err.println("La valeur " + valeur + " est insérée dans les non-attendues " +
-                        "sous la clef " + cle);
-                return inserer_valeur(cle, valeur);
-            }
-            System.err.println("ObjetCSA " + this + " /inserer_souplement_valeur : nouvelle valeur NULL," +
-                    " non insérée car la variable " + cle + " n'est pas attendue !");
-            return false;
-        }
-        // la variable est attendue
-        if (valeur == null) {
-            // on ne peut pas insérer NULL ici; c'est uniquement lors de l'initialisation !
-            comment("* Insertion de NULL dans la variable " + cle + ". Simplement ignoré ;-)",
-                    "out");
-            return false;
-        }
-        if (classe.equals(valeur.getClass())) {
-            return inserer_valeur(cle, valeur);
-        }
-        if (classe.equals(Float.class)) {
-            return inserer_valeur(cle, extraire_float(valeur));
-        }
-        if (classe.equals(Integer.class)) {
-            return inserer_valeur(cle, extraire_int(valeur));
-        }
-        if (classe.equals(LocalDate.class)) {
-            if (valeur instanceof LocalDateTime) {
-                return inserer_valeur(cle, valeur);
-            }
-            return inserer_valeur(cle, extraire_date(String.valueOf(valeur)));
-        }
-        if (classe.equals(LocalDateTime.class)) {
-            if (valeur instanceof LocalDate) {
-                return inserer_valeur(cle, ((LocalDate) valeur).atStartOfDay());
-            }
-            return inserer_valeur(cle, extraire_dateTime(String.valueOf(valeur)));
-        }
-        // conversion date vers string
-        if (classe.equals(String.class) &&
-                (valeur instanceof LocalDate || valeur instanceof LocalDateTime)) {
-            String nouveauString = String.valueOf(valeur);
-            return inserer_valeur(cle, nouveauString);
-        }
-
-        System.err.println("ObjetCSA " + this + " /inserer_souplement : je n'ai pas pu insérer " + valeur + " dans " +
-                "la clé " + cle + " (le type attendu est : " + classe.getSimpleName() + ")");
-        return false;
-    }
 
     private boolean isExpected(String cle) {
         boolean dansDonnees = hashDonnees.containsKey(cle) ||
@@ -653,22 +638,6 @@ public abstract class ObjetCSA
         boolean dansGestionnaire = gestionnairesImbrications.containsKey(cle);
 
         return dansGestionnaire || dansFk || dansDonnees || dansIntermediare;
-    }
-
-    private float extraire_float(Object value) {
-        try {
-            return Float.parseFloat(String.valueOf(value));
-        } catch (NumberFormatException nfe) {
-            return 0;
-        }
-    }
-
-    private float extraire_int(Object value) {
-        try {
-            return Integer.parseInt(String.valueOf(value));
-        } catch (NumberFormatException nfe) {
-            return 0;
-        }
     }
 
     public abstract ObjetCSA getObjetFromType(String nomType);
@@ -748,20 +717,6 @@ public abstract class ObjetCSA
         return classe;
     }
 
-    /**
-     * Cette méthode permet d'initialiser/reinitialiser les listes
-     *
-     * @param nom le nom de la variable ; ne peut être vide
-     */
-    protected void initialiser_liste(String nom) {
-        if (nom.isEmpty()) {
-            System.err.println("** ObjetCSA " + this + "  : Initialisation d'une liste sans nom de variable se l'objet " +
-                    this + ". Demande ignorée !");
-            return;
-        }
-
-        hashListes.put(nom, new ArrayList<>());
-    }
 
     /**
      * Cette méthode permet d'informer de la présence d'un sous-objet
@@ -836,103 +791,59 @@ public abstract class ObjetCSA
         hashFKs.clear();
     }
 
+
     /**
      * Permet d'insérer la valeur à la variable stockée
      * S'il n'existe pas de variable avec le nom indiqué, une nouvelle est créée dans les non-attendus
      * avec le type de l'objet valeur. Si le nom existe déjà, le type est vérifié
+     * Toutes les variables de l'objet et ses sous-objets sont passées en revue
      *
-     * @param nom    le nom de la variable
+     * @param cle    le nom de la variable : ne peut commencer par le caractère #
      * @param valeur la nouvelle valeur à attribuer
      * @return Vrai si tout s'est bien passé, false sinon
      */
-    private boolean inserer_prudemment(String nom, Object valeur) {
-        if (nom.startsWith("#")) {
-            System.out.println("* ObjetCSA/inserer_souplement : j'ignore volontairement d'insérer la variable " + nom);
+    private boolean inserer_precisement(String cle, Object valeur) {
+        if (cle.startsWith("#")) {
+            System.out.println("* ObjetCSA/inserer_souplement : j'ignore volontairement d'insérer la variable " + cle);
             return true;
         }
-        Class classe = hashClassesDonnees.get(nom);
-        if (classe == null) {
-            if (valeur == null) {
-                System.err.println("** ObjetCSA (" + this + ")/inserer_prudemment : Tentative d'insersion de" +
-                        "NULL dans une variable inconnue " + nom + ". Insertion ignorée !");
-                return false;
-            }
-            inserer_directement(nom, valeur, null);
+        // recherche dans les champs simples
+        if (setSimpleData(cle, valeur)) {
             return true;
         }
-        // La variable a déjà été initialisée; il faut savoir quoi y mettre à présent
-        Object ancienneValeur = hashDonnees.get(nom);
-        if (ancienneValeur == null) {
-            ancienneValeur = hashDonneesNonAttendues.get(nom);
-        }
-        Object nouvelleValeur;
 
-        if (ancienneValeur == null) {
-            if (valeur != null && valeur.getClass().equals(classe)) {
-                inserer_directement(nom, valeur, null);
+        ObjetCSA objetIntermediaire = getObjetIntermediaire(cle); // recherche dans les intermédiaires
+        if (objetIntermediaire.setSimpleData(cle, valeur)) {
+            return true;
+        }
+        ObjetCSA objetFK = getFK(cle);  // recherche des fk
+        if (objetFK.setSimpleData(cle, valeur)) {
+            return true;
+        }
+        ObjetCSA dependant = getObjetDependant(cle); // objets dépendants
+        if (dependant.setSimpleData(cle, valeur)) {
+            return true;
+        }
+        // recherche dans les gestionnaires d'imbrication
+        for (GestionnaireImbrications gestionnaire : getGestionnairesImbrications().values()) {
+            ObjetCSA pays = gestionnaire.getPays();
+            if (pays.setSimpleData(cle, valeur)) {
                 return true;
             }
-            System.err.println("** ObjetCSA (" + this + ")/inserer_prudemment : le type de la nouvelle valeur de " + nom +
-                    " de l'objet " + this + " est : " + valeur + " alors que le type attendu est" +
-                    " : " + classe.getSimpleName() + ". Insertion ignorée !");
-            return false;
-        }
-        // adaptation de types
-        // on reçoit un int alors qu'un booléen est attendu
-        if (classe.equals(Boolean.class) && valeur instanceof Integer) {
-            int valeurInt = (int) valeur;
-            nouvelleValeur = valeurInt != 0;
-            // on reçoit un long alors qu'un int est attendu
-        } else if (classe.equals(Integer.class) && valeur instanceof Long) {
-            nouvelleValeur = ((Long) valeur).intValue();
-
-            // on reçoit un float alors qu'un int est attendu
-        } else if (classe.equals(Integer.class) && valeur instanceof Float) {
-            nouvelleValeur = ((Float) valeur).intValue();
-
-            // idem pour les dates
-        } else if (classe.equals(LocalDateTime.class) && valeur instanceof String) {
-            nouvelleValeur = extraire_dateTime(String.valueOf(valeur));
-        } else if (classe.equals(LocalDate.class) && valeur instanceof String) {
-            nouvelleValeur = extraire_date(String.valueOf(valeur));
-        } else if (classe.equals(LocalDateTime.class) && valeur instanceof LocalDate) {
-            nouvelleValeur = ((LocalDate) valeur).atTime(0, 0);
-        } else if (classe.equals(LocalDate.class) && valeur instanceof LocalDateTime) {
-            nouvelleValeur = ((LocalDateTime) valeur).toLocalDate();
-
-            // pour tous les autres
-        } else {
-            nouvelleValeur = valeur;
-        }
-
-        if (nouvelleValeur != null &&
-                !nouvelleValeur.getClass().equals(classe)) {
-            System.err.println("** ObjetCSA/inserer_prudemment : le type de la nouvelle valeur de " + nom +
-                    " de l'objet " + this
-                    + " est : " + nouvelleValeur.getClass().getSimpleName() + " alors que l'ancienne " +
-                    "valeur est de type : " + classe.getSimpleName() + ". Insertion ignorée !");
-            return false;
-        }
-
-        inserer_directement(nom, nouvelleValeur, ancienneValeur);
-
-        return Boolean.TRUE;
-    }
-
-    private void inserer_directement(String nom, Object nouvelleValeur, Object ancienneValeur) {
-        if (hashDonnees.containsKey(nom)) {
-            hashDonnees.put(nom, nouvelleValeur);
-            if (nouvelleValeur != null) {
-                hashClassesDonnees.put(nom, nouvelleValeur.getClass());
+            ObjetCSA ville = gestionnaire.getVille();
+            if (ville.setSimpleData(cle, valeur)) {
+                return true;
             }
-        } else if (!isExpected(nom)) {
-            hashDonneesNonAttendues.put(nom, nouvelleValeur);
+            ObjetCSA quartier = gestionnaire.getQuartier();
+            if (quartier.setSimpleData(cle, valeur)) {
+                return true;
+            }
         }
-        boolean egaux = (String.valueOf(nouvelleValeur).equals(String.valueOf(ancienneValeur)));
-        if (!egaux) {
-            addModification(nom);
-        }
+        System.err.println("ObjetCSA : échec de l'insertion de " + valeur + " dans la variable " + cle +
+                ".\nJe n'ai pas trouvé d'objet ou sous-objet attendant cette variable. Insertion ignorée !");
+        return false;
     }
+
 
     public String getNomAFiltrer() {
         return toString();
@@ -1500,18 +1411,6 @@ public abstract class ObjetCSA
         return null;
     }
 
-    private ArrayList<ObjetCSA> transformer_en_objet(String nomTable, ArrayList<?> hypoListe) {
-        ArrayList<ObjetCSA> terug = new ArrayList<>();
-        hypoListe.forEach(elt -> {
-            if (elt instanceof ObjetCSA) {
-                terug.add((ObjetCSA) elt);
-            } else if (elt instanceof HashMap) {
-                ObjetCSA objetDi = getObjetFromType(nomTable);
-                terug.add(objetDi);
-            }
-        });
-        return terug;
-    }
 
     /**
      * Donne une copie du contenu des variables par paires de (nomBD, data)
@@ -1771,7 +1670,7 @@ public abstract class ObjetCSA
         if (getId() <= 0 && getNom().isEmpty()) {
             return "---";
         }
-        return toString();
+        return getNom().toUpperCase();
     }
 
     public void clearModifications() {
@@ -2009,7 +1908,7 @@ public abstract class ObjetCSA
             return null;
         }
         // fks
-        ObjetCSA objetDi = getObjet(nomVariable);
+        ObjetCSA objetDi = getFK(nomVariable);
         if (objetDi != null) {
             return objetDi;
         }
@@ -2034,37 +1933,8 @@ public abstract class ObjetCSA
      * @return si trouvé une telle variable dans les variables et sous-objets
      */
     public boolean variable_existe(String nomVariable) {
-        if (hashClassesDonnees.containsKey(nomVariable)) {
-            return true;
-        }
-        ObjetCSA objetDi = getObjet(nomVariable);
-        if (objetDi != null) {
-            return true;
-        }
-        ObjetCSA objetIntermediaire = getObjetIntermediaire(nomVariable);
-        if (objetIntermediaire != null) {
-            return true;
-        }
-        ObjetCSA objetDependant = getObjetDependant(nomVariable);
-        if (objetDependant != null) {
-            return true;
-        }
         ArrayList liste = getListe(nomVariable);
-        return liste != null;
-    }
-
-    /**
-     * Indique si le nom de variable est connu dans cet objetDi ou dans un de ses sous-objets
-     * Les listes ne sont pas reprises dans la recherche
-     *
-     * @param nomVariable c'est le nom de variable dont on veut le contenu, s'il existe
-     * @return si trouvé une telle variable dans les variables et sous-objets
-     */
-    public boolean variable_existe_recherche_fine(String nomVariable) {
-        if (hashClassesDonnees.containsKey(nomVariable)) {
-            return true;
-        }
-        return chercher_valeur(nomVariable) != null;
+        return chercher_valeur(nomVariable) != null || liste != null;
     }
 
 
@@ -2225,9 +2095,6 @@ public abstract class ObjetCSA
         return getObjetFromType(getType());
     }
 
-    public void charger_donnees(HashMap<String, Object> input, TreeMap<String, Object> hashLevis) {
-
-    }
 
     /**
      * Donne les valeurs stockées dans les données simples et les
@@ -2238,7 +2105,7 @@ public abstract class ObjetCSA
      */
     public Object getSimpleData(String nomVariable) {
         if (nomVariable == null) {
-            System.err.println("** Nom de variable null dans " + this + " !!!");
+            System.err.println("** ObjetCSA/getSimpleData : Nom de variable null dans " + this + " !!!");
             return null;
         }
         Object donneeAttendue = hashDonnees.get(nomVariable);
