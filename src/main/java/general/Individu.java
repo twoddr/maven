@@ -106,7 +106,6 @@ public class Individu extends ObjetCSA {
      * Le sexe de la personne actuelle
      *
      * @param s 0 si indéterminé, 1 si m, et 2 si f
-     * @return false si l'entier rentré n'est pas dans les 3 attendus
      */
     public void setSexe(Integer s) {
         Boolean reponse = false;
@@ -154,10 +153,10 @@ public class Individu extends ObjetCSA {
         initialiser(COMMENTAIRES, "");
 
         add_nom_public(COURRIEL, "Courriel");
-        add_variable_visible(COURRIEL);
+        add_variable_a_afficher(COURRIEL);
         add_nom_public(nomNOM, "Nom");
         add_nom_public(PRENOM, "Prénom");
-        add_variable_visible(PRENOM);
+        add_variable_a_afficher(PRENOM);
     }
 
 
@@ -210,7 +209,7 @@ public class Individu extends ObjetCSA {
      * Si le string rentré comporte plus de 5 caractères, le booléen estDetaille
      * passe également à true!
      *
-     * @param gsm1
+     * @param gsm1 numéro de gsm
      */
     public void setGsm(String gsm1) {
         inserer_valeur(GSM, gsm1);
@@ -224,7 +223,7 @@ public class Individu extends ObjetCSA {
      * Si le string rentré comporte plus de 5 caractères, le booléen estDetaille
      * passe également à true!
      *
-     * @param fax1
+     * @param fax1 numéro de fax
      */
     public void setFax(String fax1) {
         inserer_valeur(FAX, fax1);
@@ -238,7 +237,7 @@ public class Individu extends ObjetCSA {
      * Si le string rentré comporte plus de 5 caractères, le booléen estDetaille
      * passe également à true!
      *
-     * @param courriel1
+     * @param courriel1 courriel
      */
     public void setCourriel(String courriel1) {
         inserer_valeur(COURRIEL, courriel1);
@@ -310,11 +309,11 @@ public class Individu extends ObjetCSA {
     /**
      * Rentre l'âge d'une personne; date d'anniversaire = 1er janvier
      *
-     * @param age
+     * @param age la valeur entière de l'age
      * @return vrai si l'age rentré est positif
      */
     public Boolean setAge(Integer age) {
-        Boolean reussi = false;
+        boolean reussi = false;
         LocalDateTime today = LocalDateTime.now();
         if (age >= 0) {
             inserer_valeur(DATE_NAISSANCE, today.minusYears(age));
@@ -334,9 +333,9 @@ public class Individu extends ObjetCSA {
         LocalDateTime now = LocalDateTime.now();
         long nombreJours = ChronoUnit.DAYS.between(getDateNaissance(), now);
         long nombreMois = ChronoUnit.MONTHS.between(getDateNaissance(), now);
-        Boolean aMoinsDUnAn = nombreJours < 366;
+        boolean aMoinsDUnAn = nombreJours < 366;
         if (aMoinsDUnAn) {
-            Integer nbreJoursTotal = (int) nombreJours;
+            int nbreJoursTotal = (int) nombreJours;
             if (nbreJoursTotal < 31) {
                 return nbreJoursTotal + (nbreJoursTotal > 1 ? " jours" : " jour");
             }
@@ -344,7 +343,7 @@ public class Individu extends ObjetCSA {
             int nbreJours = (int) (nombreJours - 30 * nombreMois);
             return nombreMois + " mois, " + nbreJours + (nbreJours > 1 ? " jours" : " jour");
         }
-        Long ageInt = ChronoUnit.YEARS.between(getDateNaissance(), now);
+        long ageInt = ChronoUnit.YEARS.between(getDateNaissance(), now);
         if (ageInt < 6) {
             int nbreMois = (int) (nombreMois - 12 * ageInt);
             if (nbreMois < 0) {
@@ -443,7 +442,7 @@ public class Individu extends ObjetCSA {
      * Attention : ce mot de passe est transformé en MD5
      * getPswd() ne fournira pas la même valeur, évidemment
      *
-     * @param mdp
+     * @param mdp pass
      */
     public void setMotDePasse(String mdp) {
         MyPassword password = new MyPassword(mdp);
@@ -454,7 +453,7 @@ public class Individu extends ObjetCSA {
      * Cette méthode est strictement identique à setMotDePasse
      * Le mot de passe est converti en md5 et il n'y a plus moyen de le relire tel quel
      *
-     * @param password
+     * @param password pass
      */
     public void setPassword(String password) {
         setMotDePasse(password);
@@ -465,7 +464,7 @@ public class Individu extends ObjetCSA {
      * Il ne sera pas modifié et sera le résultat de getPswd()
      * Par mesure de prudence, il vaut mieux utiliser le setPassword
      *
-     * @param mdp
+     * @param mdp pass
      * @deprecated
      */
     @Deprecated
@@ -527,7 +526,7 @@ public class Individu extends ObjetCSA {
          * Introduit le password
          * Attention, il sera crypté en md5. Le String rentré est alors inaccessible !
          *
-         * @param input
+         * @param input entrée
          */
         public void setPswd(String input) {
             pswd = hashPassword(input);
@@ -545,7 +544,7 @@ public class Individu extends ObjetCSA {
         /**
          * Donne le mot de passe md5
          *
-         * @return
+         * @return le pass
          */
         private String getPassword() {
             return pswd;
@@ -570,58 +569,4 @@ public class Individu extends ObjetCSA {
         }
     }
 
-    private class CalculateurAge {
-        private LocalDateTime date;
-
-        public CalculateurAge(LocalDateTime d) {
-            date = d;
-        }
-
-        /**
-         * Détermine l'age de l'individu actuel: en années si plus d'un an; en mois
-         * si né après le mois en cours; en jours si né avant aujourd'hui; Dans tous
-         * les autres cas, l'age vaut zéro
-         *
-         * @return l'age de l'individu en cours
-         */
-        public String getAgeString() {
-            LocalDateTime now = LocalDateTime.now();
-            long deltaJours = ChronoUnit.DAYS.between(now, date);
-            Boolean aMoinsDUnAn = deltaJours < 365;
-            long nbreMois = ChronoUnit.MONTHS.between(now, date);
-            int jourDuMois = date.getDayOfMonth();
-            LocalDateTime jourAnniv = LocalDate.of(now.getYear(), now.getMonth(), jourDuMois).atStartOfDay();
-            if (aMoinsDUnAn) {
-                if (deltaJours < 31) {
-                    return deltaJours + (deltaJours > 1 ? " jours" : " jour");
-                }
-
-                long nbreJours = ChronoUnit.DAYS.between(jourAnniv, now);
-                if (nbreJours < 0) {
-                    nbreMois--;
-                    nbreJours = ChronoUnit.DAYS.between(jourAnniv.minusMonths(1), now);
-                    if (nbreJours == 0) {
-                        return nbreMois + " mois";
-                    }
-                }
-
-                return nbreMois + " mois, " + nbreJours + (nbreJours > 1 ? " jours" : " jour");
-            }
-            long ageInt = ChronoUnit.YEARS.between(now, date);
-            if (ageInt < 6) {
-                long deltaMois = ChronoUnit.MONTHS.between(jourAnniv, now);
-                if (deltaMois < 0) {
-                    ageInt--;
-                    deltaMois = ChronoUnit.MONTHS.between(jourAnniv.minusYears(1), now);
-                    if (deltaMois == 0) {
-                        return ageInt + (ageInt > 1 ? " ans" : " an");
-                    }
-                }
-                String out = ageInt + (ageInt > 1 ? " ans" : " an");
-                return out + ", " + nbreMois + " mois";
-            }
-            return ageInt + " ans";
-        }
-
-    }
 }

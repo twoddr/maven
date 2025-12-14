@@ -120,6 +120,8 @@ public class Evenement extends ObjetCSA {
         initialiser(COULEUR_FOND, RGBConverter.convert_color_2_int(Color.YELLOW));
 
         initialiser(NOM_LIEU, "Liège");
+        setVariableClass(nomDEBUT, LocalDateTime.class);
+        setVariableClass(nomFIN, LocalDateTime.class);
 
         setPublicName("Événements");
         setType("Evenement");
@@ -476,13 +478,13 @@ public class Evenement extends ObjetCSA {
     }
 
     @Override
-    public void addModification(String nom) {
+    public boolean addModification(String nom) {
         if (nom.equals(EXTERNAL_DUREE)) {
             super.addModification(nomFIN);
             super.addModification(nomDEBUT);
-            return;
+            return true;
         }
-        super.addModification(nom);
+        return super.addModification(nom);
     }
 
     @Override

@@ -2,6 +2,7 @@ package general;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class GestionnaireImbrications {
     private final String nomTablePays, nomIdPaysDansVille, nomTableVille,
@@ -9,6 +10,8 @@ public class GestionnaireImbrications {
     ObjetCSA quartier,
             ville,
             pays;
+    private String nomPublic = "Localité";
+    private ArrayList<ObjetCSA> listePays = new ArrayList<>();
     private boolean verbose = false;
     private boolean change = false;
 
@@ -41,7 +44,6 @@ public class GestionnaireImbrications {
         quartier = informateurObjetDi.getObjetFromType(nomTableQuartier);
         ville = informateurObjetDi.getObjetFromType(nomTableVille);
         pays = informateurObjetDi.getObjetFromType(nomPays);
-
     }
 
     /**
@@ -148,7 +150,7 @@ public class GestionnaireImbrications {
     public boolean remplir_donnees(int id, HashMap<String, Object> hashLevis) {
         if (id <= 0) {
             comment("** GestionnaireImbrications/remplir_donnees : Attention ID non positif pour " +
-                    nomTablePays + "/" + nomTableVille + "/" + nomTableQuartier, "err");
+                    nomTablePays + "/" + nomTableVille + "/" + nomTableQuartier, "out");
             return false;
         }
 
@@ -248,6 +250,18 @@ public class GestionnaireImbrications {
         return change;
     }
 
+    public void setNewData(ObjetCSA country, ArrayList<ObjetCSA> countries,
+                           ObjetCSA city, ArrayList<ObjetCSA> cities,
+                           ObjetCSA neighborhood, ArrayList<ObjetCSA> neighborhoods) {
+        pays = country;
+        ville = city;
+        quartier = neighborhood;
+        setListePays(countries);
+        ville.inserer_liste(nomTableQuartier, neighborhoods);
+        pays.inserer_liste(nomTableVille, cities);
+        ville.inserer_valeur(nomIdPaysDansVille, pays.getId());
+        quartier.inserer_valeur(nomIdVilleDansQuartier, ville.getId());
+    }
 
     public ObjetCSA getPays() {
         return pays;
@@ -261,7 +275,7 @@ public class GestionnaireImbrications {
         return quartier;
     }
 
-    public ArrayList<ObjetCSA> getListeHashVille() {
+    public ArrayList<ObjetCSA> getListeVilles() {
         ArrayList<ObjetCSA> villes = pays.getListe(nomTableVille);
         if (villes == null) {
             return new ArrayList<>();
@@ -269,7 +283,7 @@ public class GestionnaireImbrications {
         return villes;
     }
 
-    public ArrayList<ObjetCSA> getListeHashQuartier() {
+    public ArrayList<ObjetCSA> getListeQuartiers() {
         ArrayList<ObjetCSA> quartiers = ville.getListe(nomTableQuartier);
         if (quartiers == null) {
             return new ArrayList<>();
@@ -289,5 +303,35 @@ public class GestionnaireImbrications {
         if (retour != null) return retour;
         if (quartier != null) retour = quartier.chercher_valeur(cle);
         return retour;
+    }
+
+    public LinkedHashMap<String, Object> getFormattedData() {
+        LinkedHashMap<String, Object> terug = new LinkedHashMap<>();
+        if (quartier != null) {
+            terug.put(quartier.getPublicName(), quartier.getFormattedData());
+        }
+        if (ville != null) {
+            terug.put(ville.getPublicName(), ville.getFormattedData());
+        }
+        if (pays != null) {
+            terug.put(pays.getPublicName(), pays.getFormattedData());
+        }
+        return terug;
+    }
+
+    public String getNomPublic() {
+        return nomPublic;
+    }
+
+    public void setNomPublic(String nomPublic) {
+        this.nomPublic = nomPublic;
+    }
+
+    public ArrayList<ObjetCSA> getListePays() {
+        return listePays;
+    }
+
+    public void setListePays(ArrayList<ObjetCSA> listePays) {
+        this.listePays = listePays;
     }
 }

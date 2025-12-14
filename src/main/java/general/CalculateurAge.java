@@ -56,7 +56,7 @@ public class CalculateurAge {
                 }
             }
             String out = ageInt + (ageInt > 1 ? " ans" : " an");
-            return out + ", " + nbreMois + " mois";
+            return out + ", " + (nbreMois - ageInt * 12) + " mois";
         }
         return ageInt + " ans";
     }

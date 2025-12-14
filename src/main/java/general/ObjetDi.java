@@ -6,8 +6,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.*;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public abstract class ObjetDi
@@ -949,8 +949,8 @@ public abstract class ObjetDi
      *
      * @return une hashmap de (nom, donnée)
      */
-    public TreeMap<String, Object> getAllData() {
-        TreeMap<String, Object> donnees = new TreeMap<>();
+    public LinkedHashMap<String, Object> getAllData() {
+        LinkedHashMap<String, Object> donnees = new LinkedHashMap<>();
         // les données de base
         donnees.put("base", hashDonnees);
 
@@ -958,7 +958,7 @@ public abstract class ObjetDi
         donnees.put("non-attendus", hashDonneesNonAttendues);
 
         // fks
-        TreeMap<String, TreeMap<String, Object>> fks = new TreeMap<>();
+        LinkedHashMap<String, LinkedHashMap<String, Object>> fks = new LinkedHashMap<>();
         hashFKs.forEach((nomFk, sousObjet) -> {
             fks.put(nomFk, sousObjet.getAllData());
         });
@@ -968,7 +968,7 @@ public abstract class ObjetDi
         donnees.put("fks", new HashMap<>(fks));
 
         // intermediaires
-        TreeMap<String, TreeMap<String, Object>> intermediaires = new TreeMap<>();
+        LinkedHashMap<String, LinkedHashMap<String, Object>> intermediaires = new LinkedHashMap<>();
         hashFKIntermediaire.forEach((nomTable, sousObjet) -> {
             intermediaires.put(nomTable, sousObjet.getAllData());
         });
@@ -978,9 +978,9 @@ public abstract class ObjetDi
         donnees.put("dependants", new HashMap<>(hashDependants));
 
         // listes
-        HashMap<String, ArrayList<TreeMap<String, Object>>> hashmaps = new HashMap<>();
+        HashMap<String, ArrayList<LinkedHashMap<String, Object>>> hashmaps = new HashMap<>();
         hashListes.forEach((nomTable, objetsDi) -> {
-            ArrayList<TreeMap<String, Object>> listeHashmaps = new ArrayList<>();
+            ArrayList<LinkedHashMap<String, Object>> listeHashmaps = new ArrayList<>();
             objetsDi.forEach(objetDi -> {
                 listeHashmaps.add(objetDi.getAllData());
             });

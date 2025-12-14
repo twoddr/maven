@@ -14,7 +14,7 @@ public interface Coeur {
      * Permet d'afficher dans la console, sans afficher dans la barre
      * d'informations
      *
-     * @param string
+     * @param string le texte à afficher
      */
     void printConsole(String string);
 

@@ -10,31 +10,30 @@ import java.util.*;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public abstract class ObjetCSA
-        implements Comparable, Serializable {
-    private final LinkedHashMap<String, ObjetCSA> hashFKs = new LinkedHashMap<>(),
-            hashFKIntermediaire = new LinkedHashMap<>();
+public abstract class ObjetCSA implements Comparable, Serializable {
+    private final LinkedHashMap<String, ObjetCSA> hashFKs = new LinkedHashMap<>(), hashFKIntermediaire = new LinkedHashMap<>();
     /**
      * ce sont les sous-objets qui contiennent l'objet courant comme sous-objet
      */
-    private final TreeMap<String, TreeMap<String, Object>> hashDependants = new TreeMap<>();
-    private final TreeMap<String, String> paires_NomsTables_NomsSpeciaux = new TreeMap<>();
-    private final TreeMap<String, Object> hashDonnees = new TreeMap<>();
+    private final LinkedHashMap<String, LinkedHashMap<String, Object>> hashDependants = new LinkedHashMap<>();
+    private final LinkedHashMap<String, String> paires_NomsTables_NomsSpeciaux = new LinkedHashMap<>();
+    private final LinkedHashMap<String, Object> hashDonnees = new LinkedHashMap<>();
 
     /**
      * ceci est indispensable si on veut avoir des données null mais garder le type !
      * *
      */
-    private final TreeMap<String, Class> hashClassesDonnees = new TreeMap<>();
-    private final TreeMap<String, Object> hashDonneesNonAttendues = new TreeMap<>();
-    private final TreeMap<String, ArrayList<ObjetCSA>> hashListes = new TreeMap<>();
-    private final TreeMap<String, GestionnaireImbrications> gestionnairesImbrications = new TreeMap<>();
+    private final LinkedHashMap<String, Class> hashClassesDonnees = new LinkedHashMap<>();
+    private final LinkedHashMap<String, Object> hashDonneesNonAttendues = new LinkedHashMap<>();
+    private final LinkedHashMap<String, ArrayList<ObjetCSA>> hashListes = new LinkedHashMap<>();
+    private final LinkedHashMap<String, GestionnaireImbrications> gestionnairesImbrications = new LinkedHashMap<>();
+    private final LinkedHashSet<String> modifications = new LinkedHashSet<>();
     protected String TYPE, nomNOM, nomID;
-    protected String COULEUR = "couleur";
+    protected String COULEUR = "£couleur"; // £ exprès car ce n'est pas une variable à afficher
+    // par défaut dans les fenêtres. Les variables commençant par 'id' subissent le même sort
     protected LinkedHashSet<String> mandatories = new LinkedHashSet<>();
-    protected ArrayList<String> variablesVisibles = new ArrayList<>();
-    protected TreeMap<String, String> nomsPublics = new TreeMap<>();
-    private LinkedHashSet<String> modifications = new LinkedHashSet<>();
+    protected ArrayList<String> variablesAAfficher = new ArrayList<>();
+    protected LinkedHashMap<String, String> nomsPublics = new LinkedHashMap<>();
     private String publicName = "Objet non défini";
     private boolean textColorEnable = true;
 
@@ -49,9 +48,7 @@ public abstract class ObjetCSA
      * @param nomID    le nom de la variable qui stocke l'id
      * @param nomObjet le nom du nom de la variable nom
      */
-    public ObjetCSA(String type,
-                    String nomID,
-                    String nomObjet) {
+    public ObjetCSA(String type, String nomID, String nomObjet) {
 
         TYPE = type.isEmpty() ? "Objet" : type;
         this.nomID = nomID.isEmpty() ? "id" : nomID;
@@ -59,7 +56,7 @@ public abstract class ObjetCSA
 
         initialiser_objetCSA();
 
-        variablesVisibles.add(nomNOM);
+        variablesAAfficher.add(nomNOM);
     }
 
     /**
@@ -86,7 +83,9 @@ public abstract class ObjetCSA
 
         initialiser_objetCSA();
 
-        variablesVisibles.add(nomNOM);
+        variablesAAfficher.add(nomNOM);
+        add_nom_public(nomID, "ID");
+        add_nom_public(COULEUR, "Couleur");
     }
 
     public static ObjetCSA creer_objet_vide() {
@@ -150,7 +149,7 @@ public abstract class ObjetCSA
     }
 
     private Object chercherDansDependants(String cle) {
-        for (TreeMap<String, Object> dependant : getHashmapDependants().values()) {
+        for (LinkedHashMap<String, Object> dependant : getHashmapDependants().values()) {
             Object hypothese = dependant.get(cle);
             if (hypothese != null) return hypothese;
         }
@@ -175,6 +174,7 @@ public abstract class ObjetCSA
      */
     public void addGestionnaire(String nomFk, GestionnaireImbrications gestionnaire) {
         gestionnairesImbrications.put(nomFk, gestionnaire);
+        modifications.add(nomFk);
     }
 
     /**
@@ -207,7 +207,7 @@ public abstract class ObjetCSA
         if (cle == null || paires_NomsTables_NomsSpeciaux.get(cle) == null) {
             return null;
         }
-        TreeMap<String, Object> hashMap = hashDependants.get(paires_NomsTables_NomsSpeciaux.get(cle));
+        LinkedHashMap<String, Object> hashMap = hashDependants.get(paires_NomsTables_NomsSpeciaux.get(cle));
         if (hashMap == null) {
             return null;
         }
@@ -239,8 +239,7 @@ public abstract class ObjetCSA
      */
     public boolean inserer_liste(String nomTable, ArrayList objets) {
         if (!hashListes.containsKey(nomTable)) {
-            comment("inserer_liste : Cet objet n'attend pas de liste de " + nomTable + " => " +
-                    "Je rajoute !", "out");
+            comment("inserer_liste : Cet objet n'attend pas de liste de " + nomTable + " => " + "Je rajoute !", "out");
         }
         AtomicBoolean retour = new AtomicBoolean(true);
         ArrayList<ObjetCSA> objetDis = new ArrayList<>();
@@ -257,6 +256,20 @@ public abstract class ObjetCSA
     }
 
     /**
+     * Cette méthode permet d'initialiser/reinitialiser les listes
+     *
+     * @param nom le nom de la variable ; ne peut être vide
+     */
+    protected void initialiser_liste(String nom) {
+        if (nom.isEmpty()) {
+            System.err.println("** ObjetCSA " + this + "  : Initialisation d'une liste sans nom de variable se l'objet " + this + ". Demande ignorée !");
+            return;
+        }
+
+        hashListes.put(nom, new ArrayList<>());
+    }
+
+    /**
      * rajoute des éléments dans une liste stockée
      * Attention : les doublons sont ignorés !
      *
@@ -266,8 +279,7 @@ public abstract class ObjetCSA
      */
     public boolean ajouter_dans_liste(String nomTable, ArrayList<ObjetCSA> objetDis) {
         if (!hashListes.containsKey(nomTable)) {
-            comment("rajouter_dans_liste : Cet objet n'attend pas de liste de " + nomTable + " !\n" +
-                    "J'en crée une nouvelle, comme l'aurait fait inserer_liste !", "err");
+            comment("rajouter_dans_liste : Cet objet n'attend pas de liste de " + nomTable + " !\n" + "J'en crée une nouvelle, comme l'aurait fait inserer_liste !", "err");
             return inserer_liste(nomTable, objetDis);
         }
         TreeSet<ObjetCSA> oldList = new TreeSet<>(hashListes.get(nomTable));
@@ -275,10 +287,16 @@ public abstract class ObjetCSA
         return inserer_liste(nomTable, new ArrayList(oldList));
     }
 
+    /**
+     * Permet de mettre à jour un sous-objet (fk)
+     *
+     * @param nomFK   ne nom de sa variable dans l'objet
+     * @param objetDi le nouveau sous-objet
+     * @return vrai si objetDi n'est pas null et l'objet est attendu
+     */
     public boolean inserer_fk(String nomFK, ObjetCSA objetDi) {
         if (objetDi == null) {
-            comment("** ObjetCSA/inserer_fk : Tentative d'insertion de NULL dans" +
-                    " le fk" + nomFK + " de " + this + ". Action ignorée !", "out");
+            comment("** ObjetCSA/inserer_fk : Tentative d'insertion de NULL dans" + " le fk" + nomFK + " de " + this + ". Action ignorée !", "out");
             return false;
         }
         if (hashFKs.containsKey(nomFK)) {
@@ -292,10 +310,30 @@ public abstract class ObjetCSA
         return false;
     }
 
+    /**
+     * Mettre à jour le gestionnaire d'imbrications
+     *
+     * @param nomFK        le nom du fkquartier
+     * @param gestionnaire le nouveau gestionnaire
+     * @return vrai si l'élément est attendu
+     */
+    public boolean inserer_gestionnaireImbrications(String nomFK, GestionnaireImbrications gestionnaire) {
+        if (gestionnaire == null) {
+            comment("** ObjetCSA/inserer_gestionnaire : Tentative d'insertion de NULL dans" + " le quartier " + nomFK + " de " + this + ". Action ignorée !", "out");
+            return false;
+        }
+        if (gestionnairesImbrications.containsKey(nomFK)) {
+            gestionnairesImbrications.put(nomFK, gestionnaire);
+            addModification(nomFK);
+            return true;
+        }
+        System.err.println("ObjetCSA/inserer_gestionnaire : Demande d'insertion de " + gestionnaire + " alors que la variable " + nomFK + " n'est pas attendue. Insertion ignorée !");
+        return false;
+    }
+
     public void inserer_dependant(String nomFK, ObjetCSA objetDi) {
         if (objetDi == null) {
-            System.err.println("ObjetCSA " + this + " /inserer_inserer_dependant : " +
-                    "L'objetDi rentré ne peut être NULL. Action ignorée !");
+            System.err.println("ObjetCSA " + this + " /inserer_inserer_dependant : " + "L'objetDi rentré ne peut être NULL. Action ignorée !");
             return;
         }
         String nomTable = null;
@@ -307,21 +345,20 @@ public abstract class ObjetCSA
         }
         addModification(nomFK);
         if (nomTable != null) {
-            hashDependants.put(nomTable, new TreeMap<>(objetDi.getData()));
+            hashDependants.put(nomTable, new LinkedHashMap<>(objetDi.getData()));
             return;
         }
 
-        comment("inserer_dependant : Cet objet [" + this + "] n'attend pas de sousObjet de nom " + nomTable + " !\n" +
-                "Je l'insère dans les non-attendus (uniquement les modifications) !", "out");
+        comment("inserer_dependant : Cet objet [" + this + "] n'attend pas de sousObjet de nom " + nomTable + " !\n" + "Je l'insère dans les non-attendus (uniquement les modifications) !", "out");
         hashDonneesNonAttendues.put(nomFK, objetDi.getHashModifications());
     }
 
     public boolean inserer_valeur_intermediaire(String tableIntermediaire, String nomVariable, Object valeur) {
         if (!hashFKIntermediaire.containsKey(tableIntermediaire)) {
-            comment("inserer_intermediaire : Cet objet n'attend pas de d'intermédiaire de nom " + tableIntermediaire + " !\n" +
-                    "J'ignore l'insertion de " + valeur + " !", "err");
+            comment("inserer_intermediaire : Cet objet n'attend pas de d'intermédiaire de nom " + tableIntermediaire + " !\n" + "J'ignore l'insertion de " + valeur + " !", "err");
             return false;
         }
+        addModification(nomVariable);
         ObjetCSA objetIntermediaire = hashFKIntermediaire.get(nomVariable);
         return objetIntermediaire.inserer_valeur(nomVariable, valeur);
     }
@@ -335,8 +372,7 @@ public abstract class ObjetCSA
             }
             return true;
         }
-        comment("ObjetCSA " + this + " /inserer_dans_gestionnaire : Cet objet : " + this + " n'attend pas de nom " + nomFK + " !\n" +
-                "J'ignore l'insertion !", "err");
+        comment("ObjetCSA " + this + " /inserer_dans_gestionnaire : Cet objet : " + this + " n'attend pas de nom " + nomFK + " !\n" + "J'ignore l'insertion !", "err");
         return false;
     }
 
@@ -353,17 +389,19 @@ public abstract class ObjetCSA
             if (change) {
                 addModification(nomFK);
             }
+            comment("ObjetCSA " + this + " /inserer_dans_gestionnaire : je n'ai pas pu insérer" +
+                    " les données dans le gestionnaire " + nomFK + " !", "err");
             return true;
         }
-        comment("ObjetCSA " + this + " /inserer_dans_gestionnaire : Cet objet : " + this + " n'attend pas de nom " + nomFK + " !\n" +
-                "J'ignore l'insertion !", "err");
+        comment("ObjetCSA " + this + " /inserer_dans_gestionnaire : Cet objet : " + this +
+                " n'attend pas de nom " + nomFK + " !\n" + "J'ignore l'insertion !", "err");
         return false;
     }
 
 
     private boolean setSimpleData(String nom, Object valeur) {
         if (valeur == null) {
-            System.err.println("ObjetCSA (privé) : on ne peut insérer une valeur nulle dans " + nom);
+            comment("ObjetCSA (privé) : on ne peut insérer une valeur nulle dans " + nom, "out");
             return false;
         }
         if (hashDonnees.containsKey(nom)) {
@@ -375,18 +413,15 @@ public abstract class ObjetCSA
         return false;
     }
 
-    private boolean ecraser_hashmap(TreeMap<String, Object> donnees, String nom, Object valeur) {
+    private boolean ecraser_hashmap(LinkedHashMap<String, Object> donnees, String nom, Object valeur) {
         Object ancienneValeur = donnees.get(nom);
-        Object nouvelleValeur = check_classes(ancienneValeur, valeur);
+        Object nouvelleValeur = ancienneValeur == null ? valeur : check_classes(ancienneValeur, valeur);
         if (nouvelleValeur == null) {
-            System.err.println("** ObjetCSA/inserer_xxx : le type de la nouvelle valeur de " + nom +
-                    " de l'objet " + this
-                    + " est : " + valeur.getClass().getSimpleName() + " alors que l'ancienne " +
-                    "valeur est de type : " + ancienneValeur.getClass().getSimpleName() + ". Insertion ignorée !");
+            comment("** ObjetCSA/inserer_xxx : la nouvelle valeur de " + nom + " de l'objet " + this + " est : " + valeur + " alors que l'ancienne " + "valeur est de type : " + (ancienneValeur == null ? "NULL" : ancienneValeur.getClass().getSimpleName()) + ". Insertion ignorée !", "out");
             return false;
         }
         donnees.put(nom, nouvelleValeur);
-        if (nouvelleValeur.equals(ancienneValeur)) modifications.add(nom);
+        if (!nouvelleValeur.equals(ancienneValeur)) modifications.add(nom);
         return true;
     }
 
@@ -399,6 +434,9 @@ public abstract class ObjetCSA
      * null si les classes sont non compatibles
      */
     private Object check_classes(Object ancienneValeur, Object valeur) {
+        if (ancienneValeur == null) {
+            return null;
+        }
         Class classe = ancienneValeur.getClass();
         if (classe.equals(valeur.getClass())) {
             return valeur;
@@ -430,7 +468,22 @@ public abstract class ObjetCSA
         if (classe.equals(LocalDate.class) && valeur instanceof LocalDateTime) {
             return ((LocalDateTime) valeur).toLocalDate();
         }
+        if (valeur instanceof String && ancienneValeur instanceof Integer) {
+            try {
+                return Integer.parseInt(String.valueOf(valeur));
+            } catch (NumberFormatException e) {
+                return null;
+            }
+        }
+        if (valeur instanceof String && ancienneValeur instanceof Float) {
+            try {
+                return Float.parseFloat(String.valueOf(valeur));
+            } catch (NumberFormatException e) {
+                return null;
+            }
+        }
         // pour tous les autres
+        System.err.println("ObjetCSA : échec du check_classes entre " + ancienneValeur + " et " + valeur);
         return null;
     }
 
@@ -482,8 +535,7 @@ public abstract class ObjetCSA
             }
         }
 
-        System.err.println("*** ObjetCSA " + this + " /set_single_data : la donnée (" + nom + ", " + valeur + ")" +
-                " n'a pas pu être insérée dans l'objet " + this);
+        System.err.println("*** ObjetCSA " + this + " /set_single_data : la donnée (" + nom + ", " + valeur + ")" + " n'a pas pu être insérée dans l'objet " + this);
         return false;
     }
 
@@ -497,6 +549,10 @@ public abstract class ObjetCSA
         initialiser(nomID, 0);
         initialiser(nomNOM, "");
         initialiser(COULEUR, RGBConverter.convert_color_2_int(Color.DARK_GRAY));
+
+        add_nom_public(nomID, "ID");
+        add_nom_public(COULEUR, "Couleur de l'élément");
+        add_nom_public(nomNOM, "Intitulé");
 
         mandatories.add(nomNOM);
         mandatories.add(nomID);
@@ -518,8 +574,7 @@ public abstract class ObjetCSA
 
     public void setType(String texte) {
         if (texte.isEmpty()) {
-            System.err.println("*** ObjetCSA " + this + " /setType : vous ne pouvez pas insérer un type vide !\n" +
-                    "Ignoré !");
+            System.err.println("*** ObjetCSA " + this + " /setType : vous ne pouvez pas insérer un type vide !\n" + "Ignoré !");
             return;
         }
         TYPE = texte;
@@ -534,8 +589,8 @@ public abstract class ObjetCSA
             modifications.add(nouveau);
             return;
         }
-        if (variablesVisibles.remove(ancien)) {
-            variablesVisibles.add(nouveau);
+        if (variablesAAfficher.remove(ancien)) {
+            variablesAAfficher.add(nouveau);
             return;
         }
     }
@@ -586,6 +641,10 @@ public abstract class ObjetCSA
 
     public abstract void setParent(ObjetCSA parent);
 
+    public String getTypeEnfant() {
+        return null;
+    }
+
     /**
      * Indique si l'objet est modifié en regardant la liste des modifications
      *
@@ -611,19 +670,17 @@ public abstract class ObjetCSA
      *
      * @param nom    le nom de la variable ; ne peut être vide
      * @param valeur la valeur à insérer; ne peut être null; ne peut être un ObjetCSA
-     * @return vrai si succès, faux sinon
+     * @return vrai si succès, faux sinon; auquel cas, les non-attendues prennent l'info
      */
     public Boolean inserer_valeur(String nom, Object valeur) {
         if (nom.isEmpty()) {
-            System.err.println("** ObjetCSA " + this + "  : L'insertion d'une clé vide pour la donnée <" +
-                    valeur + "> n'est pas autorisé !");
-            throw new UnsupportedOperationException("L'insertion d'une clé vide pour la donnée <" +
-                    valeur + "> n'est pas autorisé !");
+            comment("** ObjetCSA " + this + "  : L'insertion d'une clé vide pour la donnée <" + valeur + "> n'est pas autorisé !", "err");
+            return false;
         }
 
         if (valeur instanceof ObjetCSA || valeur instanceof HashMap) {
-            throw new UnsupportedOperationException("!!! ObjetCSA " + this + " /inserer_valeur : on ne peut inserer ce type ici : " + valeur +
-                    " dans " + this + "\n" + "Il faut passer par setData !");
+            comment("!!! ObjetCSA " + this + " /inserer_valeur : on ne peut inserer ce type ici : " + valeur + " dans " + this + "\n" + "Il faut passer par setData !", "err");
+            return false;
         }
         return inserer_precisement(nom, valeur);
 
@@ -631,8 +688,7 @@ public abstract class ObjetCSA
 
 
     private boolean isExpected(String cle) {
-        boolean dansDonnees = hashDonnees.containsKey(cle) ||
-                hashClassesDonnees.containsKey(cle);
+        boolean dansDonnees = hashDonnees.containsKey(cle) || hashClassesDonnees.containsKey(cle);
         boolean dansIntermediare = hashFKIntermediaire.containsKey(cle);
         boolean dansFk = hashFKs.containsKey(cle);
         boolean dansGestionnaire = gestionnairesImbrications.containsKey(cle);
@@ -662,8 +718,7 @@ public abstract class ObjetCSA
      */
     protected void initialiser(String nom, Object valeur) {
         if (nom.isEmpty()) {
-            System.err.println("** ObjetCSA " + this + " /initialiser : L'insersion de <" + valeur + "> dans une variable vide de l'objet " +
-                    this + " n'est pas autorisé ! Demande ignorée !");
+            System.err.println("** ObjetCSA " + this + " /initialiser : L'insersion de <" + valeur + "> dans une variable vide de l'objet " + this + " n'est pas autorisé ! Demande ignorée !");
             return;
         }
         Class classe = hashClassesDonnees.get(nom);
@@ -678,13 +733,11 @@ public abstract class ObjetCSA
                 hashDonnees.put(nom, valeur);
                 return;
             }
-            comment("Mauvais type reçu par " + this + ". la variable " + nom +
-                    " doit être de type " + classe + ", mais je recois " + valeur.getClass().getSimpleName(), "err");
+            comment("Mauvais type reçu par " + this + ". la variable " + nom + " doit être de type " + classe + ", mais je recois " + valeur.getClass().getSimpleName(), "err");
             return;
         }
         if (valeur == null) {
-            throw new UnsupportedOperationException("ObjetCSA/initialiser : on ne peut initialiser " +
-                    "une variable (" + nom + ") à null sans avoir initialisé le type (setClass)");
+            throw new UnsupportedOperationException("ObjetCSA/initialiser : on ne peut initialiser " + "une variable (" + nom + ") à null sans avoir initialisé le type (setClass)");
         }
         hashDonnees.put(nom, valeur);
         hashClassesDonnees.put(nom, valeur.getClass());
@@ -702,8 +755,7 @@ public abstract class ObjetCSA
             hashClassesDonnees.put(nomVariable, classe);
             return;
         }
-        System.err.println("*** Tentative d'insertion d'une nouvelle classe (" + classe.getSimpleName() +
-                ") alors que la variable " + nomVariable + " a déjà été affectée à " + variable);
+        System.err.println("*** Tentative d'insertion d'une nouvelle classe (" + classe.getSimpleName() + ") alors que la variable " + nomVariable + " a déjà été affectée à " + variable);
     }
 
     public Class getVariableClass(String nomVariable) {
@@ -728,8 +780,7 @@ public abstract class ObjetCSA
     public void setFK(String nomfk, String nomType) {
         ObjetCSA sousObjet = getObjetFromType(nomType);
         if (sousObjet == null) {
-            System.err.println("** ObjetCSA " + this + "  : il n'existe pas de sous-objet au nom " + nomType +
-                    " ! Demande ignorée !");
+            System.err.println("** ObjetCSA " + this + "  : il n'existe pas de sous-objet au nom " + nomType + " ! Demande ignorée !");
             return;
         }
         if (nomfk.isEmpty()) {
@@ -750,8 +801,7 @@ public abstract class ObjetCSA
     public void setFKIntermediaire(String nomType) {
         ObjetCSA sousObjet = getObjetFromType(nomType);
         if (sousObjet == null) {
-            System.err.println("** ObjetCSA " + this + " /setFKIntermediaire : il n'existe pas de sous-objet au nom " + nomType + "" +
-                    " ! Demande ignorée !");
+            System.err.println("** ObjetCSA " + this + " /setFKIntermediaire : il n'existe pas de sous-objet au nom " + nomType + "" + " ! Demande ignorée !");
             return;
         }
 
@@ -771,7 +821,7 @@ public abstract class ObjetCSA
             return;
         }
         paires_NomsTables_NomsSpeciaux.put(nomType, nomFK);
-        hashDependants.put(nomType, new TreeMap<>());
+        hashDependants.put(nomType, new LinkedHashMap<>());
     }
 
 
@@ -794,17 +844,17 @@ public abstract class ObjetCSA
 
     /**
      * Permet d'insérer la valeur à la variable stockée
-     * S'il n'existe pas de variable avec le nom indiqué, une nouvelle est créée dans les non-attendus
      * avec le type de l'objet valeur. Si le nom existe déjà, le type est vérifié
      * Toutes les variables de l'objet et ses sous-objets sont passées en revue
      *
      * @param cle    le nom de la variable : ne peut commencer par le caractère #
-     * @param valeur la nouvelle valeur à attribuer
+     * @param valeur la nouvelle valeur à attribuer; elle peut même être un ObjetCSA
+     *               car la clé peut être un fk
      * @return Vrai si tout s'est bien passé, false sinon
      */
     private boolean inserer_precisement(String cle, Object valeur) {
         if (cle.startsWith("#")) {
-            System.out.println("* ObjetCSA/inserer_souplement : j'ignore volontairement d'insérer la variable " + cle);
+            System.out.println("* ObjetCSA/inserer_xxx : j'ignore volontairement d'insérer la variable " + cle);
             return true;
         }
         // recherche dans les champs simples
@@ -813,35 +863,67 @@ public abstract class ObjetCSA
         }
 
         ObjetCSA objetIntermediaire = getObjetIntermediaire(cle); // recherche dans les intermédiaires
-        if (objetIntermediaire.setSimpleData(cle, valeur)) {
+        if (objetIntermediaire != null && valeur instanceof ObjetCSA && ((ObjetCSA) valeur).getType().equals(objetIntermediaire.getType())) {
+            hashFKIntermediaire.put(cle, (ObjetCSA) valeur);
             return true;
+        }
+        // Recherche dans les fk intermédiaires
+        for (Map.Entry<String, ObjetCSA> paire : getFKIs().entrySet()) {
+            ObjetCSA fki = paire.getValue();
+            if (fki.setSimpleData(cle, valeur)) return true;
         }
         ObjetCSA objetFK = getFK(cle);  // recherche des fk
-        if (objetFK.setSimpleData(cle, valeur)) {
+        if (objetFK != null && valeur instanceof ObjetCSA && ((ObjetCSA) valeur).getType().equals(objetFK.getType())) {
+            hashFKs.put(cle, (ObjetCSA) valeur);
             return true;
         }
+        // Recherche dans les fk
+        for (Map.Entry<String, ObjetCSA> paire : getFKs().entrySet()) {
+            ObjetCSA fk = paire.getValue();
+            if (fk.setSimpleData(cle, valeur)) return true;
+        }
         ObjetCSA dependant = getObjetDependant(cle); // objets dépendants
-        if (dependant.setSimpleData(cle, valeur)) {
+        if (dependant != null && valeur instanceof ObjetCSA && ((ObjetCSA) valeur).getType().equals(dependant.getType())) {
+            hashDependants.put(cle, ((ObjetCSA) valeur).getAllData());
             return true;
+        }
+        // Recherche dans les dépendants
+        for (Map.Entry<String, ObjetCSA> paire : getHashDependants().entrySet()) {
+            ObjetCSA fk = paire.getValue();
+            if (fk.setSimpleData(cle, valeur)) return true;
         }
         // recherche dans les gestionnaires d'imbrication
         for (GestionnaireImbrications gestionnaire : getGestionnairesImbrications().values()) {
             ObjetCSA pays = gestionnaire.getPays();
-            if (pays.setSimpleData(cle, valeur)) {
+            if (pays != null && pays.setSimpleData(cle, valeur)) {
                 return true;
             }
             ObjetCSA ville = gestionnaire.getVille();
-            if (ville.setSimpleData(cle, valeur)) {
+            if (ville != null && ville.setSimpleData(cle, valeur)) {
                 return true;
             }
             ObjetCSA quartier = gestionnaire.getQuartier();
-            if (quartier.setSimpleData(cle, valeur)) {
+            if (quartier != null && quartier.setSimpleData(cle, valeur)) {
                 return true;
             }
         }
-        System.err.println("ObjetCSA : échec de l'insertion de " + valeur + " dans la variable " + cle +
-                ".\nJe n'ai pas trouvé d'objet ou sous-objet attendant cette variable. Insertion ignorée !");
+        /*System.err.println("ObjetCSA : échec de l'insertion de " + valeur + " de type "
+                + (valeur == null ? "*" : valeur.getClass().getSimpleName()) + " dans la variable " + cle +
+                ".\nJe n'ai pas trouvé d'objet ou sous-objet attendant cette variable. Insertion ignorée !");*/
+        comment("Pas trouvé de preneur pour la variable " + cle + ", je l'insère dans les non-attendues", "out");
+        ajouter_aux_nonAttendues(cle, valeur);
         return false;
+    }
+
+
+    private void ajouter_aux_nonAttendues(String cle, Object valeur) {
+        if (valeur instanceof ObjetCSA) {
+            hashDonneesNonAttendues.put(cle, ((ObjetCSA) valeur).getAllData());
+            return;
+        }
+        hashDonneesNonAttendues.put(cle, valeur);
+
+        addModification(cle);
     }
 
 
@@ -855,7 +937,7 @@ public abstract class ObjetCSA
      *
      * @return l'hashMap de données non-attendues mais enregistrées quand même
      */
-    public TreeMap<String, Object> getNonAttendus() {
+    public LinkedHashMap<String, Object> getNonAttendus() {
         return hashDonneesNonAttendues;
     }
 
@@ -868,9 +950,7 @@ public abstract class ObjetCSA
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             return LocalDateTime.parse(dateString, formatter);
         } catch (Exception e) {
-            comment("Echec de conversion de dateTime pour " + this +
-                    ". Je m'attendais à un format yyyy-MM-dd HH:mm:ss, mais " +
-                    "j'ai : " + s + ", et je ne prends que les 19 premiers symboles", "err");
+            comment("Echec de conversion de dateTime pour " + this + ". Je m'attendais à un format yyyy-MM-dd HH:mm:ss, mais " + "j'ai : " + s + ", et je ne prends que les 19 premiers symboles", "err");
             return LocalDateTime.of(1900, 1, 1, 0, 0);
         }
     }
@@ -884,9 +964,7 @@ public abstract class ObjetCSA
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             return LocalDate.parse(dateString, formatter);
         } catch (Exception e) {
-            comment("Echec de conversion de dateTime pour " + this +
-                    ". Je m'attendais à un format yyyy-MM-dd, mais " +
-                    "j'ai : " + s, "err");
+            comment("Echec de conversion de dateTime pour " + this + ". Je m'attendais à un format yyyy-MM-dd, mais " + "j'ai : " + s, "err");
             return null;
         }
     }
@@ -927,6 +1005,25 @@ public abstract class ObjetCSA
         return super.equals(o);
     }
 
+    @Override
+    public int hashCode() {
+        int myId = getId();
+
+        // Logic for objects with a positive ID: hash only on the ID and type
+        if (myId > 0) {
+            return Objects.hash(getType(), myId); // Include type and ID
+        }
+
+        // Logic for objects without a positive ID: hash on the type and the lowercase name
+        String myName = toString();
+        if (myName.isEmpty()) {
+            // If the name is empty, fall back to the default identity hash (similar to super.equals(o))
+            return System.identityHashCode(this);
+        }
+        // Use the lowercase version of the name to be consistent with equalsIgnoreCase
+        return Objects.hash(getType(), myName.toLowerCase());
+    }
+
     /**
      * Donne une copie du contenu des variables par paires de (nomBD, data)
      * Les noms de variable sont les noms des champs de la BD
@@ -952,7 +1049,7 @@ public abstract class ObjetCSA
                 donnees.put(cle, sonId);
                 donnees.put(objetIntermediaire.getType() + "-" + sonId, objetIntermediaire.getData(nomChamps));
             } else if (hashDependants.containsKey(cle)) {
-                TreeMap<String, Object> hashMap = hashDependants.get(cle);
+                LinkedHashMap<String, Object> hashMap = hashDependants.get(cle);
                 if (hashMap != null) {
                     ObjetCSA objetEtranger = getObjetFromType(cle);
                     objetEtranger.setData(new HashMap<>(hashMap), null, true, false);
@@ -975,14 +1072,14 @@ public abstract class ObjetCSA
 
 
     /**
-     * Donne une copie du contenu des variables par paires de (nomBD, data)
-     * Les noms de variable sont les noms des champs de la BD
+     * Donne une copie du contenu des variables par paires de (clé, data)
+     * les clés sont : base, non-attendues, fks, intermédiares, dépendants et listes
      * Un sous-élément éventuel sera également fourni sous forme de hashmap
      *
      * @return une hashmap de (nom, donnée)
      */
-    public TreeMap<String, Object> getAllData() {
-        TreeMap<String, Object> donnees = new TreeMap<>();
+    public LinkedHashMap<String, Object> getAllData() {
+        LinkedHashMap<String, Object> donnees = new LinkedHashMap<>();
         // les données de base
         donnees.put("base", hashDonnees);
 
@@ -990,7 +1087,7 @@ public abstract class ObjetCSA
         donnees.put("non-attendus", hashDonneesNonAttendues);
 
         // fks
-        TreeMap<String, TreeMap<String, Object>> fks = new TreeMap<>();
+        LinkedHashMap<String, LinkedHashMap<String, Object>> fks = new LinkedHashMap<>();
         hashFKs.forEach((nomFk, sousObjet) -> {
             fks.put(nomFk, sousObjet.getAllData());
         });
@@ -1000,7 +1097,7 @@ public abstract class ObjetCSA
         donnees.put("fks", new HashMap<>(fks));
 
         // intermediaires
-        TreeMap<String, TreeMap<String, Object>> intermediaires = new TreeMap<>();
+        LinkedHashMap<String, LinkedHashMap<String, Object>> intermediaires = new LinkedHashMap<>();
         hashFKIntermediaire.forEach((nomTable, sousObjet) -> {
             intermediaires.put(nomTable, sousObjet.getAllData());
         });
@@ -1010,15 +1107,57 @@ public abstract class ObjetCSA
         donnees.put("dependants", new HashMap<>(hashDependants));
 
         // listes
-        TreeMap<String, ArrayList<TreeMap<String, Object>>> hashmaps = new TreeMap<>();
+        LinkedHashMap<String, ArrayList<LinkedHashMap<String, Object>>> hashmaps = new LinkedHashMap<>();
         hashListes.forEach((nomTable, objetsDi) -> {
-            ArrayList<TreeMap<String, Object>> listeHashmaps = new ArrayList<>();
+            ArrayList<LinkedHashMap<String, Object>> listeHashmaps = new ArrayList<>();
             objetsDi.forEach(objetCSA -> {
                 listeHashmaps.add(objetCSA.getAllData());
             });
             hashmaps.put(nomTable, listeHashmaps);
         });
         donnees.put("listes", new HashMap<>(hashmaps));
+
+        return donnees;
+    }
+
+    /**
+     * Donne une copie du contenu des variables par paires de (nomBD, data)
+     * dans un format aisément interprétable par un bot et aisément xmlable
+     * Les noms de variable sont les noms des champs de la BD
+     * Un sous-élément éventuel sera également fourni sous forme de hashmap
+     *
+     * @return une hashmap de (nom, donnée)
+     */
+    public LinkedHashMap<String, Object> getFormattedData() {
+        LinkedHashMap<String, Object> donnees = new LinkedHashMap<>();
+        // les données de base
+        donnees.putAll(hashDonnees);
+        // les données non-attendues
+        donnees.putAll(hashDonneesNonAttendues);
+        // fks
+        hashFKs.forEach((nomFk, sousObjet) -> {
+            donnees.put(nomFk, sousObjet.getFormattedData());
+        });
+        gestionnairesImbrications.forEach((nomFkQuartier, gestionnaire) -> {
+            donnees.put(nomFkQuartier, gestionnaire.getFormattedData());
+        });
+
+        // intermediaires
+        hashFKIntermediaire.forEach((nomTable, sousObjet) -> {
+            donnees.put(nomTable, sousObjet.getFormattedData());
+        });
+
+        // étrangers
+        donnees.putAll(hashDependants);
+
+        // listes
+        hashListes.forEach((nomTable, objetsDi) -> {
+            ArrayList<Map<String, Object>> listeHashmaps = new ArrayList<>();
+            objetsDi.forEach(objetCSA -> {
+                listeHashmaps.add(objetCSA.getFormattedData());
+            });
+            donnees.put(nomTable, listeHashmaps);
+        });
 
         return donnees;
     }
@@ -1054,17 +1193,15 @@ public abstract class ObjetCSA
 
         // étrangers
         hashDependants.forEach((nomTable, stringObjectHashMap) -> {
-            if (stringObjectHashMap != null) {
-                donnees.putAll(stringObjectHashMap);
-            }
+            String nomFK = paires_NomsTables_NomsSpeciaux.get(nomTable);
+            ObjetCSA objetCSA = getObjetFromType(nomTable); // ce sera un objet avec données minimales !
+            objetCSA.setData(stringObjectHashMap, null, true, false);
+            donnees.put(nomFK, objetCSA.getId());
         });
 
         // listes
         hashListes.forEach((nomTable, liste) -> {
-            ArrayList<TreeMap<String, Object>> hashMaps = new ArrayList<>();
-            liste.forEach(objetCSA -> {
-                hashMaps.add(new TreeMap<>(objetCSA.getSimpleData()));
-            });
+            ArrayList<HashMap<String, Object>> hashMaps = creer_hashmaps_objets(liste);
             donnees.put(nomTable, hashMaps);
         });
 
@@ -1088,16 +1225,14 @@ public abstract class ObjetCSA
      */
     public ArrayList<String> setData(HashMap<String, Object> input,
                                      final HashMap<String, Object> hashLevis,
-                                     boolean toutPrendre,
-                                     boolean verbose) {
+                                     boolean toutPrendre, boolean verbose) {
         boolean hashLevisFourni = hashLevis != null && !hashLevis.isEmpty();
         final HashMap<String, Object> hashDetails;
         hashDetails = hashLevis == null ? new HashMap<>() : new HashMap<>(hashLevis);
         // rajoute les données principales dans les secondaires (car une fois en profondeur,
         // on perd les données principales)
         Object object = input.get(this.nomID); // non nul si Levis fournit l'id
-        int idNouveau = object == null ?
-                this.hashCode() : // si pas d'id, on prend le hashcode de l'objet actuel
+        int idNouveau = object == null ? this.hashCode() : // si pas d'id, on prend le hashcode de l'objet actuel
                 ExtracteurHashMap.extraire_int(object);
         if (hashLevisFourni && idNouveau > 0) {
             String cle = getType() + "-" + idNouveau;
@@ -1139,17 +1274,13 @@ public abstract class ObjetCSA
                 clesUtilisees.add(nomFk);
                 if (hypoId instanceof Number) {
                     int idSousObjet = ((Number) hypoId).intValue();
-                    commentIf(hypoId instanceof Long, "** ObjetCSA/setData : le fk rentré (" + nomFk + ") est du type long !!\n" +
-                            "Espérons qu'il n'est pas trop long car j'en fais un cast vers int et je continue...", "err");
+                    commentIf(hypoId instanceof Long, "** ObjetCSA/setData : le fk rentré (" + nomFk + ") est du type long !!\n" + "Espérons qu'il n'est pas trop long car j'en fais un cast vers int et je continue...", "err");
                     sousObjet.setId(idSousObjet);
                     if (hashLevisFourni && idSousObjet > 0) {
-                        sousObjet.setData(extraire_fk(sousObjet.getType(), idSousObjet, hashDetails),
-                                hashDetails, true, verbose);
+                        sousObjet.setData(extraire_fk(sousObjet.getType(), idSousObjet, hashDetails), hashDetails, true, verbose);
                     }
                 } else {
-                    comment("*** ObjetCSA/setData : le fk rentré " + nomFk +
-                            " n'est pas un nombre mais est du type " + hypoId.getClass().getSimpleName() + " !!!\n" +
-                            "Cette information sera ignorée !", "err");
+                    comment("*** ObjetCSA/setData : le fk rentré " + nomFk + " n'est pas un nombre mais est du type " + hypoId.getClass().getSimpleName() + " !!!\n" + "Cette information sera ignorée !", "err");
                 }
             }
         }
@@ -1170,26 +1301,20 @@ public abstract class ObjetCSA
                         ArrayList<Object> listeLevis = (ArrayList<Object>) hypoLevis;
                         if (listeLevis.size() > 1) {
                             String nomTableLevis = String.valueOf(listeLevis.get(0));
-                            ObjetCSA sousObjet = getObjetFromType(nomTable);
-                            if (sousObjet != null &&
-                                    nomTableLevis.equals(nomTable) &&
-                                    listeLevis.get(1) instanceof HashMap) {
+                            ObjetCSA sousObjet = getObjetFromType(nomTable); // ce sera un objet avec données minimales !
+                            if (sousObjet != null && nomTableLevis.equals(nomTable) && listeLevis.get(1) instanceof HashMap) {
                                 clesUtilisees.addAll(sousObjet.setData((HashMap<String, Object>) listeLevis.get(1),
-                                        null, toutPrendre, verbose));
-                                hashDependants.put(nomTable, new TreeMap<>(sousObjet.getSimpleData()));
+                                        null, toutPrendre,
+                                        verbose));
+                                hashDependants.put(nomTable, new LinkedHashMap<>(sousObjet.getSimpleData()));
                             } else {
-                                comment("setData/étrangers (" + nomTable + ", " + nomSpecial + ") : Trouvé un détail liste " + cleLevis +
-                                                " dont le nom " + nomTableLevis + " ne correspond pas à " + nomTable + " " +
-                                                "suivi de hashmap. J'obtiens : " + listeLevis,
-                                        "err");
+                                comment("setData/étrangers (" + nomTable + ", " + nomSpecial + ") : Trouvé un détail liste " + cleLevis + " dont le nom " + nomTableLevis + " ne correspond pas à " + nomTable + " " + "suivi de hashmap. J'obtiens : " + listeLevis, "err");
                             }
                         } else {
-                            comment("setData/étrangers (" + nomTable + ", " + nomSpecial + "): Trouvé un détail liste " + cleLevis + " non conforme : " + listeLevis,
-                                    "err");
+                            comment("setData/étrangers (" + nomTable + ", " + nomSpecial + "): Trouvé un détail liste " + cleLevis + " non conforme : " + listeLevis, "err");
                         }
                     } else {
-                        comment("setData/étrangers (" + nomTable + ", " + nomSpecial + ") : Trouvé un détail liste " + cleLevis + " qui n'est pas une liste ! => " + hypoLevis,
-                                "err");
+                        comment("setData/étrangers (" + nomTable + ", " + nomSpecial + ") : Trouvé un détail liste " + cleLevis + " qui n'est pas une liste ! => " + hypoLevis, "err");
                     }
                 }
             }
@@ -1205,9 +1330,7 @@ public abstract class ObjetCSA
                 String cleLevis = monType + "_" + nomTable + "_" + monId;
                 Object objetLevis = hashDetails.get(cleLevis);
                 if (objetLevis != null) {
-                    if (objetLevis instanceof ArrayList &&
-                            !((ArrayList<?>) objetLevis).isEmpty() &&
-                            ((ArrayList<?>) objetLevis).get(0) instanceof String) {
+                    if (objetLevis instanceof ArrayList && !((ArrayList<?>) objetLevis).isEmpty() && ((ArrayList<?>) objetLevis).get(0) instanceof String) {
                         ArrayList<Object> listeLevis = (ArrayList<Object>) objetLevis;
                         String nomTableLevis = String.valueOf(listeLevis.get(0));
                         if (nomTableLevis.equals(nomTable)) {
@@ -1217,20 +1340,14 @@ public abstract class ObjetCSA
                             anciensObjets.addAll(arrayList);
                             clesUtilisees.add(nomTable);
                         } else {
-                            comment("setData : Trouvé un détail liste " + cleLevis +
-                                            " qui est une liste de " + nomTableLevis + " et non  " + nomTable,
-                                    "err");
+                            comment("setData : Trouvé un détail liste " + cleLevis + " qui est une liste de " + nomTableLevis + " et non  " + nomTable, "out");
                         }
                     } else {
-                        comment("setData : Trouvé un détail liste " + cleLevis +
-                                        " qui n'est pas une liste dont le 1er elt est un String, mais => " + objetLevis,
-                                "err");
+                        comment("setData : Trouvé un détail liste " + cleLevis + " qui n'est pas une liste dont le 1er elt est un String, mais => " + objetLevis, "out");
                     }
                 } else {
                     if (monId > 0) {
-                        comment("setData : Pas trouvé la liste " + cleLevis +
-                                        " dans l'élément 3 (hashLevis)",
-                                "err");
+                        comment("setData : Pas trouvé la liste " + cleLevis + " dans l'élément 3 (hashLevis)", "out");
                     }
                 }
             }
@@ -1270,8 +1387,8 @@ public abstract class ObjetCSA
         return true;
     }
 
-    private TreeMap<String, Object> extraire_donnees_attendues(HashMap<String, Object> input) {
-        TreeMap<String, Object> terug = new TreeMap<>();
+    private LinkedHashMap<String, Object> extraire_donnees_attendues(HashMap<String, Object> input) {
+        LinkedHashMap<String, Object> terug = new LinkedHashMap<>();
         input.forEach((cle, valeur) -> {
             if (hashDonnees.containsKey(cle)) {
                 terug.put(cle, valeur);
@@ -1338,10 +1455,7 @@ public abstract class ObjetCSA
      * @param id          c'est l'id du détail à chercher dans la hashLevis. La clé de recherche sera ceType-id
      * @return la liste des noms qui ont trouvé preneur
      */
-    public ArrayList<String> setDataFromHashLevis(HashMap<String, Object> hashLevis,
-                                                  int id,
-                                                  boolean toutPrendre,
-                                                  boolean verbose) {
+    public ArrayList<String> setDataFromHashLevis(HashMap<String, Object> hashLevis, int id, boolean toutPrendre, boolean verbose) {
         if (hashLevis == null || hashLevis.isEmpty()) {
             return new ArrayList<>();
         }
@@ -1356,14 +1470,10 @@ public abstract class ObjetCSA
                     HashMap<String, Object> donnees = (HashMap<String, Object>) biliste.get(1);
                     return setData(donnees, hashLevis, toutPrendre, verbose);
                 }
-                comment("setDataFromHashLevis : le contenu de la clé : " + cle + " est mal formaté. J'attends : "
-                                + " (nomTable, HashMap), mais j'obtiens : " + biliste,
-                        "err");
+                comment("setDataFromHashLevis : le contenu de la clé : " + cle + " est mal formaté. J'attends : " + " (nomTable, HashMap), mais j'obtiens : " + biliste, "err");
                 return clesUtilisees;
             }
-            comment("setDataFromHashLevis : la clé : " + cle + " ne contient pas le type " + getType() + ", " +
-                            "mais le type " + nomLevis,
-                    "err");
+            comment("setDataFromHashLevis : la clé : " + cle + " ne contient pas le type " + getType() + ", " + "mais le type " + nomLevis, "err");
             return clesUtilisees;
         }
         if (id > 0) {
@@ -1381,9 +1491,7 @@ public abstract class ObjetCSA
         comment("*** Fin Rapport", "out");
     }
 
-    private ArrayList<ObjetCSA> transformer_liste(String nomTable,
-                                                  ArrayList<Object> listeRecue,
-                                                  HashMap<String, Object> hashLevis) {
+    private ArrayList<ObjetCSA> transformer_liste(String nomTable, ArrayList<Object> listeRecue, HashMap<String, Object> hashLevis) {
         ArrayList<ObjetCSA> terug = new ArrayList<>();
         for (Object elt : listeRecue) {
             if (elt instanceof HashMap && !(((HashMap) elt).isEmpty())) {
@@ -1400,6 +1508,7 @@ public abstract class ObjetCSA
     /**
      * Permet de voir si l'objet actuel contient un fk du type rentré
      *
+     * @param nomType c'est le nom du fk
      * @return null s'il ne trouve pas ou le nomFK du type rentré
      */
     public String getNomFK(String nomType) {
@@ -1420,10 +1529,22 @@ public abstract class ObjetCSA
      *
      * @return une hashmap de (nom, donnée)
      */
-    public HashMap<String, Object> getSimpleData() {
-        HashMap<String, Object> terug = new HashMap<>(hashDonnees);
+    public LinkedHashMap<String, Object> getSimpleData() {
+        LinkedHashMap<String, Object> terug = getExpectedSimpleData();
         terug.putAll(hashDonneesNonAttendues);
         return terug;
+    }
+
+    /**
+     * Donne une copie du contenu des variables par paires de (nomBD, data)
+     * Les noms de variable sont les noms des champs de la BD
+     * Seuls les champs simples sont fournis ;
+     * pas les fk ni même les intermédiaires !
+     *
+     * @return une hashmap de (nom, donnée)
+     */
+    public LinkedHashMap<String, Object> getExpectedSimpleData() {
+        return new LinkedHashMap<>(hashDonnees);
     }
 
     /**
@@ -1433,8 +1554,8 @@ public abstract class ObjetCSA
      *
      * @return une hashmap de (nom, donnée)
      */
-    public TreeMap<String, Object> getOnlyIDs() {
-        TreeMap<String, Object> terug = new TreeMap<>();
+    public LinkedHashMap<String, Object> getOnlyIDs() {
+        LinkedHashMap<String, Object> terug = new LinkedHashMap<>();
         terug.put(this.nomID, getId());
         hashFKIntermediaire.forEach((nom, sousObjet) -> {
             terug.put(sousObjet.nomID, sousObjet.getId());
@@ -1442,30 +1563,53 @@ public abstract class ObjetCSA
         return terug;
     }
 
-    private HashMap<String, Object> extraire_fk(String nomTable, int id,
-                                                HashMap<String, Object> hashLevis) {
+    /**
+     * C'est un objet qui permet de générer une entité de l'objet en cours...
+     *
+     * @return la plupart du temps, il retourne this (ce même objet), mais peut retourner
+     * un autre objet qui permet via setObjetRacine de modifier plus précisément l'objet actuel
+     */
+    public ObjetCSA getObjetRacine() {
+        return this;
+    }
+
+    /**
+     * Attention : l'objet actuel voit toutes ses données remplacées sans condition !
+     *
+     * @param intrus l'objet externe qui va permettre d'écraser les données actuelles
+     */
+    public void setObjetRacine(ObjetCSA intrus) {
+        hashDonnees.putAll(intrus.hashDonnees);
+        hashClassesDonnees.putAll(intrus.hashClassesDonnees);
+        hashDonneesNonAttendues.putAll(intrus.hashDonneesNonAttendues);
+        hashListes.putAll(intrus.hashListes);
+        hashDependants.putAll(intrus.hashDependants);
+        paires_NomsTables_NomsSpeciaux.putAll(intrus.paires_NomsTables_NomsSpeciaux);
+        hashFKIntermediaire.putAll(intrus.hashFKIntermediaire);
+        hashFKs.putAll(intrus.hashFKs);
+        mandatories.addAll(intrus.mandatories);
+        modifications.addAll(intrus.modifications);
+    }
+
+    private HashMap<String, Object> extraire_fk(String nomTable, int id, HashMap<String, Object> hashLevis) {
         String cle = nomTable + "-" + id;
         Object objetLevis = hashLevis.get(cle);
         if (objetLevis == null) {
-            comment("extraire_Fk : Le détail de " + cle + " n'est pas fourni !", "err");
+            //comment("extraire_Fk : Le détail de " + cle + " n'est pas fourni !", "err");
             return new HashMap<>();
         }
-        if (objetLevis instanceof ArrayList &&
-                ((ArrayList<?>) objetLevis).size() > 1) {
+        if (objetLevis instanceof ArrayList && ((ArrayList<?>) objetLevis).size() > 1) {
             String nomTableLevis = String.valueOf(((ArrayList<?>) objetLevis).get(0));
-            if (nomTableLevis.equals(nomTable) &&
-                    ((ArrayList<?>) objetLevis).get(1) instanceof HashMap) {
+            if (nomTableLevis.equals(nomTable) && ((ArrayList<?>) objetLevis).get(1) instanceof HashMap) {
                 return (HashMap<String, Object>) ((ArrayList<?>) objetLevis).get(1);
             }
             if (id > 0) {
-                comment("extraire_fk : Mauvais nom de table pour détail de " + cle + ". J'attends " + nomTable +
-                        "+ hashmap, mais j'obtiens : " + objetLevis, "err");
+                comment("extraire_fk : Mauvais nom de table pour détail de " + cle + ". J'attends " + nomTable + "+ hashmap, mais j'obtiens : " + objetLevis, "err");
             }
             return new HashMap<>();
         }
         if (id > 0) {
-            comment("extraire_fk : Mauvais format pour détail de " + cle + ". J'attends (nomTable,hasmap), " +
-                    "mais j'obtiens : " + objetLevis, "err");
+            comment("extraire_fk : Mauvais format pour détail de " + cle + ". J'attends (nomTable,hasmap), " + "mais j'obtiens : " + objetLevis, "out");
         }
         return new HashMap<>();
     }
@@ -1482,6 +1626,7 @@ public abstract class ObjetCSA
         clone.hashFKIntermediaire.putAll(hashFKIntermediaire);
         clone.hashFKs.putAll(hashFKs);
         clone.mandatories.addAll(mandatories);
+        clone.gestionnairesImbrications.putAll(gestionnairesImbrications);
         // les modifications ne sont pas copiées
         return clone;
     }
@@ -1491,117 +1636,21 @@ public abstract class ObjetCSA
      * Sert à récupérer les données modifiées de l'objet courant Sous forme de
      * paires (nomBD, valeur)
      * L'ID et les champs intermédiaires sont fournis également !
-     * Les listes internes sont fournies, les sous-objets aussi !
+     * Les mandatories sont inclues également
      *
      * @return une hashmap de (nom, donnéee) correspondant aux modifications
      */
     public HashMap<String, Object> getHashModifications() {
-        HashMap<String, Object> modifs = new HashMap<>();
-        TreeSet<String> mix = new TreeSet<>(modifications);
+
+        LinkedHashSet<String> mix = new LinkedHashSet<>(modifications);
         mix.addAll(mandatories);
 
-        // données d'imbrication (localités)
-        for (Map.Entry<String, GestionnaireImbrications> paire : gestionnairesImbrications.entrySet()) {
-            GestionnaireImbrications gestionnaireImbrication = paire.getValue();
-            String nomLePlusBas = paire.getKey();
-            if (mandatories.contains(nomLePlusBas) || gestionnaireImbrication.aChange()) {
-                Object nul = modifs.put(nomLePlusBas, gestionnaireImbrication.getFk());
-                alertIfNotNull(nul, nomLePlusBas);
-            }
-        }
-
-
-        // modifications observées dans les intermédiaires
-        for (Map.Entry<String, ObjetCSA> paireIntermediaire : hashFKIntermediaire.entrySet()) {
-            ObjetCSA sousObjetIntermediaire = paireIntermediaire.getValue();
-            // idintermédiaire obligatoire !
-            HashMap<String, Object> modifsIntermediaire = sousObjetIntermediaire.getData();
-            modifsIntermediaire.forEach((cle, valeur) -> {
-                Object nul = modifs.put(cle, valeur);
-                alertIfNotNull(nul, cle);
-            });
-        }
-        // FKs
-        ArrayList<String> nomUsagesFK = new ArrayList<>();
-        for (Map.Entry<String, ObjetCSA> paire : hashFKs.entrySet()) {
-            ObjetCSA sousObjet = paire.getValue();
-            String cleFK = paire.getKey();
-            if (mix.contains(cleFK)) {
-                Object nul = modifs.put(cleFK, sousObjet.getId());
-                modifs.put(sousObjet.getType() + "-" + cleFK, sousObjet.getHashModifications());
-                alertIfNotNull(nul, cleFK);
-                nomUsagesFK.add(cleFK);
-            }
-        }
-        nomUsagesFK.forEach(mix::remove); // plus rapide que removeAll apparemment...
-
-        // sous-objets dépendants (non initialisables)
-        ArrayList<String> nomUsagesForeign = new ArrayList<>();
-        for (Map.Entry<String, TreeMap<String, Object>> paireEtrangere : hashDependants.entrySet()) {
-            TreeMap<String, Object> hashMap = paireEtrangere.getValue();
-            String nomTable = paireEtrangere.getKey();
-            if (hashMap != null) {
-                ObjetCSA sousObjet = getObjetFromType(nomTable);
-                sousObjet.setData(new HashMap<>(hashMap), null, true, false);
-                String cleSpeciale = paires_NomsTables_NomsSpeciaux.get(nomTable);
-                if (mix.contains(cleSpeciale)) {
-                    Object nul = modifs.put(cleSpeciale, sousObjet.getId());
-                    modifs.put(nomTable + "-" + cleSpeciale, hashMap);
-                    alertIfNotNull(nul, cleSpeciale);
-                    nomUsagesForeign.add(cleSpeciale);
-                    // ne surtout pas mettre aussi les modifications de l'objet car il est probablement
-                    // fourni plus haut dans l'arborescence de données => losange de la mort !
-                }
-            }
-        }
-        nomUsagesForeign.forEach(mix::remove);
-
-        // listes de sous-objets
-        ArrayList<String> nomUsagesListes = new ArrayList<>();
-        for (Map.Entry<String, ArrayList<ObjetCSA>> paire : hashListes.entrySet()) {
-            ArrayList<ObjetCSA> sousObjets = paire.getValue();
-            String nomTable = paire.getKey();
-            ArrayList<HashMap<String, Object>> sousListe = new ArrayList<>();
-            if (mix.contains(nomTable)) {
-                sousObjets.forEach(sousObjet -> {
-                    sousListe.add(sousObjet.getHashModifications());
-                });
-                nomUsagesListes.add(nomTable);
-            }
-            if (!sousListe.isEmpty()) {
-                modifs.put(nomTable, sousListe);
-            }
-        }
-        nomUsagesListes.forEach(mix::remove);
-
-        // données non-attendues
-        ArrayList<String> nomUsages = new ArrayList<>();
-        for (String nom : mix) {
-            Object valeur = hashDonnees.get(nom);
-            if (valeur != null) {
-                Object nul = modifs.put(nom, valeur);
-                alertIfNotNull(nul, nom);
-                nomUsages.add(nom);
-            } else {
-                // données reçues, mais non attendues
-                valeur = hashDonneesNonAttendues.get(nom);
-                if (valeur != null && !modifs.containsKey(nom)) {
-                    Object nul = modifs.put(nom, valeur);
-                    alertIfNotNull(nul, nom);
-                    nomUsages.add(nom);
-                }
-            }
-        }
-        nomUsages.forEach(mix::remove);
-
-        modifs.put(nomID, getId());
-        return modifs;
+        return aspirer_donnees(mix);
     }
 
     private void alertIfNotNull(Object nul, String nom) {
         if (nul != null) {
-            System.err.println("Objet " + this + " : la variable " + nom + " a déjà trouvé" +
-                    " preneur => risque de losange de la mort !");
+            System.err.println("Objet " + this + " : la variable " + nom + " a déjà trouvé" + " preneur => risque de losange de la mort !");
         }
     }
 
@@ -1635,25 +1684,55 @@ public abstract class ObjetCSA
      * @return les données toujours fournies même si pas de modification
      */
     public HashMap<String, Object> getHashMandatories() {
-        HashMap<String, Object> obliges = new HashMap<>();
-        mandatories.forEach(cle -> {
-            if (hashDonnees.containsKey(cle)) {
-                obliges.put(cle, hashDonnees.get(cle));
-            } else if (hashFKs.containsKey(cle)) {
-                obliges.put(cle, (hashFKs.get(cle)).getId());
+        return aspirer_donnees(mandatories);
+    }
+
+    private HashMap<String, Object> aspirer_donnees(LinkedHashSet<String> hashSet) {
+        HashMap<String, Object> terug = new HashMap<>();
+        hashSet.forEach(cle -> {
+            if (hashFKs.containsKey(cle)) {
+                ObjetCSA objetFK = hashFKs.get(cle);
+                int sonId = objetFK.getId();
+                terug.put(cle, sonId > 0 ? sonId : null);   // levis interdit les fk nuls !
+                terug.put(objetFK.getType() + "-" + cle, objetFK.getSimpleData());
+            } else if (hashDonnees.containsKey(cle)) {
+                terug.put(cle, hashDonnees.get(cle));
+            } else if (hashDonneesNonAttendues.containsKey(cle)) {
+                terug.put(cle, hashDonneesNonAttendues.get(cle));
+            } else if (hashListes.containsKey(cle)) {
+                terug.put(cle, creer_hashmaps_objets(hashListes.get(cle)));
             } else {
                 for (ObjetCSA objetIntermediaire : hashFKIntermediaire.values()) {
                     Object match = objetIntermediaire.hashDonnees.get(cle);
                     if (match != null) {
-                        obliges.put(cle, match);
+                        terug.put(cle, match);
+                        break;
+                    }
+                }
+                for (Map.Entry<String, GestionnaireImbrications> paire : gestionnairesImbrications.entrySet()) {
+                    GestionnaireImbrications gestionnaire = paire.getValue();
+                    if (cle.equals(paire.getKey())) {
+                        int fk = gestionnaire.getFk();
+                        terug.put(cle, fk > 0 ? fk : null);   // levis interdit les fk nuls !
+                        if (gestionnaire.getQuartier() != null) {
+                            terug.put(gestionnaire.getQuartier().getType() + "-" + cle,
+                                    gestionnaire.getQuartier().getSimpleData());
+                        }
+                        break;
                     }
                 }
             }
         });
-        obliges.putAll(hashDonneesNonAttendues);
+        terug.put(nomID, getId());
+        return terug;
+    }
 
-        obliges.put(nomID, getId());
-        return obliges;
+    private ArrayList<HashMap<String, Object>> creer_hashmaps_objets(ArrayList<ObjetCSA> csas) {
+        ArrayList<HashMap<String, Object>> liste = new ArrayList<>();
+        for (ObjetCSA objetCSA : csas) {
+            liste.add(objetCSA.getData());
+        }
+        return liste;
     }
 
     public void setMandatories(ArrayList<String> obligatoires) {
@@ -1668,7 +1747,7 @@ public abstract class ObjetCSA
 
     public String toExport() {
         if (getId() <= 0 && getNom().isEmpty()) {
-            return "---";
+            return " - ";
         }
         return getNom().toUpperCase();
     }
@@ -1702,26 +1781,41 @@ public abstract class ObjetCSA
      * nomBD est utilisé, alors il sera remplacé par le nom réel de la variable
      *
      * @param nom nom de la variable modifiée
+     * @return vrai si on a trouvé la clé nom dans les données de l'objet (pas les listes)
      */
-    public void addModification(String nom) {
+    public boolean addModification(String nom) {
         modifications.add(nom);
-    }
-
-    public boolean removeModification(String nom) {
-        return modifications.remove(nom);
-    }
-
-    public boolean removeMandatory(String nom) {
-        return mandatories.remove(nom);
+        if (hashDonnees.containsKey(nom) || hashDependants.containsKey(nom) ||
+                hashFKs.containsKey(nom) || hashDonneesNonAttendues.containsKey(nom) ||
+                gestionnairesImbrications.containsKey(nom) || hashListes.containsKey(nom)) {
+            return true;
+        }
+        for (ObjetCSA intermediaire : hashFKIntermediaire.values()) {
+            if (intermediaire.addModification(nom)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
      * Rajoute une variable dont le contenu sera considéré comme obligé
      *
      * @param nom nom de la variable modifiée
+     * @return vrai si on a trouvé la clé nom dans les données de l'objet (pas les listes)
      */
-    public void addMandatory(String nom) {
-        mandatories.add(nom);
+    public boolean addMandatory(String nom) {
+        if (hashDonnees.containsKey(nom) || hashDependants.containsKey(nom) || hashFKs.containsKey(nom) || hashDonneesNonAttendues.containsKey(nom)) {
+            mandatories.add(nom);
+            return true;
+        }
+        for (ObjetCSA intermediaire : hashFKIntermediaire.values()) {
+            if (intermediaire.addMandatory(nom)) {
+                return true;
+            }
+        }
+        comment("ObjetCSA : la mandatorisation de " + nom + " n'a pas trouvé preneur dans " + this, "err");
+        return false;
     }
 
     public String getPublicName() {
@@ -1754,8 +1848,8 @@ public abstract class ObjetCSA
      *
      * @return une copie des variables visibles
      */
-    public ArrayList<String> getVariablesVisibles() {
-        return new ArrayList<>(variablesVisibles);
+    public ArrayList<String> getVariablesAAfficher() {
+        return new ArrayList<>(variablesAAfficher);
     }
 
     /**
@@ -1764,11 +1858,11 @@ public abstract class ObjetCSA
      *
      * @param visibles la liste de variables à rendre visibles
      */
-    public void setVariablesVisibles(ArrayList<String> visibles) {
-        variablesVisibles.clear();
+    public void setVariablesAAfficher(ArrayList<String> visibles) {
+        variablesAAfficher.clear();
         for (String elt : visibles) {
             if (hashDonnees.containsKey(elt)) {
-                variablesVisibles.add(elt);
+                variablesAAfficher.add(elt);
             }
         }
     }
@@ -1797,7 +1891,7 @@ public abstract class ObjetCSA
         return retour;
     }
 
-    public HashMap<String, TreeMap<String, Object>> getHashmapDependants() {
+    public HashMap<String, LinkedHashMap<String, Object>> getHashmapDependants() {
         return new HashMap<>(hashDependants);
     }
 
@@ -1808,7 +1902,7 @@ public abstract class ObjetCSA
     /**
      * renvoie une COPIE de la liste des paires (nom, nom public)
      *
-     * @return
+     * @return renvoie une COPIE de la liste des paires (nom, nom public)
      */
     public HashMap<String, String> getListeNomsPublics() {
         return new HashMap<>(nomsPublics);
@@ -1825,6 +1919,10 @@ public abstract class ObjetCSA
                 nomsPublics.put(nomVariable, nomPublic);
                 return true;
             }
+        }
+        if (hashDonneesNonAttendues.containsKey(nomVariable)) {
+            nomsPublics.put(nomVariable, nomPublic);
+            return true;
         }
         if (hashFKs.containsKey(nomVariable)) {
             nomsPublics.put(nomVariable, nomPublic);
@@ -1846,31 +1944,37 @@ public abstract class ObjetCSA
                 return true;
             }
         }
-        System.err.println("** ObjetCSA " + this + " : nom public <" + nomPublic + "> non attribué car variable <" + nomVariable +
-                "> inconnue !");
+        // Les listes
+        for (Map.Entry<String, ArrayList<ObjetCSA>> couple : hashListes.entrySet()) {
+            if (couple.getKey().equals(nomVariable)) {
+                nomsPublics.put(nomVariable, nomPublic);
+                return true;
+            }
+        }
+        System.err.println("** ObjetCSA " + this + " : nom public <" + nomPublic + "> non attribué car variable <" + nomVariable + "> inconnue !");
         return false;
     }
 
-    public void add_variable_visible(String nomVariable) {
+    public void add_variable_a_afficher(String nomVariable) {
         if (hashDonnees.containsKey(nomVariable)) {
-            ajouter_variable(nomVariable, variablesVisibles);
+            ajouter_variable(nomVariable, variablesAAfficher);
             return;
         }
         for (Map.Entry<String, ObjetCSA> couple : hashFKIntermediaire.entrySet()) {
             ObjetCSA fk = couple.getValue();
             if (fk.getSimpleData().containsKey(nomVariable)) {
-                ajouter_variable(nomVariable, variablesVisibles);
+                ajouter_variable(nomVariable, variablesAAfficher);
                 return;
             }
         }
         if (hashDonneesNonAttendues.containsKey(nomVariable)) {
-            ajouter_variable(nomVariable, variablesVisibles);
+            ajouter_variable(nomVariable, variablesAAfficher);
             return;
         }
         for (Map.Entry<String, ObjetCSA> couple : hashFKs.entrySet()) {
             ObjetCSA fk = couple.getValue();
             if (fk.getSimpleData().containsKey(nomVariable)) {
-                ajouter_variable(nomVariable, variablesVisibles);
+                ajouter_variable(nomVariable, variablesAAfficher);
                 return;
             }
         }
@@ -1878,7 +1982,7 @@ public abstract class ObjetCSA
             GestionnaireImbrications gestionnaireImbrications = couple.getValue();
             String nomID = couple.getKey();
             if (nomID.equals(nomVariable)) {
-                ajouter_variable(nomVariable, variablesVisibles);
+                ajouter_variable(nomVariable, variablesAAfficher);
                 return;
             }
         }
@@ -1981,8 +2085,7 @@ public abstract class ObjetCSA
      */
     public boolean changer_nom_id(String nouveau) {
         if (nouveau.isEmpty()) {
-            System.out.println("* ObjetCSA " + this + " /changer_nom_type : impossible de changer puisque " +
-                    "le nom de de la variable rentrée est vide !");
+            System.out.println("* ObjetCSA " + this + " /changer_nom_type : impossible de changer puisque " + "le nom de de la variable rentrée est vide !");
             return false;
         }
         Object contenu = remove(nomID);
@@ -2001,8 +2104,7 @@ public abstract class ObjetCSA
      */
     public boolean changer_nom_nom(String nouveau) {
         if (nouveau.isEmpty()) {
-            System.err.println("** ObjetCSA " + this + " /changer_nom_type : impossible de changer puisque " +
-                    "le nom de de la variable rentrée est vide !");
+            System.err.println("** ObjetCSA " + this + " /changer_nom_type : impossible de changer puisque " + "le nom de de la variable rentrée est vide !");
             return false;
         }
         Object contenu = remove(nomNOM);
@@ -2018,8 +2120,7 @@ public abstract class ObjetCSA
      * @param type      le type de la liste
      * @param hashLevis liste de Levis
      */
-    public void updater_liste(String type,
-                              HashMap<String, Object> hashLevis) {
+    public void updater_liste(String type, HashMap<String, Object> hashLevis) {
         int monId = getId();
         // Besoin de l'id pour trouver sa clé
         String cle = getType() + "_" + monId;
@@ -2033,24 +2134,20 @@ public abstract class ObjetCSA
                     ArrayList<Object> arrayList = (ArrayList<Object>) liste_levis;
                     String nomSousTable = String.valueOf(arrayList.get(0));
                     if (nomSousTable.equals(type)) {
-                        ArrayList<ObjetCSA> listeUpdatee = generer_hashobjets(arrayList.subList(1, arrayList.size()),
-                                type, hashLevis);
+                        ArrayList<ObjetCSA> listeUpdatee = generer_hashobjets(arrayList.subList(1, arrayList.size()), type, hashLevis);
                         hashListes.put(nomSousTable, listeUpdatee);
                     }
                 } else {
-                    comment("... Liste reçue de Levis non conforme (nomTable, hashmap,...) " +
-                                    " je reçois => " + liste_levis + "\nModification ignorée !",
-                            "err");
+                    comment("... Liste reçue de Levis non conforme (nomTable, hashmap,...) " + " je reçois => " + liste_levis + "\nModification ignorée !", "err");
                 }
             }
         }
-        if (monId > 0) {
+        /*if (monId > 0) {
             comment("updater_liste : je ne trouve pas le détail de " + cle, "out");
-        }
+        }*/
     }
 
-    private ArrayList<ObjetCSA> generer_hashobjets(List<Object> list, String nomTable,
-                                                   HashMap<String, Object> hashLevis) {
+    private ArrayList<ObjetCSA> generer_hashobjets(List<Object> list, String nomTable, HashMap<String, Object> hashLevis) {
         ArrayList<ObjetCSA> listeRetour = new ArrayList<>();
         for (Object objet : list) {
             if (objet instanceof HashMap) {
@@ -2105,7 +2202,6 @@ public abstract class ObjetCSA
      */
     public Object getSimpleData(String nomVariable) {
         if (nomVariable == null) {
-            System.err.println("** ObjetCSA/getSimpleData : Nom de variable null dans " + this + " !!!");
             return null;
         }
         Object donneeAttendue = hashDonnees.get(nomVariable);
