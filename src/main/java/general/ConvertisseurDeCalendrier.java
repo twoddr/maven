@@ -19,7 +19,7 @@ public class ConvertisseurDeCalendrier {
         LocalDateTime retour = LocalDateTime.of(calendrier.get(Calendar.YEAR),
                 calendrier.get(Calendar.MONTH) + 1,
                 calendrier.get(Calendar.DAY_OF_MONTH),
-                calendrier.get(Calendar.HOUR),
+                calendrier.get(Calendar.HOUR_OF_DAY),
                 calendrier.get(Calendar.MINUTE));
         return retour;
     }
