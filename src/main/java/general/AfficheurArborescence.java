@@ -13,11 +13,11 @@ public class AfficheurArborescence {
      * @return La liste comme elle apparait dans le TreeView par exemple
      */
     @Deprecated
-    public static String afficher(ArrayList<? extends ObjetDi> objetDis, String espace) {
+    public static String afficher(ArrayList<? extends ObjetCSA> objetDis, String espace) {
         StringBuilder terug = new StringBuilder();
-        ArrayList<ObjetDi> reducedList = new ArrayList<>(objetDis);
-        ArrayList<ObjetDi> parents = extraire_parents(reducedList, 0);
-        for (ObjetDi parent : parents) {
+        ArrayList<ObjetCSA> reducedList = new ArrayList<>(objetDis);
+        ArrayList<ObjetCSA> parents = extraire_parents(reducedList, 0);
+        for (ObjetCSA parent : parents) {
             terug.append(espace).append(parent.toString()).append("\n")
                     .append(afficher(extraire_parents(reducedList, parent.getId()), "    "))
                     .append("\n");
@@ -25,10 +25,10 @@ public class AfficheurArborescence {
         return terug.toString();
     }
 
-    private static ArrayList<ObjetDi> extraire_parents(ArrayList<ObjetDi> reducedList,
+    private static ArrayList<ObjetCSA> extraire_parents(ArrayList<ObjetCSA> reducedList,
                                                        int idParent) {
-        ArrayList<ObjetDi> terug = new ArrayList<>();
-        for (ObjetDi objetDi : reducedList) {
+        ArrayList<ObjetCSA> terug = new ArrayList<>();
+        for (ObjetCSA objetDi : reducedList) {
             if (objetDi.getIdParent() == idParent) {
                 terug.add(objetDi);
             }

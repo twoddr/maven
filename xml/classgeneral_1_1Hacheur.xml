@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Hacheur" kind="class" language="Java" prot="public">
+    <compoundname>general::Hacheur</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1Hacheur_1a419b212a23e1c86bdc9a89e3697b5836" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.Hacheur.hashPassword</definition>
+        <argsstring>(String password)</argsstring>
+        <name>hashPassword</name>
+        <qualifiedname>general.Hacheur.hashPassword</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Hacheur.java" line="8" column="26" bodyfile="src/main/java/general/Hacheur.java" bodystart="8" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/Hacheur.java" line="7" column="7" bodyfile="src/main/java/general/Hacheur.java" bodystart="7" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1Hacheur_1a419b212a23e1c86bdc9a89e3697b5836" prot="public" virt="non-virtual"><scope>general::Hacheur</scope><name>hashPassword</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1505 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Individu" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>general::Individu</compoundname>
+    <basecompoundref refid="classgeneral_1_1ObjetDi" prot="public" virt="non-virtual">general.ObjetDi</basecompoundref>
+    <innerclass refid="classgeneral_1_1Individu_1_1CalculateurAge" prot="private">general::Individu::CalculateurAge</innerclass>
+    <innerclass refid="classgeneral_1_1Individu_1_1MyPassword" prot="private">general::Individu::MyPassword</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a63572b99f6050b71d04a884d2d73f11f" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.SEXE</definition>
+        <argsstring></argsstring>
+        <name>SEXE</name>
+        <qualifiedname>general.Individu.SEXE</qualifiedname>
+        <initializer>= &quot;sexe&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="12" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a010b20f72c86be467f8e19c697c9c52a" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.PRENOM</definition>
+        <argsstring></argsstring>
+        <name>PRENOM</name>
+        <qualifiedname>general.Individu.PRENOM</qualifiedname>
+        <initializer>= &quot;prenom&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="12" column="26" bodyfile="src/main/java/general/Individu.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a5656f4c9ef2de2120d38cf902c193156" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.TEL</definition>
+        <argsstring></argsstring>
+        <name>TEL</name>
+        <qualifiedname>general.Individu.TEL</qualifiedname>
+        <initializer>= &quot;telephone&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="12" column="34" bodyfile="src/main/java/general/Individu.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1acbc525cfbc31dff6aa5ced5be7f6bf74" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.GSM</definition>
+        <argsstring></argsstring>
+        <name>GSM</name>
+        <qualifiedname>general.Individu.GSM</qualifiedname>
+        <initializer>= &quot;gsm&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="13" column="13" bodyfile="src/main/java/general/Individu.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a25d616fab678827a6734ee386077eb44" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.ADRESSE</definition>
+        <argsstring></argsstring>
+        <name>ADRESSE</name>
+        <qualifiedname>general.Individu.ADRESSE</qualifiedname>
+        <initializer>= &quot;adresse&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="13" column="18" bodyfile="src/main/java/general/Individu.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1aa1dc6742cf0c21d2891314526f194fa4" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.DATE_NAISSANCE</definition>
+        <argsstring></argsstring>
+        <name>DATE_NAISSANCE</name>
+        <qualifiedname>general.Individu.DATE_NAISSANCE</qualifiedname>
+        <initializer>= &quot;dateNaissance&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="13" column="27" bodyfile="src/main/java/general/Individu.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1acbec02eba1bea56fad3c5ca64dd50e5a" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.CODE_POSTAL</definition>
+        <argsstring></argsstring>
+        <name>CODE_POSTAL</name>
+        <qualifiedname>general.Individu.CODE_POSTAL</qualifiedname>
+        <initializer>= &quot;codePostal&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="14" column="13" bodyfile="src/main/java/general/Individu.java" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1af00bee6fb029e5326242c1d66633797d" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.COURRIEL</definition>
+        <argsstring></argsstring>
+        <name>COURRIEL</name>
+        <qualifiedname>general.Individu.COURRIEL</qualifiedname>
+        <initializer>= &quot;courriel&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="14" column="26" bodyfile="src/main/java/general/Individu.java" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a2bbe5a1278ed770797a8959bc0a0ad9d" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.FAX</definition>
+        <argsstring></argsstring>
+        <name>FAX</name>
+        <qualifiedname>general.Individu.FAX</qualifiedname>
+        <initializer>= &quot;fax&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="14" column="36" bodyfile="src/main/java/general/Individu.java" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a0d900f9446684b414faad8373af7483f" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.GRADE</definition>
+        <argsstring></argsstring>
+        <name>GRADE</name>
+        <qualifiedname>general.Individu.GRADE</qualifiedname>
+        <initializer>= &quot;grade&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="14" column="41" bodyfile="src/main/java/general/Individu.java" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a55adecdb0c1746be679c9f0a9f7ade8f" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.MOT_DE_PASSE</definition>
+        <argsstring></argsstring>
+        <name>MOT_DE_PASSE</name>
+        <qualifiedname>general.Individu.MOT_DE_PASSE</qualifiedname>
+        <initializer>= &quot;password&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="15" column="13" bodyfile="src/main/java/general/Individu.java" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a2d971d4d1597dc7d28526fe80a3ffb77" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.TITRE</definition>
+        <argsstring></argsstring>
+        <name>TITRE</name>
+        <qualifiedname>general.Individu.TITRE</qualifiedname>
+        <initializer>= &quot;titre&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="15" column="27" bodyfile="src/main/java/general/Individu.java" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a3a784775ea19d968b8e20f0827c92f92" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.URL</definition>
+        <argsstring></argsstring>
+        <name>URL</name>
+        <qualifiedname>general.Individu.URL</qualifiedname>
+        <initializer>= &quot;url&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="15" column="34" bodyfile="src/main/java/general/Individu.java" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a82ecf8640f3a60c1dc46e17ab2a5be99" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.TVA</definition>
+        <argsstring></argsstring>
+        <name>TVA</name>
+        <qualifiedname>general.Individu.TVA</qualifiedname>
+        <initializer>= &quot;tva&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="15" column="39" bodyfile="src/main/java/general/Individu.java" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a5a4f1fd2f96f4ba767b4e26923526a55" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.LOGIN</definition>
+        <argsstring></argsstring>
+        <name>LOGIN</name>
+        <qualifiedname>general.Individu.LOGIN</qualifiedname>
+        <initializer>= &quot;login&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="16" column="13" bodyfile="src/main/java/general/Individu.java" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1a8d7e4f12acc9500734de9f1c536e75f6" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.Individu.COMMENTAIRES</definition>
+        <argsstring></argsstring>
+        <name>COMMENTAIRES</name>
+        <qualifiedname>general.Individu.COMMENTAIRES</qualifiedname>
+        <initializer>= &quot;commentaires&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="16" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1Individu_1aacb6c78ef8003653eb25888732bbd5ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Individu.Individu</definition>
+        <argsstring>()</argsstring>
+        <name>Individu</name>
+        <qualifiedname>general.Individu.Individu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="18" column="12" bodyfile="src/main/java/general/Individu.java" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a9dc4bfa1f1c1914d37da982fb8382df5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Individu.Individu</definition>
+        <argsstring>(String prenom, String nom, String email)</argsstring>
+        <name>Individu</name>
+        <qualifiedname>general.Individu.Individu</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>prenom</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>email</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nouvel individu avec les paramètres de base</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prenom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>prénom </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>email</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>mail </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="30" column="12" bodyfile="src/main/java/general/Individu.java" bodystart="30" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a1943bb81b6190871ca6c4877225db9d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.Individu.changer_nom_variable</definition>
+        <argsstring>(String ancien, String nouveau)</argsstring>
+        <name>changer_nom_variable</name>
+        <qualifiedname>general.Individu.changer_nom_variable</qualifiedname>
+        <reimplements refid="classgeneral_1_1ObjetDi_1a3d374a4f1d0d5d32ced583d4119bb6f9">changer_nom_variable</reimplements>
+        <param>
+          <type>String</type>
+          <declname>ancien</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nouveau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de modifier le nom d&apos;une variable. Le contenu est reporté à la nouvelle variable. Il faut que l&apos;ancien existe déjà et que le nouveau soit non vide</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ancien</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;ancien nom </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nouveau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nouveau nom qui doit être non vide, sinon IGNORÉ ! </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si l&apos;opération réussit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="40" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="40" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ad26f3a0e359aa35a78d4a6ef13224629" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getSexe</definition>
+        <argsstring>()</argsstring>
+        <name>getSexe</name>
+        <qualifiedname>general.Individu.getSexe</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="82" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1aa5f33144bec2a9c8087ec4723e0c5f2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setSexe</definition>
+        <argsstring>(Integer s)</argsstring>
+        <name>setSexe</name>
+        <qualifiedname>general.Individu.setSexe</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le sexe de la personne actuelle</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>0 si indéterminé, 1 si m, et 2 si f </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false si l&apos;entier rentré n&apos;est pas dans les 3 attendus </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="92" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="92" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a4dd5c40fbfa69093d66b0f11d3068403" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setSexe</definition>
+        <argsstring>(String name)</argsstring>
+        <name>setSexe</name>
+        <qualifiedname>general.Individu.setSexe</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="109" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a3507f5bb937e6c4ca2d2f95ba46f8727" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.reinitialiser</definition>
+        <argsstring>()</argsstring>
+        <name>reinitialiser</name>
+        <qualifiedname>general.Individu.reinitialiser</qualifiedname>
+        <reimplements refid="classgeneral_1_1ObjetDi_1a39bb9240c9837e3115b2a7b00cb06433">reinitialiser</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="114" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ad15fa3c061e8df9c7f8c4ab74c06f4a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.reinitialiser_individu</definition>
+        <argsstring>()</argsstring>
+        <name>reinitialiser_individu</name>
+        <qualifiedname>general.Individu.reinitialiser_individu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="118" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="118" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1acbd4652de3f36869478950d0c36372e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <qualifiedname>general.Individu.toString</qualifiedname>
+        <reimplements refid="classgeneral_1_1ObjetDi_1a9b13218f30ad12246acb81a5e428edd3">toString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="146" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="146" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a2602d42a0ec65a149cbf057b15586f4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Integer</type>
+        <definition>Integer general.Individu.getCodePostal</definition>
+        <argsstring>()</argsstring>
+        <name>getCodePostal</name>
+        <qualifiedname>general.Individu.getCodePostal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="157" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a9c1613f48332392f559806f6afdc17b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setCodePostal</definition>
+        <argsstring>(Integer c)</argsstring>
+        <name>setCodePostal</name>
+        <qualifiedname>general.Individu.setCodePostal</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="161" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="161" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1aef422872d58e6c4052edef766aa7b7a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Integer</type>
+        <definition>Integer general.Individu.getIdLocalite</definition>
+        <argsstring>()</argsstring>
+        <name>getIdLocalite</name>
+        <qualifiedname>general.Individu.getIdLocalite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="167" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a416f9034316c12fc529d7cc4001b58f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setIdLocalite</definition>
+        <argsstring>(Integer c)</argsstring>
+        <name>setIdLocalite</name>
+        <qualifiedname>general.Individu.setIdLocalite</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="171" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="171" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a0e77d74486742d54fb83692192035911" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getTel</definition>
+        <argsstring>()</argsstring>
+        <name>getTel</name>
+        <qualifiedname>general.Individu.getTel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="178" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a60e348c5b553110f568da445525e753d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setTel</definition>
+        <argsstring>(String tel1)</argsstring>
+        <name>setTel</name>
+        <qualifiedname>general.Individu.setTel</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>tel1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="182" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a2a5f8cc94206566d88dc0d4ba8690f5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getGsm</definition>
+        <argsstring>()</argsstring>
+        <name>getGsm</name>
+        <qualifiedname>general.Individu.getGsm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="186" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a615e4c84621e9ea735abdaa645ac398f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setGsm</definition>
+        <argsstring>(String gsm1)</argsstring>
+        <name>setGsm</name>
+        <qualifiedname>general.Individu.setGsm</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>gsm1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Si le string rentré comporte plus de 5 caractères, le booléen estDetaille passe également à true!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gsm1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="196" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="196" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a45c0f192abb1ca721d0417f48305d1bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getFax</definition>
+        <argsstring>()</argsstring>
+        <name>getFax</name>
+        <qualifiedname>general.Individu.getFax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="200" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="200" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a183a2158428e4372c919fe3c6c05d106" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setFax</definition>
+        <argsstring>(String fax1)</argsstring>
+        <name>setFax</name>
+        <qualifiedname>general.Individu.setFax</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>fax1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Si le string rentré comporte plus de 5 caractères, le booléen estDetaille passe également à true!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fax1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="210" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a5519909672709118d08c2ff6a701b70b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getCourriel</definition>
+        <argsstring>()</argsstring>
+        <name>getCourriel</name>
+        <qualifiedname>general.Individu.getCourriel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="214" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="214" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ab084afc74c61d6ee2c6719c041845952" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setCourriel</definition>
+        <argsstring>(String courriel1)</argsstring>
+        <name>setCourriel</name>
+        <qualifiedname>general.Individu.setCourriel</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>courriel1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Si le string rentré comporte plus de 5 caractères, le booléen estDetaille passe également à true!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>courriel1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="224" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="224" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a724f48c9402dac21b1fc163db2da8412" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getUrl</definition>
+        <argsstring>()</argsstring>
+        <name>getUrl</name>
+        <qualifiedname>general.Individu.getUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="228" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="228" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1af834bbe202bed110ba93e7482e64620c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setUrl</definition>
+        <argsstring>(String url1)</argsstring>
+        <name>setUrl</name>
+        <qualifiedname>general.Individu.setUrl</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>url1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="232" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="232" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a6a28e349f8832f9686162622f071cade" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getDivers</definition>
+        <argsstring>()</argsstring>
+        <name>getDivers</name>
+        <qualifiedname>general.Individu.getDivers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="236" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1afc36bc558d4e6c90a0a8dfba3a123df8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setDivers</definition>
+        <argsstring>(String divers1)</argsstring>
+        <name>setDivers</name>
+        <qualifiedname>general.Individu.setDivers</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>divers1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="240" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="240" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a761585c624dc99cc5d86d21fb5d805bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getTva</definition>
+        <argsstring>()</argsstring>
+        <name>getTva</name>
+        <qualifiedname>general.Individu.getTva</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="244" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a954b07ecf2305e1d85adf3cb8cbc3aea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setTva</definition>
+        <argsstring>(String nTva)</argsstring>
+        <name>setTva</name>
+        <qualifiedname>general.Individu.setTva</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nTva</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="248" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a18885872be5fd758df9e3e661dcf5ca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getTitre</definition>
+        <argsstring>()</argsstring>
+        <name>getTitre</name>
+        <qualifiedname>general.Individu.getTitre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="252" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="252" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ac66b57316d3301ae3b1a65f1c0288b79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getPrenom</definition>
+        <argsstring>()</argsstring>
+        <name>getPrenom</name>
+        <qualifiedname>general.Individu.getPrenom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="264" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="264" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a0aa8e26db491c31b5650a0fcc1411a24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setPrenom</definition>
+        <argsstring>(String s)</argsstring>
+        <name>setPrenom</name>
+        <qualifiedname>general.Individu.setPrenom</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="268" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="268" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a3e5734936f3fcc3f6a728e56f642b5e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getAdresse</definition>
+        <argsstring>()</argsstring>
+        <name>getAdresse</name>
+        <qualifiedname>general.Individu.getAdresse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="272" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="272" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a97d4b5cc1e44de59f4000f1fd442db23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setAdresse</definition>
+        <argsstring>(String s)</argsstring>
+        <name>setAdresse</name>
+        <qualifiedname>general.Individu.setAdresse</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Si l&apos;adresse rentrée contient plus de 2 caractères, alors le booléen estDetaille passe à true! Sinon estDetaille passe à false!</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est l&apos;adresse rentrée </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="282" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a59b2fbba8d432a27d230e2af2719ab15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Integer</type>
+        <definition>Integer general.Individu.getAge</definition>
+        <argsstring>()</argsstring>
+        <name>getAge</name>
+        <qualifiedname>general.Individu.getAge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="287" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="287" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1af552d0cd9bdfe4e4587582b569b1c6ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean general.Individu.setAge</definition>
+        <argsstring>(Integer age)</argsstring>
+        <name>setAge</name>
+        <qualifiedname>general.Individu.setAge</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>age</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rentre l&apos;âge d&apos;une personne; date d&apos;anniversaire = 1er janvier</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>age</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si l&apos;age rentré est positif </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="297" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="297" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1acf580a9295ee9767f160fad36db6fd7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getAgeString</definition>
+        <argsstring>()</argsstring>
+        <name>getAgeString</name>
+        <qualifiedname>general.Individu.getAgeString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Détermine l&apos;age de l&apos;individu actuel: en années si plus d&apos;un an; en mois si né après le mois en cours; en jours si né avant aujourd&apos;hui; Dans tous les autres cas, l&apos;age vaut zéro</para>
+<para><simplesect kind="return"><para>l&apos;age de l&apos;individu en cours </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="314" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="314" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a8f0d29a16da86b679d9b6f9920fb2af1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime general.Individu.getDateNaissance</definition>
+        <argsstring>()</argsstring>
+        <name>getDateNaissance</name>
+        <qualifiedname>general.Individu.getDateNaissance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="341" column="26" bodyfile="src/main/java/general/Individu.java" bodystart="341" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a21e4f54322679b216770bc5755d9be75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setDateNaissance</definition>
+        <argsstring>(LocalDateTime c)</argsstring>
+        <name>setDateNaissance</name>
+        <qualifiedname>general.Individu.setDateNaissance</qualifiedname>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="345" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="345" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ac7a400dce088dfce23167314b15e342d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setDateNaissance</definition>
+        <argsstring>(LocalDate c)</argsstring>
+        <name>setDateNaissance</name>
+        <qualifiedname>general.Individu.setDateNaissance</qualifiedname>
+        <param>
+          <type>LocalDate</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="349" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="349" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1acfd2251498700659ae998665c4df75b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.printContenu</definition>
+        <argsstring>()</argsstring>
+        <name>printContenu</name>
+        <qualifiedname>general.Individu.printContenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="354" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="354" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a563f326b947cdbbbbe0b5dbf4f74164f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.afficheDetails</definition>
+        <argsstring>()</argsstring>
+        <name>afficheDetails</name>
+        <qualifiedname>general.Individu.afficheDetails</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="376" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="376" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a71a62091e00fbdeb7b6a2278a41647eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.Individu.equals</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>equals</name>
+        <qualifiedname>general.Individu.equals</qualifiedname>
+        <reimplements refid="classgeneral_1_1ObjetDi_1ae255e854aa41b83d9329897f17dc155b">equals</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de dire si deux eltIHM sont égaux ou pas. Les critères d&apos;égalité sont (dans l&apos;ordre) :<itemizedlist>
+<listitem><para>le type (obligatoire)</para>
+</listitem><listitem><para>l&apos;id (si ok, on regarde l&apos;intermédiaire)</para>
+</listitem><listitem><para>l&apos;id intermédiaire (ok si les deux id sont égaux)</para>
+</listitem><listitem><para>le nom, si les ids sont nuls, et les noms non-vides</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;autre eltIHM </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si les conditions précédentes sont vérifiées </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="381" column="20" bodyfile="src/main/java/general/Individu.java" bodystart="381" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1acc5da514793b0a294a667cc5f680e2bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.Individu.compareTo</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>compareTo</name>
+        <qualifiedname>general.Individu.compareTo</qualifiedname>
+        <reimplements refid="classgeneral_1_1ObjetDi_1aefc6741114ee9f329992366b594192cf">compareTo</reimplements>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="400" column="16" bodyfile="src/main/java/general/Individu.java" bodystart="400" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1afb0b9799784c9dd686e18d275c083006" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getPswd</definition>
+        <argsstring>()</argsstring>
+        <name>getPswd</name>
+        <qualifiedname>general.Individu.getPswd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Le mot de passe en md5 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="418" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="418" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ad8784c541cffaefa1420ad3d13622c2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setMotDePasse</definition>
+        <argsstring>(String mdp)</argsstring>
+        <name>setMotDePasse</name>
+        <qualifiedname>general.Individu.setMotDePasse</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>mdp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Insère le mot de passe tapé à l&apos;écran Attention : ce mot de passe est transformé en MD5 getPswd() ne fournira pas la même valeur, évidemment</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mdp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="429" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="429" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a8022a955d3b5514568b9e3a361673b0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setPassword</definition>
+        <argsstring>(String password)</argsstring>
+        <name>setPassword</name>
+        <qualifiedname>general.Individu.setPassword</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cette méthode est strictement identique à setMotDePasse Le mot de passe est converti en md5 et il n&apos;y a plus moyen de le relire tel quel</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="440" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="440" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a0fb0988b2e24c6ff7e67f4e4a075ab8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setMD5Pswd</definition>
+        <argsstring>(String mdp)</argsstring>
+        <name>setMD5Pswd</name>
+        <qualifiedname>general.Individu.setMD5Pswd</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>mdp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Insère directement le mot de passe en MD5 Il ne sera pas modifié et sera le résultat de getPswd() Par mesure de prudence, il vaut mieux utiliser le setPassword</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mdp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="453" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="453" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a996606cb43f2631e9c3c6d68d12935ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.Individu.getGrade</definition>
+        <argsstring>()</argsstring>
+        <name>getGrade</name>
+        <qualifiedname>general.Individu.getGrade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="457" column="16" bodyfile="src/main/java/general/Individu.java" bodystart="457" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ad557de2c984960a1642d473967fabfdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setGrade</definition>
+        <argsstring>(int i)</argsstring>
+        <name>setGrade</name>
+        <qualifiedname>general.Individu.setGrade</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="461" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="461" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1af8ed20670201ad4c01711ea716807007" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.getLogin</definition>
+        <argsstring>()</argsstring>
+        <name>getLogin</name>
+        <qualifiedname>general.Individu.getLogin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="466" column="19" bodyfile="src/main/java/general/Individu.java" bodystart="466" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1ad9d0c5e20a7d48f221e66b67413e1456" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setLogin</definition>
+        <argsstring>(String user)</argsstring>
+        <name>setLogin</name>
+        <qualifiedname>general.Individu.setLogin</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="470" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="470" bodyend="472"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1Individu_1a61f0e430b9efdfaca9859e445c7ef28b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Individu.setTitre</definition>
+        <argsstring>(String s)</argsstring>
+        <name>setTitre</name>
+        <qualifiedname>general.Individu.setTitre</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="259" column="18" bodyfile="src/main/java/general/Individu.java" bodystart="259" bodyend="261"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>Comparable</label>
+      </node>
+      <node id="1">
+        <label>general.Individu</label>
+        <link refid="classgeneral_1_1Individu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="3">
+        <label>Comparable</label>
+      </node>
+      <node id="6">
+        <label>HashMap&lt; String, String &gt;</label>
+      </node>
+      <node id="1">
+        <label>general.Individu</label>
+        <link refid="classgeneral_1_1Individu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>variablesVisibles</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>nomsPublics</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/Individu.java" line="11" column="17" bodyfile="src/main/java/general/Individu.java" bodystart="11" bodyend="608"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ObjetDi_1a05df36a4f4bb090379ae2786be990d73" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>add_nom_public</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a783e07f8e2b64b4892ed06b6964ee73f" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>add_variable_visible</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1828cbc021106f7812488ce236a9e127" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>addGestionnaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa86727fbfa008961c04857e2d319a290" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>addMandatory</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1b68ee5c21b4f1f29eff22347f8c82a3" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>addModification</name></member>
+      <member refid="classgeneral_1_1Individu_1a25d616fab678827a6734ee386077eb44" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>ADRESSE</name></member>
+      <member refid="classgeneral_1_1Individu_1a563f326b947cdbbbbe0b5dbf4f74164f" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>afficheDetails</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afdbb0643b4c82cf9baade201440c160e" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>ajouter_dans_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a36d8849d1a65126de95e805dc23388e9" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>changer_nom_id</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac65d393205b173a0067e32e33cbecafd" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>changer_nom_nom</name></member>
+      <member refid="classgeneral_1_1Individu_1a1943bb81b6190871ca6c4877225db9d5" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>changer_nom_variable</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5e0971df98474b4f098b5e0a51247a7d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>charger_donnees</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a35ba6f7671507de2096f39a9e83483ee" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>clear</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae3efa63f65754af5f32d9c419804be75" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>clearMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a222d3ccf13080b223a1167a41dd28ba6" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>clearModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a25567a2831eab82beb565d20f61c680d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>clearSousObjets</name></member>
+      <member refid="classgeneral_1_1Individu_1acbec02eba1bea56fad3c5ca64dd50e5a" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>CODE_POSTAL</name></member>
+      <member refid="classgeneral_1_1Individu_1a8d7e4f12acc9500734de9f1c536e75f6" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>COMMENTAIRES</name></member>
+      <member refid="classgeneral_1_1Individu_1acc5da514793b0a294a667cc5f680e2bf" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>compareTo</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aaa5ae83922d2f1394fb0e42ff02d871f" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>COULEUR</name></member>
+      <member refid="classgeneral_1_1Individu_1af00bee6fb029e5326242c1d66633797d" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>COURRIEL</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9fa51595364c2574f814bd53f4f099e0" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>creer_objet_vide</name></member>
+      <member refid="classgeneral_1_1Individu_1aa1dc6742cf0c21d2891314526f194fa4" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>DATE_NAISSANCE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a35a78342c585a1ddce8fb9b02627312a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>deleteSousObjets</name></member>
+      <member refid="classgeneral_1_1Individu_1a71a62091e00fbdeb7b6a2278a41647eb" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>equals</name></member>
+      <member refid="classgeneral_1_1Individu_1a2bbe5a1278ed770797a8959bc0a0ad9d" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>FAX</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a99264a3c2cc0c9220966ee5b0378a619" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>get</name></member>
+      <member refid="classgeneral_1_1Individu_1a3e5734936f3fcc3f6a728e56f642b5e3" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getAdresse</name></member>
+      <member refid="classgeneral_1_1Individu_1a59b2fbba8d432a27d230e2af2719ab15" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getAge</name></member>
+      <member refid="classgeneral_1_1Individu_1acf580a9295ee9767f160fad36db6fd7f" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getAgeString</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a201746dfde1966fa6ce30107a53e240a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getAllData</name></member>
+      <member refid="classgeneral_1_1Individu_1a2602d42a0ec65a149cbf057b15586f4e" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getCodePostal</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ada50db2b80b7988b81a871c8bb3dbc57" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getCopy</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a12bc1528c0e8fee99a32b332f859ce90" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getCouleur</name></member>
+      <member refid="classgeneral_1_1Individu_1a5519909672709118d08c2ff6a701b70b" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getCourriel</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8c4cbd1740b7980a88197633cbfb5f7a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abfe1b190a41ad386655d74d4121d7055" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6698fbca215239892da81c6e65cc35ee" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1Individu_1a8f0d29a16da86b679d9b6f9920fb2af1" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getDateNaissance</name></member>
+      <member refid="classgeneral_1_1Individu_1a6a28e349f8832f9686162622f071cade" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getDivers</name></member>
+      <member refid="classgeneral_1_1Individu_1a45c0f192abb1ca721d0417f48305d1bb" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getFax</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a394410f5d78362d5bb8c0af04eef6932" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getFKIs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a01fb98109f9175d082107781a441ed8f" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getFKs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a73fcdb263606a5cdc355357888b443e5" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getGestionnairesImbrications</name></member>
+      <member refid="classgeneral_1_1Individu_1a996606cb43f2631e9c3c6d68d12935ef" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getGrade</name></member>
+      <member refid="classgeneral_1_1Individu_1a2a5f8cc94206566d88dc0d4ba8690f5d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getGsm</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3be3f7048cc0c9876a79652fe6ecdb88" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getHashDependants</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a13c3b045be3e915bbd7f6762f926315d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getHashListes</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a04aa1604026adc7a2d5232f04804171b" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getHashMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abcbdd8d784c51914d82ef111ec5acb68" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getHashModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6c54a0827c56e4bdd2a5f9550750ce3a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getId</name></member>
+      <member refid="classgeneral_1_1Individu_1aef422872d58e6c4052edef766aa7b7a0" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getIdLocalite</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aae36a208effa09ca2eeaa6660ae04002" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getIdName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3325e272d4e8849c3cc3abc18b79a26d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getIdParent</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5b93b50c4b24fde4784400c53bcff250" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getListe</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a13430043faa6f6e9794d46938d9822a8" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getListeNomsPublics</name></member>
+      <member refid="classgeneral_1_1Individu_1af8ed20670201ad4c01711ea716807007" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getLogin</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a78589347be90b3359d3ee335eb292964" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getNewInstance</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6f3e3a2e251a49c43790cc19a0040ec6" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getNom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afd705894affa7683a8d61368ad174779" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getNomFK</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae6a524a6d47d089b84a12a7937dd58c8" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getNomPublic</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5f581421162407637a1beea5e27f5d21" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getNomsModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a06087a189c8ccef31d484dabfb6faf88" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getNonAttendus</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4e76c6a98a07048763ac3a4188ff64b3" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getObjet</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afd8d202f01c64d5fe44bd95967440c15" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getObjetDependant</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa99cf3f8c4de7c4477c71027b8334b3c" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getObjetFromType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6dd698536324953839aea3de639a4408" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getObjetIntermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a777e624beb1fcd7d8e5f1b1e5ebda573" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getomsMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3c80d25be475c8e3b1980a62b51e3903" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getOnlyIDs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abc10f5f2ed0ead1a6e2c790bf9c7ddcf" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getParent</name></member>
+      <member refid="classgeneral_1_1Individu_1ac66b57316d3301ae3b1a65f1c0288b79" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getPrenom</name></member>
+      <member refid="classgeneral_1_1Individu_1afb0b9799784c9dd686e18d275c083006" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getPswd</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa2d9ccee631e000308f580bb0f8d1591" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getPublicName</name></member>
+      <member refid="classgeneral_1_1Individu_1ad26f3a0e359aa35a78d4a6ef13224629" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getSexe</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a773603c5296e1293f87b665fe9930c25" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getSimpleData</name></member>
+      <member refid="classgeneral_1_1Individu_1a0e77d74486742d54fb83692192035911" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getTel</name></member>
+      <member refid="classgeneral_1_1Individu_1a18885872be5fd758df9e3e661dcf5ca5" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getTitre</name></member>
+      <member refid="classgeneral_1_1Individu_1a761585c624dc99cc5d86d21fb5d805bc" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getTva</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a21addc0aebccabf2e7cecde52b564f5a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getTypeOfVariable</name></member>
+      <member refid="classgeneral_1_1Individu_1a724f48c9402dac21b1fc163db2da8412" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getUrl</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac7e41fd987f64f513e6351100fa26900" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getVariableClass</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ab08ab8b499dbf15609cae22506e2a8cf" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>getVariablesVisibles</name></member>
+      <member refid="classgeneral_1_1Individu_1a0d900f9446684b414faad8373af7483f" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>GRADE</name></member>
+      <member refid="classgeneral_1_1Individu_1acbc525cfbc31dff6aa5ced5be7f6bf74" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>GSM</name></member>
+      <member refid="classgeneral_1_1Individu_1aacb6c78ef8003653eb25888732bbd5ce" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>Individu</name></member>
+      <member refid="classgeneral_1_1Individu_1a9dc4bfa1f1c1914d37da982fb8382df5" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>Individu</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a054ee03aba92c2690dad5e4f3b363de4" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>initialiser</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6cf9158c3ba1bd80f26366b538688795" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>initialiser_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9e70f4370dcc8699ad675232d9cea3db" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_dans_gestionnaireImbrication</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a286834e3d11c75b2d7e5deba20ae680b" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_dans_gestionnaireImbrication</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9f7d8b44b2fa8bcdb9927873f4247ea2" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_dependant</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afce9296ebb00a91a355baa7e119be1c5" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_fk</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aacc9b6e2eeca3b439398e037357cbe97" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a7a24587a62404b8543e3aca64c7bd891" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_souplement_valeur</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1af6c4646bf216a60e213e009e1eb01c5d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_valeur</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a443906de370c4ca81386b842740023d0" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>inserer_valeur_intermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa27a2b05178cfda83863dd1367a9b3b8" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>isModifie</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a611e8a9ce99154d2c3115f43ff64adf1" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>isModifie</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a16f1a41d6e8e4aea5ccd8fd3469fa58e" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>isParent</name></member>
+      <member refid="classgeneral_1_1Individu_1a5a4f1fd2f96f4ba767b4e26923526a55" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>LOGIN</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abbd15d1e65701c99c99961b24cd3594a" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>mandatories</name></member>
+      <member refid="classgeneral_1_1Individu_1a55adecdb0c1746be679c9f0a9f7ade8f" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>MOT_DE_PASSE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa1aa4881e7ed9496be8179bd355006bf" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>nomID</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5a30c7eb98943d5870b03bc070212587" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>nomNOM</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a43403e2cbc7655d89748795097025c97" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>nomsPublics</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3b7b0f7865dfffba48244a1d40484c57" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>ObjetDi</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac885b4694153adc64e9e31b8e46b624a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>ObjetDi</name></member>
+      <member refid="classgeneral_1_1Individu_1a010b20f72c86be467f8e19c697c9c52a" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>PRENOM</name></member>
+      <member refid="classgeneral_1_1Individu_1acfd2251498700659ae998665c4df75b8" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>printContenu</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4f3b720645533a03346209dcb6463acc" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>putAll</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a08cf47bc67b8ea5cce6fd2dc689385bb" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>putAllExpected</name></member>
+      <member refid="classgeneral_1_1Individu_1a3507f5bb937e6c4ca2d2f95ba46f8727" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>reinitialiser</name></member>
+      <member refid="classgeneral_1_1Individu_1ad15fa3c061e8df9c7f8c4ab74c06f4a7" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>reinitialiser_individu</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a31f9e7e65a6cf03c1d51cd884197657a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>remove</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae288edc9539c54d0da7c841c2dff215d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>removeMandatory</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae2d87edac158b1b2c87f30430a0de49f" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>removeModification</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1af9355929db1e0ee1c2eabfa3c20b4c6d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>set_single_data</name></member>
+      <member refid="classgeneral_1_1Individu_1a97d4b5cc1e44de59f4000f1fd442db23" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setAdresse</name></member>
+      <member refid="classgeneral_1_1Individu_1af552d0cd9bdfe4e4587582b569b1c6ab" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setAge</name></member>
+      <member refid="classgeneral_1_1Individu_1a9c1613f48332392f559806f6afdc17b9" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setCodePostal</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8fc95efddd92b4832c1dca6b5762ede8" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setCouleur</name></member>
+      <member refid="classgeneral_1_1Individu_1ab084afc74c61d6ee2c6719c041845952" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setCourriel</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a2a0ab29526d37729e6033dc9e0c86a39" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9b7223c1b07586ce663298d1c614d4f1" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setDataFromHashLevis</name></member>
+      <member refid="classgeneral_1_1Individu_1a21e4f54322679b216770bc5755d9be75" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setDateNaissance</name></member>
+      <member refid="classgeneral_1_1Individu_1ac7a400dce088dfce23167314b15e342d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setDateNaissance</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4a3d5facdd9ce514d62966e11ee66569" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setDependant</name></member>
+      <member refid="classgeneral_1_1Individu_1afc36bc558d4e6c90a0a8dfba3a123df8" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setDivers</name></member>
+      <member refid="classgeneral_1_1Individu_1a183a2158428e4372c919fe3c6c05d106" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setFax</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6c502465f577081ad37faf0046c4b8c1" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setFK</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8122c517d5a5ae02f6812157b8994022" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setFKIntermediaire</name></member>
+      <member refid="classgeneral_1_1Individu_1ad557de2c984960a1642d473967fabfdc" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setGrade</name></member>
+      <member refid="classgeneral_1_1Individu_1a615e4c84621e9ea735abdaa645ac398f" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setGsm</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9af290af143437cc1fc827ce59f9a8a6" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setId</name></member>
+      <member refid="classgeneral_1_1Individu_1a416f9034316c12fc529d7cc4001b58f7" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setIdLocalite</name></member>
+      <member refid="classgeneral_1_1Individu_1ad9d0c5e20a7d48f221e66b67413e1456" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setLogin</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aec6da3b01bc2b62f8b2459258f134b9b" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setMandatories</name></member>
+      <member refid="classgeneral_1_1Individu_1a0fb0988b2e24c6ff7e67f4e4a075ab8d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setMD5Pswd</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4182d279d37fd506e1a567a44c3f6554" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setModifications</name></member>
+      <member refid="classgeneral_1_1Individu_1ad8784c541cffaefa1420ad3d13622c2a" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setMotDePasse</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a0c247ae0b7c8ebc583c706c723f5bdc6" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setNom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae59e559564bec8d6b50d4f06ab59327c" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setParent</name></member>
+      <member refid="classgeneral_1_1Individu_1a8022a955d3b5514568b9e3a361673b0b" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setPassword</name></member>
+      <member refid="classgeneral_1_1Individu_1a0aa8e26db491c31b5650a0fcc1411a24" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setPrenom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae868ac029aa7f6871719dcff37e4835c" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setPublicName</name></member>
+      <member refid="classgeneral_1_1Individu_1aa5f33144bec2a9c8087ec4723e0c5f2b" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setSexe</name></member>
+      <member refid="classgeneral_1_1Individu_1a4dd5c40fbfa69093d66b0f11d3068403" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setSexe</name></member>
+      <member refid="classgeneral_1_1Individu_1a60e348c5b553110f568da445525e753d" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setTel</name></member>
+      <member refid="classgeneral_1_1Individu_1a61f0e430b9efdfaca9859e445c7ef28b" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>setTitre</name></member>
+      <member refid="classgeneral_1_1Individu_1a954b07ecf2305e1d85adf3cb8cbc3aea" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setTva</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a26bdc424bfb09120f36be44e621394b1" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setType</name></member>
+      <member refid="classgeneral_1_1Individu_1af834bbe202bed110ba93e7482e64620c" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setUrl</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a31b04d4fe5f2ff4688a773545f47bd63" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setVariableClass</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1876ccbc5fbf782096b31cc37f3cc289" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>setVariablesVisibles</name></member>
+      <member refid="classgeneral_1_1Individu_1a63572b99f6050b71d04a884d2d73f11f" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>SEXE</name></member>
+      <member refid="classgeneral_1_1Individu_1a5656f4c9ef2de2120d38cf902c193156" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>TEL</name></member>
+      <member refid="classgeneral_1_1Individu_1a2d971d4d1597dc7d28526fe80a3ffb77" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>TITRE</name></member>
+      <member refid="classgeneral_1_1Individu_1acbd4652de3f36869478950d0c36372e6" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>toString</name></member>
+      <member refid="classgeneral_1_1Individu_1a82ecf8640f3a60c1dc46e17ab2a5be99" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>TVA</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4caaf58cdfa5c9fda92b6cd329b270f8" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>TYPE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5c5351c23cedec8b4329a00ee641b168" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>updater_liste</name></member>
+      <member refid="classgeneral_1_1Individu_1a3a784775ea19d968b8e20f0827c92f92" prot="private" virt="non-virtual"><scope>general::Individu</scope><name>URL</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a205a992d070027f7ee3eed47e92cdedb" prot="public" virt="non-virtual"><scope>general::Individu</scope><name>variable_existe</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ad9c0c5d849d5f3e937fb03664bccd35e" prot="protected" virt="non-virtual"><scope>general::Individu</scope><name>variablesVisibles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

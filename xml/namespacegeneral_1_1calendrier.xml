@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacegeneral_1_1calendrier" kind="namespace" language="Java">
+    <compoundname>general::calendrier</compoundname>
+    <innerclass refid="classgeneral_1_1calendrier_1_1ChercheurTrou" prot="public">general::calendrier::ChercheurTrou</innerclass>
+    <innerclass refid="classgeneral_1_1calendrier_1_1Evenement" prot="public">general::calendrier::Evenement</innerclass>
+    <innerclass refid="classgeneral_1_1calendrier_1_1FusionneurAgendas" prot="public">general::calendrier::FusionneurAgendas</innerclass>
+    <innerclass refid="classgeneral_1_1calendrier_1_1FusionneurEvenements" prot="public">general::calendrier::FusionneurEvenements</innerclass>
+    <innerclass refid="classgeneral_1_1calendrier_1_1Indisponibilite" prot="public">general::calendrier::Indisponibilite</innerclass>
+    <innerclass refid="classgeneral_1_1calendrier_1_1Semainier" prot="public">general::calendrier::Semainier</innerclass>
+    <innerclass refid="classgeneral_1_1calendrier_1_1Trou" prot="public">general::calendrier::Trou</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/calendrier/ChercheurTrou.java" line="1" column="15"/>
+  </compounddef>
+</doxygen>

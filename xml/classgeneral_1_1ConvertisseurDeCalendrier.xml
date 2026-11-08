@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ConvertisseurDeCalendrier" kind="class" language="Java" prot="public">
+    <compoundname>general::ConvertisseurDeCalendrier</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurDeCalendrier_1a45defe1177336220661e1697002b1cf1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Calendar</type>
+        <definition>static Calendar general.ConvertisseurDeCalendrier.localDateTime2Calendar</definition>
+        <argsstring>(LocalDateTime dateTime)</argsstring>
+        <name>localDateTime2Calendar</name>
+        <qualifiedname>general.ConvertisseurDeCalendrier.localDateTime2Calendar</qualifiedname>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>dateTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurDeCalendrier.java" line="8" column="28" bodyfile="src/main/java/general/ConvertisseurDeCalendrier.java" bodystart="8" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurDeCalendrier_1a68a98943d26789c7290b4d95f439a937" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.ConvertisseurDeCalendrier.calendar2LocalDateTime</definition>
+        <argsstring>(Calendar calendrier)</argsstring>
+        <name>calendar2LocalDateTime</name>
+        <qualifiedname>general.ConvertisseurDeCalendrier.calendar2LocalDateTime</qualifiedname>
+        <param>
+          <type>Calendar</type>
+          <declname>calendrier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurDeCalendrier.java" line="18" column="33" bodyfile="src/main/java/general/ConvertisseurDeCalendrier.java" bodystart="18" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurDeCalendrier_1ae65a0c98066ad0936022072276213d69" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int general.ConvertisseurDeCalendrier.convertir_mois</definition>
+        <argsstring>(Month month)</argsstring>
+        <name>convertir_mois</name>
+        <qualifiedname>general.ConvertisseurDeCalendrier.convertir_mois</qualifiedname>
+        <param>
+          <type>Month</type>
+          <declname>month</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurDeCalendrier.java" line="27" column="24" bodyfile="src/main/java/general/ConvertisseurDeCalendrier.java" bodystart="27" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/ConvertisseurDeCalendrier.java" line="7" column="7" bodyfile="src/main/java/general/ConvertisseurDeCalendrier.java" bodystart="7" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ConvertisseurDeCalendrier_1a68a98943d26789c7290b4d95f439a937" prot="public" virt="non-virtual"><scope>general::ConvertisseurDeCalendrier</scope><name>calendar2LocalDateTime</name></member>
+      <member refid="classgeneral_1_1ConvertisseurDeCalendrier_1ae65a0c98066ad0936022072276213d69" prot="private" virt="non-virtual"><scope>general::ConvertisseurDeCalendrier</scope><name>convertir_mois</name></member>
+      <member refid="classgeneral_1_1ConvertisseurDeCalendrier_1a45defe1177336220661e1697002b1cf1" prot="public" virt="non-virtual"><scope>general::ConvertisseurDeCalendrier</scope><name>localDateTime2Calendar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

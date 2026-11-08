@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1InteresseParMiseAJour" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>general::InteresseParMiseAJour</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1InteresseParMiseAJour_1a193a9d2113e9c3b64cf5419c7867873d" prot="private" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String general.InteresseParMiseAJour.typeEcoute</definition>
+        <argsstring></argsstring>
+        <name>typeEcoute</name>
+        <qualifiedname>general.InteresseParMiseAJour.typeEcoute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/InteresseParMiseAJour.java" line="4" column="26" bodyfile="src/main/java/general/InteresseParMiseAJour.java" bodystart="4" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1InteresseParMiseAJour_1a2588558ed42d1c8decba9943878423bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.InteresseParMiseAJour.InteresseParMiseAJour</definition>
+        <argsstring>(String type)</argsstring>
+        <name>InteresseParMiseAJour</name>
+        <qualifiedname>general.InteresseParMiseAJour.InteresseParMiseAJour</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/InteresseParMiseAJour.java" line="6" column="12" bodyfile="src/main/java/general/InteresseParMiseAJour.java" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1InteresseParMiseAJour_1ac666e05cc0e411e0d05b9c64fdc4664a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract void</type>
+        <definition>abstract void general.InteresseParMiseAJour.go</definition>
+        <argsstring>()</argsstring>
+        <name>go</name>
+        <qualifiedname>general.InteresseParMiseAJour.go</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/InteresseParMiseAJour.java" line="10" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1InteresseParMiseAJour_1a8ed2ef49761e688af9ff1842f0c96946" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.InteresseParMiseAJour.getTypeEcoute</definition>
+        <argsstring>()</argsstring>
+        <name>getTypeEcoute</name>
+        <qualifiedname>general.InteresseParMiseAJour.getTypeEcoute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/InteresseParMiseAJour.java" line="12" column="19" bodyfile="src/main/java/general/InteresseParMiseAJour.java" bodystart="12" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/InteresseParMiseAJour.java" line="3" column="17" bodyfile="src/main/java/general/InteresseParMiseAJour.java" bodystart="3" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1InteresseParMiseAJour_1a8ed2ef49761e688af9ff1842f0c96946" prot="public" virt="non-virtual"><scope>general::InteresseParMiseAJour</scope><name>getTypeEcoute</name></member>
+      <member refid="classgeneral_1_1InteresseParMiseAJour_1ac666e05cc0e411e0d05b9c64fdc4664a" prot="public" virt="non-virtual"><scope>general::InteresseParMiseAJour</scope><name>go</name></member>
+      <member refid="classgeneral_1_1InteresseParMiseAJour_1a2588558ed42d1c8decba9943878423bb" prot="public" virt="non-virtual"><scope>general::InteresseParMiseAJour</scope><name>InteresseParMiseAJour</name></member>
+      <member refid="classgeneral_1_1InteresseParMiseAJour_1a193a9d2113e9c3b64cf5419c7867873d" prot="private" virt="non-virtual"><scope>general::InteresseParMiseAJour</scope><name>typeEcoute</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

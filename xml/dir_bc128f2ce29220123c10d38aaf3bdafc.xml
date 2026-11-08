@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_bc128f2ce29220123c10d38aaf3bdafc" kind="dir">
+    <compoundname>src/main/java/general/calendrier</compoundname>
+    <innerfile refid="ChercheurTrou_8java">ChercheurTrou.java</innerfile>
+    <innerfile refid="Evenement_8java">Evenement.java</innerfile>
+    <innerfile refid="FusionneurAgendas_8java">FusionneurAgendas.java</innerfile>
+    <innerfile refid="FusionneurEvenements_8java">FusionneurEvenements.java</innerfile>
+    <innerfile refid="Indisponibilite_8java">Indisponibilite.java</innerfile>
+    <innerfile refid="Semainier_8java">Semainier.java</innerfile>
+    <innerfile refid="Trou_8java">Trou.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/calendrier/"/>
+  </compounddef>
+</doxygen>

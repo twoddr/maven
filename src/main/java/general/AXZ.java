@@ -6,15 +6,15 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class AXZ {
     Integer i;
-    
+
     public AXZ(Integer input) {
         i = input;
     }
-    
+
     public Boolean verif(String x) {
         return x != null && x.equals(g_k());
     }
-    
+
     private String g_k() {
         int reste = i;
         ArrayList<Integer> listeReponses = new ArrayList<>();
@@ -31,15 +31,15 @@ public class AXZ {
                 listeReponses.add(0);
             }
         }
-        
+
         return "0";
     }
-    
+
     private String extraire_nombre(ArrayList<Integer> integers) {
         AtomicReference<String> string = new AtomicReference<>("");
         AtomicInteger nombreEnCours = new AtomicInteger(-1);
         AtomicInteger compte = new AtomicInteger(1);
-        
+
         for (int indice = 0; indice < integers.size(); indice++) {
             int nombre = integers.get(indice);
             if (nombre == nombreEnCours.get()) {
@@ -54,10 +54,10 @@ public class AXZ {
                 compte.set(1);
             }
         }
-        
+
         return string.get();
     }
-    
+
     private void incrementer_dernier(ArrayList<Integer> reponses) {
         if (!reponses.isEmpty()) {
             int dernier = reponses.size() - 1;
@@ -69,7 +69,7 @@ public class AXZ {
             }
         }
     }
-    
+
     private boolean isPremier(int n) {
         boolean isPremier = true;
         if (n < 0) {
@@ -83,5 +83,33 @@ public class AXZ {
             }
         }
         return isPremier;
+    }
+
+    /**
+     * Proposé par windsurf car plus kiss et efficace
+     * @return la factorisation 1
+     */
+    private String getPrimeFactorization() {
+        StringBuilder result = new StringBuilder();
+        int nombre = i;
+
+        for (int parcours = 2; parcours * parcours <= nombre; parcours++) {
+            int count = 0;
+            while (nombre % parcours == 0) {
+                nombre /= parcours;
+                count++;
+            }
+            if (count > 0) {
+                if (!result.isEmpty()) result.append(" ");
+                result.append(count);
+            }
+        }
+
+        if (nombre > 1) {
+            if (!result.isEmpty()) result.append(" ");
+            result.append("1");
+        }
+
+        return !result.isEmpty() ? result.toString() : "0";
     }
 }

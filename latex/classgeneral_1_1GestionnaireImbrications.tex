@@ -1,0 +1,203 @@
+\doxysection{general.\+Gestionnaire\+Imbrications Class Reference}
+\hypertarget{classgeneral_1_1GestionnaireImbrications}{}\label{classgeneral_1_1GestionnaireImbrications}\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_ac00a6f97e78fa4f62778389a8bc99a83}{Gestionnaire\+Imbrications}} (String nom\+Pays, String nom\+Id\+Pays\+Dans\+Ville, String nom\+Table\+Ville, String nom\+Id\+Ville\+Dans\+Quartier, String nom\+Table\+Quartier, int fkquartier, Hash\+Map$<$ String, Object $>$ hash\+Levis, \mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}} informateur\+Objet\+Di)
+\item 
+\mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_a150c71f0abf0af414868431dd842706f}{Gestionnaire\+Imbrications}} (String nom\+Pays, String nom\+Id\+Pays\+Dans\+Ville, String nom\+Table\+Ville, int fkville, Hash\+Map$<$ String, Object $>$ hash\+Levis, \mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}} informateur\+Objet\+Di)
+\item 
+\mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_a640c5f3c0aa74853d2b12978089ac75f}{Gestionnaire\+Imbrications}} (String nom\+Pays, String nom\+Id\+Pays\+Dans\+Ville, String nom\+Table\+Ville, String nom\+Id\+Ville\+Dans\+Quartier, String nom\+Table\+Quartier, \mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}} informateur\+Objet\+Di)
+\item 
+\mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_aa50dfb39e40475af361af76aba5a1ec8}{Gestionnaire\+Imbrications}} (String nom\+Pays, String nom\+Id\+Pays\+Dans\+Ville, String nom\+Table\+Ville, \mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}} informateur\+Objet\+Di)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_a10db3b5607f17761075dc9f5c9a059c2}{set\+Verbose}} (boolean verbose)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_aafbb92a5594d712919e8e80d65f4e957}{remplir\+\_\+donnees}} (int id, Hash\+Map$<$ String, Object $>$ hash\+Levis)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_a27ada670c65202bf6b333d87795bb67f}{a\+Change}} ()
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_aa68d60117fc14c224a1299a31b084b03}{get\+Pays}} ()
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_a02f64be9c522029600f319e913d24d11}{get\+Ville}} ()
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_ac24e8b0b520e8078bc99fb6bc327b3a3}{get\+Quartier}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_a3410e4a89b15b5a07ad95fc3a0651730}{get\+Liste\+Hash\+Ville}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_afd06d098f5895a2c05df9ae12c15de12}{get\+Liste\+Hash\+Quartier}} ()
+\item 
+int \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications_a356a94c7b3ea86e31dbebcafd70b43e8}{get\+Fk}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_ac00a6f97e78fa4f62778389a8bc99a83}\label{classgeneral_1_1GestionnaireImbrications_ac00a6f97e78fa4f62778389a8bc99a83} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!GestionnaireImbrications@{GestionnaireImbrications}}
+\index{GestionnaireImbrications@{GestionnaireImbrications}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{GestionnaireImbrications()}{GestionnaireImbrications()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily general.\+Gestionnaire\+Imbrications.\+Gestionnaire\+Imbrications (\begin{DoxyParamCaption}\item[{String}]{nom\+Pays,  }\item[{String}]{nom\+Id\+Pays\+Dans\+Ville,  }\item[{String}]{nom\+Table\+Ville,  }\item[{String}]{nom\+Id\+Ville\+Dans\+Quartier,  }\item[{String}]{nom\+Table\+Quartier,  }\item[{int}]{fkquartier,  }\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis,  }\item[{\mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}}}]{informateur\+Objet\+Di }\end{DoxyParamCaption})}
+
+Permet de générer la matrice de localité (quartier, ville, pays) à partir de la liste levis et l\textquotesingle{}id quartier Cet objet a été créé pour générer toutes les infos d\textquotesingle{}une localité en fonction de la simple connaissance de l\textquotesingle{}id du quartier Il a été généralisé à tous objets héritant de la même structure
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Pays} & nom de la table pays \\
+\hline
+{\em nom\+Id\+Pays\+Dans\+Ville} & nom de l\textquotesingle{}id pays dans la ville \\
+\hline
+{\em nom\+Table\+Ville} & nom de la table ville \\
+\hline
+{\em nom\+Id\+Ville\+Dans\+Quartier} & nom de l\textquotesingle{}idville dans le quartier \\
+\hline
+{\em nom\+Table\+Quartier} & nom de la table quartier \\
+\hline
+{\em fkquartier} & l\textquotesingle{}id du quartier recherché \\
+\hline
+{\em hash\+Levis} & la source d\textquotesingle{}informations au format Levis \\
+\hline
+{\em informateur\+Objet\+Di} & C\textquotesingle{}est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_a150c71f0abf0af414868431dd842706f}\label{classgeneral_1_1GestionnaireImbrications_a150c71f0abf0af414868431dd842706f} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!GestionnaireImbrications@{GestionnaireImbrications}}
+\index{GestionnaireImbrications@{GestionnaireImbrications}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{GestionnaireImbrications()}{GestionnaireImbrications()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily general.\+Gestionnaire\+Imbrications.\+Gestionnaire\+Imbrications (\begin{DoxyParamCaption}\item[{String}]{nom\+Pays,  }\item[{String}]{nom\+Id\+Pays\+Dans\+Ville,  }\item[{String}]{nom\+Table\+Ville,  }\item[{int}]{fkville,  }\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis,  }\item[{\mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}}}]{informateur\+Objet\+Di }\end{DoxyParamCaption})}
+
+Permet de générer la matrice de localité (ville, pays) à partir de la liste levis et l\textquotesingle{}id quartier Cet objet a été créé pour générer toutes les infos d\textquotesingle{}une localité en fonction de la simple connaissance de l\textquotesingle{}id du quartier Il a été généralisé à tous objets héritant de la même structure
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Pays} & nom de la table pays \\
+\hline
+{\em nom\+Id\+Pays\+Dans\+Ville} & nom de l\textquotesingle{}id pays dans la ville \\
+\hline
+{\em nom\+Table\+Ville} & nom de la table ville \\
+\hline
+{\em fkville} & l\textquotesingle{}id de la ville recherchée \\
+\hline
+{\em hash\+Levis} & la source d\textquotesingle{}informations au format Levis \\
+\hline
+{\em informateur\+Objet\+Di} & C\textquotesingle{}est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_a640c5f3c0aa74853d2b12978089ac75f}\label{classgeneral_1_1GestionnaireImbrications_a640c5f3c0aa74853d2b12978089ac75f} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!GestionnaireImbrications@{GestionnaireImbrications}}
+\index{GestionnaireImbrications@{GestionnaireImbrications}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{GestionnaireImbrications()}{GestionnaireImbrications()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily general.\+Gestionnaire\+Imbrications.\+Gestionnaire\+Imbrications (\begin{DoxyParamCaption}\item[{String}]{nom\+Pays,  }\item[{String}]{nom\+Id\+Pays\+Dans\+Ville,  }\item[{String}]{nom\+Table\+Ville,  }\item[{String}]{nom\+Id\+Ville\+Dans\+Quartier,  }\item[{String}]{nom\+Table\+Quartier,  }\item[{\mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}}}]{informateur\+Objet\+Di }\end{DoxyParamCaption})}
+
+Permet de générer la matrice de localité (quartier, ville, pays) à partir de la liste levis
+\begin{DoxyItemize}
+\item Il faut utiliser la méthode "{}remplir\+\_\+donnees"{} pour l\textquotesingle{}alimenter Cet objet a été créé pour générer toutes les infos d\textquotesingle{}une localité en fonction de la simple connaissance de l\textquotesingle{}id du quartier Il a été généralisé à tous objets héritant de la même structure
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Pays} & nom de la table pays \\
+\hline
+{\em nom\+Id\+Pays\+Dans\+Ville} & nom de l\textquotesingle{}id pays dans la ville \\
+\hline
+{\em nom\+Table\+Ville} & nom de la table ville \\
+\hline
+{\em nom\+Id\+Ville\+Dans\+Quartier} & nom de l\textquotesingle{}idville dans le quartier \\
+\hline
+{\em nom\+Table\+Quartier} & nom de la table quartier \\
+\hline
+{\em informateur\+Objet\+Di} & C\textquotesingle{}est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_aa50dfb39e40475af361af76aba5a1ec8}\label{classgeneral_1_1GestionnaireImbrications_aa50dfb39e40475af361af76aba5a1ec8} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!GestionnaireImbrications@{GestionnaireImbrications}}
+\index{GestionnaireImbrications@{GestionnaireImbrications}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{GestionnaireImbrications()}{GestionnaireImbrications()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily general.\+Gestionnaire\+Imbrications.\+Gestionnaire\+Imbrications (\begin{DoxyParamCaption}\item[{String}]{nom\+Pays,  }\item[{String}]{nom\+Id\+Pays\+Dans\+Ville,  }\item[{String}]{nom\+Table\+Ville,  }\item[{\mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}}}]{informateur\+Objet\+Di }\end{DoxyParamCaption})}
+
+Permet de générer la matrice de localité (ville, pays) à partir de la liste levis Il faut utiliser la méthode "{}remplir\+\_\+donnees"{} pour l\textquotesingle{}alimenter Cet objet a été créé pour générer toutes les infos d\textquotesingle{}une localité en fonction de la simple connaissance de l\textquotesingle{}id du quartier Il a été généralisé à tous objets héritant de la même structure
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Pays} & nom de la table pays \\
+\hline
+{\em nom\+Id\+Pays\+Dans\+Ville} & nom de l\textquotesingle{}id pays dans la ville \\
+\hline
+{\em nom\+Table\+Ville} & nom de la table ville \\
+\hline
+{\em informateur\+Objet\+Di} & C\textquotesingle{}est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_a27ada670c65202bf6b333d87795bb67f}\label{classgeneral_1_1GestionnaireImbrications_a27ada670c65202bf6b333d87795bb67f} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!aChange@{aChange}}
+\index{aChange@{aChange}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{aChange()}{aChange()}}
+{\footnotesize\ttfamily boolean general.\+Gestionnaire\+Imbrications.\+a\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_a356a94c7b3ea86e31dbebcafd70b43e8}\label{classgeneral_1_1GestionnaireImbrications_a356a94c7b3ea86e31dbebcafd70b43e8} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!getFk@{getFk}}
+\index{getFk@{getFk}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{getFk()}{getFk()}}
+{\footnotesize\ttfamily int general.\+Gestionnaire\+Imbrications.\+get\+Fk (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_afd06d098f5895a2c05df9ae12c15de12}\label{classgeneral_1_1GestionnaireImbrications_afd06d098f5895a2c05df9ae12c15de12} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!getListeHashQuartier@{getListeHashQuartier}}
+\index{getListeHashQuartier@{getListeHashQuartier}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{getListeHashQuartier()}{getListeHashQuartier()}}
+{\footnotesize\ttfamily Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ general.\+Gestionnaire\+Imbrications.\+get\+Liste\+Hash\+Quartier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_a3410e4a89b15b5a07ad95fc3a0651730}\label{classgeneral_1_1GestionnaireImbrications_a3410e4a89b15b5a07ad95fc3a0651730} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!getListeHashVille@{getListeHashVille}}
+\index{getListeHashVille@{getListeHashVille}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{getListeHashVille()}{getListeHashVille()}}
+{\footnotesize\ttfamily Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ general.\+Gestionnaire\+Imbrications.\+get\+Liste\+Hash\+Ville (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_aa68d60117fc14c224a1299a31b084b03}\label{classgeneral_1_1GestionnaireImbrications_aa68d60117fc14c224a1299a31b084b03} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!getPays@{getPays}}
+\index{getPays@{getPays}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{getPays()}{getPays()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Gestionnaire\+Imbrications.\+get\+Pays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_ac24e8b0b520e8078bc99fb6bc327b3a3}\label{classgeneral_1_1GestionnaireImbrications_ac24e8b0b520e8078bc99fb6bc327b3a3} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!getQuartier@{getQuartier}}
+\index{getQuartier@{getQuartier}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{getQuartier()}{getQuartier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Gestionnaire\+Imbrications.\+get\+Quartier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_a02f64be9c522029600f319e913d24d11}\label{classgeneral_1_1GestionnaireImbrications_a02f64be9c522029600f319e913d24d11} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!getVille@{getVille}}
+\index{getVille@{getVille}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{getVille()}{getVille()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Gestionnaire\+Imbrications.\+get\+Ville (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_aafbb92a5594d712919e8e80d65f4e957}\label{classgeneral_1_1GestionnaireImbrications_aafbb92a5594d712919e8e80d65f4e957} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!remplir\_donnees@{remplir\_donnees}}
+\index{remplir\_donnees@{remplir\_donnees}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{remplir\_donnees()}{remplir\_donnees()}}
+{\footnotesize\ttfamily boolean general.\+Gestionnaire\+Imbrications.\+remplir\+\_\+donnees (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis }\end{DoxyParamCaption})}
+
+Permet de remplir les données \+: quartier, ville, pays Si le nom de la table quartier est NULL, alors le remplissage se fait pour ville et pays
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & l\textquotesingle{}id du quartier. Si pas de quartier, alors id de la ville \\
+\hline
+{\em hash\+Levis} & c\textquotesingle{}est la hashmap détails de Levis (nom\+Table-\/) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si un changement a été observé 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1GestionnaireImbrications_a10db3b5607f17761075dc9f5c9a059c2}\label{classgeneral_1_1GestionnaireImbrications_a10db3b5607f17761075dc9f5c9a059c2} 
+\index{general.GestionnaireImbrications@{general.GestionnaireImbrications}!setVerbose@{setVerbose}}
+\index{setVerbose@{setVerbose}!general.GestionnaireImbrications@{general.GestionnaireImbrications}}
+\doxysubsubsection{\texorpdfstring{setVerbose()}{setVerbose()}}
+{\footnotesize\ttfamily void general.\+Gestionnaire\+Imbrications.\+set\+Verbose (\begin{DoxyParamCaption}\item[{boolean}]{verbose }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/general/\mbox{\hyperlink{GestionnaireImbrications_8java}{Gestionnaire\+Imbrications.\+java}}\end{DoxyCompactItemize}

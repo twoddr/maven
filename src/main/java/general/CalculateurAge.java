@@ -15,6 +15,10 @@ public class CalculateurAge {
         date = d;
     }
 
+    public CalculateurAge(LocalDate d) {
+        date = d.atStartOfDay();
+    }
+
     /**
      * Détermine l'age de l'individu actuel: en années si plus d'un an; en mois
      * si né après le mois en cours; en jours si né avant aujourd'hui; Dans tous
@@ -59,6 +63,14 @@ public class CalculateurAge {
             return out + ", " + (nbreMois - ageInt * 12) + " mois";
         }
         return ageInt + " ans";
+    }
+
+    public static String getAgeString(LocalDateTime d) {
+        return new CalculateurAge(d).getAgeString();
+    }
+
+    public static String getAgeString(LocalDate d) {
+        return new CalculateurAge(d).getAgeString();
     }
 
     private LocalDateTime getJourAnniversaire(int jourMois) {

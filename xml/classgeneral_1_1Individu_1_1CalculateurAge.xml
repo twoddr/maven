@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Individu_1_1CalculateurAge" kind="class" language="Java" prot="private">
+    <compoundname>general::Individu::CalculateurAge</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1Individu_1_1CalculateurAge_1a0de0483303e0dbe9425690791a9777eb" prot="private" static="no" mutable="no">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime general.Individu.CalculateurAge.date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <qualifiedname>general.Individu.CalculateurAge.date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="555" column="31" bodyfile="src/main/java/general/Individu.java" bodystart="555" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1Individu_1_1CalculateurAge_1a293021a3f0338099d509e024d8a7eeef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Individu.CalculateurAge.CalculateurAge</definition>
+        <argsstring>(LocalDateTime d)</argsstring>
+        <name>CalculateurAge</name>
+        <qualifiedname>general.Individu.CalculateurAge.CalculateurAge</qualifiedname>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="557" column="16" bodyfile="src/main/java/general/Individu.java" bodystart="557" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Individu_1_1CalculateurAge_1a2f7ebdfc14a28904f20500810d87bc83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Individu.CalculateurAge.getAgeString</definition>
+        <argsstring>()</argsstring>
+        <name>getAgeString</name>
+        <qualifiedname>general.Individu.CalculateurAge.getAgeString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Détermine l&apos;age de l&apos;individu actuel: en années si plus d&apos;un an; en mois si né après le mois en cours; en jours si né avant aujourd&apos;hui; Dans tous les autres cas, l&apos;age vaut zéro</para>
+<para><simplesect kind="return"><para>l&apos;age de l&apos;individu en cours </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Individu.java" line="568" column="23" bodyfile="src/main/java/general/Individu.java" bodystart="568" bodyend="605"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/Individu.java" line="554" column="12" bodyfile="src/main/java/general/Individu.java" bodystart="554" bodyend="607"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1Individu_1_1CalculateurAge_1a293021a3f0338099d509e024d8a7eeef" prot="public" virt="non-virtual"><scope>general::Individu::CalculateurAge</scope><name>CalculateurAge</name></member>
+      <member refid="classgeneral_1_1Individu_1_1CalculateurAge_1a0de0483303e0dbe9425690791a9777eb" prot="private" virt="non-virtual"><scope>general::Individu::CalculateurAge</scope><name>date</name></member>
+      <member refid="classgeneral_1_1Individu_1_1CalculateurAge_1a2f7ebdfc14a28904f20500810d87bc83" prot="public" virt="non-virtual"><scope>general::Individu::CalculateurAge</scope><name>getAgeString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

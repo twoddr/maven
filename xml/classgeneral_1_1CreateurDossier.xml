@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1CreateurDossier" kind="class" language="Java" prot="public">
+    <compoundname>general::CreateurDossier</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1CreateurDossier_1a241719f05ced7a1205b4638e41443265" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.CreateurDossier.creer_si_n_existe_pas</definition>
+        <argsstring>(String nomDossier)</argsstring>
+        <name>creer_si_n_existe_pas</name>
+        <qualifiedname>general.CreateurDossier.creer_si_n_existe_pas</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomDossier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/CreateurDossier.java" line="7" column="20" bodyfile="src/main/java/general/CreateurDossier.java" bodystart="7" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/CreateurDossier.java" line="5" column="7" bodyfile="src/main/java/general/CreateurDossier.java" bodystart="5" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1CreateurDossier_1a241719f05ced7a1205b4638e41443265" prot="public" virt="non-virtual"><scope>general::CreateurDossier</scope><name>creer_si_n_existe_pas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1OSFinder" kind="class" language="Java" prot="public">
+    <compoundname>general::OSFinder</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1OSFinder_1adc5797af03e92de06c33a544d1956521" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.OSFinder.getOSName</definition>
+        <argsstring>()</argsstring>
+        <name>getOSName</name>
+        <qualifiedname>general.OSFinder.getOSName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/OSFinder.java" line="6" column="26" bodyfile="src/main/java/general/OSFinder.java" bodystart="6" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/OSFinder.java" line="5" column="7" bodyfile="src/main/java/general/OSFinder.java" bodystart="5" bodyend="21"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1OSFinder_1adc5797af03e92de06c33a544d1956521" prot="public" virt="non-virtual"><scope>general::OSFinder</scope><name>getOSName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

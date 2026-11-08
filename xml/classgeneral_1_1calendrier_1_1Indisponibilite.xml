@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1calendrier_1_1Indisponibilite" kind="class" language="Java" prot="public">
+    <compoundname>general::calendrier::Indisponibilite</compoundname>
+    <basecompoundref refid="classgeneral_1_1calendrier_1_1Evenement" prot="public" virt="non-virtual">general.calendrier.Evenement</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1a016d71350b593185c40235dbb781ff98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.calendrier.Indisponibilite.Indisponibilite</definition>
+        <argsstring>(String nomType, String nomID, String nomDescription, String nomCouleurTexte, String nomIDProprietaire, String nomDateDebut, String nomDateFin, String nomCouleurCadre, String nomCouleurFond, String nomLieu, InformateurObjet informateur)</argsstring>
+        <name>Indisponibilite</name>
+        <qualifiedname>general.calendrier.Indisponibilite.Indisponibilite</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomType</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomID</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomDescription</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomCouleurTexte</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIDProprietaire</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomDateDebut</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomDateFin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomCouleurCadre</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomCouleurFond</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomLieu</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le trou par défaut dure toute la journée </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="15" column="12" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="15" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1a88651a713c51385faaadd98a588d3286" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.calendrier.Indisponibilite.Indisponibilite</definition>
+        <argsstring>(ArrayList&lt; String &gt; arrayList, InformateurObjet informateurObjet)</argsstring>
+        <name>Indisponibilite</name>
+        <qualifiedname>general.calendrier.Indisponibilite.Indisponibilite</qualifiedname>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>arrayList</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateurObjet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>L&apos;indisponibilité par défaut dure toute la journée </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="38" column="12" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1af917a2e3963907e5ba7fe8f33ff2fd7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.calendrier.Indisponibilite.Indisponibilite</definition>
+        <argsstring>(Evenement evenementIHM, InformateurObjet informateur)</argsstring>
+        <name>Indisponibilite</name>
+        <qualifiedname>general.calendrier.Indisponibilite.Indisponibilite</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>evenementIHM</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="46" column="12" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1a90db58420e1864b4e84da8ac347f7dd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement general.calendrier.Indisponibilite.getCopyOf</definition>
+        <argsstring>()</argsstring>
+        <name>getCopyOf</name>
+        <qualifiedname>general.calendrier.Indisponibilite.getCopyOf</qualifiedname>
+        <reimplements refid="classgeneral_1_1calendrier_1_1Evenement_1a2febf06b535d7d4de2a68b334e0eb50a">getCopyOf</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copie toutes les données de l&apos;hashMap dans un nouveau trou ID compris !</para>
+<para><simplesect kind="return"><para>la copie de l&apos;objet actuel </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="69" column="22" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="69" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1a68e585a71be927a66b5455f834a6a2bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.calendrier.Indisponibilite.getDescription</definition>
+        <argsstring>()</argsstring>
+        <name>getDescription</name>
+        <qualifiedname>general.calendrier.Indisponibilite.getDescription</qualifiedname>
+        <reimplements refid="classgeneral_1_1calendrier_1_1Evenement_1ae685634fa74d7896dab3c162525ff927">getDescription</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="85" column="19" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1a8db2471a76661101267122a54eb92595" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.calendrier.Indisponibilite.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <qualifiedname>general.calendrier.Indisponibilite.toString</qualifiedname>
+        <reimplements refid="classgeneral_1_1calendrier_1_1Evenement_1a0f10c146d2371c29150558a01a1a7c2a">toString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="90" column="19" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="90" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1a3bd674356109e69bf80cd1fbb3a25b12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.calendrier.Indisponibilite.getCalendarString</definition>
+        <argsstring>()</argsstring>
+        <name>getCalendarString</name>
+        <qualifiedname>general.calendrier.Indisponibilite.getCalendarString</qualifiedname>
+        <reimplements refid="classgeneral_1_1calendrier_1_1Evenement_1a501d2c22bfa13eddb273a60a81a6f14c">getCalendarString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="100" column="19" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="100" bodyend="102"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Indisponibilite_1af87915832fad7146b58d133a62568875" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.calendrier.Indisponibilite.setColor</definition>
+        <argsstring>()</argsstring>
+        <name>setColor</name>
+        <qualifiedname>general.calendrier.Indisponibilite.setColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Indisponibilite.java" line="54" column="18" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="54" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>Comparable</label>
+      </node>
+      <node id="1">
+        <label>general.calendrier.Indisponibilite</label>
+        <link refid="classgeneral_1_1calendrier_1_1Indisponibilite"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.calendrier.Evenement</label>
+        <link refid="classgeneral_1_1calendrier_1_1Evenement"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="4">
+        <label>Comparable</label>
+      </node>
+      <node id="7">
+        <label>HashMap&lt; String, String &gt;</label>
+      </node>
+      <node id="1">
+        <label>general.calendrier.Indisponibilite</label>
+        <link refid="classgeneral_1_1calendrier_1_1Indisponibilite"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>variablesVisibles</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>nomsPublics</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.calendrier.Evenement</label>
+        <link refid="classgeneral_1_1calendrier_1_1Evenement"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/calendrier/Indisponibilite.java" line="10" column="7" bodyfile="src/main/java/general/calendrier/Indisponibilite.java" bodystart="10" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ObjetDi_1a05df36a4f4bb090379ae2786be990d73" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>add_nom_public</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a783e07f8e2b64b4892ed06b6964ee73f" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>add_variable_visible</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1828cbc021106f7812488ce236a9e127" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>addGestionnaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa86727fbfa008961c04857e2d319a290" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>addMandatory</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ab701c1439e6e2cbcbeaca241c91aae07" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>addModification</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afdbb0643b4c82cf9baade201440c160e" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>ajouter_dans_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a36d8849d1a65126de95e805dc23388e9" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>changer_nom_id</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac65d393205b173a0067e32e33cbecafd" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>changer_nom_nom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3d374a4f1d0d5d32ced583d4119bb6f9" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>changer_nom_variable</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5e0971df98474b4f098b5e0a51247a7d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>charger_donnees</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a35ba6f7671507de2096f39a9e83483ee" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>clear</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae3efa63f65754af5f32d9c419804be75" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>clearMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a222d3ccf13080b223a1167a41dd28ba6" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>clearModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a25567a2831eab82beb565d20f61c680d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>clearSousObjets</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a5be2a56fa6ec9812c0988f9cbdd9414d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>compareTo</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aaa5ae83922d2f1394fb0e42ff02d871f" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>COULEUR</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a4b21c0c145e40964259280e35cce5fd1" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>COULEUR_CADRE</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ae1bb7489ab6f00ae07710e913c70f42d" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>COULEUR_FOND</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a38dc577045bc090777b33067f948dce5" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>COULEUR_TEXTE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9fa51595364c2574f814bd53f4f099e0" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>creer_objet_vide</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a35a78342c585a1ddce8fb9b02627312a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>deleteSousObjets</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a4c61c5bb9fa354805e6e6f8123c62c9c" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>equals</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ac2857e61d0ccfce0af55f75aa37ac6cb" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>Evenement</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ae77379880dd2d0d1b568aaf73a1e730a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>Evenement</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a56c54af7698418f353fb66a86867a84e" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>evenementLie</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a47b011a4d8df1520014b4969cddded29" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>EXTERNAL_DUREE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a99264a3c2cc0c9220966ee5b0378a619" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>get</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a201746dfde1966fa6ce30107a53e240a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getAllData</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1a3bd674356109e69bf80cd1fbb3a25b12" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getCalendarString</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ada50db2b80b7988b81a871c8bb3dbc57" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getCopy</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1a90db58420e1864b4e84da8ac347f7dd9" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getCopyOf</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a12bc1528c0e8fee99a32b332f859ce90" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getCouleur</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1aac2ed9494b9c7cbf4734ca6486334ab3" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getCouleurCadre</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a7566f3242ee9f654df0fa641a78300fa" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getCouleurFond</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a0149f40d2e1e934dd0a6f2072c2ccbd9" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getCouleurTexte</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1aa7036d6c057c12ff2ba2489228c95270" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8c4cbd1740b7980a88197633cbfb5f7a" prot="public" virt="non-virtual" ambiguityscope="general::ObjetDi."><scope>general::calendrier::Indisponibilite</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6698fbca215239892da81c6e65cc35ee" prot="public" virt="non-virtual" ambiguityscope="general::ObjetDi."><scope>general::calendrier::Indisponibilite</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1accc85d6b271200457dbb7c6c6517f875" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getDebut</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1a68e585a71be927a66b5455f834a6a2bb" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getDescription</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ae5721d1336ff0f3e139451eaab9081c4" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getDuree</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ac4261b6caef5f6894c29fa554f238adb" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getEvenementLie</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a51e0fadd650c70b2f43bbf24ed4a31ac" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getFin</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a394410f5d78362d5bb8c0af04eef6932" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getFKIs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a01fb98109f9175d082107781a441ed8f" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getFKs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a73fcdb263606a5cdc355357888b443e5" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getGestionnairesImbrications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3be3f7048cc0c9876a79652fe6ecdb88" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getHashDependants</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a13c3b045be3e915bbd7f6762f926315d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getHashListes</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a04aa1604026adc7a2d5232f04804171b" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getHashMandatories</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a860cdf0ec23279d0e44b05c8bdda09fc" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getHashModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6c54a0827c56e4bdd2a5f9550750ce3a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getId</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aae36a208effa09ca2eeaa6660ae04002" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getIdName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3325e272d4e8849c3cc3abc18b79a26d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getIdParent</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a90b3f371286178754fc2d467a5dd9a14" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getIdProprietaire</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a033ac05948643c734fd2827a4e5e6ce7" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getInformateurHashObjet</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ad245c5d89851322a6cb58d77ccb87d6d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getLieu</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5b93b50c4b24fde4784400c53bcff250" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getListe</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a13430043faa6f6e9794d46938d9822a8" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getListeNomsPublics</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a78589347be90b3359d3ee335eb292964" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getNewInstance</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6f3e3a2e251a49c43790cc19a0040ec6" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getNom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afd705894affa7683a8d61368ad174779" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getNomFK</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae6a524a6d47d089b84a12a7937dd58c8" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getNomPublic</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5f581421162407637a1beea5e27f5d21" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getNomsModifications</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1abd154d67a30e180d57497838cf17c64d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getNomVariables</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a06087a189c8ccef31d484dabfb6faf88" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getNonAttendus</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4e76c6a98a07048763ac3a4188ff64b3" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getObjet</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afd8d202f01c64d5fe44bd95967440c15" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getObjetDependant</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a9aa64114645bfb6f217d2133e03d7b3f" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getObjetFromType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6dd698536324953839aea3de639a4408" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getObjetIntermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a777e624beb1fcd7d8e5f1b1e5ebda573" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getomsMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3c80d25be475c8e3b1980a62b51e3903" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getOnlyIDs</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a09ac5d1899e1a67c963cf554f981d714" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getParent</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a490e851c4c0d8c05935a59bf5833e560" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getPriorite</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa2d9ccee631e000308f580bb0f8d1591" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getPublicName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a773603c5296e1293f87b665fe9930c25" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getSimpleData</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ac3c14e53b0645c11843896b89d2d54f1" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getStringDebut</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1aa360c2f871e6d0ce35456828fc2259b1" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getStringFin</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a2e7e6413f517ccaaad6b74d9e5ff2180" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getStringHeureDebut</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a5cc5fa9ac2fbed12efb944c0c4a60b0e" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getStringHeureFin</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a21addc0aebccabf2e7cecde52b564f5a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getTypeOfVariable</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac7e41fd987f64f513e6351100fa26900" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getVariableClass</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ab08ab8b499dbf15609cae22506e2a8cf" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>getVariablesVisibles</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1a016d71350b593185c40235dbb781ff98" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>Indisponibilite</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1a88651a713c51385faaadd98a588d3286" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>Indisponibilite</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1af917a2e3963907e5ba7fe8f33ff2fd7d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>Indisponibilite</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a054ee03aba92c2690dad5e4f3b363de4" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>initialiser</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6cf9158c3ba1bd80f26366b538688795" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>initialiser_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9e70f4370dcc8699ad675232d9cea3db" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_dans_gestionnaireImbrication</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a286834e3d11c75b2d7e5deba20ae680b" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_dans_gestionnaireImbrication</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9f7d8b44b2fa8bcdb9927873f4247ea2" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_dependant</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afce9296ebb00a91a355baa7e119be1c5" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_fk</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aacc9b6e2eeca3b439398e037357cbe97" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a7a24587a62404b8543e3aca64c7bd891" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_souplement_valeur</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a6508f788e35013dda2f85a48da304d8a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_valeur</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a443906de370c4ca81386b842740023d0" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>inserer_valeur_intermediaire</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a4ec20377e3cab04a1c69c37de845a779" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>isDebutSet</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a9972e9a338881814fe337bcc760074b1" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>isFinSet</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa27a2b05178cfda83863dd1367a9b3b8" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>isModifie</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a611e8a9ce99154d2c3115f43ff64adf1" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>isModifie</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a16f1a41d6e8e4aea5ccd8fd3469fa58e" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>isParent</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a05dfe6e62f056c29a1f6c88cd86802b2" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>isVerrouille</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a151b69c9322a1e92b9a4a70d62ca240d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>isWholeDay</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abbd15d1e65701c99c99961b24cd3594a" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>mandatories</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ae39b74fd1faefd7176ea70fbb18a2a1a" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>modifie</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ac53737e06ba1015c9ab67784634283cf" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>NOM_LIEU</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1aa37e5dd07090d0447ee0c392616701c6" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>nomDEBUT</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a5be9561137c53ce2cf6e344b90d94f6c" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>nomFIN</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa1aa4881e7ed9496be8179bd355006bf" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>nomID</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a854873939679a03a7a35f7f7bec5b38c" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>nomIDPROPRIETAIRE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5a30c7eb98943d5870b03bc070212587" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>nomNOM</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a43403e2cbc7655d89748795097025c97" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>nomsPublics</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3b7b0f7865dfffba48244a1d40484c57" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>ObjetDi</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac885b4694153adc64e9e31b8e46b624a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>ObjetDi</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a641588d0febd9f56112c3c527c277015" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>priorite</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4f3b720645533a03346209dcb6463acc" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>putAll</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a08cf47bc67b8ea5cce6fd2dc689385bb" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>putAllExpected</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a47af5a73114a570100a6a13cce35e839" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>reinitialiser</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a31f9e7e65a6cf03c1d51cd884197657a" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>remove</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae288edc9539c54d0da7c841c2dff215d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>removeMandatory</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae2d87edac158b1b2c87f30430a0de49f" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>removeModification</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1af9355929db1e0ee1c2eabfa3c20b4c6d" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>set_single_data</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1af87915832fad7146b58d133a62568875" prot="private" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setColor</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8fc95efddd92b4832c1dca6b5762ede8" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setCouleur</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ac51cbdc742cdbba48032341744c1c095" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setCouleurCadre</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a04ff5bbc01bcb48c886259dc8833ef94" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setCouleurCadre</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a19b03278db5d32643885c38f559c7977" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setCouleurFond</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ae50020cd1f69fae4a2aee5df28277bc9" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setCouleurFond</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a3b8f0b939443ea1d952c5815fe6b8efb" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setCouleurTexte</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ae3f48544dfb4ce2ec4e5a23426ad3b47" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setCouleurTexte</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1aebca0e87656002ba9947f23f66aa6ffd" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a2a0ab29526d37729e6033dc9e0c86a39" prot="public" virt="non-virtual" ambiguityscope="general::ObjetDi."><scope>general::calendrier::Indisponibilite</scope><name>setData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9b7223c1b07586ce663298d1c614d4f1" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setDataFromHashLevis</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a5de604cedbc4f99ec7da58af66c48d85" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setDebut</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a8c8fee0fd0fff310fbc07e53ad871860" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setDebut_Duree</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a8cbd2d78fa834bf77150600dc2318741" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setDebut_Fin</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4a3d5facdd9ce514d62966e11ee66569" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setDependant</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a310382326e1c577202ddb241e3c3fb34" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setDescription</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1afe151aa630459b790c46970b24fa7346" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setDuree</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a5a795a82024c769bf899308995466b67" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setEvenementLie</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a785df10b41cf2dff26636c0081e33c43" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setEXTERNAL_DUREE</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ab4bdc0c409a993c147cb9baacb2cee85" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setFin</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6c502465f577081ad37faf0046c4b8c1" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setFK</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8122c517d5a5ae02f6812157b8994022" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setFKIntermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9af290af143437cc1fc827ce59f9a8a6" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setId</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a1a6612a685e77a819754becdf7b3d828" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setIdProprietaire</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1aaad71fcf31fee5bd91db0122865006cd" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setInformateurHashObjet</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a0465d9b1cf680342e8c96ea1df210c55" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setLieu</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aec6da3b01bc2b62f8b2459258f134b9b" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4182d279d37fd506e1a567a44c3f6554" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setModifications</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1aa4e8829e1beb7bccaefcb3462c44d673" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setModifie</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a0c247ae0b7c8ebc583c706c723f5bdc6" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setNom</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1a5fd8156eaf6af02533608aa7e72c3513" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setParent</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ac12598ba830b8cc2b2714f8ed8bf56c7" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setPriorite</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae868ac029aa7f6871719dcff37e4835c" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setPublicName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a26bdc424bfb09120f36be44e621394b1" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a31b04d4fe5f2ff4688a773545f47bd63" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setVariableClass</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1876ccbc5fbf782096b31cc37f3cc289" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setVariablesVisibles</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ac2f7bf39ff09b70e7de401eb71b15fc8" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>setVerrouille</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1ad69bd4282d0a3f4132711b650df42607" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>toExport</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Indisponibilite_1a8db2471a76661101267122a54eb92595" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>toString</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4caaf58cdfa5c9fda92b6cd329b270f8" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>TYPE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5c5351c23cedec8b4329a00ee641b168" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>updater_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a205a992d070027f7ee3eed47e92cdedb" prot="public" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>variable_existe</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ad9c0c5d849d5f3e937fb03664bccd35e" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>variablesVisibles</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Evenement_1acdae018aacef3a8abe07bb972437c53e" prot="protected" virt="non-virtual"><scope>general::calendrier::Indisponibilite</scope><name>verrouille</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

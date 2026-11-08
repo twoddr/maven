@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1AXZ" kind="class" language="Java" prot="public">
+    <compoundname>general::AXZ</compoundname>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1AXZ_1a2ffd0e60a5107f75c57c118edeca4e6a" prot="package" static="no" mutable="no">
+        <type>Integer</type>
+        <definition>Integer general.AXZ.i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <qualifiedname>general.AXZ.i</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AXZ.java" line="8" column="13" bodyfile="src/main/java/general/AXZ.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1AXZ_1aa7f2b202e82c3f268c195b10c867fd59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.AXZ.AXZ</definition>
+        <argsstring>(Integer input)</argsstring>
+        <name>AXZ</name>
+        <qualifiedname>general.AXZ.AXZ</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AXZ.java" line="10" column="12" bodyfile="src/main/java/general/AXZ.java" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1AXZ_1acd343763e99ad65c03b5fc2915ed11c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean general.AXZ.verif</definition>
+        <argsstring>(String x)</argsstring>
+        <name>verif</name>
+        <qualifiedname>general.AXZ.verif</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AXZ.java" line="14" column="20" bodyfile="src/main/java/general/AXZ.java" bodystart="14" bodyend="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1AXZ_1abefa00c8ba078ca04ca251d39f283d2c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.AXZ.g_k</definition>
+        <argsstring>()</argsstring>
+        <name>g_k</name>
+        <qualifiedname>general.AXZ.g_k</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AXZ.java" line="18" column="20" bodyfile="src/main/java/general/AXZ.java" bodystart="18" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1AXZ_1a7837dc8e9b40240cad4893b42c19d260" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.AXZ.extraire_nombre</definition>
+        <argsstring>(ArrayList&lt; Integer &gt; integers)</argsstring>
+        <name>extraire_nombre</name>
+        <qualifiedname>general.AXZ.extraire_nombre</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Integer &gt;</type>
+          <declname>integers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AXZ.java" line="38" column="20" bodyfile="src/main/java/general/AXZ.java" bodystart="38" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1AXZ_1a90ce73385d82a9bb16e53df054beedc6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.AXZ.incrementer_dernier</definition>
+        <argsstring>(ArrayList&lt; Integer &gt; reponses)</argsstring>
+        <name>incrementer_dernier</name>
+        <qualifiedname>general.AXZ.incrementer_dernier</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Integer &gt;</type>
+          <declname>reponses</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AXZ.java" line="61" column="18" bodyfile="src/main/java/general/AXZ.java" bodystart="61" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1AXZ_1ad55aa34a0356a70d48de0b47f1ef31e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.AXZ.isPremier</definition>
+        <argsstring>(int n)</argsstring>
+        <name>isPremier</name>
+        <qualifiedname>general.AXZ.isPremier</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AXZ.java" line="73" column="21" bodyfile="src/main/java/general/AXZ.java" bodystart="73" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/AXZ.java" line="7" column="7" bodyfile="src/main/java/general/AXZ.java" bodystart="7" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1AXZ_1aa7f2b202e82c3f268c195b10c867fd59" prot="public" virt="non-virtual"><scope>general::AXZ</scope><name>AXZ</name></member>
+      <member refid="classgeneral_1_1AXZ_1a7837dc8e9b40240cad4893b42c19d260" prot="private" virt="non-virtual"><scope>general::AXZ</scope><name>extraire_nombre</name></member>
+      <member refid="classgeneral_1_1AXZ_1abefa00c8ba078ca04ca251d39f283d2c" prot="private" virt="non-virtual"><scope>general::AXZ</scope><name>g_k</name></member>
+      <member refid="classgeneral_1_1AXZ_1a2ffd0e60a5107f75c57c118edeca4e6a" prot="package" virt="non-virtual"><scope>general::AXZ</scope><name>i</name></member>
+      <member refid="classgeneral_1_1AXZ_1a90ce73385d82a9bb16e53df054beedc6" prot="private" virt="non-virtual"><scope>general::AXZ</scope><name>incrementer_dernier</name></member>
+      <member refid="classgeneral_1_1AXZ_1ad55aa34a0356a70d48de0b47f1ef31e3" prot="private" virt="non-virtual"><scope>general::AXZ</scope><name>isPremier</name></member>
+      <member refid="classgeneral_1_1AXZ_1acd343763e99ad65c03b5fc2915ed11c9" prot="public" virt="non-virtual"><scope>general::AXZ</scope><name>verif</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

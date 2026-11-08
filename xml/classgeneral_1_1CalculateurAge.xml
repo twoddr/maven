@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1CalculateurAge" kind="class" language="Java" prot="public">
+    <compoundname>general::CalculateurAge</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1CalculateurAge_1a799e7f436a7241a2a40eeb3b2b01eea5" prot="private" static="yes" mutable="no">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime general.CalculateurAge.date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <qualifiedname>general.CalculateurAge.date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/CalculateurAge.java" line="12" column="34" bodyfile="src/main/java/general/CalculateurAge.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1CalculateurAge_1a6d397666a6f60ed05afc9a9d5ab657d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.CalculateurAge.CalculateurAge</definition>
+        <argsstring>(LocalDateTime d)</argsstring>
+        <name>CalculateurAge</name>
+        <qualifiedname>general.CalculateurAge.CalculateurAge</qualifiedname>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/CalculateurAge.java" line="14" column="12" bodyfile="src/main/java/general/CalculateurAge.java" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1CalculateurAge_1aaea680ab511c446a0bf6fb722e14bb10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.CalculateurAge.getAgeString</definition>
+        <argsstring>()</argsstring>
+        <name>getAgeString</name>
+        <qualifiedname>general.CalculateurAge.getAgeString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Détermine l&apos;age de l&apos;individu actuel: en années si plus d&apos;un an; en mois si né après le mois en cours; en jours si né avant aujourd&apos;hui; Dans tous les autres cas, l&apos;age vaut zéro</para>
+<para><simplesect kind="return"><para>l&apos;age de l&apos;individu en cours </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/CalculateurAge.java" line="25" column="19" bodyfile="src/main/java/general/CalculateurAge.java" bodystart="25" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1CalculateurAge_1a314c98e139743392b4a9905a72c096ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long general.CalculateurAge.getAge</definition>
+        <argsstring>()</argsstring>
+        <name>getAge</name>
+        <qualifiedname>general.CalculateurAge.getAge</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/CalculateurAge.java" line="64" column="17" bodyfile="src/main/java/general/CalculateurAge.java" bodystart="64" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Created by didiertowe on 21/06/17. </para>
+    </detaileddescription>
+    <location file="src/main/java/general/CalculateurAge.java" line="10" column="7" bodyfile="src/main/java/general/CalculateurAge.java" bodystart="10" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1CalculateurAge_1a6d397666a6f60ed05afc9a9d5ab657d7" prot="public" virt="non-virtual"><scope>general::CalculateurAge</scope><name>CalculateurAge</name></member>
+      <member refid="classgeneral_1_1CalculateurAge_1a799e7f436a7241a2a40eeb3b2b01eea5" prot="private" virt="non-virtual"><scope>general::CalculateurAge</scope><name>date</name></member>
+      <member refid="classgeneral_1_1CalculateurAge_1a314c98e139743392b4a9905a72c096ad" prot="public" virt="non-virtual"><scope>general::CalculateurAge</scope><name>getAge</name></member>
+      <member refid="classgeneral_1_1CalculateurAge_1aaea680ab511c446a0bf6fb722e14bb10" prot="public" virt="non-virtual"><scope>general::CalculateurAge</scope><name>getAgeString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

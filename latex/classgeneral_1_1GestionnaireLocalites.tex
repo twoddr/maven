@@ -1,0 +1,110 @@
+\doxysection{general.\+Gestionnaire\+Localites Class Reference}
+\hypertarget{classgeneral_1_1GestionnaireLocalites}{}\label{classgeneral_1_1GestionnaireLocalites}\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgeneral_1_1GestionnaireLocalites_a011f1f52204e1cae130102757ab297ad}{Gestionnaire\+Localites}} (String nom\+Pays, String nom\+Id\+Pays, String nom\+Id\+Pays\+Dans\+Ville, String nom\+Ville, String nom\+Id\+Ville\+Dans\+Quartier, String nom\+Quartier, int fkquartier, Hash\+Map$<$ String, Object $>$ hash\+Levis)
+\item 
+\mbox{\hyperlink{classgeneral_1_1GestionnaireLocalites_ab575e5bd328571ee2d8ec4fcea5e68bc}{Gestionnaire\+Localites}} (String nom\+Pays, String nom\+Id\+Pays, String nom\+Id\+Pays\+Dans\+Ville, String nom\+Ville, int fkville, Hash\+Map$<$ String, Object $>$ hash\+Levis)
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1GestionnaireLocalites_a8c8a9eb861250f213b6ec6cb71348d70}{get\+Hash\+Pays}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1GestionnaireLocalites_a4b1734c9d2256c274ab5c9da81fb510f}{get\+Hash\+Ville}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1GestionnaireLocalites_a803f018e1ffaf2428a6873413f043cc5}{get\+Hash\+Quartier}} ()
+\item 
+Array\+List$<$ Hash\+Map$<$ String, Object $>$ $>$ \mbox{\hyperlink{classgeneral_1_1GestionnaireLocalites_af91db35513ebf892769aa1e5674be10e}{get\+Liste\+Hash\+Ville}} ()
+\item 
+Array\+List$<$ Hash\+Map$<$ String, Object $>$ $>$ \mbox{\hyperlink{classgeneral_1_1GestionnaireLocalites_ab986e5f4ef8f7d4449811a7e03553578}{get\+Liste\+Hash\+Quartier}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgeneral_1_1GestionnaireLocalites_a011f1f52204e1cae130102757ab297ad}\label{classgeneral_1_1GestionnaireLocalites_a011f1f52204e1cae130102757ab297ad} 
+\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}!GestionnaireLocalites@{GestionnaireLocalites}}
+\index{GestionnaireLocalites@{GestionnaireLocalites}!general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection{\texorpdfstring{GestionnaireLocalites()}{GestionnaireLocalites()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily general.\+Gestionnaire\+Localites.\+Gestionnaire\+Localites (\begin{DoxyParamCaption}\item[{String}]{nom\+Pays,  }\item[{String}]{nom\+Id\+Pays,  }\item[{String}]{nom\+Id\+Pays\+Dans\+Ville,  }\item[{String}]{nom\+Ville,  }\item[{String}]{nom\+Id\+Ville\+Dans\+Quartier,  }\item[{String}]{nom\+Quartier,  }\item[{int}]{fkquartier,  }\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis }\end{DoxyParamCaption})}
+
+Permet de générer la matrice de localité à partir de la liste levis et l\textquotesingle{}id quartier
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Pays} & nom de la table pays \\
+\hline
+{\em nom\+Id\+Pays} & nom de l\textquotesingle{}id\+Pays dans sa propre table \\
+\hline
+{\em nom\+Id\+Pays\+Dans\+Ville} & nom de l\textquotesingle{}id pays dans la ville \\
+\hline
+{\em nom\+Ville} & nom de la table ville \\
+\hline
+{\em nom\+Id\+Ville\+Dans\+Quartier} & nom de l\textquotesingle{}idville dans le quartier \\
+\hline
+{\em nom\+Quartier} & nom de la table quartier \\
+\hline
+{\em fkquartier} & l\textquotesingle{}id du quartier recherché \\
+\hline
+{\em hash\+Levis} & la source d\textquotesingle{}informations au format Levis \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1GestionnaireLocalites_ab575e5bd328571ee2d8ec4fcea5e68bc}\label{classgeneral_1_1GestionnaireLocalites_ab575e5bd328571ee2d8ec4fcea5e68bc} 
+\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}!GestionnaireLocalites@{GestionnaireLocalites}}
+\index{GestionnaireLocalites@{GestionnaireLocalites}!general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection{\texorpdfstring{GestionnaireLocalites()}{GestionnaireLocalites()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily general.\+Gestionnaire\+Localites.\+Gestionnaire\+Localites (\begin{DoxyParamCaption}\item[{String}]{nom\+Pays,  }\item[{String}]{nom\+Id\+Pays,  }\item[{String}]{nom\+Id\+Pays\+Dans\+Ville,  }\item[{String}]{nom\+Ville,  }\item[{int}]{fkville,  }\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis }\end{DoxyParamCaption})}
+
+Permet de générer la matrice de localité à partir de la liste levis et l\textquotesingle{}id ville
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Pays} & nom de la table pays \\
+\hline
+{\em nom\+Id\+Pays} & nom de l\textquotesingle{}id\+Pays dans sa propre table \\
+\hline
+{\em nom\+Id\+Pays\+Dans\+Ville} & nom de l\textquotesingle{}id pays dans la ville \\
+\hline
+{\em nom\+Ville} & nom de la table ville \\
+\hline
+{\em fkville} & l\textquotesingle{}id de la ville recherchée \\
+\hline
+{\em hash\+Levis} & la source d\textquotesingle{}informations au format Levis \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeneral_1_1GestionnaireLocalites_a8c8a9eb861250f213b6ec6cb71348d70}\label{classgeneral_1_1GestionnaireLocalites_a8c8a9eb861250f213b6ec6cb71348d70} 
+\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}!getHashPays@{getHashPays}}
+\index{getHashPays@{getHashPays}!general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection{\texorpdfstring{getHashPays()}{getHashPays()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Gestionnaire\+Localites.\+get\+Hash\+Pays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireLocalites_a803f018e1ffaf2428a6873413f043cc5}\label{classgeneral_1_1GestionnaireLocalites_a803f018e1ffaf2428a6873413f043cc5} 
+\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}!getHashQuartier@{getHashQuartier}}
+\index{getHashQuartier@{getHashQuartier}!general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection{\texorpdfstring{getHashQuartier()}{getHashQuartier()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Gestionnaire\+Localites.\+get\+Hash\+Quartier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireLocalites_a4b1734c9d2256c274ab5c9da81fb510f}\label{classgeneral_1_1GestionnaireLocalites_a4b1734c9d2256c274ab5c9da81fb510f} 
+\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}!getHashVille@{getHashVille}}
+\index{getHashVille@{getHashVille}!general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection{\texorpdfstring{getHashVille()}{getHashVille()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Gestionnaire\+Localites.\+get\+Hash\+Ville (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireLocalites_ab986e5f4ef8f7d4449811a7e03553578}\label{classgeneral_1_1GestionnaireLocalites_ab986e5f4ef8f7d4449811a7e03553578} 
+\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}!getListeHashQuartier@{getListeHashQuartier}}
+\index{getListeHashQuartier@{getListeHashQuartier}!general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection{\texorpdfstring{getListeHashQuartier()}{getListeHashQuartier()}}
+{\footnotesize\ttfamily Array\+List$<$ Hash\+Map$<$ String, Object $>$ $>$ general.\+Gestionnaire\+Localites.\+get\+Liste\+Hash\+Quartier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1GestionnaireLocalites_af91db35513ebf892769aa1e5674be10e}\label{classgeneral_1_1GestionnaireLocalites_af91db35513ebf892769aa1e5674be10e} 
+\index{general.GestionnaireLocalites@{general.GestionnaireLocalites}!getListeHashVille@{getListeHashVille}}
+\index{getListeHashVille@{getListeHashVille}!general.GestionnaireLocalites@{general.GestionnaireLocalites}}
+\doxysubsubsection{\texorpdfstring{getListeHashVille()}{getListeHashVille()}}
+{\footnotesize\ttfamily Array\+List$<$ Hash\+Map$<$ String, Object $>$ $>$ general.\+Gestionnaire\+Localites.\+get\+Liste\+Hash\+Ville (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/general/\mbox{\hyperlink{GestionnaireLocalites_8java}{Gestionnaire\+Localites.\+java}}\end{DoxyCompactItemize}

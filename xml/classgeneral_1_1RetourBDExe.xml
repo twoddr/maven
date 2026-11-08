@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1RetourBDExe" kind="class" language="Java" prot="public">
+    <compoundname>general::RetourBDExe</compoundname>
+    <basecompoundref refid="interfacegeneral_1_1GestionnaireRetourBD" prot="public" virt="non-virtual">general.GestionnaireRetourBD</basecompoundref>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1RetourBDExe_1a0cb514cfb963d57382712c9820f000dc" prot="package" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.RetourBDExe.nomTable</definition>
+        <argsstring></argsstring>
+        <name>nomTable</name>
+        <qualifiedname>general.RetourBDExe.nomTable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/RetourBDExe.java" line="6" column="12" bodyfile="src/main/java/general/RetourBDExe.java" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1RetourBDExe_1a04171dbeb3180b663e169a1345e77d11" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int general.RetourBDExe.code</definition>
+        <argsstring></argsstring>
+        <name>code</name>
+        <qualifiedname>general.RetourBDExe.code</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/RetourBDExe.java" line="7" column="9" bodyfile="src/main/java/general/RetourBDExe.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1RetourBDExe_1a07cd58d44ce1c42e5d40f67f6e458179" prot="package" static="no" mutable="no">
+        <type><ref refid="classgeneral_1_1ThreadRetourBD" kindref="compound">ThreadRetourBD</ref></type>
+        <definition>ThreadRetourBD general.RetourBDExe.thread</definition>
+        <argsstring></argsstring>
+        <name>thread</name>
+        <qualifiedname>general.RetourBDExe.thread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/RetourBDExe.java" line="8" column="20" bodyfile="src/main/java/general/RetourBDExe.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1RetourBDExe_1a64b62cf5b70add565cf331e6959b0116" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.RetourBDExe.RetourBDExe</definition>
+        <argsstring>(int codeAttendu, String nomTableAttendu, ThreadRetourBD aExecuter)</argsstring>
+        <name>RetourBDExe</name>
+        <qualifiedname>general.RetourBDExe.RetourBDExe</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>codeAttendu</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTableAttendu</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1ThreadRetourBD" kindref="compound">ThreadRetourBD</ref></type>
+          <declname>aExecuter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/RetourBDExe.java" line="10" column="12" bodyfile="src/main/java/general/RetourBDExe.java" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1RetourBDExe_1a969086c0693880289a6905b354694957" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.RetourBDExe.traitementRetour</definition>
+        <argsstring>(ArrayList arrayList)</argsstring>
+        <name>traitementRetour</name>
+        <qualifiedname>general.RetourBDExe.traitementRetour</qualifiedname>
+        <reimplements refid="interfacegeneral_1_1GestionnaireRetourBD_1a4e8459df0a937e2bcf9c30102761a911">traitementRetour</reimplements>
+        <param>
+          <type>ArrayList</type>
+          <declname>arrayList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/RetourBDExe.java" line="19" column="17" bodyfile="src/main/java/general/RetourBDExe.java" bodystart="19" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>general.RetourBDExe</label>
+        <link refid="classgeneral_1_1RetourBDExe"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.GestionnaireRetourBD</label>
+        <link refid="interfacegeneral_1_1GestionnaireRetourBD"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>general.RetourBDExe</label>
+        <link refid="classgeneral_1_1RetourBDExe"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>thread</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.GestionnaireRetourBD</label>
+        <link refid="interfacegeneral_1_1GestionnaireRetourBD"/>
+      </node>
+      <node id="3">
+        <label>general.ThreadRetourBD</label>
+        <link refid="classgeneral_1_1ThreadRetourBD"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/RetourBDExe.java" line="5" column="7" bodyfile="src/main/java/general/RetourBDExe.java" bodystart="5" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1RetourBDExe_1a04171dbeb3180b663e169a1345e77d11" prot="package" virt="non-virtual"><scope>general::RetourBDExe</scope><name>code</name></member>
+      <member refid="classgeneral_1_1RetourBDExe_1a0cb514cfb963d57382712c9820f000dc" prot="package" virt="non-virtual"><scope>general::RetourBDExe</scope><name>nomTable</name></member>
+      <member refid="classgeneral_1_1RetourBDExe_1a64b62cf5b70add565cf331e6959b0116" prot="public" virt="non-virtual"><scope>general::RetourBDExe</scope><name>RetourBDExe</name></member>
+      <member refid="classgeneral_1_1RetourBDExe_1a07cd58d44ce1c42e5d40f67f6e458179" prot="package" virt="non-virtual"><scope>general::RetourBDExe</scope><name>thread</name></member>
+      <member refid="classgeneral_1_1RetourBDExe_1a969086c0693880289a6905b354694957" prot="public" virt="non-virtual"><scope>general::RetourBDExe</scope><name>traitementRetour</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

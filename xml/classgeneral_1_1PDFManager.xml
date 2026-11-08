@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1PDFManager" kind="class" language="Java" prot="public">
+    <compoundname>general::PDFManager</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1PDFManager_1a31e8094d6025d87650f786a6e17fb772" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.PDFManager.imprimerFichier</definition>
+        <argsstring>(String nomFichier)</argsstring>
+        <name>imprimerFichier</name>
+        <qualifiedname>general.PDFManager.imprimerFichier</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomFichier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de lancer l&apos;action d&apos;impression d&apos;un fichier si l&apos;action d&apos;impression est supportée</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomFichier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est le chemin vers le fichier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Un message de retour à l&apos;attention de l&apos;appelant </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/PDFManager.java" line="19" column="19" bodyfile="src/main/java/general/PDFManager.java" bodystart="19" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1PDFManager_1a5396064a14107ab8959d9a2f7548716a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.PDFManager.afficherFichier</definition>
+        <argsstring>(String nomFichier)</argsstring>
+        <name>afficherFichier</name>
+        <qualifiedname>general.PDFManager.afficherFichier</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomFichier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lancer le fichier dans une application appropriée (pdf, doc, etc)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomFichier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est le chemin vers le fichier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Un message de retour à l&apos;attention de l&apos;appelant </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/PDFManager.java" line="48" column="19" bodyfile="src/main/java/general/PDFManager.java" bodystart="48" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Created by Didier on 14-05-16. </para>
+    </detaileddescription>
+    <location file="src/main/java/general/PDFManager.java" line="10" column="7" bodyfile="src/main/java/general/PDFManager.java" bodystart="10" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1PDFManager_1a5396064a14107ab8959d9a2f7548716a" prot="public" virt="non-virtual"><scope>general::PDFManager</scope><name>afficherFichier</name></member>
+      <member refid="classgeneral_1_1PDFManager_1a31e8094d6025d87650f786a6e17fb772" prot="public" virt="non-virtual"><scope>general::PDFManager</scope><name>imprimerFichier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

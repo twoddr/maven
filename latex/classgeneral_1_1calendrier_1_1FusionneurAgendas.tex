@@ -1,0 +1,251 @@
+\doxysection{general.\+calendrier.\+Fusionneur\+Agendas Class Reference}
+\hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas}{}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas}\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_affc16385bb5a018708a2d601a095992c}{Fusionneur\+Agendas}} (String nom\+Type, String nom\+ID, String nom\+Description, String nom\+Couleur\+Texte, String nom\+IDProprietaire, String nom\+Date\+Debut, String nom\+Date\+Fin, String nom\+Couleur\+Cadre, String nom\+Couleur\+Fond, String nom\+Lieu, \mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}} informateur)
+\item 
+\mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_aac6d0c9b8794feefeb5778c08338604b}{Fusionneur\+Agendas}} (Array\+List$<$ String $>$ liste\+Noms, \mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}} informateur)
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a988f5307706ae5195dd8231c5c1bbd87}{fusionner}} (Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ etrangers, Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ evenements, String priorite)
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a89c6ca87507459ffd6c37787c7d8acc9}{fusionner}} (\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} etranger, Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ evenements, String priorite)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a2beaba9957756d3498f17e86f79ebcd0}{inserer\+\_\+non\+\_\+prioritaire}} (\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} evenement, Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ evenements)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a41bc2bb21b550be08effe3635aca1585}{inserer\+\_\+prioritaire}} (\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} evenement, Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ evenements)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9289f818953ece8c6953585e5934abab}{inserer}} (\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} evenement, Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ evenements)
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_ad9fd09b2af88c1cf7afb32dea7e98514}{get\+Sauves}} ()
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_af3384b847069f9d0915e731b00ea706e}{get\+Bannis}} ()
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a0cb7ab26a8be0090dbdb8a2028121638}{get\+Tronques}} ()
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a6b7df5f7cd9600cf0ff364caf6ed59a4}{get\+Crees}} ()
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a0b014ef6c888e54f071b8d674081169f}{is\+Telescopage}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a6163feebd41eefb816e507bab58a2f96}{inserer\+\_\+malin}} (\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} evenement, Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ evenement\+Tree\+Set)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_ad587098f66415948f19a60bc45795e5b}{sauves}} = new Tree\+Set$<$$>$()
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9710040fde006d195cb1b15a1949f2db}{bannis}} = new Tree\+Set$<$$>$()
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9bcec0c0e8a11c1e6dad65ae2ded69fb}{tronques}} = new Tree\+Set$<$$>$()
+\item 
+Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1FusionneurAgendas_a2d0648e387743220cf1636c08589c496}{crees}} = new Tree\+Set$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+didie 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_affc16385bb5a018708a2d601a095992c}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_affc16385bb5a018708a2d601a095992c} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!FusionneurAgendas@{FusionneurAgendas}}
+\index{FusionneurAgendas@{FusionneurAgendas}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{FusionneurAgendas()}{FusionneurAgendas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily general.\+calendrier.\+Fusionneur\+Agendas.\+Fusionneur\+Agendas (\begin{DoxyParamCaption}\item[{String}]{nom\+Type,  }\item[{String}]{nom\+ID,  }\item[{String}]{nom\+Description,  }\item[{String}]{nom\+Couleur\+Texte,  }\item[{String}]{nom\+IDProprietaire,  }\item[{String}]{nom\+Date\+Debut,  }\item[{String}]{nom\+Date\+Fin,  }\item[{String}]{nom\+Couleur\+Cadre,  }\item[{String}]{nom\+Couleur\+Fond,  }\item[{String}]{nom\+Lieu,  }\item[{\mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}}}]{informateur }\end{DoxyParamCaption})}
+
+Objet permettant le fusionnage d\textquotesingle{}éléments dans un agenda
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Type} & le nom de la variable type \\
+\hline
+{\em nom\+ID} & le nom de l\textquotesingle{}id \\
+\hline
+{\em nom\+Description} & la description d\textquotesingle{}un événement \\
+\hline
+{\em nom\+Couleur\+Texte} & le nom de la variable couleur \\
+\hline
+{\em nom\+IDProprietaire} & le nom de la variable id\+Proprio \\
+\hline
+{\em nom\+Date\+Debut} & le nom de la date de début d\textquotesingle{}un événement \\
+\hline
+{\em nom\+Date\+Fin} & le nom de la date de fin \\
+\hline
+{\em nom\+Couleur\+Cadre} & le nom de la couleur du cadre d\textquotesingle{}agenda \\
+\hline
+{\em nom\+Couleur\+Fond} & le nom de la couleur de fond de l\textquotesingle{}agenda \\
+\hline
+{\em nom\+Lieu} & le nom de la variable de lieu \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_aac6d0c9b8794feefeb5778c08338604b}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_aac6d0c9b8794feefeb5778c08338604b} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!FusionneurAgendas@{FusionneurAgendas}}
+\index{FusionneurAgendas@{FusionneurAgendas}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{FusionneurAgendas()}{FusionneurAgendas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily general.\+calendrier.\+Fusionneur\+Agendas.\+Fusionneur\+Agendas (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{liste\+Noms,  }\item[{\mbox{\hyperlink{interfacegeneral_1_1InformateurObjet}{Informateur\+Objet}}}]{informateur }\end{DoxyParamCaption})}
+
+Constructeur avec la liste des noms des champs dans l\textquotesingle{}ordre suivant \+: nom\+Type, nom\+ID, nom\+Description, nom\+Couleur\+Texte, nom\+IDProprietaire, nom\+Date\+Debut, nom\+Date\+Fin, nom\+Couleur\+Cadre, nom\+Couleur\+Fond, nom\+Lieu
+
+
+\begin{DoxyParams}{Parameters}
+{\em liste\+Noms} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a89c6ca87507459ffd6c37787c7d8acc9}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a89c6ca87507459ffd6c37787c7d8acc9} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!fusionner@{fusionner}}
+\index{fusionner@{fusionner}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{fusionner()}{fusionner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ general.\+calendrier.\+Fusionneur\+Agendas.\+fusionner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}}]{etranger,  }\item[{Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$}]{evenements,  }\item[{String}]{priorite }\end{DoxyParamCaption})}
+
+Permet de fusionner plusieurs événements en évitant les chevauchements
+
+
+\begin{DoxyParams}{Parameters}
+{\em etranger} & le nouvel événement \\
+\hline
+{\em evenements} & les événements initiaux \\
+\hline
+{\em priorite} & la priorité de fusion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le résultat de la fusion 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a988f5307706ae5195dd8231c5c1bbd87}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a988f5307706ae5195dd8231c5c1bbd87} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!fusionner@{fusionner}}
+\index{fusionner@{fusionner}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{fusionner()}{fusionner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ general.\+calendrier.\+Fusionneur\+Agendas.\+fusionner (\begin{DoxyParamCaption}\item[{Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$}]{etrangers,  }\item[{Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$}]{evenements,  }\item[{String}]{priorite }\end{DoxyParamCaption})}
+
+Permet de fusionner plusieurs événements en évitant les chevauchements
+
+
+\begin{DoxyParams}{Parameters}
+{\em etrangers} & les nouveaux événements \\
+\hline
+{\em evenements} & les événements initiaux \\
+\hline
+{\em priorite} & la priorité de fusion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le résultat de la fusion 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_af3384b847069f9d0915e731b00ea706e}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_af3384b847069f9d0915e731b00ea706e} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!getBannis@{getBannis}}
+\index{getBannis@{getBannis}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{getBannis()}{getBannis()}}
+{\footnotesize\ttfamily Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ general.\+calendrier.\+Fusionneur\+Agendas.\+get\+Bannis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a6b7df5f7cd9600cf0ff364caf6ed59a4}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a6b7df5f7cd9600cf0ff364caf6ed59a4} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!getCrees@{getCrees}}
+\index{getCrees@{getCrees}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{getCrees()}{getCrees()}}
+{\footnotesize\ttfamily Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ general.\+calendrier.\+Fusionneur\+Agendas.\+get\+Crees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_ad9fd09b2af88c1cf7afb32dea7e98514}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_ad9fd09b2af88c1cf7afb32dea7e98514} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!getSauves@{getSauves}}
+\index{getSauves@{getSauves}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{getSauves()}{getSauves()}}
+{\footnotesize\ttfamily Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ general.\+calendrier.\+Fusionneur\+Agendas.\+get\+Sauves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a0cb7ab26a8be0090dbdb8a2028121638}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a0cb7ab26a8be0090dbdb8a2028121638} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!getTronques@{getTronques}}
+\index{getTronques@{getTronques}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{getTronques()}{getTronques()}}
+{\footnotesize\ttfamily Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$ general.\+calendrier.\+Fusionneur\+Agendas.\+get\+Tronques (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9289f818953ece8c6953585e5934abab}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9289f818953ece8c6953585e5934abab} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!inserer@{inserer}}
+\index{inserer@{inserer}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{inserer()}{inserer()}}
+{\footnotesize\ttfamily void general.\+calendrier.\+Fusionneur\+Agendas.\+inserer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}}]{evenement,  }\item[{Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$}]{evenements }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}insérer un événement selon la priorité, et ce sans autoriser les chevauchements
+
+
+\begin{DoxyParams}{Parameters}
+{\em evenement} & c\textquotesingle{}est l\textquotesingle{}événement intrus qui veut s\textquotesingle{}insérer avec les autres ;il peut être modifié ! \\
+\hline
+{\em evenements} & c\textquotesingle{}est la liste des événements initiaux \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a6163feebd41eefb816e507bab58a2f96}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a6163feebd41eefb816e507bab58a2f96} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!inserer\_malin@{inserer\_malin}}
+\index{inserer\_malin@{inserer\_malin}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{inserer\_malin()}{inserer\_malin()}}
+{\footnotesize\ttfamily void general.\+calendrier.\+Fusionneur\+Agendas.\+inserer\+\_\+malin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}}]{evenement,  }\item[{Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$}]{evenement\+Tree\+Set }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a2beaba9957756d3498f17e86f79ebcd0}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a2beaba9957756d3498f17e86f79ebcd0} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!inserer\_non\_prioritaire@{inserer\_non\_prioritaire}}
+\index{inserer\_non\_prioritaire@{inserer\_non\_prioritaire}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{inserer\_non\_prioritaire()}{inserer\_non\_prioritaire()}}
+{\footnotesize\ttfamily void general.\+calendrier.\+Fusionneur\+Agendas.\+inserer\+\_\+non\+\_\+prioritaire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}}]{evenement,  }\item[{Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$}]{evenements }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}insérer un événement qui n\textquotesingle{}a pas la priorité sur les autres, et ce sans autoriser les chevauchements
+
+
+\begin{DoxyParams}{Parameters}
+{\em evenement} & c\textquotesingle{}est l\textquotesingle{}événement intrus \\
+\hline
+{\em evenements} & c\textquotesingle{}est la liste des événements initiaux \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a41bc2bb21b550be08effe3635aca1585}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a41bc2bb21b550be08effe3635aca1585} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!inserer\_prioritaire@{inserer\_prioritaire}}
+\index{inserer\_prioritaire@{inserer\_prioritaire}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{inserer\_prioritaire()}{inserer\_prioritaire()}}
+{\footnotesize\ttfamily void general.\+calendrier.\+Fusionneur\+Agendas.\+inserer\+\_\+prioritaire (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}}]{evenement,  }\item[{Tree\+Set$<$ \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}} $>$}]{evenements }\end{DoxyParamCaption})}
+
+Permet d\textquotesingle{}insérer un événement qui a la priorité sur les autres, et ce sans autoriser les chevauchements
+
+
+\begin{DoxyParams}{Parameters}
+{\em evenement} & c\textquotesingle{}est l\textquotesingle{}événement intrus qui peut écraser les autres ;il ne sera pas modifié ! \\
+\hline
+{\em evenements} & c\textquotesingle{}est la liste des événements initiaux \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a0b014ef6c888e54f071b8d674081169f}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a0b014ef6c888e54f071b8d674081169f} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!isTelescopage@{isTelescopage}}
+\index{isTelescopage@{isTelescopage}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{isTelescopage()}{isTelescopage()}}
+{\footnotesize\ttfamily boolean general.\+calendrier.\+Fusionneur\+Agendas.\+is\+Telescopage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9710040fde006d195cb1b15a1949f2db}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9710040fde006d195cb1b15a1949f2db} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!bannis@{bannis}}
+\index{bannis@{bannis}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{bannis}{bannis}}
+{\footnotesize\ttfamily Tree\+Set$<$\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}$>$ general.\+calendrier.\+Fusionneur\+Agendas.\+bannis = new Tree\+Set$<$$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a2d0648e387743220cf1636c08589c496}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a2d0648e387743220cf1636c08589c496} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!crees@{crees}}
+\index{crees@{crees}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{crees}{crees}}
+{\footnotesize\ttfamily Tree\+Set$<$\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}$>$ general.\+calendrier.\+Fusionneur\+Agendas.\+crees = new Tree\+Set$<$$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_ad587098f66415948f19a60bc45795e5b}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_ad587098f66415948f19a60bc45795e5b} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!sauves@{sauves}}
+\index{sauves@{sauves}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{sauves}{sauves}}
+{\footnotesize\ttfamily Tree\+Set$<$\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}$>$ general.\+calendrier.\+Fusionneur\+Agendas.\+sauves = new Tree\+Set$<$$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9bcec0c0e8a11c1e6dad65ae2ded69fb}\label{classgeneral_1_1calendrier_1_1FusionneurAgendas_a9bcec0c0e8a11c1e6dad65ae2ded69fb} 
+\index{general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}!tronques@{tronques}}
+\index{tronques@{tronques}!general.calendrier.FusionneurAgendas@{general.calendrier.FusionneurAgendas}}
+\doxysubsubsection{\texorpdfstring{tronques}{tronques}}
+{\footnotesize\ttfamily Tree\+Set$<$\mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement}{Evenement}}$>$ general.\+calendrier.\+Fusionneur\+Agendas.\+tronques = new Tree\+Set$<$$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/general/calendrier/\mbox{\hyperlink{FusionneurAgendas_8java}{Fusionneur\+Agendas.\+java}}\end{DoxyCompactItemize}

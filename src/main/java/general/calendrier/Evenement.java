@@ -115,13 +115,13 @@ public class Evenement extends ObjetCSA {
     }
 
     public void reinitialiser() {
-        initialiser(COULEUR_TEXTE, RGBConverter.convert_color_2_int(Color.BLUE));
-        initialiser(COULEUR_CADRE, RGBConverter.convert_color_2_int(Color.GREEN));
-        initialiser(COULEUR_FOND, RGBConverter.convert_color_2_int(Color.YELLOW));
+        initialiser(COULEUR_TEXTE, RGBConverter.convert_color_2_int(Color.BLUE), "Couleur du texte");
+        initialiser(COULEUR_CADRE, RGBConverter.convert_color_2_int(Color.GREEN), "Couleur du cadre");
+        initialiser(COULEUR_FOND, RGBConverter.convert_color_2_int(Color.YELLOW), "Couleur du fond");
 
-        initialiser(NOM_LIEU, "Liège");
-        setVariableClass(nomDEBUT, LocalDateTime.class);
-        setVariableClass(nomFIN, LocalDateTime.class);
+        initialiser(NOM_LIEU, "Liège", "Lieu");
+        setVariableClass(nomDEBUT, LocalDateTime.class, "Début");
+        setVariableClass(nomFIN, LocalDateTime.class, "Fin");
 
         setPublicName("Événements");
         setType("Evenement");

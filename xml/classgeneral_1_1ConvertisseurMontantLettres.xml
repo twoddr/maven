@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ConvertisseurMontantLettres" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>general::ConvertisseurMontantLettres</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1a4f82bdbd46960a969cebc7be538625b4" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurMontantLettres.result</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.result</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="22" column="27" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1ad1bfbd4dd339fefc25d35eea1038fbec" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurMontantLettres.frac</definition>
+        <argsstring></argsstring>
+        <name>frac</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.frac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="22" column="34" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1aa5c48f3f223805b71bf26ab0f8673191" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurMontantLettres.tranche</definition>
+        <argsstring></argsstring>
+        <name>tranche</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.tranche</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="22" column="39" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1ae95d27321f9875e86c5360e0bfe932dc" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurMontantLettres.dec</definition>
+        <argsstring></argsstring>
+        <name>dec</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.dec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="22" column="47" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1a17974c455aad7aa9e3674bfed9a420e7" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurMontantLettres.cent</definition>
+        <argsstring></argsstring>
+        <name>cent</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.cent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="22" column="51" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1a7becbebda78c107d3835e894dd4d2162" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurMontantLettres.un</definition>
+        <argsstring></argsstring>
+        <name>un</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.un</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="22" column="56" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1a8be64932603b6af6314ddf5b0e40ae9d" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurMontantLettres.dix</definition>
+        <argsstring></argsstring>
+        <name>dix</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.dix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="22" column="59" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1ae7f1d12472bff7efa377865fcc470cb8" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int general.ConvertisseurMontantLettres.rang</definition>
+        <argsstring></argsstring>
+        <name>rang</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.rang</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="23" column="24" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1aac83a0a9bec821c66ca7f560825624ee" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int general.ConvertisseurMontantLettres.virgule</definition>
+        <argsstring></argsstring>
+        <name>virgule</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.virgule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="23" column="29" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurMontantLettres_1ab64fa780929c18783b1517f8fbb74aeb" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int general.ConvertisseurMontantLettres.lg</definition>
+        <argsstring></argsstring>
+        <name>lg</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.lg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="23" column="37" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurMontantLettres_1a877c5a0c81401bc877bbc521911617e4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurMontantLettres.traiter</definition>
+        <argsstring>(String nombre)</argsstring>
+        <name>traiter</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.traiter</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="25" column="27" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="25" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurMontantLettres_1a3acaa4fb043df9792c1885fb5669894b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurMontantLettres.AR</definition>
+        <argsstring>(String nombre, String devise, String sou)</argsstring>
+        <name>AR</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.AR</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>devise</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>sou</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="52" column="26" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="52" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurMontantLettres_1af37cdee9bddae9e69208a9d214680070" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurMontantLettres.AR</definition>
+        <argsstring>(String nombre)</argsstring>
+        <name>AR</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.AR</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="195" column="26" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurMontantLettres_1aa9b446e44a75da273fcf2bd8be9f9c70" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurMontantLettres.FR</definition>
+        <argsstring>(String nombre, String devise, String sou)</argsstring>
+        <name>FR</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.FR</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>devise</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>sou</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="200" column="26" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="200" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurMontantLettres_1acd3b73ea5db674b2059c8d8df49cf99b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurMontantLettres.FR</definition>
+        <argsstring>(String nombre)</argsstring>
+        <name>FR</name>
+        <qualifiedname>general.ConvertisseurMontantLettres.FR</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="367" column="26" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="367" bodyend="369"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/ConvertisseurMontantLettres.java" line="20" column="17" bodyfile="src/main/java/general/ConvertisseurMontantLettres.java" bodystart="20" bodyend="370"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1a3acaa4fb043df9792c1885fb5669894b" prot="public" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>AR</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1af37cdee9bddae9e69208a9d214680070" prot="public" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>AR</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1a17974c455aad7aa9e3674bfed9a420e7" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>cent</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1ae95d27321f9875e86c5360e0bfe932dc" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>dec</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1a8be64932603b6af6314ddf5b0e40ae9d" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>dix</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1aa9b446e44a75da273fcf2bd8be9f9c70" prot="public" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>FR</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1acd3b73ea5db674b2059c8d8df49cf99b" prot="public" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>FR</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1ad1bfbd4dd339fefc25d35eea1038fbec" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>frac</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1ab64fa780929c18783b1517f8fbb74aeb" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>lg</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1ae7f1d12472bff7efa377865fcc470cb8" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>rang</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1a4f82bdbd46960a969cebc7be538625b4" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>result</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1a877c5a0c81401bc877bbc521911617e4" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>traiter</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1aa5c48f3f223805b71bf26ab0f8673191" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>tranche</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1a7becbebda78c107d3835e894dd4d2162" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>un</name></member>
+      <member refid="classgeneral_1_1ConvertisseurMontantLettres_1aac83a0a9bec821c66ca7f560825624ee" prot="private" virt="non-virtual"><scope>general::ConvertisseurMontantLettres</scope><name>virgule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

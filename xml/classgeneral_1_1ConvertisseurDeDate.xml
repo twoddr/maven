@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ConvertisseurDeDate" kind="class" language="Java" prot="public">
+    <compoundname>general::ConvertisseurDeDate</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurDeDate_1a62a257d987b8797a99accdc95436e53a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Date</type>
+        <definition>static Date general.ConvertisseurDeDate.localDateTime2UtilDate</definition>
+        <argsstring>(LocalDateTime dateTime)</argsstring>
+        <name>localDateTime2UtilDate</name>
+        <qualifiedname>general.ConvertisseurDeDate.localDateTime2UtilDate</qualifiedname>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>dateTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurDeDate.java" line="11" column="24" bodyfile="src/main/java/general/ConvertisseurDeDate.java" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurDeDate_1ad0c82552dcfee6f05ebee4ed17194c9e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>java.sql.Date</type>
+        <definition>static java.sql.Date general.ConvertisseurDeDate.localDate2SQLDate</definition>
+        <argsstring>(LocalDateTime date)</argsstring>
+        <name>localDate2SQLDate</name>
+        <qualifiedname>general.ConvertisseurDeDate.localDate2SQLDate</qualifiedname>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurDeDate.java" line="15" column="31" bodyfile="src/main/java/general/ConvertisseurDeDate.java" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurDeDate_1adb583f608ca9883f6c3105b0d41b270d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.ConvertisseurDeDate.utilDate2LocalDateTime</definition>
+        <argsstring>(Date date)</argsstring>
+        <name>utilDate2LocalDateTime</name>
+        <qualifiedname>general.ConvertisseurDeDate.utilDate2LocalDateTime</qualifiedname>
+        <param>
+          <type>Date</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurDeDate.java" line="19" column="33" bodyfile="src/main/java/general/ConvertisseurDeDate.java" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurDeDate_1ada0e5f122bdc7a7f7e1f441bf7613352" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>static LocalDate general.ConvertisseurDeDate.sqlDate2LocalDate</definition>
+        <argsstring>(java.sql.Date date)</argsstring>
+        <name>sqlDate2LocalDate</name>
+        <qualifiedname>general.ConvertisseurDeDate.sqlDate2LocalDate</qualifiedname>
+        <param>
+          <type>java.sql.Date</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurDeDate.java" line="23" column="29" bodyfile="src/main/java/general/ConvertisseurDeDate.java" bodystart="23" bodyend="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/ConvertisseurDeDate.java" line="9" column="7" bodyfile="src/main/java/general/ConvertisseurDeDate.java" bodystart="9" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ConvertisseurDeDate_1ad0c82552dcfee6f05ebee4ed17194c9e" prot="public" virt="non-virtual"><scope>general::ConvertisseurDeDate</scope><name>localDate2SQLDate</name></member>
+      <member refid="classgeneral_1_1ConvertisseurDeDate_1a62a257d987b8797a99accdc95436e53a" prot="public" virt="non-virtual"><scope>general::ConvertisseurDeDate</scope><name>localDateTime2UtilDate</name></member>
+      <member refid="classgeneral_1_1ConvertisseurDeDate_1ada0e5f122bdc7a7f7e1f441bf7613352" prot="public" virt="non-virtual"><scope>general::ConvertisseurDeDate</scope><name>sqlDate2LocalDate</name></member>
+      <member refid="classgeneral_1_1ConvertisseurDeDate_1adb583f608ca9883f6c3105b0d41b270d" prot="public" virt="non-virtual"><scope>general::ConvertisseurDeDate</scope><name>utilDate2LocalDateTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="interfacegeneral_1_1HashObjetColore" kind="interface" language="Java" prot="public">
+    <compoundname>general::HashObjetColore</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacegeneral_1_1HashObjetColore_1acf1557f5d59a6e85737e5df36e426fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.HashObjetColore.getCouleur</definition>
+        <argsstring>()</argsstring>
+        <name>getCouleur</name>
+        <qualifiedname>general.HashObjetColore.getCouleur</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/HashObjetColore.java" line="4" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/HashObjetColore.java" line="3" column="18" bodyfile="src/main/java/general/HashObjetColore.java" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+      <member refid="interfacegeneral_1_1HashObjetColore_1acf1557f5d59a6e85737e5df36e426fb5" prot="public" virt="non-virtual"><scope>general::HashObjetColore</scope><name>getCouleur</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

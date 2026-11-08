@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacegeneral" kind="namespace" language="Java">
+    <compoundname>general</compoundname>
+    <innerclass refid="classgeneral_1_1AfficheurArborescence" prot="public">general::AfficheurArborescence</innerclass>
+    <innerclass refid="classgeneral_1_1AfficheurRequete" prot="public">general::AfficheurRequete</innerclass>
+    <innerclass refid="classgeneral_1_1AXZ" prot="public">general::AXZ</innerclass>
+    <innerclass refid="classgeneral_1_1CalculateurAge" prot="public">general::CalculateurAge</innerclass>
+    <innerclass refid="classgeneral_1_1Capitaliseur" prot="public">general::Capitaliseur</innerclass>
+    <innerclass refid="classgeneral_1_1Capsule" prot="public">general::Capsule</innerclass>
+    <innerclass refid="interfacegeneral_1_1ControleurPrincipal" prot="public">general::ControleurPrincipal</innerclass>
+    <innerclass refid="classgeneral_1_1ConvertisseurDeCalendrier" prot="public">general::ConvertisseurDeCalendrier</innerclass>
+    <innerclass refid="classgeneral_1_1ConvertisseurDeDate" prot="public">general::ConvertisseurDeDate</innerclass>
+    <innerclass refid="classgeneral_1_1ConvertisseurMontantLettres" prot="public">general::ConvertisseurMontantLettres</innerclass>
+    <innerclass refid="classgeneral_1_1ConvertisseurNombreLettres" prot="public">general::ConvertisseurNombreLettres</innerclass>
+    <innerclass refid="classgeneral_1_1Coordonnees" prot="public">general::Coordonnees</innerclass>
+    <innerclass refid="classgeneral_1_1CreateurDossier" prot="public">general::CreateurDossier</innerclass>
+    <innerclass refid="classgeneral_1_1DateString" prot="public">general::DateString</innerclass>
+    <innerclass refid="classgeneral_1_1DetecteurModification" prot="public">general::DetecteurModification</innerclass>
+    <innerclass refid="classgeneral_1_1DetecteurPresence" prot="public">general::DetecteurPresence</innerclass>
+    <innerclass refid="classgeneral_1_1Duplicateur" prot="public">general::Duplicateur</innerclass>
+    <innerclass refid="classgeneral_1_1ExtracteurHashMap" prot="public">general::ExtracteurHashMap</innerclass>
+    <innerclass refid="classgeneral_1_1ExtracteurObjet" prot="public">general::ExtracteurObjet</innerclass>
+    <innerclass refid="classgeneral_1_1FormateurNumero" prot="public">general::FormateurNumero</innerclass>
+    <innerclass refid="classgeneral_1_1GestionnaireImbrications" prot="public">general::GestionnaireImbrications</innerclass>
+    <innerclass refid="classgeneral_1_1GestionnaireLocalites" prot="public">general::GestionnaireLocalites</innerclass>
+    <innerclass refid="interfacegeneral_1_1GestionnaireRetourBD" prot="public">general::GestionnaireRetourBD</innerclass>
+    <innerclass refid="classgeneral_1_1Hacheur" prot="public">general::Hacheur</innerclass>
+    <innerclass refid="interfacegeneral_1_1HashObjetColore" prot="public">general::HashObjetColore</innerclass>
+    <innerclass refid="classgeneral_1_1Individu" prot="public">general::Individu</innerclass>
+    <innerclass refid="interfacegeneral_1_1InformateurObjet" prot="public">general::InformateurObjet</innerclass>
+    <innerclass refid="classgeneral_1_1InteresseParMiseAJour" prot="public">general::InteresseParMiseAJour</innerclass>
+    <innerclass refid="classgeneral_1_1LecteurFichier" prot="public">general::LecteurFichier</innerclass>
+    <innerclass refid="classgeneral_1_1Monostable" prot="public">general::Monostable</innerclass>
+    <innerclass refid="classgeneral_1_1MutableObject" prot="public">general::MutableObject</innerclass>
+    <innerclass refid="classgeneral_1_1ObjetDi" prot="public">general::ObjetDi</innerclass>
+    <innerclass refid="classgeneral_1_1OSFinder" prot="public">general::OSFinder</innerclass>
+    <innerclass refid="classgeneral_1_1PDFManager" prot="public">general::PDFManager</innerclass>
+    <innerclass refid="classgeneral_1_1RetourBDExe" prot="public">general::RetourBDExe</innerclass>
+    <innerclass refid="classgeneral_1_1RGBConverter" prot="public">general::RGBConverter</innerclass>
+    <innerclass refid="classgeneral_1_1ThreadRetourBD" prot="public">general::ThreadRetourBD</innerclass>
+    <innernamespace refid="namespacegeneral_1_1calendrier">general::calendrier</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/AfficheurArborescence.java" line="1" column="15"/>
+  </compounddef>
+</doxygen>

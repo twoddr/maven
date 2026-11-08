@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1LecteurFichier" kind="class" language="Java" prot="public">
+    <compoundname>general::LecteurFichier</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1LecteurFichier_1a3f6be6fcf4c778609b4e84a24f6a54cf" prot="private" static="yes" mutable="no">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>ArrayList&lt;String&gt; general.LecteurFichier.lignes</definition>
+        <argsstring></argsstring>
+        <name>lignes</name>
+        <qualifiedname>general.LecteurFichier.lignes</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/LecteurFichier.java" line="10" column="30" bodyfile="src/main/java/general/LecteurFichier.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1LecteurFichier_1ad7cd78ef5b9cbded11730bf0b85c1d8c" prot="private" static="yes" mutable="no">
+        <type>File</type>
+        <definition>File general.LecteurFichier.fichier</definition>
+        <argsstring></argsstring>
+        <name>fichier</name>
+        <qualifiedname>general.LecteurFichier.fichier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/LecteurFichier.java" line="11" column="25" bodyfile="src/main/java/general/LecteurFichier.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1LecteurFichier_1a773b704fade2ec8a0cadd9c08ecfe4ce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>static ArrayList&lt; String &gt; general.LecteurFichier.getLignes</definition>
+        <argsstring>(String cheminComplet)</argsstring>
+        <name>getLignes</name>
+        <qualifiedname>general.LecteurFichier.getLignes</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cheminComplet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/LecteurFichier.java" line="13" column="29" bodyfile="src/main/java/general/LecteurFichier.java" bodystart="13" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1LecteurFichier_1abf047e4f3cd892cc2d63b3ff17874728" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.LecteurFichier.getLigne</definition>
+        <argsstring>(String cheminComplet, int numero)</argsstring>
+        <name>getLigne</name>
+        <qualifiedname>general.LecteurFichier.getLigne</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cheminComplet</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numero</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/LecteurFichier.java" line="29" column="26" bodyfile="src/main/java/general/LecteurFichier.java" bodystart="29" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/LecteurFichier.java" line="9" column="7" bodyfile="src/main/java/general/LecteurFichier.java" bodystart="9" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1LecteurFichier_1ad7cd78ef5b9cbded11730bf0b85c1d8c" prot="private" virt="non-virtual"><scope>general::LecteurFichier</scope><name>fichier</name></member>
+      <member refid="classgeneral_1_1LecteurFichier_1abf047e4f3cd892cc2d63b3ff17874728" prot="public" virt="non-virtual"><scope>general::LecteurFichier</scope><name>getLigne</name></member>
+      <member refid="classgeneral_1_1LecteurFichier_1a773b704fade2ec8a0cadd9c08ecfe4ce" prot="public" virt="non-virtual"><scope>general::LecteurFichier</scope><name>getLignes</name></member>
+      <member refid="classgeneral_1_1LecteurFichier_1a3f6be6fcf4c778609b4e84a24f6a54cf" prot="private" virt="non-virtual"><scope>general::LecteurFichier</scope><name>lignes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -10,8 +10,8 @@ public class Duplicateur {
     }
 
     public Object obtenirDuplicata() {
-        if (objet instanceof ObjetDi) {
-            ObjetDi dbObject = (ObjetDi) objet;
+        if (objet instanceof ObjetCSA) {
+            ObjetCSA dbObject = (ObjetCSA) objet;
             dbObject.setId(0);
             dbObject.setNom(creer_nouveau_nom(dbObject.getNom()));
         } else if (objet instanceof String) {

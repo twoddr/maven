@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="ControleurPrincipal_8java" kind="file" language="Java">
+    <compoundname>ControleurPrincipal.java</compoundname>
+    <innerclass refid="interfacegeneral_1_1ControleurPrincipal" prot="public">general::ControleurPrincipal</innerclass>
+    <innernamespace refid="namespacegeneral">general</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">general;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.ArrayList;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="interfacegeneral_1_1ControleurPrincipal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacegeneral_1_1ControleurPrincipal" kindref="compound">ControleurPrincipal</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1a84b12382b8ee93b2dbf48169a1bd88a4" kindref="member">inscrire_composant</ref>(String<sp/>nomClasse,<sp/>Object<sp/>composant,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>inscrire);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1ad07e988e7deaaf3e50e6ce007ed0e5d0" kindref="member">inscrire_thread</ref>(String<sp/>nomClasse,<sp/><ref refid="classgeneral_1_1InteresseParMiseAJour" kindref="compound">InteresseParMiseAJour</ref><sp/>processus,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>inscrire);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1a55db940c61aa2239e33a247dd0ccee60" kindref="member">demande_liste</ref>(String<sp/>type,<sp/><ref refid="interfacegeneral_1_1GestionnaireRetourBD" kindref="compound">GestionnaireRetourBD</ref><sp/>appelant);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1a74db3ee0684ff29529fdbe30f028faec" kindref="member">requete_BD</ref>(ArrayList&lt;Object&gt;<sp/>requete);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1a203fd44da8abb4d0aa8e5ff7cda0837b" kindref="member">affiche_utilisateur</ref>(String<sp/>texte);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1aeb4157d0607c531d2208bac06ad8e50c" kindref="member">affiche_console</ref>(String<sp/>texte);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1af099e730f888d786c401b4d0ce259768" kindref="member">demande_details_pour_edition</ref>(Object<sp/>requete);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1a5855106dcc5da86e29ce1d77d9b84eba" kindref="member">getElementFromType</ref>(String<sp/>typeAffiche);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interfacegeneral_1_1ControleurPrincipal_1ad48e8217c8cd4ccbea47dce78ee955e2" kindref="member">action_utilisateur</ref>(Object<sp/>source,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref><sp/>selectedItem,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomColonne);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/main/java/general/ControleurPrincipal.java"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Capsule" kind="class" language="Java" prot="public">
+    <compoundname>general::Capsule</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1Capsule_1aefb86ab6954a0a2b1f87b1fee6b737a5" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object general.Capsule.variable</definition>
+        <argsstring></argsstring>
+        <name>variable</name>
+        <qualifiedname>general.Capsule.variable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Capsule.java" line="9" column="20" bodyfile="src/main/java/general/Capsule.java" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1Capsule_1ac697095e2ec20ea92d3fa34151d3fef5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Capsule.Capsule</definition>
+        <argsstring>()</argsstring>
+        <name>Capsule</name>
+        <qualifiedname>general.Capsule.Capsule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Capsule.java" line="11" column="12" bodyfile="src/main/java/general/Capsule.java" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Capsule_1a76a4e5bb3798432e36e3906848c64e41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Capsule.Capsule</definition>
+        <argsstring>(Object x)</argsstring>
+        <name>Capsule</name>
+        <qualifiedname>general.Capsule.Capsule</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Capsule.java" line="15" column="12" bodyfile="src/main/java/general/Capsule.java" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Capsule_1ae8dc5917980bac40aa29adc95dccc3bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.Capsule.getVariable</definition>
+        <argsstring>()</argsstring>
+        <name>getVariable</name>
+        <qualifiedname>general.Capsule.getVariable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Capsule.java" line="19" column="19" bodyfile="src/main/java/general/Capsule.java" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Capsule_1a9da35d12a53b7d3e646e390de28d52db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Capsule.setVariable</definition>
+        <argsstring>(Object var)</argsstring>
+        <name>setVariable</name>
+        <qualifiedname>general.Capsule.setVariable</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Capsule.java" line="23" column="17" bodyfile="src/main/java/general/Capsule.java" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Capsule_1aa27fe04a3407fe9835a066a2e9bad00a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Class</type>
+        <definition>Class general.Capsule.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>general.Capsule.getType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Capsule.java" line="27" column="18" bodyfile="src/main/java/general/Capsule.java" bodystart="27" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Created by didiertowe on 12/05/17. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>general.Capsule</label>
+        <link refid="classgeneral_1_1Capsule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>general.Capsule</label>
+        <link refid="classgeneral_1_1Capsule"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/Capsule.java" line="8" column="7" bodyfile="src/main/java/general/Capsule.java" bodystart="8" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1Capsule_1ac697095e2ec20ea92d3fa34151d3fef5" prot="public" virt="non-virtual"><scope>general::Capsule</scope><name>Capsule</name></member>
+      <member refid="classgeneral_1_1Capsule_1a76a4e5bb3798432e36e3906848c64e41" prot="public" virt="non-virtual"><scope>general::Capsule</scope><name>Capsule</name></member>
+      <member refid="classgeneral_1_1Capsule_1aa27fe04a3407fe9835a066a2e9bad00a" prot="public" virt="non-virtual"><scope>general::Capsule</scope><name>getType</name></member>
+      <member refid="classgeneral_1_1Capsule_1ae8dc5917980bac40aa29adc95dccc3bd" prot="public" virt="non-virtual"><scope>general::Capsule</scope><name>getVariable</name></member>
+      <member refid="classgeneral_1_1Capsule_1a9da35d12a53b7d3e646e390de28d52db" prot="public" virt="non-virtual"><scope>general::Capsule</scope><name>setVariable</name></member>
+      <member refid="classgeneral_1_1Capsule_1aefb86ab6954a0a2b1f87b1fee6b737a5" prot="private" virt="non-virtual"><scope>general::Capsule</scope><name>variable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

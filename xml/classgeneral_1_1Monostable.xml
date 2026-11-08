@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Monostable" kind="class" language="Java" prot="public">
+    <compoundname>general::Monostable</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1Monostable_1a867c8a9e420fa55b904b1452d00b49bd" prot="private" static="no" mutable="no">
+        <type>final <ref refid="classgeneral_1_1MutableObject" kindref="compound">MutableObject</ref></type>
+        <definition>final MutableObject general.Monostable.objet</definition>
+        <argsstring></argsstring>
+        <name>objet</name>
+        <qualifiedname>general.Monostable.objet</qualifiedname>
+        <initializer>= new <ref refid="classgeneral_1_1MutableObject" kindref="compound">MutableObject</ref>(false)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="4" column="33" bodyfile="src/main/java/general/Monostable.java" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Monostable_1ace59451812603ff9261fe541064576ab" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int general.Monostable.duree</definition>
+        <argsstring></argsstring>
+        <name>duree</name>
+        <qualifiedname>general.Monostable.duree</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="5" column="17" bodyfile="src/main/java/general/Monostable.java" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Monostable_1a8770ecd9b1ae5e37e55619de6d0a9247" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object general.Monostable.etatStable</definition>
+        <argsstring></argsstring>
+        <name>etatStable</name>
+        <qualifiedname>general.Monostable.etatStable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="6" column="20" bodyfile="src/main/java/general/Monostable.java" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Monostable_1a1a60dfe121f8daa8117b4bfc305e583d" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object general.Monostable.etatInstable</definition>
+        <argsstring></argsstring>
+        <name>etatInstable</name>
+        <qualifiedname>general.Monostable.etatInstable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="7" column="20" bodyfile="src/main/java/general/Monostable.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a571c266fb29d0595bb22cac09c669b97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Monostable.Monostable</definition>
+        <argsstring>(boolean etatInstable, boolean etatStable)</argsstring>
+        <name>Monostable</name>
+        <qualifiedname>general.Monostable.Monostable</qualifiedname>
+        <param>
+          <type>boolean</type>
+          <declname>etatInstable</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>etatStable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Affiche une valeur pendant une certaine durée</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>etatInstable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur initiale à attribuer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>etatStable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valeur finale après le délai (défaut : 1s) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="15" column="12" bodyfile="src/main/java/general/Monostable.java" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a750b1648f98c88d81e0e83dc6fb19a99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Monostable.go</definition>
+        <argsstring>()</argsstring>
+        <name>go</name>
+        <qualifiedname>general.Monostable.go</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Met la valeur instable, attend la durée puis remet l&apos;état stable et puis c&apos;est tout </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="24" column="17" bodyfile="src/main/java/general/Monostable.java" bodystart="24" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a7c2ace017c1714d2a3b0e122635f3f1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.Monostable.getDuree</definition>
+        <argsstring>()</argsstring>
+        <name>getDuree</name>
+        <qualifiedname>general.Monostable.getDuree</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="49" column="16" bodyfile="src/main/java/general/Monostable.java" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a9847925245dd388953ea6cbf9019ebc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Monostable.setDuree</definition>
+        <argsstring>(int duree)</argsstring>
+        <name>setDuree</name>
+        <qualifiedname>general.Monostable.setDuree</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>duree</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="53" column="17" bodyfile="src/main/java/general/Monostable.java" bodystart="53" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a8e80fe6218db6582944edf2a4971d1ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.Monostable.getEtatStable</definition>
+        <argsstring>()</argsstring>
+        <name>getEtatStable</name>
+        <qualifiedname>general.Monostable.getEtatStable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="62" column="19" bodyfile="src/main/java/general/Monostable.java" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a6c68754527e2202466d1056ab0efc7aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Monostable.setEtatStable</definition>
+        <argsstring>(Object etatStable)</argsstring>
+        <name>setEtatStable</name>
+        <qualifiedname>general.Monostable.setEtatStable</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>etatStable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="66" column="17" bodyfile="src/main/java/general/Monostable.java" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a9aea18277532858e00a156569f9e65ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.Monostable.getEtatInstable</definition>
+        <argsstring>()</argsstring>
+        <name>getEtatInstable</name>
+        <qualifiedname>general.Monostable.getEtatInstable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="70" column="19" bodyfile="src/main/java/general/Monostable.java" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a06178d6bae9f7967fe478070d01dd099" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Monostable.setEtatInstable</definition>
+        <argsstring>(Object etatInstable)</argsstring>
+        <name>setEtatInstable</name>
+        <qualifiedname>general.Monostable.setEtatInstable</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>etatInstable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="74" column="17" bodyfile="src/main/java/general/Monostable.java" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1a9478eb4e9416cd63f0cbb512c22a6b2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.Monostable.isStable</definition>
+        <argsstring>()</argsstring>
+        <name>isStable</name>
+        <qualifiedname>general.Monostable.isStable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="78" column="20" bodyfile="src/main/java/general/Monostable.java" bodystart="78" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1Monostable_1aa8ec636a30a62ab2e2a1123248776036" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Monostable.setValue</definition>
+        <argsstring>(Object etat)</argsstring>
+        <name>setValue</name>
+        <qualifiedname>general.Monostable.setValue</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>etat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Monostable.java" line="40" column="18" bodyfile="src/main/java/general/Monostable.java" bodystart="40" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/Monostable.java" line="3" column="7" bodyfile="src/main/java/general/Monostable.java" bodystart="3" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1Monostable_1ace59451812603ff9261fe541064576ab" prot="private" virt="non-virtual"><scope>general::Monostable</scope><name>duree</name></member>
+      <member refid="classgeneral_1_1Monostable_1a1a60dfe121f8daa8117b4bfc305e583d" prot="private" virt="non-virtual"><scope>general::Monostable</scope><name>etatInstable</name></member>
+      <member refid="classgeneral_1_1Monostable_1a8770ecd9b1ae5e37e55619de6d0a9247" prot="private" virt="non-virtual"><scope>general::Monostable</scope><name>etatStable</name></member>
+      <member refid="classgeneral_1_1Monostable_1a7c2ace017c1714d2a3b0e122635f3f1c" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>getDuree</name></member>
+      <member refid="classgeneral_1_1Monostable_1a9aea18277532858e00a156569f9e65ae" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>getEtatInstable</name></member>
+      <member refid="classgeneral_1_1Monostable_1a8e80fe6218db6582944edf2a4971d1ee" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>getEtatStable</name></member>
+      <member refid="classgeneral_1_1Monostable_1a750b1648f98c88d81e0e83dc6fb19a99" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>go</name></member>
+      <member refid="classgeneral_1_1Monostable_1a9478eb4e9416cd63f0cbb512c22a6b2f" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>isStable</name></member>
+      <member refid="classgeneral_1_1Monostable_1a571c266fb29d0595bb22cac09c669b97" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>Monostable</name></member>
+      <member refid="classgeneral_1_1Monostable_1a867c8a9e420fa55b904b1452d00b49bd" prot="private" virt="non-virtual"><scope>general::Monostable</scope><name>objet</name></member>
+      <member refid="classgeneral_1_1Monostable_1a9847925245dd388953ea6cbf9019ebc7" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>setDuree</name></member>
+      <member refid="classgeneral_1_1Monostable_1a06178d6bae9f7967fe478070d01dd099" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>setEtatInstable</name></member>
+      <member refid="classgeneral_1_1Monostable_1a6c68754527e2202466d1056ab0efc7aa" prot="public" virt="non-virtual"><scope>general::Monostable</scope><name>setEtatStable</name></member>
+      <member refid="classgeneral_1_1Monostable_1aa8ec636a30a62ab2e2a1123248776036" prot="private" virt="non-virtual"><scope>general::Monostable</scope><name>setValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ConvertisseurNombreLettres" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>general::ConvertisseurNombreLettres</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1abd8621562daac7a957e714c6cd14b6b2" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurNombreLettres.result</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.result</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="22" column="27" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1a5e321e150ffd0526ed1e1a3bb796b088" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurNombreLettres.frac</definition>
+        <argsstring></argsstring>
+        <name>frac</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.frac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="22" column="34" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1a1817475bc68c25d5b40ab741d707894a" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurNombreLettres.tranche</definition>
+        <argsstring></argsstring>
+        <name>tranche</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.tranche</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="22" column="39" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1a55c765b3031ac7ea237fb937bc2cf94c" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurNombreLettres.dec</definition>
+        <argsstring></argsstring>
+        <name>dec</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.dec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="22" column="47" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1a7bd2043bdb63badd3f0510dbd73cf997" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurNombreLettres.cent</definition>
+        <argsstring></argsstring>
+        <name>cent</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.cent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="22" column="51" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1a2bf51f31c5fc54700726ebe224dd636d" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurNombreLettres.un</definition>
+        <argsstring></argsstring>
+        <name>un</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.un</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="22" column="56" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1a07deb6bafec357ab66e9e4a5b9ddb9e4" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String general.ConvertisseurNombreLettres.dix</definition>
+        <argsstring></argsstring>
+        <name>dix</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.dix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="22" column="59" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1ad540eda1876d4c328ccdc5460f2c2101" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int general.ConvertisseurNombreLettres.rang</definition>
+        <argsstring></argsstring>
+        <name>rang</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.rang</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="23" column="24" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1ac7f62feedcb16ba2cce6ab112df61e38" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int general.ConvertisseurNombreLettres.virgule</definition>
+        <argsstring></argsstring>
+        <name>virgule</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.virgule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="23" column="29" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ConvertisseurNombreLettres_1a43b0e528f26e3ec32e6d77f479ebc4be" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int general.ConvertisseurNombreLettres.lg</definition>
+        <argsstring></argsstring>
+        <name>lg</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.lg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="23" column="37" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurNombreLettres_1afda7b3a0752dae4789db08ea77f2fc2c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurNombreLettres.traiter</definition>
+        <argsstring>(String nombre)</argsstring>
+        <name>traiter</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.traiter</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="25" column="27" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="25" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurNombreLettres_1afbc7faf25dd473610102ecf2119da4f2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurNombreLettres.AR</definition>
+        <argsstring>(String nombre, String devise, String sou)</argsstring>
+        <name>AR</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.AR</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>devise</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>sou</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="52" column="26" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="52" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurNombreLettres_1a6f6c4ae236ddff62322c9952107c9794" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurNombreLettres.AR</definition>
+        <argsstring>(String nombre)</argsstring>
+        <name>AR</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.AR</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="195" column="26" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ConvertisseurNombreLettres_1a54df9deefd0bc0ec1bfc18f84ff2dcfc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ConvertisseurNombreLettres.FR</definition>
+        <argsstring>(String nombre)</argsstring>
+        <name>FR</name>
+        <qualifiedname>general.ConvertisseurNombreLettres.FR</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nombre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="200" column="26" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="200" bodyend="365"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/ConvertisseurNombreLettres.java" line="20" column="17" bodyfile="src/main/java/general/ConvertisseurNombreLettres.java" bodystart="20" bodyend="367"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1afbc7faf25dd473610102ecf2119da4f2" prot="public" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>AR</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a6f6c4ae236ddff62322c9952107c9794" prot="public" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>AR</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a7bd2043bdb63badd3f0510dbd73cf997" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>cent</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a55c765b3031ac7ea237fb937bc2cf94c" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>dec</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a07deb6bafec357ab66e9e4a5b9ddb9e4" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>dix</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a54df9deefd0bc0ec1bfc18f84ff2dcfc" prot="public" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>FR</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a5e321e150ffd0526ed1e1a3bb796b088" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>frac</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a43b0e528f26e3ec32e6d77f479ebc4be" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>lg</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1ad540eda1876d4c328ccdc5460f2c2101" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>rang</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1abd8621562daac7a957e714c6cd14b6b2" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>result</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1afda7b3a0752dae4789db08ea77f2fc2c" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>traiter</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a1817475bc68c25d5b40ab741d707894a" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>tranche</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1a2bf51f31c5fc54700726ebe224dd636d" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>un</name></member>
+      <member refid="classgeneral_1_1ConvertisseurNombreLettres_1ac7f62feedcb16ba2cce6ab112df61e38" prot="private" virt="non-virtual"><scope>general::ConvertisseurNombreLettres</scope><name>virgule</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

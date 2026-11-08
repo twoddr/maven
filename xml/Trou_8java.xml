@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Trou_8java" kind="file" language="Java">
+    <compoundname>Trou.java</compoundname>
+    <innerclass refid="classgeneral_1_1calendrier_1_1Trou" prot="public">general::calendrier::Trou</innerclass>
+    <innernamespace refid="namespacegeneral_1_1calendrier">general::calendrier</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">general.calendrier;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespacegeneral" kindref="compound">general</ref>.<ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.awt.*;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.time.LocalDate;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.time.format.DateTimeFormatter;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.ArrayList;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classgeneral_1_1calendrier_1_1Trou" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgeneral_1_1calendrier_1_1Trou" kindref="compound">Trou</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a91b3a6f18972dd76e6cba33fb906f04e" kindref="member">Trou</ref>(String<sp/>nomType,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/><ref refid="classgeneral_1_1ObjetDi_1aa1aa4881e7ed9496be8179bd355006bf" kindref="member">nomID</ref>,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomDescription,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomCouleurTexte,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomIDProprietaire,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomDateDebut,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomDateFin,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomCouleurCadre,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomCouleurFond,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nomLieu,<sp/><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref><sp/>informateur)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super(nomType,<sp/><ref refid="classgeneral_1_1ObjetDi_1aa1aa4881e7ed9496be8179bd355006bf" kindref="member">nomID</ref>,<sp/>nomDescription,<sp/>nomCouleurTexte,<sp/>nomIDProprietaire,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nomDateDebut,<sp/>nomDateFin,<sp/>nomCouleurCadre,<sp/>nomCouleurFond,<sp/>nomLieu,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>informateur);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a8c8fee0fd0fff310fbc07e53ad871860" kindref="member">setDebut_Duree</ref>(LocalDate.now().atStartOfDay(),<sp/>1439);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1ac12598ba830b8cc2b2714f8ed8bf56c7" kindref="member">setPriorite</ref>(0);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a91b3a6f18972dd76e6cba33fb906f04e" kindref="member">Trou</ref>(ArrayList&lt;String&gt;<sp/>arrayList,<sp/><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref><sp/>informateur)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super(arrayList,<sp/>informateur);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a8c8fee0fd0fff310fbc07e53ad871860" kindref="member">setDebut_Duree</ref>(LocalDate.now().atStartOfDay(),<sp/>1439);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1ac12598ba830b8cc2b2714f8ed8bf56c7" kindref="member">setPriorite</ref>(0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setColor()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1ac51cbdc742cdbba48032341744c1c095" kindref="member">setCouleurCadre</ref>(Color.WHITE);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a19b03278db5d32643885c38f559c7977" kindref="member">setCouleurFond</ref>(Color.WHITE);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a3b8f0b939443ea1d952c5815fe6b8efb" kindref="member">setCouleurTexte</ref>(Color.BLUE);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref><sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a4a04086d9e842d1567a8e2c9e2cd2a3f" kindref="member">getCopyOf</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Trou" kindref="compound">Trou</ref><sp/>nouveau<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a91b3a6f18972dd76e6cba33fb906f04e" kindref="member">Trou</ref>(<ref refid="classgeneral_1_1ObjetDi_1a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0" kindref="member">getType</ref>(),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1ObjetDi_1aa1aa4881e7ed9496be8179bd355006bf" kindref="member">nomID</ref>,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1ObjetDi_1a5a30c7eb98943d5870b03bc070212587" kindref="member">nomNOM</ref>,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a38dc577045bc090777b33067f948dce5" kindref="member">COULEUR_TEXTE</ref>,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a854873939679a03a7a35f7f7bec5b38c" kindref="member">nomIDPROPRIETAIRE</ref>,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1aa37e5dd07090d0447ee0c392616701c6" kindref="member">nomDEBUT</ref>,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a5be9561137c53ce2cf6e344b90d94f6c" kindref="member">nomFIN</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a4b21c0c145e40964259280e35cce5fd1" kindref="member">COULEUR_CADRE</ref>,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1ae1bb7489ab6f00ae07710e913c70f42d" kindref="member">COULEUR_FOND</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1ac53737e06ba1015c9ab67784634283cf" kindref="member">NOM_LIEU</ref>,<sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a033ac05948643c734fd2827a4e5e6ce7" kindref="member">getInformateurHashObjet</ref>());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nouveau.setData(<ref refid="classgeneral_1_1calendrier_1_1Evenement_1aa7036d6c057c12ff2ba2489228c95270" kindref="member">getData</ref>(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nouveau.setPriorite(<ref refid="classgeneral_1_1calendrier_1_1Evenement_1a490e851c4c0d8c05935a59bf5833e560" kindref="member">getPriorite</ref>());</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nouveau;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a57971dbd36c78976135f8fc1314dfbdc" kindref="member">getDescription</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a874ae92baf97a751a1734f84c2c07288" kindref="member">toString</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal"><sp/>+<sp/>super.getDescription();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a874ae92baf97a751a1734f84c2c07288" kindref="member">toString</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1accc85d6b271200457dbb7c6c6517f875" kindref="member">getDebut</ref>().format(DateTimeFormatter.ofPattern(</highlight><highlight class="stringliteral">&quot;HH:mm&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a51e0fadd650c70b2f43bbf24ed4a31ac" kindref="member">getFin</ref>().format(DateTimeFormatter.ofPattern(</highlight><highlight class="stringliteral">&quot;HH:mm&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(NullPointerException<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>Vide<sp/>-<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classgeneral_1_1calendrier_1_1Trou_1a506283cae9aed564a7c336ddce10be70" kindref="member">getCalendarString</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a2e7e6413f517ccaaad6b74d9e5ff2180" kindref="member">getStringHeureDebut</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classgeneral_1_1calendrier_1_1Evenement_1a5cc5fa9ac2fbed12efb944c0c4a60b0e" kindref="member">getStringHeureFin</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/main/java/general/calendrier/Trou.java"/>
+  </compounddef>
+</doxygen>

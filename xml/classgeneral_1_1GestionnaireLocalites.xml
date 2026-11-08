@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1GestionnaireLocalites" kind="class" language="Java" prot="public">
+    <compoundname>general::GestionnaireLocalites</compoundname>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireLocalites_1a78266c25664c7649e0e9b5d189cb48a8" prot="package" static="no" mutable="no">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt;String, Object&gt; general.GestionnaireLocalites.hashQuartier</definition>
+        <argsstring></argsstring>
+        <name>hashQuartier</name>
+        <qualifiedname>general.GestionnaireLocalites.hashQuartier</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="8" column="13" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireLocalites_1aa8d30333aada8ee28f2d127bdde41aae" prot="package" static="no" mutable="no">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt;String, Object&gt; general.GestionnaireLocalites.hashVille</definition>
+        <argsstring></argsstring>
+        <name>hashVille</name>
+        <qualifiedname>general.GestionnaireLocalites.hashVille</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="9" column="13" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireLocalites_1ab985191200baa1489bc963616d4edc8a" prot="package" static="no" mutable="no">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt;String, Object&gt; general.GestionnaireLocalites.hashPays</definition>
+        <argsstring></argsstring>
+        <name>hashPays</name>
+        <qualifiedname>general.GestionnaireLocalites.hashPays</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="10" column="13" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireLocalites_1acc3a668f116f4395c615b3f0eff9db8f" prot="package" static="no" mutable="no">
+        <type>ArrayList&lt; HashMap&lt; String, Object &gt; &gt;</type>
+        <definition>ArrayList&lt;HashMap&lt;String, Object&gt; &gt; general.GestionnaireLocalites.listeHashVilles</definition>
+        <argsstring></argsstring>
+        <name>listeHashVilles</name>
+        <qualifiedname>general.GestionnaireLocalites.listeHashVilles</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="11" column="15" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireLocalites_1a58bd80cc36491cbe0bb3186807a03005" prot="package" static="no" mutable="no">
+        <type>ArrayList&lt; HashMap&lt; String, Object &gt; &gt;</type>
+        <definition>ArrayList&lt;HashMap&lt;String, Object&gt; &gt; general.GestionnaireLocalites.listeHashQuartiers</definition>
+        <argsstring></argsstring>
+        <name>listeHashQuartiers</name>
+        <qualifiedname>general.GestionnaireLocalites.listeHashQuartiers</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="12" column="13" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1a011f1f52204e1cae130102757ab297ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.GestionnaireLocalites.GestionnaireLocalites</definition>
+        <argsstring>(String nomPays, String nomIdPays, String nomIdPaysDansVille, String nomVille, String nomIdVilleDansQuartier, String nomQuartier, int fkquartier, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>GestionnaireLocalites</name>
+        <qualifiedname>general.GestionnaireLocalites.GestionnaireLocalites</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdVilleDansQuartier</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomQuartier</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkquartier</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de générer la matrice de localité à partir de la liste levis et l&apos;id quartier</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table pays </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;idPays dans sa propre table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPaysDansVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;id pays dans la ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdVilleDansQuartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;idville dans le quartier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomQuartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table quartier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fkquartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;id du quartier recherché </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la source d&apos;informations au format Levis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="26" column="12" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="26" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1ab575e5bd328571ee2d8ec4fcea5e68bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.GestionnaireLocalites.GestionnaireLocalites</definition>
+        <argsstring>(String nomPays, String nomIdPays, String nomIdPaysDansVille, String nomVille, int fkville, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>GestionnaireLocalites</name>
+        <qualifiedname>general.GestionnaireLocalites.GestionnaireLocalites</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVille</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkville</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de générer la matrice de localité à partir de la liste levis et l&apos;id ville</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table pays </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;idPays dans sa propre table </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPaysDansVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;id pays dans la ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fkville</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;id de la ville recherchée </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la source d&apos;informations au format Levis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="69" column="12" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="69" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1a8c8a9eb861250f213b6ec6cb71348d70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.GestionnaireLocalites.getHashPays</definition>
+        <argsstring>()</argsstring>
+        <name>getHashPays</name>
+        <qualifiedname>general.GestionnaireLocalites.getHashPays</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="179" column="20" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="179" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1a4b1734c9d2256c274ab5c9da81fb510f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.GestionnaireLocalites.getHashVille</definition>
+        <argsstring>()</argsstring>
+        <name>getHashVille</name>
+        <qualifiedname>general.GestionnaireLocalites.getHashVille</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="183" column="20" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1a803f018e1ffaf2428a6873413f043cc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.GestionnaireLocalites.getHashQuartier</definition>
+        <argsstring>()</argsstring>
+        <name>getHashQuartier</name>
+        <qualifiedname>general.GestionnaireLocalites.getHashQuartier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="187" column="20" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1af91db35513ebf892769aa1e5674be10e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; HashMap&lt; String, Object &gt; &gt;</type>
+        <definition>ArrayList&lt; HashMap&lt; String, Object &gt; &gt; general.GestionnaireLocalites.getListeHashVille</definition>
+        <argsstring>()</argsstring>
+        <name>getListeHashVille</name>
+        <qualifiedname>general.GestionnaireLocalites.getListeHashVille</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="191" column="22" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1ab986e5f4ef8f7d4449811a7e03553578" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; HashMap&lt; String, Object &gt; &gt;</type>
+        <definition>ArrayList&lt; HashMap&lt; String, Object &gt; &gt; general.GestionnaireLocalites.getListeHashQuartier</definition>
+        <argsstring>()</argsstring>
+        <name>getListeHashQuartier</name>
+        <qualifiedname>general.GestionnaireLocalites.getListeHashQuartier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="195" column="22" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="195" bodyend="197"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1a694c45499725c5e3feed63fd5a00c9db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.GestionnaireLocalites.chercher_ville</definition>
+        <argsstring>(String nomPays, String nomIdPays, String nomIdPaysDansVille, String nomVille, int fkville, String nomQuartier, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>chercher_ville</name>
+        <qualifiedname>general.GestionnaireLocalites.chercher_ville</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVille</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkville</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomQuartier</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="75" column="18" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="75" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1a645f649ee92034d8e9c14abf029b75e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.GestionnaireLocalites.chercher_pays</definition>
+        <argsstring>(String nomPays, String nomIdPays, int fkpays, String nomVille, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>chercher_pays</name>
+        <qualifiedname>general.GestionnaireLocalites.chercher_pays</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkpays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVille</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="113" column="18" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="113" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1afcc3fb7ee447d1c758b12ce2c6977a86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; HashMap&lt; String, Object &gt; &gt;</type>
+        <definition>ArrayList&lt; HashMap&lt; String, Object &gt; &gt; general.GestionnaireLocalites.chercher_liste_villes</definition>
+        <argsstring>(String cleLevis, String nomVille, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>chercher_liste_villes</name>
+        <qualifiedname>general.GestionnaireLocalites.chercher_liste_villes</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cleLevis</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVille</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="148" column="23" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="148" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireLocalites_1a251a25873cf01cc7c2044dafdd259e20" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; HashMap&lt; String, Object &gt; &gt;</type>
+        <definition>ArrayList&lt; HashMap&lt; String, Object &gt; &gt; general.GestionnaireLocalites.chercher_liste_quartiers</definition>
+        <argsstring>(String cleLevis, String nomQuartier, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>chercher_liste_quartiers</name>
+        <qualifiedname>general.GestionnaireLocalites.chercher_liste_quartiers</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cleLevis</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomQuartier</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireLocalites.java" line="163" column="23" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="163" bodyend="177"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>ArrayList&lt; HashMap&lt; String, Object &gt; &gt;</label>
+      </node>
+      <node id="2">
+        <label>HashMap&lt; String, Object &gt;</label>
+      </node>
+      <node id="1">
+        <label>general.GestionnaireLocalites</label>
+        <link refid="classgeneral_1_1GestionnaireLocalites"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>hashPays</edgelabel>
+          <edgelabel>hashQuartier</edgelabel>
+          <edgelabel>hashVille</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>listeHashQuartiers</edgelabel>
+          <edgelabel>listeHashVilles</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/GestionnaireLocalites.java" line="7" column="7" bodyfile="src/main/java/general/GestionnaireLocalites.java" bodystart="7" bodyend="198"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a251a25873cf01cc7c2044dafdd259e20" prot="private" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>chercher_liste_quartiers</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1afcc3fb7ee447d1c758b12ce2c6977a86" prot="private" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>chercher_liste_villes</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a645f649ee92034d8e9c14abf029b75e4" prot="private" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>chercher_pays</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a694c45499725c5e3feed63fd5a00c9db" prot="private" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>chercher_ville</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a011f1f52204e1cae130102757ab297ad" prot="public" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>GestionnaireLocalites</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1ab575e5bd328571ee2d8ec4fcea5e68bc" prot="public" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>GestionnaireLocalites</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a8c8a9eb861250f213b6ec6cb71348d70" prot="public" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>getHashPays</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a803f018e1ffaf2428a6873413f043cc5" prot="public" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>getHashQuartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a4b1734c9d2256c274ab5c9da81fb510f" prot="public" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>getHashVille</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1ab986e5f4ef8f7d4449811a7e03553578" prot="public" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>getListeHashQuartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1af91db35513ebf892769aa1e5674be10e" prot="public" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>getListeHashVille</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1ab985191200baa1489bc963616d4edc8a" prot="package" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>hashPays</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a78266c25664c7649e0e9b5d189cb48a8" prot="package" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>hashQuartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1aa8d30333aada8ee28f2d127bdde41aae" prot="package" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>hashVille</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1a58bd80cc36491cbe0bb3186807a03005" prot="package" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>listeHashQuartiers</name></member>
+      <member refid="classgeneral_1_1GestionnaireLocalites_1acc3a668f116f4395c615b3f0eff9db8f" prot="package" virt="non-virtual"><scope>general::GestionnaireLocalites</scope><name>listeHashVilles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

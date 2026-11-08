@@ -135,6 +135,24 @@ public class GestionnaireImbrications {
         pays = informateurObjetDi.getObjetFromType(nomPays);
     }
 
+    /**
+     * Constructeur de copie qui permet d'initialiser un gestionnaire à partir
+     * des éléments fournis (utilisé pour cloner sans dépendre d'un InformateurObjet).
+     */
+    public GestionnaireImbrications(String nomPays, String nomIdPaysDansVille,
+                                    String nomTableVille, String nomIdVilleDansQuartier,
+                                    String nomTableQuartier,
+                                    ObjetCSA quartier, ObjetCSA ville, ObjetCSA pays) {
+        this.nomTablePays = nomPays;
+        this.nomIdPaysDansVille = nomIdPaysDansVille;
+        this.nomTableVille = nomTableVille;
+        this.nomIdVilleDansQuartier = nomIdVilleDansQuartier;
+        this.nomTableQuartier = nomTableQuartier;
+        this.quartier = quartier;
+        this.ville = ville;
+        this.pays = pays;
+    }
+
     public void setVerbose(boolean verbose) {
         this.verbose = verbose;
     }
@@ -333,5 +351,34 @@ public class GestionnaireImbrications {
 
     public void setListePays(ArrayList<ObjetCSA> listePays) {
         this.listePays = listePays;
+    }
+
+    /**
+     * Retourne une copie profonde du gestionnaire (les ObjetCSA sont clonés).
+     */
+    public GestionnaireImbrications getCopy() {
+        ObjetCSA q = quartier == null ? null : quartier.getCopy();
+        ObjetCSA v = ville == null ? null : ville.getCopy();
+        ObjetCSA p = pays == null ? null : pays.getCopy();
+        GestionnaireImbrications copie = new GestionnaireImbrications(
+                this.nomTablePays,
+                this.nomIdPaysDansVille,
+                this.nomTableVille,
+                this.nomIdVilleDansQuartier,
+                this.nomTableQuartier,
+                q, v, p
+        );
+        copie.nomPublic = this.nomPublic;
+        copie.verbose = this.verbose;
+        copie.change = this.change;
+        // copier la liste des pays en clonant les éléments
+        ArrayList<ObjetCSA> nouvelleListePays = new ArrayList<>();
+        if (this.listePays != null) {
+            for (ObjetCSA elt : this.listePays) {
+                nouvelleListePays.add(elt == null ? null : elt.getCopy());
+            }
+        }
+        copie.listePays = nouvelleListePays;
+        return copie;
     }
 }

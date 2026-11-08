@@ -15,9 +15,9 @@ public class DetecteurPresence {
 
     public Boolean isIn() {
         for (Object elt : liste) {
-            if ((elt instanceof ObjetDi) && (objet instanceof ObjetDi)) {
-                ObjetDi dboElt = (ObjetDi) elt;
-                ObjetDi dbo = (ObjetDi) objet;
+            if ((elt instanceof ObjetCSA) && (objet instanceof ObjetCSA)) {
+                ObjetCSA dboElt = (ObjetCSA) elt;
+                ObjetCSA dbo = (ObjetCSA) objet;
                 if (dbo.getId() == dboElt.getId() && elt.toString().equals(objet.toString())) {
                     return true;
                 }

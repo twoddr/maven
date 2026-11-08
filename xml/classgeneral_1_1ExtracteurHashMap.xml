@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ExtracteurHashMap" kind="class" language="Java" prot="public">
+    <compoundname>general::ExtracteurHashMap</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1abe15bf4b2d9a2e00c6c0df64764875fd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>static float general.ExtracteurHashMap.extraire_float</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_float</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_float</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="11" column="25" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="11" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1a63a1973776c89c0b924d6f78613cea27" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int general.ExtracteurHashMap.extraire_int</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_int</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_int</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="31" column="23" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="31" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1a2706281c21bd81b94c8586c1f30e1eb6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>static long general.ExtracteurHashMap.extraire_long</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_long</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_long</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="51" column="24" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="51" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1a88045b19d6af6e1536a43ca2001a29ce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.ExtracteurHashMap.extraire_string</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_string</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_string</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="71" column="26" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1a3dbea3523719c8e0a8d8e0f41121cdcd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean general.ExtracteurHashMap.extraire_booleen</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_booleen</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_booleen</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="75" column="27" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1ad4f6febe2f67102c42febbc0c413ea2b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Collection</type>
+        <definition>static Collection general.ExtracteurHashMap.extraire_liste</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_liste</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_liste</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="82" column="30" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="82" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1a7e007d537dd5df79fcbe33cbe7ce8589" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>static LocalDate general.ExtracteurHashMap.extraire_date</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_date</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_date</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="89" column="29" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="89" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurHashMap_1ab2e5550afac04cea4f716200ff94888c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.ExtracteurHashMap.extraire_dateHeure</definition>
+        <argsstring>(Object suspect)</argsstring>
+        <name>extraire_dateHeure</name>
+        <qualifiedname>general.ExtracteurHashMap.extraire_dateHeure</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>suspect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurHashMap.java" line="102" column="33" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="102" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/ExtracteurHashMap.java" line="10" column="7" bodyfile="src/main/java/general/ExtracteurHashMap.java" bodystart="10" bodyend="116"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1a3dbea3523719c8e0a8d8e0f41121cdcd" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_booleen</name></member>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1a7e007d537dd5df79fcbe33cbe7ce8589" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_date</name></member>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1ab2e5550afac04cea4f716200ff94888c" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_dateHeure</name></member>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1abe15bf4b2d9a2e00c6c0df64764875fd" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_float</name></member>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1a63a1973776c89c0b924d6f78613cea27" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_int</name></member>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1ad4f6febe2f67102c42febbc0c413ea2b" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_liste</name></member>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1a2706281c21bd81b94c8586c1f30e1eb6" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_long</name></member>
+      <member refid="classgeneral_1_1ExtracteurHashMap_1a88045b19d6af6e1536a43ca2001a29ce" prot="public" virt="non-virtual"><scope>general::ExtracteurHashMap</scope><name>extraire_string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

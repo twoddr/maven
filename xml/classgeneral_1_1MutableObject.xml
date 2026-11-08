@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1MutableObject" kind="class" language="Java" prot="public">
+    <compoundname>general::MutableObject</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1MutableObject_1afdb266ee4828f10f0bc4527f9687312f" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object general.MutableObject.valeur</definition>
+        <argsstring></argsstring>
+        <name>valeur</name>
+        <qualifiedname>general.MutableObject.valeur</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="7" column="20" bodyfile="src/main/java/general/MutableObject.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1MutableObject_1a5efe52c98e7269e2b8b2c38bbceb7166" prot="private" static="no" mutable="no">
+        <type>Class</type>
+        <definition>Class general.MutableObject.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>general.MutableObject.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="8" column="19" bodyfile="src/main/java/general/MutableObject.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1ac8b6e035400daf7a5b4d697f55de65de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.MutableObject.MutableObject</definition>
+        <argsstring>(Object value)</argsstring>
+        <name>MutableObject</name>
+        <qualifiedname>general.MutableObject.MutableObject</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Objet coquille dont le contenu est modifiable L&apos;objet est donc passable à une fonction &quot;par référence&quot;</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la valeur initiale de l&apos;objet. Les objets y insérés seront dorénavant du même type, sous peine de rejet ! </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="17" column="12" bodyfile="src/main/java/general/MutableObject.java" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1add483f47a6c39e74bf460f487a589c6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.MutableObject.getValeur</definition>
+        <argsstring>()</argsstring>
+        <name>getValeur</name>
+        <qualifiedname>general.MutableObject.getValeur</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="22" column="19" bodyfile="src/main/java/general/MutableObject.java" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1ad4377650efa4b6c94c8a3a9676da993b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.MutableObject.getBoolean</definition>
+        <argsstring>()</argsstring>
+        <name>getBoolean</name>
+        <qualifiedname>general.MutableObject.getBoolean</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="26" column="20" bodyfile="src/main/java/general/MutableObject.java" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1a331bfb6248223bc049576d478c57cb89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.MutableObject.getInteger</definition>
+        <argsstring>()</argsstring>
+        <name>getInteger</name>
+        <qualifiedname>general.MutableObject.getInteger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="35" column="16" bodyfile="src/main/java/general/MutableObject.java" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1af9e6f04582abe5123239cd8712f35f7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float general.MutableObject.getFloat</definition>
+        <argsstring>()</argsstring>
+        <name>getFloat</name>
+        <qualifiedname>general.MutableObject.getFloat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="44" column="18" bodyfile="src/main/java/general/MutableObject.java" bodystart="44" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1abb3d4d18c51fa841e475b501a5590acf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.MutableObject.getString</definition>
+        <argsstring>()</argsstring>
+        <name>getString</name>
+        <qualifiedname>general.MutableObject.getString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="53" column="19" bodyfile="src/main/java/general/MutableObject.java" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1ab5f97c139a70013276a7e0d9ed28fd71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.MutableObject.getLocalDate</definition>
+        <argsstring>()</argsstring>
+        <name>getLocalDate</name>
+        <qualifiedname>general.MutableObject.getLocalDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="57" column="22" bodyfile="src/main/java/general/MutableObject.java" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1a76f2ef15cb34567c1bf256f9907d1ca3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime general.MutableObject.getLocalDateTime</definition>
+        <argsstring>()</argsstring>
+        <name>getLocalDateTime</name>
+        <qualifiedname>general.MutableObject.getLocalDateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="66" column="26" bodyfile="src/main/java/general/MutableObject.java" bodystart="66" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1a87a3d5e5ad2bb0012533d882ec4392f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.MutableObject.setValeur</definition>
+        <argsstring>(Object value)</argsstring>
+        <name>setValeur</name>
+        <qualifiedname>general.MutableObject.setValeur</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="75" column="20" bodyfile="src/main/java/general/MutableObject.java" bodystart="75" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1MutableObject_1ad66c6ba06f41b6c1d7f636d7dbb05d46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Class</type>
+        <definition>Class general.MutableObject.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>general.MutableObject.getType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/MutableObject.java" line="85" column="18" bodyfile="src/main/java/general/MutableObject.java" bodystart="85" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/MutableObject.java" line="6" column="7" bodyfile="src/main/java/general/MutableObject.java" bodystart="6" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1MutableObject_1ad4377650efa4b6c94c8a3a9676da993b" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getBoolean</name></member>
+      <member refid="classgeneral_1_1MutableObject_1af9e6f04582abe5123239cd8712f35f7c" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getFloat</name></member>
+      <member refid="classgeneral_1_1MutableObject_1a331bfb6248223bc049576d478c57cb89" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getInteger</name></member>
+      <member refid="classgeneral_1_1MutableObject_1ab5f97c139a70013276a7e0d9ed28fd71" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getLocalDate</name></member>
+      <member refid="classgeneral_1_1MutableObject_1a76f2ef15cb34567c1bf256f9907d1ca3" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getLocalDateTime</name></member>
+      <member refid="classgeneral_1_1MutableObject_1abb3d4d18c51fa841e475b501a5590acf" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getString</name></member>
+      <member refid="classgeneral_1_1MutableObject_1ad66c6ba06f41b6c1d7f636d7dbb05d46" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getType</name></member>
+      <member refid="classgeneral_1_1MutableObject_1add483f47a6c39e74bf460f487a589c6c" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>getValeur</name></member>
+      <member refid="classgeneral_1_1MutableObject_1ac8b6e035400daf7a5b4d697f55de65de" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>MutableObject</name></member>
+      <member refid="classgeneral_1_1MutableObject_1a87a3d5e5ad2bb0012533d882ec4392f6" prot="public" virt="non-virtual"><scope>general::MutableObject</scope><name>setValeur</name></member>
+      <member refid="classgeneral_1_1MutableObject_1a5efe52c98e7269e2b8b2c38bbceb7166" prot="private" virt="non-virtual"><scope>general::MutableObject</scope><name>type</name></member>
+      <member refid="classgeneral_1_1MutableObject_1afdb266ee4828f10f0bc4527f9687312f" prot="private" virt="non-virtual"><scope>general::MutableObject</scope><name>valeur</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ExtracteurObjet" kind="class" language="Java" prot="public">
+    <compoundname>general::ExtracteurObjet</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ExtracteurObjet_1a2d665a202d13bd01e7f9fd8bab2dc5df" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>static ObjetDi general.ExtracteurObjetFromListe.extraire_par_id</definition>
+        <argsstring>(List liste, int id)</argsstring>
+        <name>extraire_par_id</name>
+        <qualifiedname>general.ExtracteurObjetFromListe.extraire_par_id</qualifiedname>
+        <param>
+          <type>List</type>
+          <declname>liste</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ExtracteurObjet.java" line="6" column="27" bodyfile="src/main/java/general/ExtracteurObjet.java" bodystart="6" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/ExtracteurObjet.java" line="5" column="7" bodyfile="src/main/java/general/ExtracteurObjet.java" bodystart="5" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ExtracteurObjet_1a2d665a202d13bd01e7f9fd8bab2dc5df" prot="public" virt="non-virtual"><scope>general::ExtracteurObjet</scope><name>extraire_par_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

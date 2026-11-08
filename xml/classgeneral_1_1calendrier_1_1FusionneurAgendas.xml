@@ -1,0 +1,795 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1calendrier_1_1FusionneurAgendas" kind="class" language="Java" prot="public">
+    <compoundname>general::calendrier::FusionneurAgendas</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a50566277c23100a6dea1ef5c08f24373" prot="private" static="no" mutable="no">
+        <type>final <ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+        <definition>final InformateurObjet general.calendrier.FusionneurAgendas.informateurObjet</definition>
+        <argsstring></argsstring>
+        <name>informateurObjet</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.informateurObjet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="20" column="36" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a66a83401a678ccd3f9ba59c0fc4ab7b7" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_TYPE</definition>
+        <argsstring></argsstring>
+        <name>NOM_TYPE</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_TYPE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="25" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a37d4a383b7f630666171aa49eae99fb5" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_ID</definition>
+        <argsstring></argsstring>
+        <name>NOM_ID</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="25" column="29" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1af8c9e4368efb6f8778e27671ca0f64f3" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_DESCRIPTION</definition>
+        <argsstring></argsstring>
+        <name>NOM_DESCRIPTION</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_DESCRIPTION</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="25" column="36" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a1e05d63f11b286ca60059cfd50281adc" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_COULEUR</definition>
+        <argsstring></argsstring>
+        <name>NOM_COULEUR</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_COULEUR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="25" column="52" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a817a877fbcfabe5cf1cc90584e6cdff8" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_IDINTERMEDIAIRE</definition>
+        <argsstring></argsstring>
+        <name>NOM_IDINTERMEDIAIRE</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_IDINTERMEDIAIRE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="25" column="64" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1ad56990ee1b2844361a6cf16271f16624" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_DATEDU</definition>
+        <argsstring></argsstring>
+        <name>NOM_DATEDU</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_DATEDU</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="26" column="13" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a06370045f4453333a6c971313238732a" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_DATEAU</definition>
+        <argsstring></argsstring>
+        <name>NOM_DATEAU</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_DATEAU</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="26" column="24" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a3838ae8aa017b448ee08a27a66673b42" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_COULEUR_CADRE</definition>
+        <argsstring></argsstring>
+        <name>NOM_COULEUR_CADRE</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_COULEUR_CADRE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="26" column="35" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a65552fa8ee28827bdae1a9516673709c" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_COULEUR_FOND</definition>
+        <argsstring></argsstring>
+        <name>NOM_COULEUR_FOND</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_COULEUR_FOND</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="26" column="53" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1afa6f42ef6e1a1bfa8b8453970ee6adb0" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.calendrier.FusionneurAgendas.NOM_LIEU</definition>
+        <argsstring></argsstring>
+        <name>NOM_LIEU</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.NOM_LIEU</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="26" column="70" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1ad587098f66415948f19a60bc45795e5b" prot="protected" static="no" mutable="no">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt;Evenement&gt; general.calendrier.FusionneurAgendas.sauves</definition>
+        <argsstring></argsstring>
+        <name>sauves</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.sauves</qualifiedname>
+        <initializer>= new TreeSet&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="21" column="23" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a9710040fde006d195cb1b15a1949f2db" prot="protected" static="no" mutable="no">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt;Evenement&gt; general.calendrier.FusionneurAgendas.bannis</definition>
+        <argsstring></argsstring>
+        <name>bannis</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.bannis</qualifiedname>
+        <initializer>= new TreeSet&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="22" column="13" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a9bcec0c0e8a11c1e6dad65ae2ded69fb" prot="protected" static="no" mutable="no">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt;Evenement&gt; general.calendrier.FusionneurAgendas.tronques</definition>
+        <argsstring></argsstring>
+        <name>tronques</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.tronques</qualifiedname>
+        <initializer>= new TreeSet&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="23" column="13" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a2d0648e387743220cf1636c08589c496" prot="protected" static="no" mutable="no">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt;Evenement&gt; general.calendrier.FusionneurAgendas.crees</definition>
+        <argsstring></argsstring>
+        <name>crees</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.crees</qualifiedname>
+        <initializer>= new TreeSet&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="24" column="13" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1affc16385bb5a018708a2d601a095992c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.calendrier.FusionneurAgendas.FusionneurAgendas</definition>
+        <argsstring>(String nomType, String nomID, String nomDescription, String nomCouleurTexte, String nomIDProprietaire, String nomDateDebut, String nomDateFin, String nomCouleurCadre, String nomCouleurFond, String nomLieu, InformateurObjet informateur)</argsstring>
+        <name>FusionneurAgendas</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.FusionneurAgendas</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomType</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomID</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomDescription</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomCouleurTexte</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIDProprietaire</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomDateDebut</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomDateFin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomCouleurCadre</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomCouleurFond</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomLieu</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Objet permettant le fusionnage d&apos;éléments dans un agenda</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable type </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de l&apos;id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomDescription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la description d&apos;un événement </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomCouleurTexte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable couleur </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIDProprietaire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable idProprio </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomDateDebut</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la date de début d&apos;un événement </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomDateFin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la date de fin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomCouleurCadre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la couleur du cadre d&apos;agenda </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomCouleurFond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la couleur de fond de l&apos;agenda </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomLieu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable de lieu </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="42" column="12" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="42" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1aac6d0c9b8794feefeb5778c08338604b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.calendrier.FusionneurAgendas.FusionneurAgendas</definition>
+        <argsstring>(ArrayList&lt; String &gt; listeNoms, InformateurObjet informateur)</argsstring>
+        <name>FusionneurAgendas</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.FusionneurAgendas</qualifiedname>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>listeNoms</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructeur avec la liste des noms des champs dans l&apos;ordre suivant : nomType, nomID, nomDescription, nomCouleurTexte, nomIDProprietaire, nomDateDebut, nomDateFin, nomCouleurCadre, nomCouleurFond, nomLieu</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listeNoms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="74" column="12" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="74" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a988f5307706ae5195dd8231c5c1bbd87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt; Evenement &gt; general.calendrier.FusionneurAgendas.fusionner</definition>
+        <argsstring>(TreeSet&lt; Evenement &gt; etrangers, TreeSet&lt; Evenement &gt; evenements, String priorite)</argsstring>
+        <name>fusionner</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.fusionner</qualifiedname>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>etrangers</declname>
+        </param>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>evenements</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priorite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de fusionner plusieurs événements en évitant les chevauchements</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>etrangers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>les nouveaux événements </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evenements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>les événements initiaux </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priorite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la priorité de fusion </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>le résultat de la fusion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="117" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="117" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a89c6ca87507459ffd6c37787c7d8acc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt; Evenement &gt; general.calendrier.FusionneurAgendas.fusionner</definition>
+        <argsstring>(Evenement etranger, TreeSet&lt; Evenement &gt; evenements, String priorite)</argsstring>
+        <name>fusionner</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.fusionner</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>etranger</declname>
+        </param>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>evenements</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>priorite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de fusionner plusieurs événements en évitant les chevauchements</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>etranger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nouvel événement </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evenements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>les événements initiaux </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>priorite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la priorité de fusion </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>le résultat de la fusion </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="156" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="156" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a2beaba9957756d3498f17e86f79ebcd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.calendrier.FusionneurAgendas.inserer_non_prioritaire</definition>
+        <argsstring>(Evenement evenement, TreeSet&lt; Evenement &gt; evenements)</argsstring>
+        <name>inserer_non_prioritaire</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.inserer_non_prioritaire</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>evenement</declname>
+        </param>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>evenements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet d&apos;insérer un événement qui n&apos;a pas la priorité sur les autres, et ce sans autoriser les chevauchements</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evenement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est l&apos;événement intrus </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evenements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est la liste des événements initiaux </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="192" column="17" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="192" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a41bc2bb21b550be08effe3635aca1585" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.calendrier.FusionneurAgendas.inserer_prioritaire</definition>
+        <argsstring>(Evenement evenement, TreeSet&lt; Evenement &gt; evenements)</argsstring>
+        <name>inserer_prioritaire</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.inserer_prioritaire</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>evenement</declname>
+        </param>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>evenements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet d&apos;insérer un événement qui a la priorité sur les autres, et ce sans autoriser les chevauchements</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evenement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est l&apos;événement intrus qui peut écraser les autres ;il ne sera pas modifié ! </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evenements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est la liste des événements initiaux </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="265" column="17" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="265" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a9289f818953ece8c6953585e5934abab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.calendrier.FusionneurAgendas.inserer</definition>
+        <argsstring>(Evenement evenement, TreeSet&lt; Evenement &gt; evenements)</argsstring>
+        <name>inserer</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.inserer</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>evenement</declname>
+        </param>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>evenements</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet d&apos;insérer un événement selon la priorité, et ce sans autoriser les chevauchements</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>evenement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est l&apos;événement intrus qui veut s&apos;insérer avec les autres ;il peut être modifié ! </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evenements</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est la liste des événements initiaux </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="326" column="17" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="326" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1ad9fd09b2af88c1cf7afb32dea7e98514" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt; Evenement &gt; general.calendrier.FusionneurAgendas.getSauves</definition>
+        <argsstring>()</argsstring>
+        <name>getSauves</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.getSauves</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="388" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="388" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1af3384b847069f9d0915e731b00ea706e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt; Evenement &gt; general.calendrier.FusionneurAgendas.getBannis</definition>
+        <argsstring>()</argsstring>
+        <name>getBannis</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.getBannis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="392" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="392" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a0cb7ab26a8be0090dbdb8a2028121638" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt; Evenement &gt; general.calendrier.FusionneurAgendas.getTronques</definition>
+        <argsstring>()</argsstring>
+        <name>getTronques</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.getTronques</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="396" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="396" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a6b7df5f7cd9600cf0ff364caf6ed59a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt; Evenement &gt; general.calendrier.FusionneurAgendas.getCrees</definition>
+        <argsstring>()</argsstring>
+        <name>getCrees</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.getCrees</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="400" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="400" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a0b014ef6c888e54f071b8d674081169f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.calendrier.FusionneurAgendas.isTelescopage</definition>
+        <argsstring>()</argsstring>
+        <name>isTelescopage</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.isTelescopage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="404" column="20" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="404" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a6163feebd41eefb816e507bab58a2f96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.calendrier.FusionneurAgendas.inserer_malin</definition>
+        <argsstring>(Evenement evenement, TreeSet&lt; Evenement &gt; evenementTreeSet)</argsstring>
+        <name>inserer_malin</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.inserer_malin</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>evenement</declname>
+        </param>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>evenementTreeSet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="408" column="17" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="408" bodyend="433"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a0acb8afe39fd12a48c9db5e33a92a130" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.calendrier.FusionneurAgendas.vider_listes</definition>
+        <argsstring>()</argsstring>
+        <name>vider_listes</name>
+        <qualifiedname>general.calendrier.FusionneurAgendas.vider_listes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="381" column="18" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="381" bodyend="386"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>didie </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>TreeSet&lt; general.calendrier.Evenement &gt;</label>
+      </node>
+      <node id="1">
+        <label>general.calendrier.FusionneurAgendas</label>
+        <link refid="classgeneral_1_1calendrier_1_1FusionneurAgendas"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>bannis</edgelabel>
+          <edgelabel>crees</edgelabel>
+          <edgelabel>sauves</edgelabel>
+          <edgelabel>tronques</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/calendrier/FusionneurAgendas.java" line="17" column="7" bodyfile="src/main/java/general/calendrier/FusionneurAgendas.java" bodystart="17" bodyend="434"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a9710040fde006d195cb1b15a1949f2db" prot="protected" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>bannis</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a2d0648e387743220cf1636c08589c496" prot="protected" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>crees</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a988f5307706ae5195dd8231c5c1bbd87" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>fusionner</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a89c6ca87507459ffd6c37787c7d8acc9" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>fusionner</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1affc16385bb5a018708a2d601a095992c" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>FusionneurAgendas</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1aac6d0c9b8794feefeb5778c08338604b" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>FusionneurAgendas</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1af3384b847069f9d0915e731b00ea706e" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>getBannis</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a6b7df5f7cd9600cf0ff364caf6ed59a4" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>getCrees</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1ad9fd09b2af88c1cf7afb32dea7e98514" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>getSauves</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a0cb7ab26a8be0090dbdb8a2028121638" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>getTronques</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a50566277c23100a6dea1ef5c08f24373" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>informateurObjet</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a9289f818953ece8c6953585e5934abab" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>inserer</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a6163feebd41eefb816e507bab58a2f96" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>inserer_malin</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a2beaba9957756d3498f17e86f79ebcd0" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>inserer_non_prioritaire</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a41bc2bb21b550be08effe3635aca1585" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>inserer_prioritaire</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a0b014ef6c888e54f071b8d674081169f" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>isTelescopage</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a1e05d63f11b286ca60059cfd50281adc" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_COULEUR</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a3838ae8aa017b448ee08a27a66673b42" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_COULEUR_CADRE</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a65552fa8ee28827bdae1a9516673709c" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_COULEUR_FOND</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a06370045f4453333a6c971313238732a" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_DATEAU</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1ad56990ee1b2844361a6cf16271f16624" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_DATEDU</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1af8c9e4368efb6f8778e27671ca0f64f3" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_DESCRIPTION</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a37d4a383b7f630666171aa49eae99fb5" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_ID</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a817a877fbcfabe5cf1cc90584e6cdff8" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_IDINTERMEDIAIRE</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1afa6f42ef6e1a1bfa8b8453970ee6adb0" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_LIEU</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a66a83401a678ccd3f9ba59c0fc4ab7b7" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>NOM_TYPE</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1ad587098f66415948f19a60bc45795e5b" prot="protected" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>sauves</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a9bcec0c0e8a11c1e6dad65ae2ded69fb" prot="protected" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>tronques</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurAgendas_1a0acb8afe39fd12a48c9db5e33a92a130" prot="private" virt="non-virtual"><scope>general::calendrier::FusionneurAgendas</scope><name>vider_listes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

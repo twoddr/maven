@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1DetecteurModification" kind="class" language="Java" prot="public">
+    <compoundname>general::DetecteurModification</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1DetecteurModification_1ab25a6592409d99a66abb2fb5a2681a87" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt;Object&gt; general.DetecteurModification.listeInitiale</definition>
+        <argsstring></argsstring>
+        <name>listeInitiale</name>
+        <qualifiedname>general.DetecteurModification.listeInitiale</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="8" column="23" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1DetecteurModification_1a6e876933b9b9010c512bc9348fddea4a" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt;Object&gt; general.DetecteurModification.listeModifiee</definition>
+        <argsstring></argsstring>
+        <name>listeModifiee</name>
+        <qualifiedname>general.DetecteurModification.listeModifiee</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="9" column="23" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1DetecteurModification_1ade553e01a5218096bc4ffbfbcea9425f" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt;Object&gt; general.DetecteurModification.aSupprimer</definition>
+        <argsstring></argsstring>
+        <name>aSupprimer</name>
+        <qualifiedname>general.DetecteurModification.aSupprimer</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="10" column="23" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1DetecteurModification_1ab61fcbdefd8c2b4e8e541f45ee1b0842" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt;Object&gt; general.DetecteurModification.aAjouter</definition>
+        <argsstring></argsstring>
+        <name>aAjouter</name>
+        <qualifiedname>general.DetecteurModification.aAjouter</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="11" column="23" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1DetecteurModification_1aa892dd7c43235637ad40f4f33940fa17" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt;Object&gt; general.DetecteurModification.rescapes</definition>
+        <argsstring></argsstring>
+        <name>rescapes</name>
+        <qualifiedname>general.DetecteurModification.rescapes</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="12" column="23" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1DetecteurModification_1a4d8e545085b1c8ed6b71365bb98784e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.DetecteurModification.DetecteurModification</definition>
+        <argsstring>(ArrayList&lt; Object &gt; initiale, ArrayList&lt; Object &gt; modifiee)</argsstring>
+        <name>DetecteurModification</name>
+        <qualifiedname>general.DetecteurModification.DetecteurModification</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>initiale</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>modifiee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="14" column="12" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="14" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DetecteurModification_1ad79e0475606af213d712c424080e94ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt; Object &gt; general.DetecteurModification.getListeASupprimer</definition>
+        <argsstring>()</argsstring>
+        <name>getListeASupprimer</name>
+        <qualifiedname>general.DetecteurModification.getListeASupprimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="69" column="22" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DetecteurModification_1ac62d91afe1e2d1bc43c7da9f494b55fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt; Object &gt; general.DetecteurModification.getListeAAjouter</definition>
+        <argsstring>()</argsstring>
+        <name>getListeAAjouter</name>
+        <qualifiedname>general.DetecteurModification.getListeAAjouter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="73" column="22" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DetecteurModification_1ac32175fc3b8e3dd76381648a4d8f2808" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt; Object &gt; general.DetecteurModification.getListeRescapes</definition>
+        <argsstring>()</argsstring>
+        <name>getListeRescapes</name>
+        <qualifiedname>general.DetecteurModification.getListeRescapes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="77" column="22" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="77" bodyend="79"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1DetecteurModification_1afd5d97b01bbc415671024cafa6d02bcb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.DetecteurModification.generer_listes_simplement</definition>
+        <argsstring>()</argsstring>
+        <name>generer_listes_simplement</name>
+        <qualifiedname>general.DetecteurModification.generer_listes_simplement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="22" column="18" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="22" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DetecteurModification_1a46d0306f59296353847f03030a6bb98e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.DetecteurModification.estDansListe</definition>
+        <argsstring>(Object o, ArrayList&lt; Object &gt; liste)</argsstring>
+        <name>estDansListe</name>
+        <qualifiedname>general.DetecteurModification.estDansListe</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>liste</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurModification.java" line="38" column="21" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="38" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/DetecteurModification.java" line="6" column="7" bodyfile="src/main/java/general/DetecteurModification.java" bodystart="6" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1DetecteurModification_1ab61fcbdefd8c2b4e8e541f45ee1b0842" prot="private" virt="non-virtual"><scope>general::DetecteurModification</scope><name>aAjouter</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1ade553e01a5218096bc4ffbfbcea9425f" prot="private" virt="non-virtual"><scope>general::DetecteurModification</scope><name>aSupprimer</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1a4d8e545085b1c8ed6b71365bb98784e4" prot="public" virt="non-virtual"><scope>general::DetecteurModification</scope><name>DetecteurModification</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1a46d0306f59296353847f03030a6bb98e" prot="private" virt="non-virtual"><scope>general::DetecteurModification</scope><name>estDansListe</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1afd5d97b01bbc415671024cafa6d02bcb" prot="private" virt="non-virtual"><scope>general::DetecteurModification</scope><name>generer_listes_simplement</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1ac62d91afe1e2d1bc43c7da9f494b55fe" prot="public" virt="non-virtual"><scope>general::DetecteurModification</scope><name>getListeAAjouter</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1ad79e0475606af213d712c424080e94ef" prot="public" virt="non-virtual"><scope>general::DetecteurModification</scope><name>getListeASupprimer</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1ac32175fc3b8e3dd76381648a4d8f2808" prot="public" virt="non-virtual"><scope>general::DetecteurModification</scope><name>getListeRescapes</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1ab25a6592409d99a66abb2fb5a2681a87" prot="private" virt="non-virtual"><scope>general::DetecteurModification</scope><name>listeInitiale</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1a6e876933b9b9010c512bc9348fddea4a" prot="private" virt="non-virtual"><scope>general::DetecteurModification</scope><name>listeModifiee</name></member>
+      <member refid="classgeneral_1_1DetecteurModification_1aa892dd7c43235637ad40f4f33940fa17" prot="private" virt="non-virtual"><scope>general::DetecteurModification</scope><name>rescapes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

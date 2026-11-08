@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ThreadRetourBD" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>general::ThreadRetourBD</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1ThreadRetourBD_1ac3ec55e944f2f8fef455d75818556d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract void</type>
+        <definition>abstract void general.ThreadRetourBD.go</definition>
+        <argsstring>(int code, String nomTable, Object x)</argsstring>
+        <name>go</name>
+        <qualifiedname>general.ThreadRetourBD.go</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ThreadRetourBD.java" line="4" column="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/ThreadRetourBD.java" line="3" column="17" bodyfile="src/main/java/general/ThreadRetourBD.java" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ThreadRetourBD_1ac3ec55e944f2f8fef455d75818556d87" prot="public" virt="non-virtual"><scope>general::ThreadRetourBD</scope><name>go</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,99 @@
+\doxysection{general.\+Controleur\+Principal Interface Reference}
+\hypertarget{interfacegeneral_1_1ControleurPrincipal}{}\label{interfacegeneral_1_1ControleurPrincipal}\index{general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_a84b12382b8ee93b2dbf48169a1bd88a4}{inscrire\+\_\+composant}} (String nom\+Classe, Object composant, boolean inscrire)
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_ad07e988e7deaaf3e50e6ce007ed0e5d0}{inscrire\+\_\+thread}} (String nom\+Classe, \mbox{\hyperlink{classgeneral_1_1InteresseParMiseAJour}{Interesse\+Par\+Mise\+AJour}} processus, boolean inscrire)
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_a55db940c61aa2239e33a247dd0ccee60}{demande\+\_\+liste}} (String type, \mbox{\hyperlink{interfacegeneral_1_1GestionnaireRetourBD}{Gestionnaire\+Retour\+BD}} appelant)
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_a74db3ee0684ff29529fdbe30f028faec}{requete\+\_\+\+BD}} (Array\+List$<$ Object $>$ requete)
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_a203fd44da8abb4d0aa8e5ff7cda0837b}{affiche\+\_\+utilisateur}} (String texte)
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_aeb4157d0607c531d2208bac06ad8e50c}{affiche\+\_\+console}} (String texte)
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_af099e730f888d786c401b4d0ce259768}{demande\+\_\+details\+\_\+pour\+\_\+edition}} (Object requete)
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_a5855106dcc5da86e29ce1d77d9b84eba}{get\+Element\+From\+Type}} (String type\+Affiche)
+\item 
+void \mbox{\hyperlink{interfacegeneral_1_1ControleurPrincipal_ad48e8217c8cd4ccbea47dce78ee955e2}{action\+\_\+utilisateur}} (Object source, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} selected\+Item, String nom\+Colonne)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ce titre est donné à toute fenêtre qui présente des filles ; ces filles doivent obligatoirement passer par leur fenêtre mère 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_ad48e8217c8cd4ccbea47dce78ee955e2}\label{interfacegeneral_1_1ControleurPrincipal_ad48e8217c8cd4ccbea47dce78ee955e2} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!action\_utilisateur@{action\_utilisateur}}
+\index{action\_utilisateur@{action\_utilisateur}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{action\_utilisateur()}{action\_utilisateur()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+action\+\_\+utilisateur (\begin{DoxyParamCaption}\item[{Object}]{source,  }\item[{\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}}}]{selected\+Item,  }\item[{String}]{nom\+Colonne }\end{DoxyParamCaption})}
+
+Permet de notifier d\textquotesingle{}une action
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & l\textquotesingle{}objet à l\textquotesingle{}origine (par exemple List\+Table\+BD) \\
+\hline
+{\em selected\+Item} & l\textquotesingle{}objetihm sélectionné \\
+\hline
+{\em nom\+Colonne} & le nom de la colonne cliquée \\
+\hline
+\end{DoxyParams}
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_aeb4157d0607c531d2208bac06ad8e50c}\label{interfacegeneral_1_1ControleurPrincipal_aeb4157d0607c531d2208bac06ad8e50c} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!affiche\_console@{affiche\_console}}
+\index{affiche\_console@{affiche\_console}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{affiche\_console()}{affiche\_console()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+affiche\+\_\+console (\begin{DoxyParamCaption}\item[{String}]{texte }\end{DoxyParamCaption})}
+
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_a203fd44da8abb4d0aa8e5ff7cda0837b}\label{interfacegeneral_1_1ControleurPrincipal_a203fd44da8abb4d0aa8e5ff7cda0837b} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!affiche\_utilisateur@{affiche\_utilisateur}}
+\index{affiche\_utilisateur@{affiche\_utilisateur}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{affiche\_utilisateur()}{affiche\_utilisateur()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+affiche\+\_\+utilisateur (\begin{DoxyParamCaption}\item[{String}]{texte }\end{DoxyParamCaption})}
+
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_af099e730f888d786c401b4d0ce259768}\label{interfacegeneral_1_1ControleurPrincipal_af099e730f888d786c401b4d0ce259768} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!demande\_details\_pour\_edition@{demande\_details\_pour\_edition}}
+\index{demande\_details\_pour\_edition@{demande\_details\_pour\_edition}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{demande\_details\_pour\_edition()}{demande\_details\_pour\_edition()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+demande\+\_\+details\+\_\+pour\+\_\+edition (\begin{DoxyParamCaption}\item[{Object}]{requete }\end{DoxyParamCaption})}
+
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_a55db940c61aa2239e33a247dd0ccee60}\label{interfacegeneral_1_1ControleurPrincipal_a55db940c61aa2239e33a247dd0ccee60} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!demande\_liste@{demande\_liste}}
+\index{demande\_liste@{demande\_liste}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{demande\_liste()}{demande\_liste()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+demande\+\_\+liste (\begin{DoxyParamCaption}\item[{String}]{type,  }\item[{\mbox{\hyperlink{interfacegeneral_1_1GestionnaireRetourBD}{Gestionnaire\+Retour\+BD}}}]{appelant }\end{DoxyParamCaption})}
+
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_a5855106dcc5da86e29ce1d77d9b84eba}\label{interfacegeneral_1_1ControleurPrincipal_a5855106dcc5da86e29ce1d77d9b84eba} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!getElementFromType@{getElementFromType}}
+\index{getElementFromType@{getElementFromType}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{getElementFromType()}{getElementFromType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Controleur\+Principal.\+get\+Element\+From\+Type (\begin{DoxyParamCaption}\item[{String}]{type\+Affiche }\end{DoxyParamCaption})}
+
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_a84b12382b8ee93b2dbf48169a1bd88a4}\label{interfacegeneral_1_1ControleurPrincipal_a84b12382b8ee93b2dbf48169a1bd88a4} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!inscrire\_composant@{inscrire\_composant}}
+\index{inscrire\_composant@{inscrire\_composant}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{inscrire\_composant()}{inscrire\_composant()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+inscrire\+\_\+composant (\begin{DoxyParamCaption}\item[{String}]{nom\+Classe,  }\item[{Object}]{composant,  }\item[{boolean}]{inscrire }\end{DoxyParamCaption})}
+
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_ad07e988e7deaaf3e50e6ce007ed0e5d0}\label{interfacegeneral_1_1ControleurPrincipal_ad07e988e7deaaf3e50e6ce007ed0e5d0} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!inscrire\_thread@{inscrire\_thread}}
+\index{inscrire\_thread@{inscrire\_thread}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{inscrire\_thread()}{inscrire\_thread()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+inscrire\+\_\+thread (\begin{DoxyParamCaption}\item[{String}]{nom\+Classe,  }\item[{\mbox{\hyperlink{classgeneral_1_1InteresseParMiseAJour}{Interesse\+Par\+Mise\+AJour}}}]{processus,  }\item[{boolean}]{inscrire }\end{DoxyParamCaption})}
+
+\Hypertarget{interfacegeneral_1_1ControleurPrincipal_a74db3ee0684ff29529fdbe30f028faec}\label{interfacegeneral_1_1ControleurPrincipal_a74db3ee0684ff29529fdbe30f028faec} 
+\index{general.ControleurPrincipal@{general.ControleurPrincipal}!requete\_BD@{requete\_BD}}
+\index{requete\_BD@{requete\_BD}!general.ControleurPrincipal@{general.ControleurPrincipal}}
+\doxysubsubsection{\texorpdfstring{requete\_BD()}{requete\_BD()}}
+{\footnotesize\ttfamily void general.\+Controleur\+Principal.\+requete\+\_\+\+BD (\begin{DoxyParamCaption}\item[{Array\+List$<$ Object $>$}]{requete }\end{DoxyParamCaption})}
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/general/\mbox{\hyperlink{ControleurPrincipal_8java}{Controleur\+Principal.\+java}}\end{DoxyCompactItemize}

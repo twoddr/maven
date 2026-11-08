@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1DetecteurPresence" kind="class" language="Java" prot="public">
+    <compoundname>general::DetecteurPresence</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1DetecteurPresence_1aae05d350f8c16a0563abf53f7350aca4" prot="private" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object general.DetecteurPresence.objet</definition>
+        <argsstring></argsstring>
+        <name>objet</name>
+        <qualifiedname>general.DetecteurPresence.objet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurPresence.java" line="8" column="20" bodyfile="src/main/java/general/DetecteurPresence.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1DetecteurPresence_1af4fe1a60bac5a21c43134fe6b74309ef" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt;Object&gt; general.DetecteurPresence.liste</definition>
+        <argsstring></argsstring>
+        <name>liste</name>
+        <qualifiedname>general.DetecteurPresence.liste</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurPresence.java" line="9" column="23" bodyfile="src/main/java/general/DetecteurPresence.java" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1DetecteurPresence_1af80023a9499afb94aebcb04e084fed5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.DetecteurPresence.DetecteurPresence</definition>
+        <argsstring>(Object o, ArrayList list)</argsstring>
+        <name>DetecteurPresence</name>
+        <qualifiedname>general.DetecteurPresence.DetecteurPresence</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurPresence.java" line="11" column="12" bodyfile="src/main/java/general/DetecteurPresence.java" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DetecteurPresence_1afcbaf70d2930fb82e99962a86dc1882c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean general.DetecteurPresence.isIn</definition>
+        <argsstring>()</argsstring>
+        <name>isIn</name>
+        <qualifiedname>general.DetecteurPresence.isIn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DetecteurPresence.java" line="16" column="20" bodyfile="src/main/java/general/DetecteurPresence.java" bodystart="16" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/DetecteurPresence.java" line="6" column="7" bodyfile="src/main/java/general/DetecteurPresence.java" bodystart="6" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1DetecteurPresence_1af80023a9499afb94aebcb04e084fed5c" prot="public" virt="non-virtual"><scope>general::DetecteurPresence</scope><name>DetecteurPresence</name></member>
+      <member refid="classgeneral_1_1DetecteurPresence_1afcbaf70d2930fb82e99962a86dc1882c" prot="public" virt="non-virtual"><scope>general::DetecteurPresence</scope><name>isIn</name></member>
+      <member refid="classgeneral_1_1DetecteurPresence_1af4fe1a60bac5a21c43134fe6b74309ef" prot="private" virt="non-virtual"><scope>general::DetecteurPresence</scope><name>liste</name></member>
+      <member refid="classgeneral_1_1DetecteurPresence_1aae05d350f8c16a0563abf53f7350aca4" prot="private" virt="non-virtual"><scope>general::DetecteurPresence</scope><name>objet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

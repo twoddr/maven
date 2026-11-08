@@ -19,11 +19,8 @@ public class ExtracteurHashMap {
             return ((Long) suspect).intValue();
         }
         if (suspect instanceof String) {
-            try {
-                return Float.parseFloat((String) suspect);
-            } catch (NumberFormatException e) {
-                return 0f;
-            }
+            Float resultat = FormatNombre.versFloat((String) suspect);
+            return resultat == null ? 0f : resultat;
         }
         return 0f;
     }
@@ -39,11 +36,8 @@ public class ExtracteurHashMap {
             return ((Float) suspect).intValue();
         }
         if (suspect instanceof String) {
-            try {
-                return Integer.parseInt((String) suspect);
-            } catch (NumberFormatException e) {
-                return 0;
-            }
+            Integer resultat = FormatNombre.versInteger((String) suspect);
+            return resultat == null ? 0 : resultat;
         }
         return 0;
     }
@@ -59,11 +53,8 @@ public class ExtracteurHashMap {
             return ((Float) suspect).longValue();
         }
         if (suspect instanceof String) {
-            try {
-                return Long.parseLong((String) suspect);
-            } catch (NumberFormatException e) {
-                return 0L;
-            }
+            Double resultat = FormatNombre.versDouble((String) suspect);
+            return resultat == null ? 0L : resultat.longValue();
         }
         return 0;
     }

@@ -1,11 +1,14 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>macy</groupId>
     <artifactId>communs</artifactId>
-    <version>17.0</version>
+    <version>17.5.1</version>
+    <packaging>jar</packaging>
+    <name>communs</name>
+    <description>Librairie partagée de classes utilitaires</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -15,16 +18,32 @@
 
     <build>
         <plugins>
+            <!-- Maven Source Plugin: create and attach sources JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <!-- no explicit version: use Maven's default or your company's plugin management -->
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <!-- Bind to the 'package' phase so sources are created when packaging -->
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <!-- Maven Javadoc Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.6.0</version> <!-- Use the latest version -->
+                <!-- no explicit version: use Maven's default or your company's plugin management -->
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
-                        <!-- Bind to the 'deploy' phase to run during `mvn deploy` -->
-                        <phase>deploy</phase>
+                        <!-- Bind to the 'package' phase so javadoc JAR is produced during package -->
+                        <phase>package</phase>
                         <goals>
                             <goal>jar</goal> <!-- The goal that creates the JAR -->
                         </goals>
@@ -39,9 +58,6 @@
             <id>github</id>
             <name>GitHub twoddr Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/twoddr/maven</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
         </repository>
         <snapshotRepository>
             <id>github</id>

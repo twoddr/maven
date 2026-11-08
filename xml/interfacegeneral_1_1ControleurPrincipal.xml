@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="interfacegeneral_1_1ControleurPrincipal" kind="interface" language="Java" prot="public">
+    <compoundname>general::ControleurPrincipal</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1a84b12382b8ee93b2dbf48169a1bd88a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.inscrire_composant</definition>
+        <argsstring>(String nomClasse, Object composant, boolean inscrire)</argsstring>
+        <name>inscrire_composant</name>
+        <qualifiedname>general.ControleurPrincipal.inscrire_composant</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomClasse</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>composant</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>inscrire</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="12" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1ad07e988e7deaaf3e50e6ce007ed0e5d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.inscrire_thread</definition>
+        <argsstring>(String nomClasse, InteresseParMiseAJour processus, boolean inscrire)</argsstring>
+        <name>inscrire_thread</name>
+        <qualifiedname>general.ControleurPrincipal.inscrire_thread</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomClasse</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1InteresseParMiseAJour" kindref="compound">InteresseParMiseAJour</ref></type>
+          <declname>processus</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>inscrire</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="14" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1a55db940c61aa2239e33a247dd0ccee60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.demande_liste</definition>
+        <argsstring>(String type, GestionnaireRetourBD appelant)</argsstring>
+        <name>demande_liste</name>
+        <qualifiedname>general.ControleurPrincipal.demande_liste</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1GestionnaireRetourBD" kindref="compound">GestionnaireRetourBD</ref></type>
+          <declname>appelant</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="16" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1a74db3ee0684ff29529fdbe30f028faec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.requete_BD</definition>
+        <argsstring>(ArrayList&lt; Object &gt; requete)</argsstring>
+        <name>requete_BD</name>
+        <qualifiedname>general.ControleurPrincipal.requete_BD</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>requete</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="18" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1a203fd44da8abb4d0aa8e5ff7cda0837b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.affiche_utilisateur</definition>
+        <argsstring>(String texte)</argsstring>
+        <name>affiche_utilisateur</name>
+        <qualifiedname>general.ControleurPrincipal.affiche_utilisateur</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>texte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="20" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1aeb4157d0607c531d2208bac06ad8e50c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.affiche_console</definition>
+        <argsstring>(String texte)</argsstring>
+        <name>affiche_console</name>
+        <qualifiedname>general.ControleurPrincipal.affiche_console</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>texte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="22" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1af099e730f888d786c401b4d0ce259768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.demande_details_pour_edition</definition>
+        <argsstring>(Object requete)</argsstring>
+        <name>demande_details_pour_edition</name>
+        <qualifiedname>general.ControleurPrincipal.demande_details_pour_edition</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>requete</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="24" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1a5855106dcc5da86e29ce1d77d9b84eba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.ControleurPrincipal.getElementFromType</definition>
+        <argsstring>(String typeAffiche)</argsstring>
+        <name>getElementFromType</name>
+        <qualifiedname>general.ControleurPrincipal.getElementFromType</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>typeAffiche</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="26" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="interfacegeneral_1_1ControleurPrincipal_1ad48e8217c8cd4ccbea47dce78ee955e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ControleurPrincipal.action_utilisateur</definition>
+        <argsstring>(Object source, ObjetDi selectedItem, String nomColonne)</argsstring>
+        <name>action_utilisateur</name>
+        <qualifiedname>general.ControleurPrincipal.action_utilisateur</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+          <declname>selectedItem</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomColonne</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de notifier d&apos;une action</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;objet à l&apos;origine (par exemple ListTableBD) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>selectedItem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;objetihm sélectionné </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomColonne</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la colonne cliquée </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ControleurPrincipal.java" line="35" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Ce titre est donné à toute fenêtre qui présente des filles ; ces filles doivent obligatoirement passer par leur fenêtre mère </para>
+    </detaileddescription>
+    <location file="src/main/java/general/ControleurPrincipal.java" line="11" column="18" bodyfile="src/main/java/general/ControleurPrincipal.java" bodystart="11" bodyend="38"/>
+    <listofallmembers>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1ad48e8217c8cd4ccbea47dce78ee955e2" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>action_utilisateur</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1aeb4157d0607c531d2208bac06ad8e50c" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>affiche_console</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1a203fd44da8abb4d0aa8e5ff7cda0837b" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>affiche_utilisateur</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1af099e730f888d786c401b4d0ce259768" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>demande_details_pour_edition</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1a55db940c61aa2239e33a247dd0ccee60" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>demande_liste</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1a5855106dcc5da86e29ce1d77d9b84eba" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>getElementFromType</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1a84b12382b8ee93b2dbf48169a1bd88a4" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>inscrire_composant</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1ad07e988e7deaaf3e50e6ce007ed0e5d0" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>inscrire_thread</name></member>
+      <member refid="interfacegeneral_1_1ControleurPrincipal_1a74db3ee0684ff29529fdbe30f028faec" prot="public" virt="non-virtual"><scope>general::ControleurPrincipal</scope><name>requete_BD</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

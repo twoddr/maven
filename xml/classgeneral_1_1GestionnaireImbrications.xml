@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1GestionnaireImbrications" kind="class" language="Java" prot="public">
+    <compoundname>general::GestionnaireImbrications</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1a39e92d1faa871ef2c7ae59c6b18b3414" prot="private" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String general.GestionnaireImbrications.nomTablePays</definition>
+        <argsstring></argsstring>
+        <name>nomTablePays</name>
+        <qualifiedname>general.GestionnaireImbrications.nomTablePays</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="7" column="26" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1aa4af54d5cf25f15b1314476d6a5b7606" prot="private" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String general.GestionnaireImbrications.nomIdPaysDansVille</definition>
+        <argsstring></argsstring>
+        <name>nomIdPaysDansVille</name>
+        <qualifiedname>general.GestionnaireImbrications.nomIdPaysDansVille</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="7" column="39" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1a1cccd616164286e2380ab281a24cfc02" prot="private" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String general.GestionnaireImbrications.nomTableVille</definition>
+        <argsstring></argsstring>
+        <name>nomTableVille</name>
+        <qualifiedname>general.GestionnaireImbrications.nomTableVille</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="7" column="58" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1ab9868c0cf1702015366f27a984596d39" prot="private" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String general.GestionnaireImbrications.nomIdVilleDansQuartier</definition>
+        <argsstring></argsstring>
+        <name>nomIdVilleDansQuartier</name>
+        <qualifiedname>general.GestionnaireImbrications.nomIdVilleDansQuartier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="8" column="13" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1a83530e4ed7c9b015cb1d6050e4271f87" prot="private" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String general.GestionnaireImbrications.nomTableQuartier</definition>
+        <argsstring></argsstring>
+        <name>nomTableQuartier</name>
+        <qualifiedname>general.GestionnaireImbrications.nomTableQuartier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="8" column="36" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1abd0f728365f1a6362c9ea3d1b100a79e" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean general.GestionnaireImbrications.verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>general.GestionnaireImbrications.verbose</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="12" column="21" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1a1a2461f22b0b9c47e7b7a2c425a45dd6" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean general.GestionnaireImbrications.change</definition>
+        <argsstring></argsstring>
+        <name>change</name>
+        <qualifiedname>general.GestionnaireImbrications.change</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="13" column="21" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1a8770b27197e81981e12d5b86bf2cd232" prot="package" static="no" mutable="no">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.GestionnaireImbrications.quartier</definition>
+        <argsstring></argsstring>
+        <name>quartier</name>
+        <qualifiedname>general.GestionnaireImbrications.quartier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="9" column="13" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1abbdcea78fb44d0f24603b7fa08b68890" prot="package" static="no" mutable="no">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.GestionnaireImbrications.ville</definition>
+        <argsstring></argsstring>
+        <name>ville</name>
+        <qualifiedname>general.GestionnaireImbrications.ville</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="10" column="13" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1GestionnaireImbrications_1a9c10b6cf8e57e38b006ce78d4687e00e" prot="package" static="no" mutable="no">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.GestionnaireImbrications.pays</definition>
+        <argsstring></argsstring>
+        <name>pays</name>
+        <qualifiedname>general.GestionnaireImbrications.pays</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="11" column="13" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1ac00a6f97e78fa4f62778389a8bc99a83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.GestionnaireImbrications.GestionnaireImbrications</definition>
+        <argsstring>(String nomPays, String nomIdPaysDansVille, String nomTableVille, String nomIdVilleDansQuartier, String nomTableQuartier, int fkquartier, HashMap&lt; String, Object &gt; hashLevis, InformateurObjet informateurObjetDi)</argsstring>
+        <name>GestionnaireImbrications</name>
+        <qualifiedname>general.GestionnaireImbrications.GestionnaireImbrications</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTableVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdVilleDansQuartier</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTableQuartier</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkquartier</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateurObjetDi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de générer la matrice de localité (quartier, ville, pays) à partir de la liste levis et l&apos;id quartier Cet objet a été créé pour générer toutes les infos d&apos;une localité en fonction de la simple connaissance de l&apos;id du quartier Il a été généralisé à tous objets héritant de la même structure</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table pays </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPaysDansVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;id pays dans la ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomTableVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdVilleDansQuartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;idville dans le quartier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomTableQuartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table quartier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fkquartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;id du quartier recherché </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la source d&apos;informations au format Levis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>informateurObjetDi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>C&apos;est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="31" column="12" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="31" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a150c71f0abf0af414868431dd842706f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.GestionnaireImbrications.GestionnaireImbrications</definition>
+        <argsstring>(String nomPays, String nomIdPaysDansVille, String nomTableVille, int fkville, HashMap&lt; String, Object &gt; hashLevis, InformateurObjet informateurObjetDi)</argsstring>
+        <name>GestionnaireImbrications</name>
+        <qualifiedname>general.GestionnaireImbrications.GestionnaireImbrications</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTableVille</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkville</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateurObjetDi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de générer la matrice de localité (ville, pays) à partir de la liste levis et l&apos;id quartier Cet objet a été créé pour générer toutes les infos d&apos;une localité en fonction de la simple connaissance de l&apos;id du quartier Il a été généralisé à tous objets héritant de la même structure</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table pays </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPaysDansVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;id pays dans la ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomTableVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fkville</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;id de la ville recherchée </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la source d&apos;informations au format Levis </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>informateurObjetDi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>C&apos;est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="62" column="12" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="62" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a640c5f3c0aa74853d2b12978089ac75f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.GestionnaireImbrications.GestionnaireImbrications</definition>
+        <argsstring>(String nomPays, String nomIdPaysDansVille, String nomTableVille, String nomIdVilleDansQuartier, String nomTableQuartier, InformateurObjet informateurObjetDi)</argsstring>
+        <name>GestionnaireImbrications</name>
+        <qualifiedname>general.GestionnaireImbrications.GestionnaireImbrications</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTableVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdVilleDansQuartier</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTableQuartier</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateurObjetDi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de générer la matrice de localité (quartier, ville, pays) à partir de la liste levis<itemizedlist>
+<listitem><para>Il faut utiliser la méthode &quot;remplir_donnees&quot; pour l&apos;alimenter Cet objet a été créé pour générer toutes les infos d&apos;une localité en fonction de la simple connaissance de l&apos;id du quartier Il a été généralisé à tous objets héritant de la même structure</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table pays </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPaysDansVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;id pays dans la ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomTableVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdVilleDansQuartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;idville dans le quartier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomTableQuartier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table quartier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>informateurObjetDi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>C&apos;est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="97" column="12" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="97" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1aa50dfb39e40475af361af76aba5a1ec8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.GestionnaireImbrications.GestionnaireImbrications</definition>
+        <argsstring>(String nomPays, String nomIdPaysDansVille, String nomTableVille, InformateurObjet informateurObjetDi)</argsstring>
+        <name>GestionnaireImbrications</name>
+        <qualifiedname>general.GestionnaireImbrications.GestionnaireImbrications</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTableVille</declname>
+        </param>
+        <param>
+          <type><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref></type>
+          <declname>informateurObjetDi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de générer la matrice de localité (ville, pays) à partir de la liste levis Il faut utiliser la méthode &quot;remplir_donnees&quot; pour l&apos;alimenter Cet objet a été créé pour générer toutes les infos d&apos;une localité en fonction de la simple connaissance de l&apos;id du quartier Il a été généralisé à tous objets héritant de la même structure</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomPays</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table pays </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomIdPaysDansVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de l&apos;id pays dans la ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomTableVille</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la table ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>informateurObjetDi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>C&apos;est une Interface (locale) permettant de générer des hashobjets à partir du nom de leur table </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="125" column="12" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="125" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a10db3b5607f17761075dc9f5c9a059c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.GestionnaireImbrications.setVerbose</definition>
+        <argsstring>(boolean verbose)</argsstring>
+        <name>setVerbose</name>
+        <qualifiedname>general.GestionnaireImbrications.setVerbose</qualifiedname>
+        <param>
+          <type>boolean</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="138" column="17" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1aafbb92a5594d712919e8e80d65f4e957" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.GestionnaireImbrications.remplir_donnees</definition>
+        <argsstring>(int id, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>remplir_donnees</name>
+        <qualifiedname>general.GestionnaireImbrications.remplir_donnees</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de remplir les données : quartier, ville, pays Si le nom de la table quartier est NULL, alors le remplissage se fait pour ville et pays</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;id du quartier. Si pas de quartier, alors id de la ville </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est la hashmap détails de Levis (nomTable-) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si un changement a été observé </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="150" column="20" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="150" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a27ada670c65202bf6b333d87795bb67f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.GestionnaireImbrications.aChange</definition>
+        <argsstring>()</argsstring>
+        <name>aChange</name>
+        <qualifiedname>general.GestionnaireImbrications.aChange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="243" column="20" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="243" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1aa68d60117fc14c224a1299a31b084b03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.GestionnaireImbrications.getPays</definition>
+        <argsstring>()</argsstring>
+        <name>getPays</name>
+        <qualifiedname>general.GestionnaireImbrications.getPays</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="303" column="20" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="303" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a02f64be9c522029600f319e913d24d11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.GestionnaireImbrications.getVille</definition>
+        <argsstring>()</argsstring>
+        <name>getVille</name>
+        <qualifiedname>general.GestionnaireImbrications.getVille</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="307" column="20" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="307" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1ac24e8b0b520e8078bc99fb6bc327b3a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.GestionnaireImbrications.getQuartier</definition>
+        <argsstring>()</argsstring>
+        <name>getQuartier</name>
+        <qualifiedname>general.GestionnaireImbrications.getQuartier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="311" column="20" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="311" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a3410e4a89b15b5a07ad95fc3a0651730" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>ArrayList&lt; ObjetDi &gt; general.GestionnaireImbrications.getListeHashVille</definition>
+        <argsstring>()</argsstring>
+        <name>getListeHashVille</name>
+        <qualifiedname>general.GestionnaireImbrications.getListeHashVille</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="315" column="22" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="315" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1afd06d098f5895a2c05df9ae12c15de12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>ArrayList&lt; ObjetDi &gt; general.GestionnaireImbrications.getListeHashQuartier</definition>
+        <argsstring>()</argsstring>
+        <name>getListeHashQuartier</name>
+        <qualifiedname>general.GestionnaireImbrications.getListeHashQuartier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="323" column="22" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="323" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a356a94c7b3ea86e31dbebcafd70b43e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.GestionnaireImbrications.getFk</definition>
+        <argsstring>()</argsstring>
+        <name>getFk</name>
+        <qualifiedname>general.GestionnaireImbrications.getFk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="331" column="16" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="331" bodyend="333"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a43f1e7b6804ccfbbd3150bb1620e1cbe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.GestionnaireImbrications.comment</definition>
+        <argsstring>(String s, String out)</argsstring>
+        <name>comment</name>
+        <qualifiedname>general.GestionnaireImbrications.comment</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="188" column="18" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1ac6287cb856fd829f30082ced03d4db5c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.GestionnaireImbrications.chercher_ville</definition>
+        <argsstring>(String nomPays, String nomIdPaysDansVille, String nomVille, int fkville, String nomQuartier, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>chercher_ville</name>
+        <qualifiedname>general.GestionnaireImbrications.chercher_ville</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomIdPaysDansVille</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVille</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkville</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomQuartier</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="196" column="21" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="196" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1GestionnaireImbrications_1a8e18faa6c8139df5dbd145de0bbc6d9e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.GestionnaireImbrications.chercher_pays</definition>
+        <argsstring>(String nomPays, int fkpays, String nomVille, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>chercher_pays</name>
+        <qualifiedname>general.GestionnaireImbrications.chercher_pays</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomPays</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fkpays</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVille</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireImbrications.java" line="234" column="21" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="234" bodyend="241"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="3">
+        <label>Comparable</label>
+      </node>
+      <node id="6">
+        <label>HashMap&lt; String, String &gt;</label>
+      </node>
+      <node id="1">
+        <label>general.GestionnaireImbrications</label>
+        <link refid="classgeneral_1_1GestionnaireImbrications"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>pays</edgelabel>
+          <edgelabel>quartier</edgelabel>
+          <edgelabel>ville</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>variablesVisibles</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>nomsPublics</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/GestionnaireImbrications.java" line="6" column="7" bodyfile="src/main/java/general/GestionnaireImbrications.java" bodystart="6" bodyend="334"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a27ada670c65202bf6b333d87795bb67f" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>aChange</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a1a2461f22b0b9c47e7b7a2c425a45dd6" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>change</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a8e18faa6c8139df5dbd145de0bbc6d9e" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>chercher_pays</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1ac6287cb856fd829f30082ced03d4db5c" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>chercher_ville</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a43f1e7b6804ccfbbd3150bb1620e1cbe" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>comment</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1ac00a6f97e78fa4f62778389a8bc99a83" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>GestionnaireImbrications</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a150c71f0abf0af414868431dd842706f" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>GestionnaireImbrications</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a640c5f3c0aa74853d2b12978089ac75f" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>GestionnaireImbrications</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1aa50dfb39e40475af361af76aba5a1ec8" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>GestionnaireImbrications</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a356a94c7b3ea86e31dbebcafd70b43e8" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>getFk</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1afd06d098f5895a2c05df9ae12c15de12" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>getListeHashQuartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a3410e4a89b15b5a07ad95fc3a0651730" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>getListeHashVille</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1aa68d60117fc14c224a1299a31b084b03" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>getPays</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1ac24e8b0b520e8078bc99fb6bc327b3a3" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>getQuartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a02f64be9c522029600f319e913d24d11" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>getVille</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1aa4af54d5cf25f15b1314476d6a5b7606" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>nomIdPaysDansVille</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1ab9868c0cf1702015366f27a984596d39" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>nomIdVilleDansQuartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a39e92d1faa871ef2c7ae59c6b18b3414" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>nomTablePays</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a83530e4ed7c9b015cb1d6050e4271f87" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>nomTableQuartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a1cccd616164286e2380ab281a24cfc02" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>nomTableVille</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a9c10b6cf8e57e38b006ce78d4687e00e" prot="package" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>pays</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a8770b27197e81981e12d5b86bf2cd232" prot="package" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>quartier</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1aafbb92a5594d712919e8e80d65f4e957" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>remplir_donnees</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1a10db3b5607f17761075dc9f5c9a059c2" prot="public" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>setVerbose</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1abd0f728365f1a6362c9ea3d1b100a79e" prot="private" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>verbose</name></member>
+      <member refid="classgeneral_1_1GestionnaireImbrications_1abbdcea78fb44d0f24603b7fa08b68890" prot="package" virt="non-virtual"><scope>general::GestionnaireImbrications</scope><name>ville</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="interfacegeneral_1_1InformateurObjet" kind="interface" language="Java" prot="public">
+    <compoundname>general::InformateurObjet</compoundname>
+    <derivedcompoundref refid="classmainCommuns_1_1FusionneurAgendaTest" prot="public" virt="non-virtual">mainCommuns.FusionneurAgendaTest</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacegeneral_1_1InformateurObjet_1a46a228beaa7f6083921c4ff0d6f33e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.InformateurObjet.getObjetFromType</definition>
+        <argsstring>(String nomTable)</argsstring>
+        <name>getObjetFromType</name>
+        <qualifiedname>general.InformateurObjet.getObjetFromType</qualifiedname>
+        <reimplementedby refid="classmainCommuns_1_1FusionneurAgendaTest_1af8fbf15f1874c665ad997b7b040961e5">getObjetFromType</reimplementedby>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/InformateurObjet.java" line="4" column="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>general.InformateurObjet</label>
+        <link refid="interfacegeneral_1_1InformateurObjet"/>
+      </node>
+      <node id="2">
+        <label>mainCommuns.FusionneurAgendaTest</label>
+        <link refid="classmainCommuns_1_1FusionneurAgendaTest"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/main/java/general/InformateurObjet.java" line="3" column="18" bodyfile="src/main/java/general/InformateurObjet.java" bodystart="3" bodyend="5"/>
+    <listofallmembers>
+      <member refid="interfacegeneral_1_1InformateurObjet_1a46a228beaa7f6083921c4ff0d6f33e96" prot="public" virt="non-virtual"><scope>general::InformateurObjet</scope><name>getObjetFromType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

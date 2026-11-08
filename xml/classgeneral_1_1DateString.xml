@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1DateString" kind="class" language="Java" prot="public">
+    <compoundname>general::DateString</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1DateString_1af70baef2b71c64f98bbd4253a6bb75c6" prot="private" static="no" mutable="no">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime general.DateString.localDateTime</definition>
+        <argsstring></argsstring>
+        <name>localDateTime</name>
+        <qualifiedname>general.DateString.localDateTime</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="8" column="27" bodyfile="src/main/java/general/DateString.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a92325b1af6432ed86839922cd32cdde9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.DateString.DateString</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>DateString</name>
+        <qualifiedname>general.DateString.DateString</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="10" column="12" bodyfile="src/main/java/general/DateString.java" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1aae572edc049329a0117593fab5ddb6c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.DateString.getLocalDate</definition>
+        <argsstring>()</argsstring>
+        <name>getLocalDate</name>
+        <qualifiedname>general.DateString.getLocalDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="137" column="22" bodyfile="src/main/java/general/DateString.java" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a616e76ebec963ae370b13ba09eee967c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime general.DateString.getLocalDateTime</definition>
+        <argsstring>()</argsstring>
+        <name>getLocalDateTime</name>
+        <qualifiedname>general.DateString.getLocalDateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="142" column="26" bodyfile="src/main/java/general/DateString.java" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1ac6fd6c521db8459273d6e219ffdd2565" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.DateString.getLocalDateTimeISO</definition>
+        <argsstring>()</argsstring>
+        <name>getLocalDateTimeISO</name>
+        <qualifiedname>general.DateString.getLocalDateTimeISO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="146" column="19" bodyfile="src/main/java/general/DateString.java" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a34221e9a04535bcec7601bfe84f51dc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.DateString.getLocalDateISO</definition>
+        <argsstring>()</argsstring>
+        <name>getLocalDateISO</name>
+        <qualifiedname>general.DateString.getLocalDateISO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="151" column="19" bodyfile="src/main/java/general/DateString.java" bodystart="151" bodyend="154"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a88377bd01a726f115e6b300c430d9664" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>static LocalDate general.DateString.getLocalDate</definition>
+        <argsstring>(Object hypoDate)</argsstring>
+        <name>getLocalDate</name>
+        <qualifiedname>general.DateString.getLocalDate</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>hypoDate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="14" column="29" bodyfile="src/main/java/general/DateString.java" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a22c19305dce12f6446bb2d45fb3c3148" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.getLocalDateTime</definition>
+        <argsstring>(Object hypoDate)</argsstring>
+        <name>getLocalDateTime</name>
+        <qualifiedname>general.DateString.getLocalDateTime</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>hypoDate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="19" column="33" bodyfile="src/main/java/general/DateString.java" bodystart="19" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a64e40f8080f183d321ee0c448798e36e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.extraire_dateTime</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>extraire_dateTime</name>
+        <qualifiedname>general.DateString.extraire_dateTime</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="23" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="23" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a0887a48e4f7f3842179c6786ae4a9aec" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.test_if_iso</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>test_if_iso</name>
+        <qualifiedname>general.DateString.test_if_iso</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="65" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="65" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1af270a297758a3c7fc1a16f3345d5a219" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.test_if_standard</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>test_if_standard</name>
+        <qualifiedname>general.DateString.test_if_standard</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="76" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="76" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a93742e1bc0071d158d2488ad6053e628" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.test_if_standard2</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>test_if_standard2</name>
+        <qualifiedname>general.DateString.test_if_standard2</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="86" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="86" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1a8d2e912e42455fce7dc17576442861a3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.test_if_frStandard</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>test_if_frStandard</name>
+        <qualifiedname>general.DateString.test_if_frStandard</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="100" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1ac874085f8605b66578b1bcaf89d9d762" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.test_if_iso_date</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>test_if_iso_date</name>
+        <qualifiedname>general.DateString.test_if_iso_date</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="109" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="109" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1ac71fb2c9e0ca75b7d47b765fce4aabc6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.test_if_standard_date</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>test_if_standard_date</name>
+        <qualifiedname>general.DateString.test_if_standard_date</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="119" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="119" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1DateString_1aca781f3a19c2f249a565f70689a79514" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>static LocalDateTime general.DateString.test_if_frStandard_date</definition>
+        <argsstring>(Object date)</argsstring>
+        <name>test_if_frStandard_date</name>
+        <qualifiedname>general.DateString.test_if_frStandard_date</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/DateString.java" line="128" column="34" bodyfile="src/main/java/general/DateString.java" bodystart="128" bodyend="135"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/DateString.java" line="7" column="7" bodyfile="src/main/java/general/DateString.java" bodystart="7" bodyend="155"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1DateString_1a92325b1af6432ed86839922cd32cdde9" prot="public" virt="non-virtual"><scope>general::DateString</scope><name>DateString</name></member>
+      <member refid="classgeneral_1_1DateString_1a64e40f8080f183d321ee0c448798e36e" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>extraire_dateTime</name></member>
+      <member refid="classgeneral_1_1DateString_1a88377bd01a726f115e6b300c430d9664" prot="public" virt="non-virtual"><scope>general::DateString</scope><name>getLocalDate</name></member>
+      <member refid="classgeneral_1_1DateString_1aae572edc049329a0117593fab5ddb6c7" prot="public" virt="non-virtual"><scope>general::DateString</scope><name>getLocalDate</name></member>
+      <member refid="classgeneral_1_1DateString_1a34221e9a04535bcec7601bfe84f51dc7" prot="public" virt="non-virtual"><scope>general::DateString</scope><name>getLocalDateISO</name></member>
+      <member refid="classgeneral_1_1DateString_1a22c19305dce12f6446bb2d45fb3c3148" prot="public" virt="non-virtual"><scope>general::DateString</scope><name>getLocalDateTime</name></member>
+      <member refid="classgeneral_1_1DateString_1a616e76ebec963ae370b13ba09eee967c" prot="public" virt="non-virtual"><scope>general::DateString</scope><name>getLocalDateTime</name></member>
+      <member refid="classgeneral_1_1DateString_1ac6fd6c521db8459273d6e219ffdd2565" prot="public" virt="non-virtual"><scope>general::DateString</scope><name>getLocalDateTimeISO</name></member>
+      <member refid="classgeneral_1_1DateString_1af70baef2b71c64f98bbd4253a6bb75c6" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>localDateTime</name></member>
+      <member refid="classgeneral_1_1DateString_1a8d2e912e42455fce7dc17576442861a3" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>test_if_frStandard</name></member>
+      <member refid="classgeneral_1_1DateString_1aca781f3a19c2f249a565f70689a79514" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>test_if_frStandard_date</name></member>
+      <member refid="classgeneral_1_1DateString_1a0887a48e4f7f3842179c6786ae4a9aec" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>test_if_iso</name></member>
+      <member refid="classgeneral_1_1DateString_1ac874085f8605b66578b1bcaf89d9d762" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>test_if_iso_date</name></member>
+      <member refid="classgeneral_1_1DateString_1af270a297758a3c7fc1a16f3345d5a219" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>test_if_standard</name></member>
+      <member refid="classgeneral_1_1DateString_1a93742e1bc0071d158d2488ad6053e628" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>test_if_standard2</name></member>
+      <member refid="classgeneral_1_1DateString_1ac71fb2c9e0ca75b7d47b765fce4aabc6" prot="private" virt="non-virtual"><scope>general::DateString</scope><name>test_if_standard_date</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

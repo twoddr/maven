@@ -1,6 +1,5 @@
 package general;
 
-
 import java.util.ArrayList;
 
 public class DetecteurModification {
@@ -15,7 +14,7 @@ public class DetecteurModification {
         listeInitiale = initiale;
         listeModifiee = modifiee;
 
-        //generer_listes();
+        // generer_listes();
         generer_listes_simplement();
     }
 
@@ -39,32 +38,34 @@ public class DetecteurModification {
         return liste.contains(o);
     }
 
-   /* private void generer_listes() {
-        Boolean plusGrand = listeInitiale.size() < listeModifiee.size();
-        Boolean memeTaille = listeInitiale.size() == listeModifiee.size();
-
-        if (memeTaille) {
-            rescapes = listeInitiale;
-        } else if (plusGrand) {
-            Integer taillePetite = listeInitiale.size();
-            for (int i = 0; i < listeModifiee.size(); i++) {
-                if (i < taillePetite) {
-                    rescapes.add(listeModifiee.get(i));
-                } else {
-                    aAjouter.add(listeModifiee.get(i));
-                }
-            }
-        } else {
-            Integer taillePetite = listeModifiee.size();
-            for (int i = 0; i < listeInitiale.size(); i++) {
-                if (i < taillePetite) {
-                    rescapes.add(listeModifiee.get(i));
-                } else {
-                    aSupprimer.add(listeInitiale.get(i));
-                }
-            }
-        }
-    }*/
+    /*
+     * private void generer_listes() {
+     * Boolean plusGrand = listeInitiale.size() < listeModifiee.size();
+     * Boolean memeTaille = listeInitiale.size() == listeModifiee.size();
+     * 
+     * if (memeTaille) {
+     * rescapes = listeInitiale;
+     * } else if (plusGrand) {
+     * Integer taillePetite = listeInitiale.size();
+     * for (int i = 0; i < listeModifiee.size(); i++) {
+     * if (i < taillePetite) {
+     * rescapes.add(listeModifiee.get(i));
+     * } else {
+     * aAjouter.add(listeModifiee.get(i));
+     * }
+     * }
+     * } else {
+     * Integer taillePetite = listeModifiee.size();
+     * for (int i = 0; i < listeInitiale.size(); i++) {
+     * if (i < taillePetite) {
+     * rescapes.add(listeModifiee.get(i));
+     * } else {
+     * aSupprimer.add(listeInitiale.get(i));
+     * }
+     * }
+     * }
+     * }
+     */
 
     public ArrayList<Object> getListeASupprimer() {
         return aSupprimer;
@@ -76,5 +77,15 @@ public class DetecteurModification {
 
     public ArrayList<Object> getListeRescapes() {
         return rescapes;
+    }
+
+    public ArrayList<Object> getListeAModifier() {
+        ArrayList<Object> modifs = new ArrayList<>();
+        rescapes.forEach((Object o) -> {
+            if (o instanceof ObjetCSA objetCSA && objetCSA.isModifie()) {
+                modifs.add(o);
+            }
+        });
+        return modifs;
     }
 }

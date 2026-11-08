@@ -19,11 +19,8 @@ public class ExtracteurPrimitif {
         if (suspect instanceof Long) {
             return ((Long) suspect).intValue();
         }
-        try {
-            return Float.parseFloat(String.valueOf(suspect));
-        } catch (NumberFormatException e) {
-            return 0;
-        }
+        Float resultat = FormatNombre.versFloat(String.valueOf(suspect));
+        return resultat == null ? 0f : resultat;
     }
 
     public static int extraire_int(Object suspect) {
@@ -38,8 +35,8 @@ public class ExtracteurPrimitif {
         }
 
         try {
-            return Integer.parseInt(String.valueOf(suspect));
-        } catch (NumberFormatException e) {
+            return Integer.parseInt(FormatNombre.normaliser(String.valueOf(suspect)));
+        } catch (NumberFormatException | NullPointerException e) {
             return 0;
         }
 
@@ -57,14 +54,14 @@ public class ExtracteurPrimitif {
         }
         if (suspect instanceof String) {
             try {
-                return Long.parseLong((String) suspect);
-            } catch (NumberFormatException e) {
+                return Long.parseLong(FormatNombre.normaliser((String) suspect));
+            } catch (NumberFormatException | NullPointerException e) {
                 return 0L;
             }
         }
         try {
-            return Long.parseLong(String.valueOf(suspect));
-        } catch (NumberFormatException e) {
+            return Long.parseLong(FormatNombre.normaliser(String.valueOf(suspect)));
+        } catch (NumberFormatException | NullPointerException e) {
             return 0;
         }
     }

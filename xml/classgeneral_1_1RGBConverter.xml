@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1RGBConverter" kind="class" language="Java" prot="public">
+    <compoundname>general::RGBConverter</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1RGBConverter_1aa5f7c730005d4ba4312f26b47dc846b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Integer</type>
+        <definition>static Integer general.RGBConverter.convert_color_2_int</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>convert_color_2_int</name>
+        <qualifiedname>general.RGBConverter.convert_color_2_int</qualifiedname>
+        <param>
+          <type>Color</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/RGBConverter.java" line="8" column="27" bodyfile="src/main/java/general/RGBConverter.java" bodystart="8" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1RGBConverter_1adfd4f98e0155a17313a12dd3706451de" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Color</type>
+        <definition>static Color general.RGBConverter.convert_int_2_color</definition>
+        <argsstring>(int couleur)</argsstring>
+        <name>convert_int_2_color</name>
+        <qualifiedname>general.RGBConverter.convert_int_2_color</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>couleur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/RGBConverter.java" line="19" column="25" bodyfile="src/main/java/general/RGBConverter.java" bodystart="19" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/RGBConverter.java" line="6" column="7" bodyfile="src/main/java/general/RGBConverter.java" bodystart="6" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1RGBConverter_1aa5f7c730005d4ba4312f26b47dc846b3" prot="public" virt="non-virtual"><scope>general::RGBConverter</scope><name>convert_color_2_int</name></member>
+      <member refid="classgeneral_1_1RGBConverter_1adfd4f98e0155a17313a12dd3706451de" prot="public" virt="non-virtual"><scope>general::RGBConverter</scope><name>convert_int_2_color</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

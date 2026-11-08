@@ -1,0 +1,1294 @@
+\doxysection{general.\+Objet\+Di Class Reference}
+\hypertarget{classgeneral_1_1ObjetDi}{}\label{classgeneral_1_1ObjetDi}\index{general.ObjetDi@{general.ObjetDi}}
+Inheritance diagram for general.\+Objet\+Di\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.642277cm]{classgeneral_1_1ObjetDi}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi_a3b7b0f7865dfffba48244a1d40484c57}{Objet\+Di}} (String type, String \mbox{\hyperlink{classgeneral_1_1ObjetDi_aa1aa4881e7ed9496be8179bd355006bf}{nom\+ID}}, String nom\+Objet)
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi_ac885b4694153adc64e9e31b8e46b624a}{Objet\+Di}} (Array\+List$<$ String $>$ noms\+Variables)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a1828cbc021106f7812488ce236a9e127}{add\+Gestionnaire}} (String nom\+Fk, \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications}{Gestionnaire\+Imbrications}} gestionnaire)
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_a4e76c6a98a07048763ac3a4188ff64b3}{get\+Objet}} (String cle)
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_a6dd698536324953839aea3de639a4408}{get\+Objet\+Intermediaire}} (String cle)
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_afd8d202f01c64d5fe44bd95967440c15}{get\+Objet\+Dependant}} (String cle)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a4f3b720645533a03346209dcb6463acc}{put\+All}} (Map$<$? extends String, ?$>$ m)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_aacc9b6e2eeca3b439398e037357cbe97}{inserer\+\_\+liste}} (String nom\+Table, Array\+List objets)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_afdbb0643b4c82cf9baade201440c160e}{ajouter\+\_\+dans\+\_\+liste}} (String nom\+Table, Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ objet\+Dis)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_afce9296ebb00a91a355baa7e119be1c5}{inserer\+\_\+fk}} (String nom\+FK, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} objet\+Di)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a9f7d8b44b2fa8bcdb9927873f4247ea2}{inserer\+\_\+dependant}} (String nom\+Table, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} objet\+Di)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a443906de370c4ca81386b842740023d0}{inserer\+\_\+valeur\+\_\+intermediaire}} (String table\+Intermediaire, String nom\+Variable, Object valeur)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a9e70f4370dcc8699ad675232d9cea3db}{inserer\+\_\+dans\+\_\+gestionnaire\+Imbrication}} (String nom\+FK, int id)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a286834e3d11c75b2d7e5deba20ae680b}{inserer\+\_\+dans\+\_\+gestionnaire\+Imbrication}} (String nom\+FK, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} objet\+Di)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a08cf47bc67b8ea5cce6fd2dc689385bb}{put\+All\+Expected}} (Map$<$? extends String, ?$>$ m)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_af9355929db1e0ee1c2eabfa3c20b4c6d}{set\+\_\+single\+\_\+data}} (String nom, Object valeur)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_aa27a2b05178cfda83863dd1367a9b3b8}{is\+Modifie}} (String nom)
+\item 
+Object \mbox{\hyperlink{classgeneral_1_1ObjetDi_a31f9e7e65a6cf03c1d51cd884197657a}{remove}} (String key)
+\item 
+final String \mbox{\hyperlink{classgeneral_1_1ObjetDi_a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a26bdc424bfb09120f36be44e621394b1}{set\+Type}} (String texte)
+\item 
+int \mbox{\hyperlink{classgeneral_1_1ObjetDi_a12bc1528c0e8fee99a32b332f859ce90}{get\+Couleur}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a8fc95efddd92b4832c1dca6b5762ede8}{set\+Couleur}} (int couleur\+Int)
+\item 
+int \mbox{\hyperlink{classgeneral_1_1ObjetDi_a6c54a0827c56e4bdd2a5f9550750ce3a}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a9af290af143437cc1fc827ce59f9a8a6}{set\+Id}} (int id\+Ext)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a16f1a41d6e8e4aea5ccd8fd3469fa58e}{is\+Parent}} ()
+\item 
+final int \mbox{\hyperlink{classgeneral_1_1ObjetDi_a3325e272d4e8849c3cc3abc18b79a26d}{get\+Id\+Parent}} ()
+\item 
+abstract \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_abc10f5f2ed0ead1a6e2c790bf9c7ddcf}{get\+Parent}} ()
+\item 
+abstract void \mbox{\hyperlink{classgeneral_1_1ObjetDi_ae59e559564bec8d6b50d4f06ab59327c}{set\+Parent}} (\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} parent)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a611e8a9ce99154d2c3115f43ff64adf1}{is\+Modifie}} ()
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_a6f3e3a2e251a49c43790cc19a0040ec6}{get\+Nom}} ()
+\item 
+final void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a0c247ae0b7c8ebc583c706c723f5bdc6}{set\+Nom}} (String name)
+\item 
+Boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_af6c4646bf216a60e213e009e1eb01c5d}{inserer\+\_\+valeur}} (String nom, Object valeur)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a7a24587a62404b8543e3aca64c7bd891}{inserer\+\_\+souplement\+\_\+valeur}} (String cle, Object valeur)
+\item 
+abstract \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_aa99cf3f8c4de7c4477c71027b8334b3c}{get\+Objet\+From\+Type}} (String nom\+Type)
+\item 
+final void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a35ba6f7671507de2096f39a9e83483ee}{clear}} ()
+\item 
+abstract void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a39bb9240c9837e3115b2a7b00cb06433}{reinitialiser}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a31b04d4fe5f2ff4688a773545f47bd63}{set\+Variable\+Class}} (String nom\+Variable, Class classe)
+\item 
+Class \mbox{\hyperlink{classgeneral_1_1ObjetDi_ac7e41fd987f64f513e6351100fa26900}{get\+Variable\+Class}} (String nom\+Variable)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a6c502465f577081ad37faf0046c4b8c1}{set\+FK}} (String nomfk, String nom\+Type)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a8122c517d5a5ae02f6812157b8994022}{set\+FKIntermediaire}} (String nom\+Type)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a4a3d5facdd9ce514d62966e11ee66569}{set\+Dependant}} (String nom\+FK, String nom\+Type)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a25567a2831eab82beb565d20f61c680d}{clear\+Sous\+Objets}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a35a78342c585a1ddce8fb9b02627312a}{delete\+Sous\+Objets}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a06087a189c8ccef31d484dabfb6faf88}{get\+Non\+Attendus}} ()
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_ae255e854aa41b83d9329897f17dc155b}{equals}} (Object o)
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a8c4cbd1740b7980a88197633cbfb5f7a}{get\+Data}} (Array\+List$<$ String $>$ nom\+Champs)
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a201746dfde1966fa6ce30107a53e240a}{get\+All\+Data}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_abfe1b190a41ad386655d74d4121d7055}{get\+Data}} ()
+\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a2a0ab29526d37729e6033dc9e0c86a39}{set\+Data}} (Hash\+Map$<$ String, Object $>$ input, final Hash\+Map$<$ String, Object $>$ hash\+Levis, boolean tout\+Prendre, boolean verbose)
+\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a9b7223c1b07586ce663298d1c614d4f1}{set\+Data\+From\+Hash\+Levis}} (Hash\+Map$<$ String, Object $>$ hash\+Levis, int id, boolean tout\+Prendre, boolean verbose)
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_afd705894affa7683a8d61368ad174779}{get\+Nom\+FK}} (String nom\+Type)
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a773603c5296e1293f87b665fe9930c25}{get\+Simple\+Data}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a3c80d25be475c8e3b1980a62b51e3903}{get\+Only\+IDs}} ()
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_ada50db2b80b7988b81a871c8bb3dbc57}{get\+Copy}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_abcbdd8d784c51914d82ef111ec5acb68}{get\+Hash\+Modifications}} (boolean stricte)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a4182d279d37fd506e1a567a44c3f6554}{set\+Modifications}} (Collection$<$ String $>$ modifs)
+\item 
+Linked\+Hash\+Set$<$ String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a777e624beb1fcd7d8e5f1b1e5ebda573}{getoms\+Mandatories}} ()
+\item 
+Linked\+Hash\+Set$<$ String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a5f581421162407637a1beea5e27f5d21}{get\+Noms\+Modifications}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a04aa1604026adc7a2d5232f04804171b}{get\+Hash\+Mandatories}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_aec6da3b01bc2b62f8b2459258f134b9b}{set\+Mandatories}} (Array\+List$<$ String $>$ obligatoires)
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_a9b13218f30ad12246acb81a5e428edd3}{to\+String}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a222d3ccf13080b223a1167a41dd28ba6}{clear\+Modifications}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_ae3efa63f65754af5f32d9c419804be75}{clear\+Mandatories}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a1b68ee5c21b4f1f29eff22347f8c82a3}{add\+Modification}} (String nom)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_ae2d87edac158b1b2c87f30430a0de49f}{remove\+Modification}} (String nom)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_ae288edc9539c54d0da7c841c2dff215d}{remove\+Mandatory}} (String nom)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_aa86727fbfa008961c04857e2d319a290}{add\+Mandatory}} (String nom)
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_aa2d9ccee631e000308f580bb0f8d1591}{get\+Public\+Name}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_ae868ac029aa7f6871719dcff37e4835c}{set\+Public\+Name}} (String public\+Name)
+\item 
+int \mbox{\hyperlink{classgeneral_1_1ObjetDi_aefc6741114ee9f329992366b594192cf}{compare\+To}} (Object o)
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_ae6a524a6d47d089b84a12a7937dd58c8}{get\+Nom\+Public}} (String name)
+\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_ab08ab8b499dbf15609cae22506e2a8cf}{get\+Variables\+Visibles}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a1876ccbc5fbf782096b31cc37f3cc289}{set\+Variables\+Visibles}} (Array\+List$<$ String $>$ visibles)
+\item 
+Linked\+Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a01fb98109f9175d082107781a441ed8f}{get\+FKs}} ()
+\item 
+Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a394410f5d78362d5bb8c0af04eef6932}{get\+FKIs}} ()
+\item 
+Hash\+Map$<$ String, Object $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a13c3b045be3e915bbd7f6762f926315d}{get\+Hash\+Listes}} ()
+\item 
+Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a3be3f7048cc0c9876a79652fe6ecdb88}{get\+Hash\+Dependants}} ()
+\item 
+Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications}{Gestionnaire\+Imbrications}} $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a73fcdb263606a5cdc355357888b443e5}{get\+Gestionnaires\+Imbrications}} ()
+\item 
+Hash\+Map$<$ String, String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a13430043faa6f6e9794d46938d9822a8}{get\+Liste\+Noms\+Publics}} ()
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a05df36a4f4bb090379ae2786be990d73}{add\+\_\+nom\+\_\+public}} (String nom\+Variable, String nom\+Public)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a783e07f8e2b64b4892ed06b6964ee73f}{add\+\_\+variable\+\_\+visible}} (String nom\+Variable)
+\item 
+Class \mbox{\hyperlink{classgeneral_1_1ObjetDi_a21addc0aebccabf2e7cecde52b564f5a}{get\+Type\+Of\+Variable}} (String nom\+Variable)
+\item 
+Object \mbox{\hyperlink{classgeneral_1_1ObjetDi_a6698fbca215239892da81c6e65cc35ee}{get\+Data}} (String nom\+Variable)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a205a992d070027f7ee3eed47e92cdedb}{variable\+\_\+existe}} (String nom\+Variable)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a3d374a4f1d0d5d32ced583d4119bb6f9}{changer\+\_\+nom\+\_\+variable}} (String ancien, String nouveau)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_a36d8849d1a65126de95e805dc23388e9}{changer\+\_\+nom\+\_\+id}} (String nouveau)
+\item 
+boolean \mbox{\hyperlink{classgeneral_1_1ObjetDi_ac65d393205b173a0067e32e33cbecafd}{changer\+\_\+nom\+\_\+nom}} (String nouveau)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a5c5351c23cedec8b4329a00ee641b168}{updater\+\_\+liste}} (String type, Hash\+Map$<$ String, Object $>$ hash\+Levis)
+\item 
+Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a5b93b50c4b24fde4784400c53bcff250}{get\+Liste}} (String nom\+Table)
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_aae36a208effa09ca2eeaa6660ae04002}{get\+Id\+Name}} ()
+\item 
+\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_a78589347be90b3359d3ee335eb292964}{get\+New\+Instance}} ()
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a5e0971df98474b4f098b5e0a51247a7d}{charger\+\_\+donnees}} (Hash\+Map$<$ String, Object $>$ input, Hash\+Map$<$ String, Object $>$ hash\+Levis)
+\item 
+Object \mbox{\hyperlink{classgeneral_1_1ObjetDi_a99264a3c2cc0c9220966ee5b0378a619}{get}} (String nom\+Variable)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} \mbox{\hyperlink{classgeneral_1_1ObjetDi_a9fa51595364c2574f814bd53f4f099e0}{creer\+\_\+objet\+\_\+vide}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a054ee03aba92c2690dad5e4f3b363de4}{initialiser}} (String nom, Object valeur)
+\item 
+void \mbox{\hyperlink{classgeneral_1_1ObjetDi_a6cf9158c3ba1bd80f26366b538688795}{initialiser\+\_\+liste}} (String nom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_a4caaf58cdfa5c9fda92b6cd329b270f8}{TYPE}}
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_a5a30c7eb98943d5870b03bc070212587}{nom\+NOM}}
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_aa1aa4881e7ed9496be8179bd355006bf}{nom\+ID}}
+\item 
+String \mbox{\hyperlink{classgeneral_1_1ObjetDi_aaa5ae83922d2f1394fb0e42ff02d871f}{COULEUR}} = "{}couleur"{}
+\item 
+Linked\+Hash\+Set$<$ String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_abbd15d1e65701c99c99961b24cd3594a}{mandatories}} = new Linked\+Hash\+Set$<$$>$()
+\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_ad9c0c5d849d5f3e937fb03664bccd35e}{variables\+Visibles}} = new Array\+List$<$$>$()
+\item 
+Hash\+Map$<$ String, String $>$ \mbox{\hyperlink{classgeneral_1_1ObjetDi_a43403e2cbc7655d89748795097025c97}{noms\+Publics}} = new Hash\+Map$<$$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgeneral_1_1ObjetDi_a3b7b0f7865dfffba48244a1d40484c57}\label{classgeneral_1_1ObjetDi_a3b7b0f7865dfffba48244a1d40484c57} 
+\index{general.ObjetDi@{general.ObjetDi}!ObjetDi@{ObjetDi}}
+\index{ObjetDi@{ObjetDi}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{ObjetDi()}{ObjetDi()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily general.\+Objet\+Di.\+Objet\+Di (\begin{DoxyParamCaption}\item[{String}]{type,  }\item[{String}]{nom\+ID,  }\item[{String}]{nom\+Objet }\end{DoxyParamCaption})}
+
+Pour créer un Objet\+Di, il faut lui donner les noms des variables nécessaires Les informations nécessaires permettent d\textquotesingle{}identifier, dans l\textquotesingle{}hashmap de données, quelles sont celles qu\textquotesingle{}on observe généralement dans une interface graphique L\textquotesingle{}id et l\textquotesingle{}id intermédiaire sont utiles lors des sélections et échanges de liste...
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & le nom de la table de l\textquotesingle{}objet représenté \\
+\hline
+{\em nom\+ID} & le nom de la variable qui stocke l\textquotesingle{}id \\
+\hline
+{\em nom\+Objet} & le nom du nom de la variable nom \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_ac885b4694153adc64e9e31b8e46b624a}\label{classgeneral_1_1ObjetDi_ac885b4694153adc64e9e31b8e46b624a} 
+\index{general.ObjetDi@{general.ObjetDi}!ObjetDi@{ObjetDi}}
+\index{ObjetDi@{ObjetDi}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{ObjetDi()}{ObjetDi()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily general.\+Objet\+Di.\+Objet\+Di (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{noms\+Variables }\end{DoxyParamCaption})}
+
+Pour créer un Hash\+Objet, il faut lui donner les noms des variables nécessaires Les informations nécessaires permettent d\textquotesingle{}identifier, dans l\textquotesingle{}hashmap de données, quelles sont celles qu\textquotesingle{}on observe généralement dans une interface graphique L\textquotesingle{}id et l\textquotesingle{}id intermédiaire sont utiles lors des sélections et échanges de liste...
+
+
+\begin{DoxyParams}{Parameters}
+{\em noms\+Variables} & c\textquotesingle{}est la liste des noms de variables d\textquotesingle{}après l\textquotesingle{}ordre ci-\/dessous \+:
+\begin{DoxyItemize}
+\item nom\+Type le nom de la classe de l\textquotesingle{}objet représenté
+\item nom\+ID le nom de la variable qui stocke l\textquotesingle{}id
+\item nom\+Objet le nom du nom de la variable nom
+\item nom\+Couleur le nom de la variable qui contient la couleur texte
+\item nom\+IDIntermediaire le nom de l\textquotesingle{}id intermédiaire
+\item nom\+Date\+Du le nom de la variable date\+Du
+\item nom\+Date\+Au le nom de la variable date\+Au 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgeneral_1_1ObjetDi_a05df36a4f4bb090379ae2786be990d73}\label{classgeneral_1_1ObjetDi_a05df36a4f4bb090379ae2786be990d73} 
+\index{general.ObjetDi@{general.ObjetDi}!add\_nom\_public@{add\_nom\_public}}
+\index{add\_nom\_public@{add\_nom\_public}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{add\_nom\_public()}{add\_nom\_public()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+add\+\_\+nom\+\_\+public (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable,  }\item[{String}]{nom\+Public }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a783e07f8e2b64b4892ed06b6964ee73f}\label{classgeneral_1_1ObjetDi_a783e07f8e2b64b4892ed06b6964ee73f} 
+\index{general.ObjetDi@{general.ObjetDi}!add\_variable\_visible@{add\_variable\_visible}}
+\index{add\_variable\_visible@{add\_variable\_visible}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{add\_variable\_visible()}{add\_variable\_visible()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+add\+\_\+variable\+\_\+visible (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a1828cbc021106f7812488ce236a9e127}\label{classgeneral_1_1ObjetDi_a1828cbc021106f7812488ce236a9e127} 
+\index{general.ObjetDi@{general.ObjetDi}!addGestionnaire@{addGestionnaire}}
+\index{addGestionnaire@{addGestionnaire}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{addGestionnaire()}{addGestionnaire()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+add\+Gestionnaire (\begin{DoxyParamCaption}\item[{String}]{nom\+Fk,  }\item[{\mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications}{Gestionnaire\+Imbrications}}}]{gestionnaire }\end{DoxyParamCaption})}
+
+Associe un nom\+Fk de quartier à un gestionnaire d\textquotesingle{}imbrications. À partir de l\textquotesingle{}id du quartier, le gestionnaire est capable de rechercher les villes et pays pour affichage dans des combos par exemple
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Fk} & le nom du champ idquartier \\
+\hline
+{\em gestionnaire} & le gestionnaire de localités \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_aa86727fbfa008961c04857e2d319a290}\label{classgeneral_1_1ObjetDi_aa86727fbfa008961c04857e2d319a290} 
+\index{general.ObjetDi@{general.ObjetDi}!addMandatory@{addMandatory}}
+\index{addMandatory@{addMandatory}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{addMandatory()}{addMandatory()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+add\+Mandatory (\begin{DoxyParamCaption}\item[{String}]{nom }\end{DoxyParamCaption})}
+
+Rajoute une variable dont le contenu sera considéré comme obligé
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & nom de la variable modifiée \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a1b68ee5c21b4f1f29eff22347f8c82a3}\label{classgeneral_1_1ObjetDi_a1b68ee5c21b4f1f29eff22347f8c82a3} 
+\index{general.ObjetDi@{general.ObjetDi}!addModification@{addModification}}
+\index{addModification@{addModification}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{addModification()}{addModification()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+add\+Modification (\begin{DoxyParamCaption}\item[{String}]{nom }\end{DoxyParamCaption})}
+
+Rajoute une variable dont le contenu sera considéré comme modifié Si un nom\+BD est utilisé, alors il sera remplacé par le nom réel de la variable
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & nom de la variable modifiée \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_ab701c1439e6e2cbcbeaca241c91aae07}{general.\+calendrier.\+Evenement}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_afdbb0643b4c82cf9baade201440c160e}\label{classgeneral_1_1ObjetDi_afdbb0643b4c82cf9baade201440c160e} 
+\index{general.ObjetDi@{general.ObjetDi}!ajouter\_dans\_liste@{ajouter\_dans\_liste}}
+\index{ajouter\_dans\_liste@{ajouter\_dans\_liste}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{ajouter\_dans\_liste()}{ajouter\_dans\_liste()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+ajouter\+\_\+dans\+\_\+liste (\begin{DoxyParamCaption}\item[{String}]{nom\+Table,  }\item[{Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$}]{objet\+Dis }\end{DoxyParamCaption})}
+
+rajoute des éléments dans une liste stockée Attention \+: les doublons sont ignorés !
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Table} & \\
+\hline
+{\em objet\+Dis} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si tout se passe bien 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a36d8849d1a65126de95e805dc23388e9}\label{classgeneral_1_1ObjetDi_a36d8849d1a65126de95e805dc23388e9} 
+\index{general.ObjetDi@{general.ObjetDi}!changer\_nom\_id@{changer\_nom\_id}}
+\index{changer\_nom\_id@{changer\_nom\_id}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{changer\_nom\_id()}{changer\_nom\_id()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+changer\+\_\+nom\+\_\+id (\begin{DoxyParamCaption}\item[{String}]{nouveau }\end{DoxyParamCaption})}
+
+Permet de changer le nom de l\textquotesingle{}id de variable représenté par ce hash\+Objet
+
+
+\begin{DoxyParams}{Parameters}
+{\em nouveau} & c\textquotesingle{}est le nouveau nom \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}opération réussit 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_ac65d393205b173a0067e32e33cbecafd}\label{classgeneral_1_1ObjetDi_ac65d393205b173a0067e32e33cbecafd} 
+\index{general.ObjetDi@{general.ObjetDi}!changer\_nom\_nom@{changer\_nom\_nom}}
+\index{changer\_nom\_nom@{changer\_nom\_nom}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{changer\_nom\_nom()}{changer\_nom\_nom()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+changer\+\_\+nom\+\_\+nom (\begin{DoxyParamCaption}\item[{String}]{nouveau }\end{DoxyParamCaption})}
+
+Permet de changer le nom du libelle de variable représenté par ce hash\+Objet
+
+
+\begin{DoxyParams}{Parameters}
+{\em nouveau} & c\textquotesingle{}est le nouveau nom \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si l\textquotesingle{}opération réussit 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a3d374a4f1d0d5d32ced583d4119bb6f9}\label{classgeneral_1_1ObjetDi_a3d374a4f1d0d5d32ced583d4119bb6f9} 
+\index{general.ObjetDi@{general.ObjetDi}!changer\_nom\_variable@{changer\_nom\_variable}}
+\index{changer\_nom\_variable@{changer\_nom\_variable}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{changer\_nom\_variable()}{changer\_nom\_variable()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+changer\+\_\+nom\+\_\+variable (\begin{DoxyParamCaption}\item[{String}]{ancien,  }\item[{String}]{nouveau }\end{DoxyParamCaption})}
+
+Permet de modifier le nom d\textquotesingle{}une variable. Le contenu est reporté à la nouvelle variable. Il faut que l\textquotesingle{}ancien existe déjà et que le nouveau soit non vide
+
+
+\begin{DoxyParams}{Parameters}
+{\em ancien} & l\textquotesingle{}ancien nom \\
+\hline
+{\em nouveau} & le nouveau nom qui doit être non vide, sinon IGNORÉ ! \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si l\textquotesingle{}opération réussit 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1Individu_a1943bb81b6190871ca6c4877225db9d5}{general.\+Individu}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a5e0971df98474b4f098b5e0a51247a7d}\label{classgeneral_1_1ObjetDi_a5e0971df98474b4f098b5e0a51247a7d} 
+\index{general.ObjetDi@{general.ObjetDi}!charger\_donnees@{charger\_donnees}}
+\index{charger\_donnees@{charger\_donnees}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{charger\_donnees()}{charger\_donnees()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+charger\+\_\+donnees (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ String, Object $>$}]{input,  }\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a35ba6f7671507de2096f39a9e83483ee}\label{classgeneral_1_1ObjetDi_a35ba6f7671507de2096f39a9e83483ee} 
+\index{general.ObjetDi@{general.ObjetDi}!clear@{clear}}
+\index{clear@{clear}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily final void general.\+Objet\+Di.\+clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Permet de faire appel au clear des hashmaps, puis recharge les variables nécessaires à tout hashobjet \Hypertarget{classgeneral_1_1ObjetDi_ae3efa63f65754af5f32d9c419804be75}\label{classgeneral_1_1ObjetDi_ae3efa63f65754af5f32d9c419804be75} 
+\index{general.ObjetDi@{general.ObjetDi}!clearMandatories@{clearMandatories}}
+\index{clearMandatories@{clearMandatories}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{clearMandatories()}{clearMandatories()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+clear\+Mandatories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a222d3ccf13080b223a1167a41dd28ba6}\label{classgeneral_1_1ObjetDi_a222d3ccf13080b223a1167a41dd28ba6} 
+\index{general.ObjetDi@{general.ObjetDi}!clearModifications@{clearModifications}}
+\index{clearModifications@{clearModifications}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{clearModifications()}{clearModifications()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+clear\+Modifications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a25567a2831eab82beb565d20f61c680d}\label{classgeneral_1_1ObjetDi_a25567a2831eab82beb565d20f61c680d} 
+\index{general.ObjetDi@{general.ObjetDi}!clearSousObjets@{clearSousObjets}}
+\index{clearSousObjets@{clearSousObjets}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{clearSousObjets()}{clearSousObjets()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+clear\+Sous\+Objets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Réinitialise tous les sous-\/objets \Hypertarget{classgeneral_1_1ObjetDi_aefc6741114ee9f329992366b594192cf}\label{classgeneral_1_1ObjetDi_aefc6741114ee9f329992366b594192cf} 
+\index{general.ObjetDi@{general.ObjetDi}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily int general.\+Objet\+Di.\+compare\+To (\begin{DoxyParamCaption}\item[{Object}]{o }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a5be2a56fa6ec9812c0988f9cbdd9414d}{general.\+calendrier.\+Evenement}}, and \mbox{\hyperlink{classgeneral_1_1Individu_acc5da514793b0a294a667cc5f680e2bf}{general.\+Individu}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a9fa51595364c2574f814bd53f4f099e0}\label{classgeneral_1_1ObjetDi_a9fa51595364c2574f814bd53f4f099e0} 
+\index{general.ObjetDi@{general.ObjetDi}!creer\_objet\_vide@{creer\_objet\_vide}}
+\index{creer\_objet\_vide@{creer\_objet\_vide}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{creer\_objet\_vide()}{creer\_objet\_vide()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+creer\+\_\+objet\+\_\+vide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a35a78342c585a1ddce8fb9b02627312a}\label{classgeneral_1_1ObjetDi_a35a78342c585a1ddce8fb9b02627312a} 
+\index{general.ObjetDi@{general.ObjetDi}!deleteSousObjets@{deleteSousObjets}}
+\index{deleteSousObjets@{deleteSousObjets}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{deleteSousObjets()}{deleteSousObjets()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+delete\+Sous\+Objets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Efface tous les sous-\/objets \Hypertarget{classgeneral_1_1ObjetDi_ae255e854aa41b83d9329897f17dc155b}\label{classgeneral_1_1ObjetDi_ae255e854aa41b83d9329897f17dc155b} 
+\index{general.ObjetDi@{general.ObjetDi}!equals@{equals}}
+\index{equals@{equals}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o }\end{DoxyParamCaption})}
+
+Permet de dire si deux elt\+IHM sont égaux ou pas. Les critères d\textquotesingle{}égalité sont (dans l\textquotesingle{}ordre) \+:
+\begin{DoxyItemize}
+\item le type (obligatoire)
+\item l\textquotesingle{}id (si ok, on regarde l\textquotesingle{}intermédiaire)
+\item l\textquotesingle{}id intermédiaire (ok si les deux id sont égaux)
+\item le nom, si les ids sont nuls, et les noms non-\/vides
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & l\textquotesingle{}autre elt\+IHM \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si les conditions précédentes sont vérifiées 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a4c61c5bb9fa354805e6e6f8123c62c9c}{general.\+calendrier.\+Evenement}}, and \mbox{\hyperlink{classgeneral_1_1Individu_a71a62091e00fbdeb7b6a2278a41647eb}{general.\+Individu}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a99264a3c2cc0c9220966ee5b0378a619}\label{classgeneral_1_1ObjetDi_a99264a3c2cc0c9220966ee5b0378a619} 
+\index{general.ObjetDi@{general.ObjetDi}!get@{get}}
+\index{get@{get}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Object general.\+Objet\+Di.\+get (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable }\end{DoxyParamCaption})}
+
+Donne les valeurs stockées dans les données simples et les données non-\/attendues
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Variable} & nom de variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null si pas trouvé dans hash\+Donnees ou hash\+Donnees\+Non\+Attendues 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a201746dfde1966fa6ce30107a53e240a}\label{classgeneral_1_1ObjetDi_a201746dfde1966fa6ce30107a53e240a} 
+\index{general.ObjetDi@{general.ObjetDi}!getAllData@{getAllData}}
+\index{getAllData@{getAllData}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getAllData()}{getAllData()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+All\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Donne une copie du contenu des variables par paires de (nom\+BD, data) Les noms de variable sont les noms des champs de la BD Un sous-\/élément éventuel sera également fourni sous forme de hashmap
+
+\begin{DoxyReturn}{Returns}
+une hashmap de (nom, donnée) 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_ada50db2b80b7988b81a871c8bb3dbc57}\label{classgeneral_1_1ObjetDi_ada50db2b80b7988b81a871c8bb3dbc57} 
+\index{general.ObjetDi@{general.ObjetDi}!getCopy@{getCopy}}
+\index{getCopy@{getCopy}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getCopy()}{getCopy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+get\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a12bc1528c0e8fee99a32b332f859ce90}\label{classgeneral_1_1ObjetDi_a12bc1528c0e8fee99a32b332f859ce90} 
+\index{general.ObjetDi@{general.ObjetDi}!getCouleur@{getCouleur}}
+\index{getCouleur@{getCouleur}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getCouleur()}{getCouleur()}}
+{\footnotesize\ttfamily int general.\+Objet\+Di.\+get\+Couleur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_abfe1b190a41ad386655d74d4121d7055}\label{classgeneral_1_1ObjetDi_abfe1b190a41ad386655d74d4121d7055} 
+\index{general.ObjetDi@{general.ObjetDi}!getData@{getData}}
+\index{getData@{getData}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Donne une copie du contenu des variables par paires de (nom\+BD, data) Les noms de variable sont les noms des champs de la BD Seuls les champs, les fk et la jointure intermédiaire sont fournis !
+
+\begin{DoxyReturn}{Returns}
+une hashmap de (nom, donnée) 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_aa7036d6c057c12ff2ba2489228c95270}{general.\+calendrier.\+Evenement}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a8c4cbd1740b7980a88197633cbfb5f7a}\label{classgeneral_1_1ObjetDi_a8c4cbd1740b7980a88197633cbfb5f7a} 
+\index{general.ObjetDi@{general.ObjetDi}!getData@{getData}}
+\index{getData@{getData}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Data (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{nom\+Champs }\end{DoxyParamCaption})}
+
+Donne une copie du contenu des variables par paires de (nom\+BD, data) Les noms de variable sont les noms des champs de la BD L\textquotesingle{}id de l\textquotesingle{}objet actuel est fourni systématiquement !
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Champs} & ce sont les noms dont les valeurs sont à retourner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+une hashmap de (nom, donnée) 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a6698fbca215239892da81c6e65cc35ee}\label{classgeneral_1_1ObjetDi_a6698fbca215239892da81c6e65cc35ee} 
+\index{general.ObjetDi@{general.ObjetDi}!getData@{getData}}
+\index{getData@{getData}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Object general.\+Objet\+Di.\+get\+Data (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable }\end{DoxyParamCaption})}
+
+Donne la valeur stockée dans le nom de variable rentré Si pas trouvé dans les données simples, il y a une recherche dans les fk Si toujours pas trouvé, il recherche des listes, des objet\+Di dépendants, etc...
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Variable} & c\textquotesingle{}est le nom de variable dont on veut le contenu, s\textquotesingle{}il existe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null si pas trouvé; autrement, on peut avoir un primitif, un objet\+Di ou une liste ! 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a394410f5d78362d5bb8c0af04eef6932}\label{classgeneral_1_1ObjetDi_a394410f5d78362d5bb8c0af04eef6932} 
+\index{general.ObjetDi@{general.ObjetDi}!getFKIs@{getFKIs}}
+\index{getFKIs@{getFKIs}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getFKIs()}{getFKIs()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ general.\+Objet\+Di.\+get\+FKIs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a01fb98109f9175d082107781a441ed8f}\label{classgeneral_1_1ObjetDi_a01fb98109f9175d082107781a441ed8f} 
+\index{general.ObjetDi@{general.ObjetDi}!getFKs@{getFKs}}
+\index{getFKs@{getFKs}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getFKs()}{getFKs()}}
+{\footnotesize\ttfamily Linked\+Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ general.\+Objet\+Di.\+get\+FKs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a73fcdb263606a5cdc355357888b443e5}\label{classgeneral_1_1ObjetDi_a73fcdb263606a5cdc355357888b443e5} 
+\index{general.ObjetDi@{general.ObjetDi}!getGestionnairesImbrications@{getGestionnairesImbrications}}
+\index{getGestionnairesImbrications@{getGestionnairesImbrications}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getGestionnairesImbrications()}{getGestionnairesImbrications()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1GestionnaireImbrications}{Gestionnaire\+Imbrications}} $>$ general.\+Objet\+Di.\+get\+Gestionnaires\+Imbrications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a3be3f7048cc0c9876a79652fe6ecdb88}\label{classgeneral_1_1ObjetDi_a3be3f7048cc0c9876a79652fe6ecdb88} 
+\index{general.ObjetDi@{general.ObjetDi}!getHashDependants@{getHashDependants}}
+\index{getHashDependants@{getHashDependants}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getHashDependants()}{getHashDependants()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ general.\+Objet\+Di.\+get\+Hash\+Dependants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a13c3b045be3e915bbd7f6762f926315d}\label{classgeneral_1_1ObjetDi_a13c3b045be3e915bbd7f6762f926315d} 
+\index{general.ObjetDi@{general.ObjetDi}!getHashListes@{getHashListes}}
+\index{getHashListes@{getHashListes}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getHashListes()}{getHashListes()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Hash\+Listes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a04aa1604026adc7a2d5232f04804171b}\label{classgeneral_1_1ObjetDi_a04aa1604026adc7a2d5232f04804171b} 
+\index{general.ObjetDi@{general.ObjetDi}!getHashMandatories@{getHashMandatories}}
+\index{getHashMandatories@{getHashMandatories}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getHashMandatories()}{getHashMandatories()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Hash\+Mandatories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retourne la liste des données obligatoires
+
+\begin{DoxyReturn}{Returns}
+les données toujours fournies même si pas de modification 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_abcbdd8d784c51914d82ef111ec5acb68}\label{classgeneral_1_1ObjetDi_abcbdd8d784c51914d82ef111ec5acb68} 
+\index{general.ObjetDi@{general.ObjetDi}!getHashModifications@{getHashModifications}}
+\index{getHashModifications@{getHashModifications}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getHashModifications()}{getHashModifications()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Hash\+Modifications (\begin{DoxyParamCaption}\item[{boolean}]{stricte }\end{DoxyParamCaption})}
+
+Sert à récupérer les données modifiées de l\textquotesingle{}objet courant Sous forme de paires (nom\+BD, valeur) L\textquotesingle{}ID et les champs intermédiaires sont fournis également ! Les listes internes ne sont pas fournies, les sous-\/objets non plus !
+
+
+\begin{DoxyParams}{Parameters}
+{\em stricte} & si oui, les mandatories ne sont pas fournis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+une hashmap de (nom, donnéee) correspondant aux modifications 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a860cdf0ec23279d0e44b05c8bdda09fc}{general.\+calendrier.\+Evenement}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a6c54a0827c56e4bdd2a5f9550750ce3a}\label{classgeneral_1_1ObjetDi_a6c54a0827c56e4bdd2a5f9550750ce3a} 
+\index{general.ObjetDi@{general.ObjetDi}!getId@{getId}}
+\index{getId@{getId}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int general.\+Objet\+Di.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Récupère l\textquotesingle{}ID de l\textquotesingle{}élément actuel
+
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}id pour la BD 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_aae36a208effa09ca2eeaa6660ae04002}\label{classgeneral_1_1ObjetDi_aae36a208effa09ca2eeaa6660ae04002} 
+\index{general.ObjetDi@{general.ObjetDi}!getIdName@{getIdName}}
+\index{getIdName@{getIdName}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getIdName()}{getIdName()}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+get\+Id\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a3325e272d4e8849c3cc3abc18b79a26d}\label{classgeneral_1_1ObjetDi_a3325e272d4e8849c3cc3abc18b79a26d} 
+\index{general.ObjetDi@{general.ObjetDi}!getIdParent@{getIdParent}}
+\index{getIdParent@{getIdParent}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getIdParent()}{getIdParent()}}
+{\footnotesize\ttfamily final int general.\+Objet\+Di.\+get\+Id\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Donne l\textquotesingle{}id du parent éventuel (sert pour les treeview par exemple)
+
+\begin{DoxyReturn}{Returns}
+0 sauf si la méthode get\+Parent a été overridée 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a5b93b50c4b24fde4784400c53bcff250}\label{classgeneral_1_1ObjetDi_a5b93b50c4b24fde4784400c53bcff250} 
+\index{general.ObjetDi@{general.ObjetDi}!getListe@{getListe}}
+\index{getListe@{getListe}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getListe()}{getListe()}}
+{\footnotesize\ttfamily Array\+List$<$ \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} $>$ general.\+Objet\+Di.\+get\+Liste (\begin{DoxyParamCaption}\item[{String}]{nom\+Table }\end{DoxyParamCaption})}
+
+Donne une copie de la liste contenant les éléments du type désiré
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Table} & ne nom de la variable désirée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null si ce nom-\/là ne contient pas de liste 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a13430043faa6f6e9794d46938d9822a8}\label{classgeneral_1_1ObjetDi_a13430043faa6f6e9794d46938d9822a8} 
+\index{general.ObjetDi@{general.ObjetDi}!getListeNomsPublics@{getListeNomsPublics}}
+\index{getListeNomsPublics@{getListeNomsPublics}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getListeNomsPublics()}{getListeNomsPublics()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, String $>$ general.\+Objet\+Di.\+get\+Liste\+Noms\+Publics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+renvoie une COPIE de la liste des paires (nom, nom public)
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a78589347be90b3359d3ee335eb292964}\label{classgeneral_1_1ObjetDi_a78589347be90b3359d3ee335eb292964} 
+\index{general.ObjetDi@{general.ObjetDi}!getNewInstance@{getNewInstance}}
+\index{getNewInstance@{getNewInstance}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getNewInstance()}{getNewInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+get\+New\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a6f3e3a2e251a49c43790cc19a0040ec6}\label{classgeneral_1_1ObjetDi_a6f3e3a2e251a49c43790cc19a0040ec6} 
+\index{general.ObjetDi@{general.ObjetDi}!getNom@{getNom}}
+\index{getNom@{getNom}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getNom()}{getNom()}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+get\+Nom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_afd705894affa7683a8d61368ad174779}\label{classgeneral_1_1ObjetDi_afd705894affa7683a8d61368ad174779} 
+\index{general.ObjetDi@{general.ObjetDi}!getNomFK@{getNomFK}}
+\index{getNomFK@{getNomFK}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getNomFK()}{getNomFK()}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+get\+Nom\+FK (\begin{DoxyParamCaption}\item[{String}]{nom\+Type }\end{DoxyParamCaption})}
+
+Permet de voir si l\textquotesingle{}objet actuel contient un fk du type rentré
+
+\begin{DoxyReturn}{Returns}
+null s\textquotesingle{}il ne trouve pas ou le nom\+FK du type rentré 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_ae6a524a6d47d089b84a12a7937dd58c8}\label{classgeneral_1_1ObjetDi_ae6a524a6d47d089b84a12a7937dd58c8} 
+\index{general.ObjetDi@{general.ObjetDi}!getNomPublic@{getNomPublic}}
+\index{getNomPublic@{getNomPublic}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getNomPublic()}{getNomPublic()}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+get\+Nom\+Public (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a5f581421162407637a1beea5e27f5d21}\label{classgeneral_1_1ObjetDi_a5f581421162407637a1beea5e27f5d21} 
+\index{general.ObjetDi@{general.ObjetDi}!getNomsModifications@{getNomsModifications}}
+\index{getNomsModifications@{getNomsModifications}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getNomsModifications()}{getNomsModifications()}}
+{\footnotesize\ttfamily Linked\+Hash\+Set$<$ String $>$ general.\+Objet\+Di.\+get\+Noms\+Modifications (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fournit une copie de la liste des noms des variables dont la valeur a changé
+
+\begin{DoxyReturn}{Returns}
+une copie de la liste des noms des champs modifiés 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a06087a189c8ccef31d484dabfb6faf88}\label{classgeneral_1_1ObjetDi_a06087a189c8ccef31d484dabfb6faf88} 
+\index{general.ObjetDi@{general.ObjetDi}!getNonAttendus@{getNonAttendus}}
+\index{getNonAttendus@{getNonAttendus}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getNonAttendus()}{getNonAttendus()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Non\+Attendus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+renvoie une copie de la liste des variables remplies mais non prévues dans le hashobjet
+
+\begin{DoxyReturn}{Returns}
+l\textquotesingle{}hash\+Map de données non-\/attendues mais enregistrées quand même 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a4e76c6a98a07048763ac3a4188ff64b3}\label{classgeneral_1_1ObjetDi_a4e76c6a98a07048763ac3a4188ff64b3} 
+\index{general.ObjetDi@{general.ObjetDi}!getObjet@{getObjet}}
+\index{getObjet@{getObjet}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getObjet()}{getObjet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+get\+Objet (\begin{DoxyParamCaption}\item[{String}]{cle }\end{DoxyParamCaption})}
+
+Donne l\textquotesingle{}hash\+Objet stocké à la clé rentrée
+
+
+\begin{DoxyParams}{Parameters}
+{\em cle} & nom de la variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null si un tel objet n\textquotesingle{}existe pas ! 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_afd8d202f01c64d5fe44bd95967440c15}\label{classgeneral_1_1ObjetDi_afd8d202f01c64d5fe44bd95967440c15} 
+\index{general.ObjetDi@{general.ObjetDi}!getObjetDependant@{getObjetDependant}}
+\index{getObjetDependant@{getObjetDependant}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getObjetDependant()}{getObjetDependant()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+get\+Objet\+Dependant (\begin{DoxyParamCaption}\item[{String}]{cle }\end{DoxyParamCaption})}
+
+Donne l\textquotesingle{}hash\+Objet de données brutes stocké à la clé rentrée
+
+
+\begin{DoxyParams}{Parameters}
+{\em cle} & nom de la variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null si un tel objet n\textquotesingle{}existe pas ! 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_aa99cf3f8c4de7c4477c71027b8334b3c}\label{classgeneral_1_1ObjetDi_aa99cf3f8c4de7c4477c71027b8334b3c} 
+\index{general.ObjetDi@{general.ObjetDi}!getObjetFromType@{getObjetFromType}}
+\index{getObjetFromType@{getObjetFromType}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getObjetFromType()}{getObjetFromType()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+get\+Objet\+From\+Type (\begin{DoxyParamCaption}\item[{String}]{nom\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a9aa64114645bfb6f217d2133e03d7b3f}{general.\+calendrier.\+Evenement}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a6dd698536324953839aea3de639a4408}\label{classgeneral_1_1ObjetDi_a6dd698536324953839aea3de639a4408} 
+\index{general.ObjetDi@{general.ObjetDi}!getObjetIntermediaire@{getObjetIntermediaire}}
+\index{getObjetIntermediaire@{getObjetIntermediaire}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getObjetIntermediaire()}{getObjetIntermediaire()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+get\+Objet\+Intermediaire (\begin{DoxyParamCaption}\item[{String}]{cle }\end{DoxyParamCaption})}
+
+Donne l\textquotesingle{}hash\+Objet intermédiaire stocké à la clé rentrée
+
+
+\begin{DoxyParams}{Parameters}
+{\em cle} & nom de la variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null si un tel objet n\textquotesingle{}existe pas ! 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a777e624beb1fcd7d8e5f1b1e5ebda573}\label{classgeneral_1_1ObjetDi_a777e624beb1fcd7d8e5f1b1e5ebda573} 
+\index{general.ObjetDi@{general.ObjetDi}!getomsMandatories@{getomsMandatories}}
+\index{getomsMandatories@{getomsMandatories}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getomsMandatories()}{getomsMandatories()}}
+{\footnotesize\ttfamily Linked\+Hash\+Set$<$ String $>$ general.\+Objet\+Di.\+getoms\+Mandatories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fournit une copie de la liste des noms des variables obligatoires
+
+\begin{DoxyReturn}{Returns}
+une copie de la liste des noms des champs obligatoires 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a3c80d25be475c8e3b1980a62b51e3903}\label{classgeneral_1_1ObjetDi_a3c80d25be475c8e3b1980a62b51e3903} 
+\index{general.ObjetDi@{general.ObjetDi}!getOnlyIDs@{getOnlyIDs}}
+\index{getOnlyIDs@{getOnlyIDs}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getOnlyIDs()}{getOnlyIDs()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Only\+IDs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Donne une copie du contenu des variables par paires de (nom\+BD, data) Les noms de variable sont les noms des champs de la BD Seuls les ids sont fournis ; pas les fk ni même les intermédiaires !
+
+\begin{DoxyReturn}{Returns}
+une hashmap de (nom, donnée) 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_abc10f5f2ed0ead1a6e2c790bf9c7ddcf}\label{classgeneral_1_1ObjetDi_abc10f5f2ed0ead1a6e2c790bf9c7ddcf} 
+\index{general.ObjetDi@{general.ObjetDi}!getParent@{getParent}}
+\index{getParent@{getParent}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily abstract \mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}} general.\+Objet\+Di.\+get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a09ac5d1899e1a67c963cf554f981d714}{general.\+calendrier.\+Evenement}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_aa2d9ccee631e000308f580bb0f8d1591}\label{classgeneral_1_1ObjetDi_aa2d9ccee631e000308f580bb0f8d1591} 
+\index{general.ObjetDi@{general.ObjetDi}!getPublicName@{getPublicName}}
+\index{getPublicName@{getPublicName}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getPublicName()}{getPublicName()}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+get\+Public\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a773603c5296e1293f87b665fe9930c25}\label{classgeneral_1_1ObjetDi_a773603c5296e1293f87b665fe9930c25} 
+\index{general.ObjetDi@{general.ObjetDi}!getSimpleData@{getSimpleData}}
+\index{getSimpleData@{getSimpleData}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getSimpleData()}{getSimpleData()}}
+{\footnotesize\ttfamily Hash\+Map$<$ String, Object $>$ general.\+Objet\+Di.\+get\+Simple\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Donne une copie du contenu des variables par paires de (nom\+BD, data) Les noms de variable sont les noms des champs de la BD Seuls les champs sont fournis ; pas les fk ni même les intermédiaires !
+
+\begin{DoxyReturn}{Returns}
+une hashmap de (nom, donnée) 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0}\label{classgeneral_1_1ObjetDi_a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0} 
+\index{general.ObjetDi@{general.ObjetDi}!getType@{getType}}
+\index{getType@{getType}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily final String general.\+Objet\+Di.\+get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a21addc0aebccabf2e7cecde52b564f5a}\label{classgeneral_1_1ObjetDi_a21addc0aebccabf2e7cecde52b564f5a} 
+\index{general.ObjetDi@{general.ObjetDi}!getTypeOfVariable@{getTypeOfVariable}}
+\index{getTypeOfVariable@{getTypeOfVariable}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getTypeOfVariable()}{getTypeOfVariable()}}
+{\footnotesize\ttfamily Class general.\+Objet\+Di.\+get\+Type\+Of\+Variable (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_ac7e41fd987f64f513e6351100fa26900}\label{classgeneral_1_1ObjetDi_ac7e41fd987f64f513e6351100fa26900} 
+\index{general.ObjetDi@{general.ObjetDi}!getVariableClass@{getVariableClass}}
+\index{getVariableClass@{getVariableClass}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getVariableClass()}{getVariableClass()}}
+{\footnotesize\ttfamily Class general.\+Objet\+Di.\+get\+Variable\+Class (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_ab08ab8b499dbf15609cae22506e2a8cf}\label{classgeneral_1_1ObjetDi_ab08ab8b499dbf15609cae22506e2a8cf} 
+\index{general.ObjetDi@{general.ObjetDi}!getVariablesVisibles@{getVariablesVisibles}}
+\index{getVariablesVisibles@{getVariablesVisibles}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{getVariablesVisibles()}{getVariablesVisibles()}}
+{\footnotesize\ttfamily Array\+List$<$ String $>$ general.\+Objet\+Di.\+get\+Variables\+Visibles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+renvoie une COPIE de la liste des variables à afficher
+
+\begin{DoxyReturn}{Returns}
+une copie des variables visibles 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a054ee03aba92c2690dad5e4f3b363de4}\label{classgeneral_1_1ObjetDi_a054ee03aba92c2690dad5e4f3b363de4} 
+\index{general.ObjetDi@{general.ObjetDi}!initialiser@{initialiser}}
+\index{initialiser@{initialiser}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{initialiser()}{initialiser()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+initialiser (\begin{DoxyParamCaption}\item[{String}]{nom,  }\item[{Object}]{valeur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cette méthode permet d\textquotesingle{}initialiser/reinitialiser les variables
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & le nom de la variable ; ne peut être vide \\
+\hline
+{\em valeur} & la valeur à insérer; ne peut être null \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a6cf9158c3ba1bd80f26366b538688795}\label{classgeneral_1_1ObjetDi_a6cf9158c3ba1bd80f26366b538688795} 
+\index{general.ObjetDi@{general.ObjetDi}!initialiser\_liste@{initialiser\_liste}}
+\index{initialiser\_liste@{initialiser\_liste}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{initialiser\_liste()}{initialiser\_liste()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+initialiser\+\_\+liste (\begin{DoxyParamCaption}\item[{String}]{nom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cette méthode permet d\textquotesingle{}initialiser/reinitialiser les listes
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & le nom de la variable ; ne peut être vide \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a9e70f4370dcc8699ad675232d9cea3db}\label{classgeneral_1_1ObjetDi_a9e70f4370dcc8699ad675232d9cea3db} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_dans\_gestionnaireImbrication@{inserer\_dans\_gestionnaireImbrication}}
+\index{inserer\_dans\_gestionnaireImbrication@{inserer\_dans\_gestionnaireImbrication}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_dans\_gestionnaireImbrication()}{inserer\_dans\_gestionnaireImbrication()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+inserer\+\_\+dans\+\_\+gestionnaire\+Imbrication (\begin{DoxyParamCaption}\item[{String}]{nom\+FK,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a286834e3d11c75b2d7e5deba20ae680b}\label{classgeneral_1_1ObjetDi_a286834e3d11c75b2d7e5deba20ae680b} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_dans\_gestionnaireImbrication@{inserer\_dans\_gestionnaireImbrication}}
+\index{inserer\_dans\_gestionnaireImbrication@{inserer\_dans\_gestionnaireImbrication}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_dans\_gestionnaireImbrication()}{inserer\_dans\_gestionnaireImbrication()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+inserer\+\_\+dans\+\_\+gestionnaire\+Imbrication (\begin{DoxyParamCaption}\item[{String}]{nom\+FK,  }\item[{\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}}}]{objet\+Di }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a9f7d8b44b2fa8bcdb9927873f4247ea2}\label{classgeneral_1_1ObjetDi_a9f7d8b44b2fa8bcdb9927873f4247ea2} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_dependant@{inserer\_dependant}}
+\index{inserer\_dependant@{inserer\_dependant}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_dependant()}{inserer\_dependant()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+inserer\+\_\+dependant (\begin{DoxyParamCaption}\item[{String}]{nom\+Table,  }\item[{\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}}}]{objet\+Di }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_afce9296ebb00a91a355baa7e119be1c5}\label{classgeneral_1_1ObjetDi_afce9296ebb00a91a355baa7e119be1c5} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_fk@{inserer\_fk}}
+\index{inserer\_fk@{inserer\_fk}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_fk()}{inserer\_fk()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+inserer\+\_\+fk (\begin{DoxyParamCaption}\item[{String}]{nom\+FK,  }\item[{\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}}}]{objet\+Di }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_aacc9b6e2eeca3b439398e037357cbe97}\label{classgeneral_1_1ObjetDi_aacc9b6e2eeca3b439398e037357cbe97} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_liste@{inserer\_liste}}
+\index{inserer\_liste@{inserer\_liste}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_liste()}{inserer\_liste()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+inserer\+\_\+liste (\begin{DoxyParamCaption}\item[{String}]{nom\+Table,  }\item[{Array\+List}]{objets }\end{DoxyParamCaption})}
+
+Stocke la liste fournie uniquement si ce sont des objets\+Di Les non-\/objet\+Dis sont ignorés
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Table} & le type des objets\+Di \\
+\hline
+{\em objets} & liste d\textquotesingle{}objets quelconques \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si tous les objets étaient des objets\+Di et que l\textquotesingle{}enregistrement s\textquotesingle{}est bien passé 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a7a24587a62404b8543e3aca64c7bd891}\label{classgeneral_1_1ObjetDi_a7a24587a62404b8543e3aca64c7bd891} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_souplement\_valeur@{inserer\_souplement\_valeur}}
+\index{inserer\_souplement\_valeur@{inserer\_souplement\_valeur}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_souplement\_valeur()}{inserer\_souplement\_valeur()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+inserer\+\_\+souplement\+\_\+valeur (\begin{DoxyParamCaption}\item[{String}]{cle,  }\item[{Object}]{valeur }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_af6c4646bf216a60e213e009e1eb01c5d}\label{classgeneral_1_1ObjetDi_af6c4646bf216a60e213e009e1eb01c5d} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_valeur@{inserer\_valeur}}
+\index{inserer\_valeur@{inserer\_valeur}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_valeur()}{inserer\_valeur()}}
+{\footnotesize\ttfamily Boolean general.\+Objet\+Di.\+inserer\+\_\+valeur (\begin{DoxyParamCaption}\item[{String}]{nom,  }\item[{Object}]{valeur }\end{DoxyParamCaption})}
+
+Cette méthode vérifie d\textquotesingle{}abord que la valeur rentrée est du type attendu avant d\textquotesingle{}effectuer l\textquotesingle{}insertion. Autrement, c\textquotesingle{}est ignoré ! Egalement ignoré si la valeur vaut NULL Cette méthode modifie \+: hash\+Donnees et non\+Attendus
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & le nom de la variable ; ne peut être vide \\
+\hline
+{\em valeur} & la valeur à insérer; ne peut être null \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai si succès, faux sinon 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a6508f788e35013dda2f85a48da304d8a}{general.\+calendrier.\+Evenement}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a443906de370c4ca81386b842740023d0}\label{classgeneral_1_1ObjetDi_a443906de370c4ca81386b842740023d0} 
+\index{general.ObjetDi@{general.ObjetDi}!inserer\_valeur\_intermediaire@{inserer\_valeur\_intermediaire}}
+\index{inserer\_valeur\_intermediaire@{inserer\_valeur\_intermediaire}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{inserer\_valeur\_intermediaire()}{inserer\_valeur\_intermediaire()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+inserer\+\_\+valeur\+\_\+intermediaire (\begin{DoxyParamCaption}\item[{String}]{table\+Intermediaire,  }\item[{String}]{nom\+Variable,  }\item[{Object}]{valeur }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a611e8a9ce99154d2c3115f43ff64adf1}\label{classgeneral_1_1ObjetDi_a611e8a9ce99154d2c3115f43ff64adf1} 
+\index{general.ObjetDi@{general.ObjetDi}!isModifie@{isModifie}}
+\index{isModifie@{isModifie}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{isModifie()}{isModifie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+is\+Modifie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Indique si l\textquotesingle{}objet est modifié en regardant la liste des modifications
+
+\begin{DoxyReturn}{Returns}
+vrai si "{}modifications"{} n\textquotesingle{}est pas vide 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_aa27a2b05178cfda83863dd1367a9b3b8}\label{classgeneral_1_1ObjetDi_aa27a2b05178cfda83863dd1367a9b3b8} 
+\index{general.ObjetDi@{general.ObjetDi}!isModifie@{isModifie}}
+\index{isModifie@{isModifie}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{isModifie()}{isModifie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+is\+Modifie (\begin{DoxyParamCaption}\item[{String}]{nom }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a16f1a41d6e8e4aea5ccd8fd3469fa58e}\label{classgeneral_1_1ObjetDi_a16f1a41d6e8e4aea5ccd8fd3469fa58e} 
+\index{general.ObjetDi@{general.ObjetDi}!isParent@{isParent}}
+\index{isParent@{isParent}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{isParent()}{isParent()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+is\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+méthode à surdéfinir !
+
+\begin{DoxyReturn}{Returns}
+tout le temps FALSE ! 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a4f3b720645533a03346209dcb6463acc}\label{classgeneral_1_1ObjetDi_a4f3b720645533a03346209dcb6463acc} 
+\index{general.ObjetDi@{general.ObjetDi}!putAll@{putAll}}
+\index{putAll@{putAll}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{putAll()}{putAll()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+put\+All (\begin{DoxyParamCaption}\item[{Map$<$? extends String, ?$>$}]{m }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a08cf47bc67b8ea5cce6fd2dc689385bb}\label{classgeneral_1_1ObjetDi_a08cf47bc67b8ea5cce6fd2dc689385bb} 
+\index{general.ObjetDi@{general.ObjetDi}!putAllExpected@{putAllExpected}}
+\index{putAllExpected@{putAllExpected}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{putAllExpected()}{putAllExpected()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+put\+All\+Expected (\begin{DoxyParamCaption}\item[{Map$<$? extends String, ?$>$}]{m }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a39bb9240c9837e3115b2a7b00cb06433}\label{classgeneral_1_1ObjetDi_a39bb9240c9837e3115b2a7b00cb06433} 
+\index{general.ObjetDi@{general.ObjetDi}!reinitialiser@{reinitialiser}}
+\index{reinitialiser@{reinitialiser}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{reinitialiser()}{reinitialiser()}}
+{\footnotesize\ttfamily abstract void general.\+Objet\+Di.\+reinitialiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a47af5a73114a570100a6a13cce35e839}{general.\+calendrier.\+Evenement}}, and \mbox{\hyperlink{classgeneral_1_1Individu_a3507f5bb937e6c4ca2d2f95ba46f8727}{general.\+Individu}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a31f9e7e65a6cf03c1d51cd884197657a}\label{classgeneral_1_1ObjetDi_a31f9e7e65a6cf03c1d51cd884197657a} 
+\index{general.ObjetDi@{general.ObjetDi}!remove@{remove}}
+\index{remove@{remove}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily Object general.\+Objet\+Di.\+remove (\begin{DoxyParamCaption}\item[{String}]{key }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_ae288edc9539c54d0da7c841c2dff215d}\label{classgeneral_1_1ObjetDi_ae288edc9539c54d0da7c841c2dff215d} 
+\index{general.ObjetDi@{general.ObjetDi}!removeMandatory@{removeMandatory}}
+\index{removeMandatory@{removeMandatory}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{removeMandatory()}{removeMandatory()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+remove\+Mandatory (\begin{DoxyParamCaption}\item[{String}]{nom }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_ae2d87edac158b1b2c87f30430a0de49f}\label{classgeneral_1_1ObjetDi_ae2d87edac158b1b2c87f30430a0de49f} 
+\index{general.ObjetDi@{general.ObjetDi}!removeModification@{removeModification}}
+\index{removeModification@{removeModification}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{removeModification()}{removeModification()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+remove\+Modification (\begin{DoxyParamCaption}\item[{String}]{nom }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_af9355929db1e0ee1c2eabfa3c20b4c6d}\label{classgeneral_1_1ObjetDi_af9355929db1e0ee1c2eabfa3c20b4c6d} 
+\index{general.ObjetDi@{general.ObjetDi}!set\_single\_data@{set\_single\_data}}
+\index{set\_single\_data@{set\_single\_data}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{set\_single\_data()}{set\_single\_data()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+set\+\_\+single\+\_\+data (\begin{DoxyParamCaption}\item[{String}]{nom,  }\item[{Object}]{valeur }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a8fc95efddd92b4832c1dca6b5762ede8}\label{classgeneral_1_1ObjetDi_a8fc95efddd92b4832c1dca6b5762ede8} 
+\index{general.ObjetDi@{general.ObjetDi}!setCouleur@{setCouleur}}
+\index{setCouleur@{setCouleur}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setCouleur()}{setCouleur()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Couleur (\begin{DoxyParamCaption}\item[{int}]{couleur\+Int }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a2a0ab29526d37729e6033dc9e0c86a39}\label{classgeneral_1_1ObjetDi_a2a0ab29526d37729e6033dc9e0c86a39} 
+\index{general.ObjetDi@{general.ObjetDi}!setData@{setData}}
+\index{setData@{setData}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily Array\+List$<$ String $>$ general.\+Objet\+Di.\+set\+Data (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ String, Object $>$}]{input,  }\item[{final Hash\+Map$<$ String, Object $>$}]{hash\+Levis,  }\item[{boolean}]{tout\+Prendre,  }\item[{boolean}]{verbose }\end{DoxyParamCaption})}
+
+Permet de charger les variables àpd\textquotesingle{}une liste de (nom, donnée). Si une variable attendue doit être modifiée alors que le type n\textquotesingle{}est pas bon, cette insertion sera ignorée. Si une variable nouvelle apparaît, elle sera rajoutée à la liste des variables. Seront affectés \+: hash\+Donnees, hash\+FKIntermediaire et hash\+FK. Il vaut mieux vérifier le contenu de l\textquotesingle{}objet après cette opération.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & l\textquotesingle{}hashmap de données à rentrer comme variables \\
+\hline
+{\em tout\+Prendre} & si oui, même les données non attendues sont prises \\
+\hline
+{\em hash\+Levis} & C\textquotesingle{}est la liste de détails selon la structure csa-\/soft \\
+\hline
+{\em verbose} & On affiche des commentaires ? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la liste des noms qui ont trouvé preneur 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a9b7223c1b07586ce663298d1c614d4f1}\label{classgeneral_1_1ObjetDi_a9b7223c1b07586ce663298d1c614d4f1} 
+\index{general.ObjetDi@{general.ObjetDi}!setDataFromHashLevis@{setDataFromHashLevis}}
+\index{setDataFromHashLevis@{setDataFromHashLevis}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setDataFromHashLevis()}{setDataFromHashLevis()}}
+{\footnotesize\ttfamily Array\+List$<$ String $>$ general.\+Objet\+Di.\+set\+Data\+From\+Hash\+Levis (\begin{DoxyParamCaption}\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis,  }\item[{int}]{id,  }\item[{boolean}]{tout\+Prendre,  }\item[{boolean}]{verbose }\end{DoxyParamCaption})}
+
+Permet de charger les variables àpd\textquotesingle{}une liste de (nom, donnée). Si une variable attendue doit être modifiée alors que le type n\textquotesingle{}est pas bon, cette insertion sera ignorée. Si une variable nouvelle apparaît, elle sera rajoutée à la liste des variables. Seront affectés \+: hash\+Donnees, hash\+FKIntermediaire et hash\+FK. Il vaut mieux vérifier le contenu de l\textquotesingle{}objet après cette opération.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tout\+Prendre} & si oui, même les données non attendues sont prises \\
+\hline
+{\em hash\+Levis} & C\textquotesingle{}est la liste de détails selon la structure csa-\/soft \\
+\hline
+{\em verbose} & On affiche des commentaires ? \\
+\hline
+{\em id} & c\textquotesingle{}est l\textquotesingle{}id du détail à chercher dans la hash\+Levis. La clé de recherche sera ce\+Type-\/id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la liste des noms qui ont trouvé preneur 
+\end{DoxyReturn}
+\Hypertarget{classgeneral_1_1ObjetDi_a4a3d5facdd9ce514d62966e11ee66569}\label{classgeneral_1_1ObjetDi_a4a3d5facdd9ce514d62966e11ee66569} 
+\index{general.ObjetDi@{general.ObjetDi}!setDependant@{setDependant}}
+\index{setDependant@{setDependant}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setDependant()}{setDependant()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Dependant (\begin{DoxyParamCaption}\item[{String}]{nom\+FK,  }\item[{String}]{nom\+Type }\end{DoxyParamCaption})}
+
+Cette méthode permet d\textquotesingle{}informer de la présence d\textquotesingle{}un sous-\/objet qui ne peut être instancié ici, car dépend de l\textquotesingle{}objet actuel.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Type} & le nom du type de variable dont à créer plus tard \\
+\hline
+{\em nom\+FK} & le nom de la variable dans l\textquotesingle{}objet parent \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a6c502465f577081ad37faf0046c4b8c1}\label{classgeneral_1_1ObjetDi_a6c502465f577081ad37faf0046c4b8c1} 
+\index{general.ObjetDi@{general.ObjetDi}!setFK@{setFK}}
+\index{setFK@{setFK}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setFK()}{setFK()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+FK (\begin{DoxyParamCaption}\item[{String}]{nomfk,  }\item[{String}]{nom\+Type }\end{DoxyParamCaption})}
+
+Cette méthode permet d\textquotesingle{}informer de la présence d\textquotesingle{}un sous-\/objet identifié par son fk
+
+
+\begin{DoxyParams}{Parameters}
+{\em nomfk} & le nom de la fk ; ne peut être vide \\
+\hline
+{\em nom\+Type} & le nom du type de variable dont l\textquotesingle{}id est le fk \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a8122c517d5a5ae02f6812157b8994022}\label{classgeneral_1_1ObjetDi_a8122c517d5a5ae02f6812157b8994022} 
+\index{general.ObjetDi@{general.ObjetDi}!setFKIntermediaire@{setFKIntermediaire}}
+\index{setFKIntermediaire@{setFKIntermediaire}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setFKIntermediaire()}{setFKIntermediaire()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+FKIntermediaire (\begin{DoxyParamCaption}\item[{String}]{nom\+Type }\end{DoxyParamCaption})}
+
+Cette méthode permet d\textquotesingle{}informer de la présence d\textquotesingle{}un sous-\/objet qui provient d\textquotesingle{}une table intermédiaire. Cet objet est complet lorque le sous-\/objet intermediaire est également fourni !
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Type} & le nom du type de variable dont l\textquotesingle{}id est le fk \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a9af290af143437cc1fc827ce59f9a8a6}\label{classgeneral_1_1ObjetDi_a9af290af143437cc1fc827ce59f9a8a6} 
+\index{general.ObjetDi@{general.ObjetDi}!setId@{setId}}
+\index{setId@{setId}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Id (\begin{DoxyParamCaption}\item[{int}]{id\+Ext }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_aec6da3b01bc2b62f8b2459258f134b9b}\label{classgeneral_1_1ObjetDi_aec6da3b01bc2b62f8b2459258f134b9b} 
+\index{general.ObjetDi@{general.ObjetDi}!setMandatories@{setMandatories}}
+\index{setMandatories@{setMandatories}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setMandatories()}{setMandatories()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Mandatories (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{obligatoires }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a4182d279d37fd506e1a567a44c3f6554}\label{classgeneral_1_1ObjetDi_a4182d279d37fd506e1a567a44c3f6554} 
+\index{general.ObjetDi@{general.ObjetDi}!setModifications@{setModifications}}
+\index{setModifications@{setModifications}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setModifications()}{setModifications()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Modifications (\begin{DoxyParamCaption}\item[{Collection$<$ String $>$}]{modifs }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a0c247ae0b7c8ebc583c706c723f5bdc6}\label{classgeneral_1_1ObjetDi_a0c247ae0b7c8ebc583c706c723f5bdc6} 
+\index{general.ObjetDi@{general.ObjetDi}!setNom@{setNom}}
+\index{setNom@{setNom}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setNom()}{setNom()}}
+{\footnotesize\ttfamily final void general.\+Objet\+Di.\+set\+Nom (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_ae59e559564bec8d6b50d4f06ab59327c}\label{classgeneral_1_1ObjetDi_ae59e559564bec8d6b50d4f06ab59327c} 
+\index{general.ObjetDi@{general.ObjetDi}!setParent@{setParent}}
+\index{setParent@{setParent}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setParent()}{setParent()}}
+{\footnotesize\ttfamily abstract void general.\+Objet\+Di.\+set\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgeneral_1_1ObjetDi}{Objet\+Di}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a5fd8156eaf6af02533608aa7e72c3513}{general.\+calendrier.\+Evenement}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_ae868ac029aa7f6871719dcff37e4835c}\label{classgeneral_1_1ObjetDi_ae868ac029aa7f6871719dcff37e4835c} 
+\index{general.ObjetDi@{general.ObjetDi}!setPublicName@{setPublicName}}
+\index{setPublicName@{setPublicName}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setPublicName()}{setPublicName()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Public\+Name (\begin{DoxyParamCaption}\item[{String}]{public\+Name }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a26bdc424bfb09120f36be44e621394b1}\label{classgeneral_1_1ObjetDi_a26bdc424bfb09120f36be44e621394b1} 
+\index{general.ObjetDi@{general.ObjetDi}!setType@{setType}}
+\index{setType@{setType}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Type (\begin{DoxyParamCaption}\item[{String}]{texte }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a31b04d4fe5f2ff4688a773545f47bd63}\label{classgeneral_1_1ObjetDi_a31b04d4fe5f2ff4688a773545f47bd63} 
+\index{general.ObjetDi@{general.ObjetDi}!setVariableClass@{setVariableClass}}
+\index{setVariableClass@{setVariableClass}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setVariableClass()}{setVariableClass()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Variable\+Class (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable,  }\item[{Class}]{classe }\end{DoxyParamCaption})}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a1876ccbc5fbf782096b31cc37f3cc289}\label{classgeneral_1_1ObjetDi_a1876ccbc5fbf782096b31cc37f3cc289} 
+\index{general.ObjetDi@{general.ObjetDi}!setVariablesVisibles@{setVariablesVisibles}}
+\index{setVariablesVisibles@{setVariablesVisibles}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{setVariablesVisibles()}{setVariablesVisibles()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+set\+Variables\+Visibles (\begin{DoxyParamCaption}\item[{Array\+List$<$ String $>$}]{visibles }\end{DoxyParamCaption})}
+
+Créé une liste de variables visibles. Attention \+: un filtre est effectué par rapport aux variables existantes
+
+
+\begin{DoxyParams}{Parameters}
+{\em visibles} & la liste de variables à rendre visibles \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a9b13218f30ad12246acb81a5e428edd3}\label{classgeneral_1_1ObjetDi_a9b13218f30ad12246acb81a5e428edd3} 
+\index{general.ObjetDi@{general.ObjetDi}!toString@{toString}}
+\index{toString@{toString}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Evenement_a0f10c146d2371c29150558a01a1a7c2a}{general.\+calendrier.\+Evenement}}, \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Indisponibilite_a8db2471a76661101267122a54eb92595}{general.\+calendrier.\+Indisponibilite}}, \mbox{\hyperlink{classgeneral_1_1calendrier_1_1Trou_a874ae92baf97a751a1734f84c2c07288}{general.\+calendrier.\+Trou}}, and \mbox{\hyperlink{classgeneral_1_1Individu_acbd4652de3f36869478950d0c36372e6}{general.\+Individu}}.
+
+\Hypertarget{classgeneral_1_1ObjetDi_a5c5351c23cedec8b4329a00ee641b168}\label{classgeneral_1_1ObjetDi_a5c5351c23cedec8b4329a00ee641b168} 
+\index{general.ObjetDi@{general.ObjetDi}!updater\_liste@{updater\_liste}}
+\index{updater\_liste@{updater\_liste}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{updater\_liste()}{updater\_liste()}}
+{\footnotesize\ttfamily void general.\+Objet\+Di.\+updater\+\_\+liste (\begin{DoxyParamCaption}\item[{String}]{type,  }\item[{Hash\+Map$<$ String, Object $>$}]{hash\+Levis }\end{DoxyParamCaption})}
+
+Permet de mettre à jour une liste à partir d\textquotesingle{}une hash\+Levis de détails
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & le type de la liste \\
+\hline
+{\em hash\+Levis} & liste de Levis \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgeneral_1_1ObjetDi_a205a992d070027f7ee3eed47e92cdedb}\label{classgeneral_1_1ObjetDi_a205a992d070027f7ee3eed47e92cdedb} 
+\index{general.ObjetDi@{general.ObjetDi}!variable\_existe@{variable\_existe}}
+\index{variable\_existe@{variable\_existe}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{variable\_existe()}{variable\_existe()}}
+{\footnotesize\ttfamily boolean general.\+Objet\+Di.\+variable\+\_\+existe (\begin{DoxyParamCaption}\item[{String}]{nom\+Variable }\end{DoxyParamCaption})}
+
+Indique si le nom de variable est connu dans cet objet\+Di
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom\+Variable} & c\textquotesingle{}est le nom de variable dont on veut le contenu, s\textquotesingle{}il existe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+si trouvé une telle variable dans les variables et sous-\/objets 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgeneral_1_1ObjetDi_aaa5ae83922d2f1394fb0e42ff02d871f}\label{classgeneral_1_1ObjetDi_aaa5ae83922d2f1394fb0e42ff02d871f} 
+\index{general.ObjetDi@{general.ObjetDi}!COULEUR@{COULEUR}}
+\index{COULEUR@{COULEUR}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{COULEUR}{COULEUR}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+COULEUR = "{}couleur"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1ObjetDi_abbd15d1e65701c99c99961b24cd3594a}\label{classgeneral_1_1ObjetDi_abbd15d1e65701c99c99961b24cd3594a} 
+\index{general.ObjetDi@{general.ObjetDi}!mandatories@{mandatories}}
+\index{mandatories@{mandatories}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{mandatories}{mandatories}}
+{\footnotesize\ttfamily Linked\+Hash\+Set$<$String$>$ general.\+Objet\+Di.\+mandatories = new Linked\+Hash\+Set$<$$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1ObjetDi_aa1aa4881e7ed9496be8179bd355006bf}\label{classgeneral_1_1ObjetDi_aa1aa4881e7ed9496be8179bd355006bf} 
+\index{general.ObjetDi@{general.ObjetDi}!nomID@{nomID}}
+\index{nomID@{nomID}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{nomID}{nomID}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+nom\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a5a30c7eb98943d5870b03bc070212587}\label{classgeneral_1_1ObjetDi_a5a30c7eb98943d5870b03bc070212587} 
+\index{general.ObjetDi@{general.ObjetDi}!nomNOM@{nomNOM}}
+\index{nomNOM@{nomNOM}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{nomNOM}{nomNOM}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+nom\+NOM\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a43403e2cbc7655d89748795097025c97}\label{classgeneral_1_1ObjetDi_a43403e2cbc7655d89748795097025c97} 
+\index{general.ObjetDi@{general.ObjetDi}!nomsPublics@{nomsPublics}}
+\index{nomsPublics@{nomsPublics}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{nomsPublics}{nomsPublics}}
+{\footnotesize\ttfamily Hash\+Map$<$String, String$>$ general.\+Objet\+Di.\+noms\+Publics = new Hash\+Map$<$$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1ObjetDi_a4caaf58cdfa5c9fda92b6cd329b270f8}\label{classgeneral_1_1ObjetDi_a4caaf58cdfa5c9fda92b6cd329b270f8} 
+\index{general.ObjetDi@{general.ObjetDi}!TYPE@{TYPE}}
+\index{TYPE@{TYPE}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{TYPE}{TYPE}}
+{\footnotesize\ttfamily String general.\+Objet\+Di.\+TYPE\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classgeneral_1_1ObjetDi_ad9c0c5d849d5f3e937fb03664bccd35e}\label{classgeneral_1_1ObjetDi_ad9c0c5d849d5f3e937fb03664bccd35e} 
+\index{general.ObjetDi@{general.ObjetDi}!variablesVisibles@{variablesVisibles}}
+\index{variablesVisibles@{variablesVisibles}!general.ObjetDi@{general.ObjetDi}}
+\doxysubsubsection{\texorpdfstring{variablesVisibles}{variablesVisibles}}
+{\footnotesize\ttfamily Array\+List$<$String$>$ general.\+Objet\+Di.\+variables\+Visibles = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/general/\mbox{\hyperlink{ObjetDi_8java}{Objet\+Di.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1AfficheurArborescence" kind="class" language="Java" prot="public">
+    <compoundname>general::AfficheurArborescence</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1AfficheurArborescence_1a01200bb92a3aa8ba96583c72c0d0797c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.AfficheurArborescence.afficher</definition>
+        <argsstring>(ArrayList&lt;? extends ObjetDi &gt; objetDis, String espace)</argsstring>
+        <name>afficher</name>
+        <qualifiedname>general.AfficheurArborescence.afficher</qualifiedname>
+        <param>
+          <type>ArrayList&lt;? extends <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+          <declname>objetDis</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>espace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AfficheurArborescence.java" line="6" column="26" bodyfile="src/main/java/general/AfficheurArborescence.java" bodystart="6" bodyend="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgeneral_1_1AfficheurArborescence_1aa7a05ac63e66cebaaebf7291ae96d61f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt;? extends <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>static ArrayList&lt;? extends ObjetDi &gt; general.AfficheurArborescence.extraire_parents</definition>
+        <argsstring>(ArrayList&lt;? extends ObjetDi &gt; reducedList, int idParent)</argsstring>
+        <name>extraire_parents</name>
+        <qualifiedname>general.AfficheurArborescence.extraire_parents</qualifiedname>
+        <param>
+          <type>ArrayList&lt;? extends <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+          <declname>reducedList</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idParent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AfficheurArborescence.java" line="18" column="30" bodyfile="src/main/java/general/AfficheurArborescence.java" bodystart="18" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/AfficheurArborescence.java" line="5" column="7" bodyfile="src/main/java/general/AfficheurArborescence.java" bodystart="5" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1AfficheurArborescence_1a01200bb92a3aa8ba96583c72c0d0797c" prot="public" virt="non-virtual"><scope>general::AfficheurArborescence</scope><name>afficher</name></member>
+      <member refid="classgeneral_1_1AfficheurArborescence_1aa7a05ac63e66cebaaebf7291ae96d61f" prot="private" virt="non-virtual"><scope>general::AfficheurArborescence</scope><name>extraire_parents</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

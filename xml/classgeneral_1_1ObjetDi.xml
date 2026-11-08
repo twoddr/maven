@@ -1,0 +1,3176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1ObjetDi" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>general::ObjetDi</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Comparable</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">Serializable</basecompoundref>
+    <derivedcompoundref refid="classgeneral_1_1Individu" prot="public" virt="non-virtual">general.Individu</derivedcompoundref>
+    <derivedcompoundref refid="classgeneral_1_1calendrier_1_1Evenement" prot="public" virt="non-virtual">general.calendrier.Evenement</derivedcompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a0b1b911533d165037ae98b6cb2e28024" prot="private" static="no" mutable="no">
+        <type>final LinkedHashMap&lt; String, <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>final LinkedHashMap&lt;String, ObjetDi&gt; general.ObjetDi.hashFKs</definition>
+        <argsstring></argsstring>
+        <name>hashFKs</name>
+        <qualifiedname>general.ObjetDi.hashFKs</qualifiedname>
+        <initializer>= new LinkedHashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="15" column="33" bodyfile="src/main/java/general/ObjetDi.java" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a608dc44cabc8add7e996529b540ba1b1" prot="private" static="no" mutable="no">
+        <type>final LinkedHashMap&lt; String, <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>final LinkedHashMap&lt;String, ObjetDi&gt; general.ObjetDi.hashFKIntermediaire</definition>
+        <argsstring></argsstring>
+        <name>hashFKIntermediaire</name>
+        <qualifiedname>general.ObjetDi.hashFKIntermediaire</qualifiedname>
+        <initializer>= new LinkedHashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="16" column="13" bodyfile="src/main/java/general/ObjetDi.java" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a9fd4fcdb07a86bec531c37df57758a1e" prot="private" static="no" mutable="no">
+        <type>final HashMap&lt; String, <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>final HashMap&lt;String, ObjetDi&gt; general.ObjetDi.hashDependants</definition>
+        <argsstring></argsstring>
+        <name>hashDependants</name>
+        <qualifiedname>general.ObjetDi.hashDependants</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ce sont les sous-objets qui contiennent l&apos;objet courant comme sous-objet </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="20" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a216cb072a88539066bec1d542b021973" prot="private" static="no" mutable="no">
+        <type>final HashMap&lt; String, String &gt;</type>
+        <definition>final HashMap&lt;String, String&gt; general.ObjetDi.paires_NomsTables_NomsSpeciaux</definition>
+        <argsstring></argsstring>
+        <name>paires_NomsTables_NomsSpeciaux</name>
+        <qualifiedname>general.ObjetDi.paires_NomsTables_NomsSpeciaux</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="21" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a27589d3144fe16018d9b2ac24fac0a25" prot="private" static="no" mutable="no">
+        <type>final HashMap&lt; String, Object &gt;</type>
+        <definition>final HashMap&lt;String, Object&gt; general.ObjetDi.hashDonnees</definition>
+        <argsstring></argsstring>
+        <name>hashDonnees</name>
+        <qualifiedname>general.ObjetDi.hashDonnees</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="22" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a4aca20d2c557710f30d5b379591e53cd" prot="private" static="no" mutable="no">
+        <type>final HashMap&lt; String, Class &gt;</type>
+        <definition>final HashMap&lt;String, Class&gt; general.ObjetDi.hashClassesDonnees</definition>
+        <argsstring></argsstring>
+        <name>hashClassesDonnees</name>
+        <qualifiedname>general.ObjetDi.hashClassesDonnees</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ceci est indispensable si on veut avoir des données null mais garder le type !<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="28" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1aeb114c5ba48c852e22c21ecb72b108da" prot="private" static="no" mutable="no">
+        <type>final HashMap&lt; String, Object &gt;</type>
+        <definition>final HashMap&lt;String, Object&gt; general.ObjetDi.hashDonneesNonAttendues</definition>
+        <argsstring></argsstring>
+        <name>hashDonneesNonAttendues</name>
+        <qualifiedname>general.ObjetDi.hashDonneesNonAttendues</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="29" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a9d1417aa63a7fdce2e479def6f0873f1" prot="private" static="no" mutable="no">
+        <type>final HashMap&lt; String, ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt; &gt;</type>
+        <definition>final HashMap&lt;String, ArrayList&lt;ObjetDi&gt; &gt; general.ObjetDi.hashListes</definition>
+        <argsstring></argsstring>
+        <name>hashListes</name>
+        <qualifiedname>general.ObjetDi.hashListes</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="30" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a78c14cfd291b8dc561d8c660a1ebc702" prot="private" static="no" mutable="no">
+        <type>final HashMap&lt; String, <ref refid="classgeneral_1_1GestionnaireImbrications" kindref="compound">GestionnaireImbrications</ref> &gt;</type>
+        <definition>final HashMap&lt;String, GestionnaireImbrications&gt; general.ObjetDi.gestionnairesImbrications</definition>
+        <argsstring></argsstring>
+        <name>gestionnairesImbrications</name>
+        <qualifiedname>general.ObjetDi.gestionnairesImbrications</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="31" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1acc7dd0583ae413323796b92ad235ede4" prot="private" static="no" mutable="no">
+        <type>LinkedHashSet&lt; String &gt;</type>
+        <definition>LinkedHashSet&lt;String&gt; general.ObjetDi.modifications</definition>
+        <argsstring></argsstring>
+        <name>modifications</name>
+        <qualifiedname>general.ObjetDi.modifications</qualifiedname>
+        <initializer>= new LinkedHashSet&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="37" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a1895ed7b1daa179dd3fdc06174959c52" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.ObjetDi.publicName</definition>
+        <argsstring></argsstring>
+        <name>publicName</name>
+        <qualifiedname>general.ObjetDi.publicName</qualifiedname>
+        <initializer>= &quot;Objet non défini&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="38" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a4caaf58cdfa5c9fda92b6cd329b270f8" prot="protected" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.ObjetDi.TYPE</definition>
+        <argsstring></argsstring>
+        <name>TYPE</name>
+        <qualifiedname>general.ObjetDi.TYPE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="32" column="22" bodyfile="src/main/java/general/ObjetDi.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a5a30c7eb98943d5870b03bc070212587" prot="protected" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.ObjetDi.nomNOM</definition>
+        <argsstring></argsstring>
+        <name>nomNOM</name>
+        <qualifiedname>general.ObjetDi.nomNOM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="32" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1aa1aa4881e7ed9496be8179bd355006bf" prot="protected" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.ObjetDi.nomID</definition>
+        <argsstring></argsstring>
+        <name>nomID</name>
+        <qualifiedname>general.ObjetDi.nomID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="32" column="34" bodyfile="src/main/java/general/ObjetDi.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1aaa5ae83922d2f1394fb0e42ff02d871f" prot="protected" static="no" mutable="no">
+        <type>String</type>
+        <definition>String general.ObjetDi.COULEUR</definition>
+        <argsstring></argsstring>
+        <name>COULEUR</name>
+        <qualifiedname>general.ObjetDi.COULEUR</qualifiedname>
+        <initializer>= &quot;couleur&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="33" column="22" bodyfile="src/main/java/general/ObjetDi.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1abbd15d1e65701c99c99961b24cd3594a" prot="protected" static="no" mutable="no">
+        <type>LinkedHashSet&lt; String &gt;</type>
+        <definition>LinkedHashSet&lt;String&gt; general.ObjetDi.mandatories</definition>
+        <argsstring></argsstring>
+        <name>mandatories</name>
+        <qualifiedname>general.ObjetDi.mandatories</qualifiedname>
+        <initializer>= new LinkedHashSet&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="34" column="29" bodyfile="src/main/java/general/ObjetDi.java" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1ad9c0c5d849d5f3e937fb03664bccd35e" prot="protected" static="no" mutable="no">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>ArrayList&lt;String&gt; general.ObjetDi.variablesVisibles</definition>
+        <argsstring></argsstring>
+        <name>variablesVisibles</name>
+        <qualifiedname>general.ObjetDi.variablesVisibles</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="35" column="25" bodyfile="src/main/java/general/ObjetDi.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1ObjetDi_1a43403e2cbc7655d89748795097025c97" prot="protected" static="no" mutable="no">
+        <type>HashMap&lt; String, String &gt;</type>
+        <definition>HashMap&lt;String, String&gt; general.ObjetDi.nomsPublics</definition>
+        <argsstring></argsstring>
+        <name>nomsPublics</name>
+        <qualifiedname>general.ObjetDi.nomsPublics</qualifiedname>
+        <initializer>= new HashMap&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="36" column="23" bodyfile="src/main/java/general/ObjetDi.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a3b7b0f7865dfffba48244a1d40484c57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.ObjetDi.ObjetDi</definition>
+        <argsstring>(String type, String nomID, String nomObjet)</argsstring>
+        <name>ObjetDi</name>
+        <qualifiedname>general.ObjetDi.ObjetDi</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomID</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomObjet</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pour créer un ObjetDi, il faut lui donner les noms des variables nécessaires Les informations nécessaires permettent d&apos;identifier, dans l&apos;hashmap de données, quelles sont celles qu&apos;on observe généralement dans une interface graphique L&apos;id et l&apos;id intermédiaire sont utiles lors des sélections et échanges de liste...</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la table de l&apos;objet représenté </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable qui stocke l&apos;id </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomObjet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom du nom de la variable nom </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="51" column="12" bodyfile="src/main/java/general/ObjetDi.java" bodystart="51" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ac885b4694153adc64e9e31b8e46b624a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.ObjetDi.ObjetDi</definition>
+        <argsstring>(ArrayList&lt; String &gt; nomsVariables)</argsstring>
+        <name>ObjetDi</name>
+        <qualifiedname>general.ObjetDi.ObjetDi</qualifiedname>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>nomsVariables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pour créer un HashObjet, il faut lui donner les noms des variables nécessaires Les informations nécessaires permettent d&apos;identifier, dans l&apos;hashmap de données, quelles sont celles qu&apos;on observe généralement dans une interface graphique L&apos;id et l&apos;id intermédiaire sont utiles lors des sélections et échanges de liste...</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomsVariables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est la liste des noms de variables d&apos;après l&apos;ordre ci-dessous :<itemizedlist>
+<listitem><para>nomType le nom de la classe de l&apos;objet représenté</para>
+</listitem><listitem><para>nomID le nom de la variable qui stocke l&apos;id</para>
+</listitem><listitem><para>nomObjet le nom du nom de la variable nom</para>
+</listitem><listitem><para>nomCouleur le nom de la variable qui contient la couleur texte</para>
+</listitem><listitem><para>nomIDIntermediaire le nom de l&apos;id intermédiaire</para>
+</listitem><listitem><para>nomDateDu le nom de la variable dateDu</para>
+</listitem><listitem><para>nomDateAu le nom de la variable dateAu </para>
+</listitem></itemizedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="80" column="12" bodyfile="src/main/java/general/ObjetDi.java" bodystart="80" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a1828cbc021106f7812488ce236a9e127" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.addGestionnaire</definition>
+        <argsstring>(String nomFk, GestionnaireImbrications gestionnaire)</argsstring>
+        <name>addGestionnaire</name>
+        <qualifiedname>general.ObjetDi.addGestionnaire</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomFk</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1GestionnaireImbrications" kindref="compound">GestionnaireImbrications</ref></type>
+          <declname>gestionnaire</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associe un nomFk de quartier à un gestionnaire d&apos;imbrications. À partir de l&apos;id du quartier, le gestionnaire est capable de rechercher les villes et pays pour affichage dans des combos par exemple</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomFk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom du champ idquartier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gestionnaire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le gestionnaire de localités </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="123" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a4e76c6a98a07048763ac3a4188ff64b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.ObjetDi.getObjet</definition>
+        <argsstring>(String cle)</argsstring>
+        <name>getObjet</name>
+        <qualifiedname>general.ObjetDi.getObjet</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne l&apos;hashObjet stocké à la clé rentrée</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null si un tel objet n&apos;existe pas ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="133" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6dd698536324953839aea3de639a4408" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.ObjetDi.getObjetIntermediaire</definition>
+        <argsstring>(String cle)</argsstring>
+        <name>getObjetIntermediaire</name>
+        <qualifiedname>general.ObjetDi.getObjetIntermediaire</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne l&apos;hashObjet intermédiaire stocké à la clé rentrée</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null si un tel objet n&apos;existe pas ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="143" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1afd8d202f01c64d5fe44bd95967440c15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.ObjetDi.getObjetDependant</definition>
+        <argsstring>(String cle)</argsstring>
+        <name>getObjetDependant</name>
+        <qualifiedname>general.ObjetDi.getObjetDependant</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne l&apos;hashObjet de données brutes stocké à la clé rentrée</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null si un tel objet n&apos;existe pas ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="153" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="153" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a4f3b720645533a03346209dcb6463acc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.putAll</definition>
+        <argsstring>(Map&lt;? extends String, ?&gt; m)</argsstring>
+        <name>putAll</name>
+        <qualifiedname>general.ObjetDi.putAll</qualifiedname>
+        <param>
+          <type>Map&lt;? extends String, ?&gt;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="157" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="157" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aacc9b6e2eeca3b439398e037357cbe97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.inserer_liste</definition>
+        <argsstring>(String nomTable, ArrayList objets)</argsstring>
+        <name>inserer_liste</name>
+        <qualifiedname>general.ObjetDi.inserer_liste</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type>ArrayList</type>
+          <declname>objets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stocke la liste fournie uniquement si ce sont des objetsDi Les non-objetDis sont ignorés</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le type des objetsDi </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>liste d&apos;objets quelconques </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si tous les objets étaient des objetsDi et que l&apos;enregistrement s&apos;est bien passé </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="173" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="173" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1afdbb0643b4c82cf9baade201440c160e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.ajouter_dans_liste</definition>
+        <argsstring>(String nomTable, ArrayList&lt; ObjetDi &gt; objetDis)</argsstring>
+        <name>ajouter_dans_liste</name>
+        <qualifiedname>general.ObjetDi.ajouter_dans_liste</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+          <declname>objetDis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>rajoute des éléments dans une liste stockée Attention : les doublons sont ignorés !</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>objetDis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si tout se passe bien </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="200" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="200" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1afce9296ebb00a91a355baa7e119be1c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.inserer_fk</definition>
+        <argsstring>(String nomFK, ObjetDi objetDi)</argsstring>
+        <name>inserer_fk</name>
+        <qualifiedname>general.ObjetDi.inserer_fk</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomFK</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+          <declname>objetDi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="211" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="211" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a9f7d8b44b2fa8bcdb9927873f4247ea2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.inserer_dependant</definition>
+        <argsstring>(String nomTable, ObjetDi objetDi)</argsstring>
+        <name>inserer_dependant</name>
+        <qualifiedname>general.ObjetDi.inserer_dependant</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+          <declname>objetDi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="226" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="226" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a443906de370c4ca81386b842740023d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.inserer_valeur_intermediaire</definition>
+        <argsstring>(String tableIntermediaire, String nomVariable, Object valeur)</argsstring>
+        <name>inserer_valeur_intermediaire</name>
+        <qualifiedname>general.ObjetDi.inserer_valeur_intermediaire</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>tableIntermediaire</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>valeur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="236" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="236" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a9e70f4370dcc8699ad675232d9cea3db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.inserer_dans_gestionnaireImbrication</definition>
+        <argsstring>(String nomFK, int id)</argsstring>
+        <name>inserer_dans_gestionnaireImbrication</name>
+        <qualifiedname>general.ObjetDi.inserer_dans_gestionnaireImbrication</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomFK</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="246" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="246" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a286834e3d11c75b2d7e5deba20ae680b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.inserer_dans_gestionnaireImbrication</definition>
+        <argsstring>(String nomFK, ObjetDi objetDi)</argsstring>
+        <name>inserer_dans_gestionnaireImbrication</name>
+        <qualifiedname>general.ObjetDi.inserer_dans_gestionnaireImbrication</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomFK</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+          <declname>objetDi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="260" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="260" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a08cf47bc67b8ea5cce6fd2dc689385bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.putAllExpected</definition>
+        <argsstring>(Map&lt;? extends String, ?&gt; m)</argsstring>
+        <name>putAllExpected</name>
+        <qualifiedname>general.ObjetDi.putAllExpected</qualifiedname>
+        <param>
+          <type>Map&lt;? extends String, ?&gt;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="280" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="280" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1af9355929db1e0ee1c2eabfa3c20b4c6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.set_single_data</definition>
+        <argsstring>(String nom, Object valeur)</argsstring>
+        <name>set_single_data</name>
+        <qualifiedname>general.ObjetDi.set_single_data</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>valeur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="290" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="290" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aa27a2b05178cfda83863dd1367a9b3b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.isModifie</definition>
+        <argsstring>(String nom)</argsstring>
+        <name>isModifie</name>
+        <qualifiedname>general.ObjetDi.isModifie</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="343" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="343" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a31f9e7e65a6cf03c1d51cd884197657a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.ObjetDi.remove</definition>
+        <argsstring>(String key)</argsstring>
+        <name>remove</name>
+        <qualifiedname>general.ObjetDi.remove</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="358" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="358" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final String</type>
+        <definition>final String general.ObjetDi.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>general.ObjetDi.getType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="368" column="25" bodyfile="src/main/java/general/ObjetDi.java" bodystart="368" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a26bdc424bfb09120f36be44e621394b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setType</definition>
+        <argsstring>(String texte)</argsstring>
+        <name>setType</name>
+        <qualifiedname>general.ObjetDi.setType</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>texte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="372" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="372" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a12bc1528c0e8fee99a32b332f859ce90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.ObjetDi.getCouleur</definition>
+        <argsstring>()</argsstring>
+        <name>getCouleur</name>
+        <qualifiedname>general.ObjetDi.getCouleur</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="396" column="16" bodyfile="src/main/java/general/ObjetDi.java" bodystart="396" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a8fc95efddd92b4832c1dca6b5762ede8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setCouleur</definition>
+        <argsstring>(int couleurInt)</argsstring>
+        <name>setCouleur</name>
+        <qualifiedname>general.ObjetDi.setCouleur</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>couleurInt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="400" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="400" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6c54a0827c56e4bdd2a5f9550750ce3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.ObjetDi.getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <qualifiedname>general.ObjetDi.getId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Récupère l&apos;ID de l&apos;élément actuel</para>
+<para><simplesect kind="return"><para>l&apos;id pour la BD </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="409" column="16" bodyfile="src/main/java/general/ObjetDi.java" bodystart="409" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a9af290af143437cc1fc827ce59f9a8a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setId</definition>
+        <argsstring>(int idExt)</argsstring>
+        <name>setId</name>
+        <qualifiedname>general.ObjetDi.setId</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idExt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="413" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="413" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a16f1a41d6e8e4aea5ccd8fd3469fa58e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.isParent</definition>
+        <argsstring>()</argsstring>
+        <name>isParent</name>
+        <qualifiedname>general.ObjetDi.isParent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>méthode à surdéfinir !</para>
+<para><simplesect kind="return"><para>tout le temps FALSE ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="422" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="422" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a3325e272d4e8849c3cc3abc18b79a26d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final int</type>
+        <definition>final int general.ObjetDi.getIdParent</definition>
+        <argsstring>()</argsstring>
+        <name>getIdParent</name>
+        <qualifiedname>general.ObjetDi.getIdParent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne l&apos;id du parent éventuel (sert pour les treeview par exemple)</para>
+<para><simplesect kind="return"><para>0 sauf si la méthode getParent a été overridée </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="431" column="22" bodyfile="src/main/java/general/ObjetDi.java" bodystart="431" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1abc10f5f2ed0ead1a6e2c790bf9c7ddcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>abstract ObjetDi general.ObjetDi.getParent</definition>
+        <argsstring>()</argsstring>
+        <name>getParent</name>
+        <qualifiedname>general.ObjetDi.getParent</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a09ac5d1899e1a67c963cf554f981d714">getParent</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="438" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ae59e559564bec8d6b50d4f06ab59327c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract void</type>
+        <definition>abstract void general.ObjetDi.setParent</definition>
+        <argsstring>(ObjetDi parent)</argsstring>
+        <name>setParent</name>
+        <qualifiedname>general.ObjetDi.setParent</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a5fd8156eaf6af02533608aa7e72c3513">setParent</reimplementedby>
+        <param>
+          <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="440" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a611e8a9ce99154d2c3115f43ff64adf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.isModifie</definition>
+        <argsstring>()</argsstring>
+        <name>isModifie</name>
+        <qualifiedname>general.ObjetDi.isModifie</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indique si l&apos;objet est modifié en regardant la liste des modifications</para>
+<para><simplesect kind="return"><para>vrai si &quot;modifications&quot; n&apos;est pas vide </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="448" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="448" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6f3e3a2e251a49c43790cc19a0040ec6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.ObjetDi.getNom</definition>
+        <argsstring>()</argsstring>
+        <name>getNom</name>
+        <qualifiedname>general.ObjetDi.getNom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="452" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="452" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a0c247ae0b7c8ebc583c706c723f5bdc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final void</type>
+        <definition>final void general.ObjetDi.setNom</definition>
+        <argsstring>(String name)</argsstring>
+        <name>setNom</name>
+        <qualifiedname>general.ObjetDi.setNom</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="456" column="23" bodyfile="src/main/java/general/ObjetDi.java" bodystart="456" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1af6c4646bf216a60e213e009e1eb01c5d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean general.ObjetDi.inserer_valeur</definition>
+        <argsstring>(String nom, Object valeur)</argsstring>
+        <name>inserer_valeur</name>
+        <qualifiedname>general.ObjetDi.inserer_valeur</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a6508f788e35013dda2f85a48da304d8a">inserer_valeur</reimplementedby>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>valeur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cette méthode vérifie d&apos;abord que la valeur rentrée est du type attendu avant d&apos;effectuer l&apos;insertion. Autrement, c&apos;est ignoré ! Egalement ignoré si la valeur vaut NULL Cette méthode modifie : hashDonnees et nonAttendus</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable ; ne peut être vide </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valeur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la valeur à insérer; ne peut être null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si succès, faux sinon </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="470" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="470" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a7a24587a62404b8543e3aca64c7bd891" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.inserer_souplement_valeur</definition>
+        <argsstring>(String cle, Object valeur)</argsstring>
+        <name>inserer_souplement_valeur</name>
+        <qualifiedname>general.ObjetDi.inserer_souplement_valeur</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>cle</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>valeur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="486" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="486" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aa99cf3f8c4de7c4477c71027b8334b3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>abstract ObjetDi general.ObjetDi.getObjetFromType</definition>
+        <argsstring>(String nomType)</argsstring>
+        <name>getObjetFromType</name>
+        <qualifiedname>general.ObjetDi.getObjetFromType</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a9aa64114645bfb6f217d2133e03d7b3f">getObjetFromType</reimplementedby>
+        <param>
+          <type>String</type>
+          <declname>nomType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="548" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a35ba6f7671507de2096f39a9e83483ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>final void</type>
+        <definition>final void general.ObjetDi.clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>general.ObjetDi.clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de faire appel au clear des hashmaps, puis recharge les variables nécessaires à tout hashobjet </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="555" column="23" bodyfile="src/main/java/general/ObjetDi.java" bodystart="555" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a39bb9240c9837e3115b2a7b00cb06433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract void</type>
+        <definition>abstract void general.ObjetDi.reinitialiser</definition>
+        <argsstring>()</argsstring>
+        <name>reinitialiser</name>
+        <qualifiedname>general.ObjetDi.reinitialiser</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a47af5a73114a570100a6a13cce35e839">reinitialiser</reimplementedby>
+        <reimplementedby refid="classgeneral_1_1Individu_1a3507f5bb937e6c4ca2d2f95ba46f8727">reinitialiser</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="561" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a31b04d4fe5f2ff4688a773545f47bd63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setVariableClass</definition>
+        <argsstring>(String nomVariable, Class classe)</argsstring>
+        <name>setVariableClass</name>
+        <qualifiedname>general.ObjetDi.setVariableClass</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <param>
+          <type>Class</type>
+          <declname>classe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="586" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="586" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ac7e41fd987f64f513e6351100fa26900" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Class</type>
+        <definition>Class general.ObjetDi.getVariableClass</definition>
+        <argsstring>(String nomVariable)</argsstring>
+        <name>getVariableClass</name>
+        <qualifiedname>general.ObjetDi.getVariableClass</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="590" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="590" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6c502465f577081ad37faf0046c4b8c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setFK</definition>
+        <argsstring>(String nomfk, String nomType)</argsstring>
+        <name>setFK</name>
+        <qualifiedname>general.ObjetDi.setFK</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomfk</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cette méthode permet d&apos;informer de la présence d&apos;un sous-objet identifié par son fk</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomfk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la fk ; ne peut être vide </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom du type de variable dont l&apos;id est le fk </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="616" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="616" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a8122c517d5a5ae02f6812157b8994022" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setFKIntermediaire</definition>
+        <argsstring>(String nomType)</argsstring>
+        <name>setFKIntermediaire</name>
+        <qualifiedname>general.ObjetDi.setFKIntermediaire</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cette méthode permet d&apos;informer de la présence d&apos;un sous-objet qui provient d&apos;une table intermédiaire. Cet objet est complet lorque le sous-objet intermediaire est également fourni !</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom du type de variable dont l&apos;id est le fk </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="638" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="638" bodyend="647"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a4a3d5facdd9ce514d62966e11ee66569" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setDependant</definition>
+        <argsstring>(String nomFK, String nomType)</argsstring>
+        <name>setDependant</name>
+        <qualifiedname>general.ObjetDi.setDependant</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomFK</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cette méthode permet d&apos;informer de la présence d&apos;un sous-objet qui ne peut être instancié ici, car dépend de l&apos;objet actuel.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom du type de variable dont à créer plus tard </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nomFK</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable dans l&apos;objet parent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="656" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="656" bodyend="663"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a25567a2831eab82beb565d20f61c680d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.clearSousObjets</definition>
+        <argsstring>()</argsstring>
+        <name>clearSousObjets</name>
+        <qualifiedname>general.ObjetDi.clearSousObjets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Réinitialise tous les sous-objets </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="669" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="669" bodyend="673"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a35a78342c585a1ddce8fb9b02627312a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.deleteSousObjets</definition>
+        <argsstring>()</argsstring>
+        <name>deleteSousObjets</name>
+        <qualifiedname>general.ObjetDi.deleteSousObjets</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Efface tous les sous-objets </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="678" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="678" bodyend="680"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a06087a189c8ccef31d484dabfb6faf88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getNonAttendus</definition>
+        <argsstring>()</argsstring>
+        <name>getNonAttendus</name>
+        <qualifiedname>general.ObjetDi.getNonAttendus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>renvoie une copie de la liste des variables remplies mais non prévues dans le hashobjet</para>
+<para><simplesect kind="return"><para>l&apos;hashMap de données non-attendues mais enregistrées quand même </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="783" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="783" bodyend="785"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ae255e854aa41b83d9329897f17dc155b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.equals</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>equals</name>
+        <qualifiedname>general.ObjetDi.equals</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a4c61c5bb9fa354805e6e6f8123c62c9c">equals</reimplementedby>
+        <reimplementedby refid="classgeneral_1_1Individu_1a71a62091e00fbdeb7b6a2278a41647eb">equals</reimplementedby>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de dire si deux eltIHM sont égaux ou pas. Les critères d&apos;égalité sont (dans l&apos;ordre) :<itemizedlist>
+<listitem><para>le type (obligatoire)</para>
+</listitem><listitem><para>l&apos;id (si ok, on regarde l&apos;intermédiaire)</para>
+</listitem><listitem><para>l&apos;id intermédiaire (ok si les deux id sont égaux)</para>
+</listitem><listitem><para>le nom, si les ids sont nuls, et les noms non-vides</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;autre eltIHM </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si les conditions précédentes sont vérifiées </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="831" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="831" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a8c4cbd1740b7980a88197633cbfb5f7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getData</definition>
+        <argsstring>(ArrayList&lt; String &gt; nomChamps)</argsstring>
+        <name>getData</name>
+        <qualifiedname>general.ObjetDi.getData</qualifiedname>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>nomChamps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne une copie du contenu des variables par paires de (nomBD, data) Les noms de variable sont les noms des champs de la BD L&apos;id de l&apos;objet actuel est fourni systématiquement !</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomChamps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ce sont les noms dont les valeurs sont à retourner </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>une hashmap de (nom, donnée) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="859" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="859" bodyend="893"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a201746dfde1966fa6ce30107a53e240a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getAllData</definition>
+        <argsstring>()</argsstring>
+        <name>getAllData</name>
+        <qualifiedname>general.ObjetDi.getAllData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne une copie du contenu des variables par paires de (nomBD, data) Les noms de variable sont les noms des champs de la BD Un sous-élément éventuel sera également fourni sous forme de hashmap</para>
+<para><simplesect kind="return"><para>une hashmap de (nom, donnée) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="903" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="903" bodyend="943"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1abfe1b190a41ad386655d74d4121d7055" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getData</definition>
+        <argsstring>()</argsstring>
+        <name>getData</name>
+        <qualifiedname>general.ObjetDi.getData</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1aa7036d6c057c12ff2ba2489228c95270">getData</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne une copie du contenu des variables par paires de (nomBD, data) Les noms de variable sont les noms des champs de la BD Seuls les champs, les fk et la jointure intermédiaire sont fournis !</para>
+<para><simplesect kind="return"><para>une hashmap de (nom, donnée) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="953" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="953" bodyend="991"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a2a0ab29526d37729e6033dc9e0c86a39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>ArrayList&lt; String &gt; general.ObjetDi.setData</definition>
+        <argsstring>(HashMap&lt; String, Object &gt; input, final HashMap&lt; String, Object &gt; hashLevis, boolean toutPrendre, boolean verbose)</argsstring>
+        <name>setData</name>
+        <qualifiedname>general.ObjetDi.setData</qualifiedname>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>final HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>toutPrendre</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de charger les variables àpd&apos;une liste de (nom, donnée). Si une variable attendue doit être modifiée alors que le type n&apos;est pas bon, cette insertion sera ignorée. Si une variable nouvelle apparaît, elle sera rajoutée à la liste des variables. Seront affectés : hashDonnees, hashFKIntermediaire et hashFK. Il vaut mieux vérifier le contenu de l&apos;objet après cette opération.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;hashmap de données à rentrer comme variables </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toutPrendre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>si oui, même les données non attendues sont prises </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>C&apos;est la liste de détails selon la structure csa-soft </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On affiche des commentaires ? </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>la liste des noms qui ont trouvé preneur </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1008" column="22" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1008" bodyend="1163"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a9b7223c1b07586ce663298d1c614d4f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>ArrayList&lt; String &gt; general.ObjetDi.setDataFromHashLevis</definition>
+        <argsstring>(HashMap&lt; String, Object &gt; hashLevis, int id, boolean toutPrendre, boolean verbose)</argsstring>
+        <name>setDataFromHashLevis</name>
+        <qualifiedname>general.ObjetDi.setDataFromHashLevis</qualifiedname>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>toutPrendre</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de charger les variables àpd&apos;une liste de (nom, donnée). Si une variable attendue doit être modifiée alors que le type n&apos;est pas bon, cette insertion sera ignorée. Si une variable nouvelle apparaît, elle sera rajoutée à la liste des variables. Seront affectés : hashDonnees, hashFKIntermediaire et hashFK. Il vaut mieux vérifier le contenu de l&apos;objet après cette opération.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toutPrendre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>si oui, même les données non attendues sont prises </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>C&apos;est la liste de détails selon la structure csa-soft </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On affiche des commentaires ? </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est l&apos;id du détail à chercher dans la hashLevis. La clé de recherche sera ceType-id </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>la liste des noms qui ont trouvé preneur </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1190" column="22" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1190" bodyend="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1afd705894affa7683a8d61368ad174779" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.ObjetDi.getNomFK</definition>
+        <argsstring>(String nomType)</argsstring>
+        <name>getNomFK</name>
+        <qualifiedname>general.ObjetDi.getNomFK</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de voir si l&apos;objet actuel contient un fk du type rentré</para>
+<para><simplesect kind="return"><para>null s&apos;il ne trouve pas ou le nomFK du type rentré </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1254" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1254" bodyend="1261"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a773603c5296e1293f87b665fe9930c25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getSimpleData</definition>
+        <argsstring>()</argsstring>
+        <name>getSimpleData</name>
+        <qualifiedname>general.ObjetDi.getSimpleData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne une copie du contenu des variables par paires de (nomBD, data) Les noms de variable sont les noms des champs de la BD Seuls les champs sont fournis ; pas les fk ni même les intermédiaires !</para>
+<para><simplesect kind="return"><para>une hashmap de (nom, donnée) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1283" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1283" bodyend="1287"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a3c80d25be475c8e3b1980a62b51e3903" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getOnlyIDs</definition>
+        <argsstring>()</argsstring>
+        <name>getOnlyIDs</name>
+        <qualifiedname>general.ObjetDi.getOnlyIDs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne une copie du contenu des variables par paires de (nomBD, data) Les noms de variable sont les noms des champs de la BD Seuls les ids sont fournis ; pas les fk ni même les intermédiaires !</para>
+<para><simplesect kind="return"><para>une hashmap de (nom, donnée) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1296" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1296" bodyend="1303"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ada50db2b80b7988b81a871c8bb3dbc57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.ObjetDi.getCopy</definition>
+        <argsstring>()</argsstring>
+        <name>getCopy</name>
+        <qualifiedname>general.ObjetDi.getCopy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1334" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1334" bodyend="1347"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1abcbdd8d784c51914d82ef111ec5acb68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getHashModifications</definition>
+        <argsstring>(boolean stricte)</argsstring>
+        <name>getHashModifications</name>
+        <qualifiedname>general.ObjetDi.getHashModifications</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a860cdf0ec23279d0e44b05c8bdda09fc">getHashModifications</reimplementedby>
+        <param>
+          <type>boolean</type>
+          <declname>stricte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sert à récupérer les données modifiées de l&apos;objet courant Sous forme de paires (nomBD, valeur) L&apos;ID et les champs intermédiaires sont fournis également ! Les listes internes ne sont pas fournies, les sous-objets non plus !</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stricte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>si oui, les mandatories ne sont pas fournis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>une hashmap de (nom, donnéee) correspondant aux modifications </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1359" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1359" bodyend="1436"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a4182d279d37fd506e1a567a44c3f6554" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setModifications</definition>
+        <argsstring>(Collection&lt; String &gt; modifs)</argsstring>
+        <name>setModifications</name>
+        <qualifiedname>general.ObjetDi.setModifications</qualifiedname>
+        <param>
+          <type>Collection&lt; String &gt;</type>
+          <declname>modifs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1491" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1491" bodyend="1494"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a777e624beb1fcd7d8e5f1b1e5ebda573" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LinkedHashSet&lt; String &gt;</type>
+        <definition>LinkedHashSet&lt; String &gt; general.ObjetDi.getomsMandatories</definition>
+        <argsstring>()</argsstring>
+        <name>getomsMandatories</name>
+        <qualifiedname>general.ObjetDi.getomsMandatories</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fournit une copie de la liste des noms des variables obligatoires</para>
+<para><simplesect kind="return"><para>une copie de la liste des noms des champs obligatoires </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1501" column="26" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1501" bodyend="1503"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a5f581421162407637a1beea5e27f5d21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LinkedHashSet&lt; String &gt;</type>
+        <definition>LinkedHashSet&lt; String &gt; general.ObjetDi.getNomsModifications</definition>
+        <argsstring>()</argsstring>
+        <name>getNomsModifications</name>
+        <qualifiedname>general.ObjetDi.getNomsModifications</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fournit une copie de la liste des noms des variables dont la valeur a changé</para>
+<para><simplesect kind="return"><para>une copie de la liste des noms des champs modifiés </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1510" column="26" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1510" bodyend="1512"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a04aa1604026adc7a2d5232f04804171b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getHashMandatories</definition>
+        <argsstring>()</argsstring>
+        <name>getHashMandatories</name>
+        <qualifiedname>general.ObjetDi.getHashMandatories</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retourne la liste des données obligatoires</para>
+<para><simplesect kind="return"><para>les données toujours fournies même si pas de modification </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1519" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1519" bodyend="1539"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aec6da3b01bc2b62f8b2459258f134b9b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setMandatories</definition>
+        <argsstring>(ArrayList&lt; String &gt; obligatoires)</argsstring>
+        <name>setMandatories</name>
+        <qualifiedname>general.ObjetDi.setMandatories</qualifiedname>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>obligatoires</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1541" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1541" bodyend="1543"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a9b13218f30ad12246acb81a5e428edd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.ObjetDi.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <qualifiedname>general.ObjetDi.toString</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a0f10c146d2371c29150558a01a1a7c2a">toString</reimplementedby>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Indisponibilite_1a8db2471a76661101267122a54eb92595">toString</reimplementedby>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Trou_1a874ae92baf97a751a1734f84c2c07288">toString</reimplementedby>
+        <reimplementedby refid="classgeneral_1_1Individu_1acbd4652de3f36869478950d0c36372e6">toString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1547" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1547" bodyend="1549"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a222d3ccf13080b223a1167a41dd28ba6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.clearModifications</definition>
+        <argsstring>()</argsstring>
+        <name>clearModifications</name>
+        <qualifiedname>general.ObjetDi.clearModifications</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1551" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1551" bodyend="1569"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ae3efa63f65754af5f32d9c419804be75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.clearMandatories</definition>
+        <argsstring>()</argsstring>
+        <name>clearMandatories</name>
+        <qualifiedname>general.ObjetDi.clearMandatories</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1571" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1571" bodyend="1573"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a1b68ee5c21b4f1f29eff22347f8c82a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.addModification</definition>
+        <argsstring>(String nom)</argsstring>
+        <name>addModification</name>
+        <qualifiedname>general.ObjetDi.addModification</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1ab701c1439e6e2cbcbeaca241c91aae07">addModification</reimplementedby>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rajoute une variable dont le contenu sera considéré comme modifié Si un nomBD est utilisé, alors il sera remplacé par le nom réel de la variable</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la variable modifiée </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1581" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1581" bodyend="1583"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ae2d87edac158b1b2c87f30430a0de49f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.removeModification</definition>
+        <argsstring>(String nom)</argsstring>
+        <name>removeModification</name>
+        <qualifiedname>general.ObjetDi.removeModification</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1585" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1585" bodyend="1587"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ae288edc9539c54d0da7c841c2dff215d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.removeMandatory</definition>
+        <argsstring>(String nom)</argsstring>
+        <name>removeMandatory</name>
+        <qualifiedname>general.ObjetDi.removeMandatory</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1589" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1589" bodyend="1591"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aa86727fbfa008961c04857e2d319a290" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.addMandatory</definition>
+        <argsstring>(String nom)</argsstring>
+        <name>addMandatory</name>
+        <qualifiedname>general.ObjetDi.addMandatory</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rajoute une variable dont le contenu sera considéré comme obligé</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de la variable modifiée </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1598" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1598" bodyend="1600"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aa2d9ccee631e000308f580bb0f8d1591" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.ObjetDi.getPublicName</definition>
+        <argsstring>()</argsstring>
+        <name>getPublicName</name>
+        <qualifiedname>general.ObjetDi.getPublicName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1602" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1602" bodyend="1604"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ae868ac029aa7f6871719dcff37e4835c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setPublicName</definition>
+        <argsstring>(String publicName)</argsstring>
+        <name>setPublicName</name>
+        <qualifiedname>general.ObjetDi.setPublicName</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>publicName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1606" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1606" bodyend="1608"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aefc6741114ee9f329992366b594192cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.ObjetDi.compareTo</definition>
+        <argsstring>(Object o)</argsstring>
+        <name>compareTo</name>
+        <qualifiedname>general.ObjetDi.compareTo</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1calendrier_1_1Evenement_1a5be2a56fa6ec9812c0988f9cbdd9414d">compareTo</reimplementedby>
+        <reimplementedby refid="classgeneral_1_1Individu_1acc5da514793b0a294a667cc5f680e2bf">compareTo</reimplementedby>
+        <param>
+          <type>Object</type>
+          <declname>o</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1611" column="16" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1611" bodyend="1620"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ae6a524a6d47d089b84a12a7937dd58c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.ObjetDi.getNomPublic</definition>
+        <argsstring>(String name)</argsstring>
+        <name>getNomPublic</name>
+        <qualifiedname>general.ObjetDi.getNomPublic</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1622" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1622" bodyend="1625"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ab08ab8b499dbf15609cae22506e2a8cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>ArrayList&lt; String &gt; general.ObjetDi.getVariablesVisibles</definition>
+        <argsstring>()</argsstring>
+        <name>getVariablesVisibles</name>
+        <qualifiedname>general.ObjetDi.getVariablesVisibles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>renvoie une COPIE de la liste des variables à afficher</para>
+<para><simplesect kind="return"><para>une copie des variables visibles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1632" column="22" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1632" bodyend="1634"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a1876ccbc5fbf782096b31cc37f3cc289" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.setVariablesVisibles</definition>
+        <argsstring>(ArrayList&lt; String &gt; visibles)</argsstring>
+        <name>setVariablesVisibles</name>
+        <qualifiedname>general.ObjetDi.setVariablesVisibles</qualifiedname>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>visibles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Créé une liste de variables visibles. Attention : un filtre est effectué par rapport aux variables existantes</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>visibles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la liste de variables à rendre visibles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1642" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1642" bodyend="1649"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a01fb98109f9175d082107781a441ed8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LinkedHashMap&lt; String, <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>LinkedHashMap&lt; String, ObjetDi &gt; general.ObjetDi.getFKs</definition>
+        <argsstring>()</argsstring>
+        <name>getFKs</name>
+        <qualifiedname>general.ObjetDi.getFKs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1651" column="26" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1651" bodyend="1653"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a394410f5d78362d5bb8c0af04eef6932" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>HashMap&lt; String, ObjetDi &gt; general.ObjetDi.getFKIs</definition>
+        <argsstring>()</argsstring>
+        <name>getFKIs</name>
+        <qualifiedname>general.ObjetDi.getFKIs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1655" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1655" bodyend="1657"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a13c3b045be3e915bbd7f6762f926315d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getHashListes</definition>
+        <argsstring>()</argsstring>
+        <name>getHashListes</name>
+        <qualifiedname>general.ObjetDi.getHashListes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1659" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1659" bodyend="1661"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a3be3f7048cc0c9876a79652fe6ecdb88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>HashMap&lt; String, ObjetDi &gt; general.ObjetDi.getHashDependants</definition>
+        <argsstring>()</argsstring>
+        <name>getHashDependants</name>
+        <qualifiedname>general.ObjetDi.getHashDependants</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1663" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1663" bodyend="1665"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a73fcdb263606a5cdc355357888b443e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, <ref refid="classgeneral_1_1GestionnaireImbrications" kindref="compound">GestionnaireImbrications</ref> &gt;</type>
+        <definition>HashMap&lt; String, GestionnaireImbrications &gt; general.ObjetDi.getGestionnairesImbrications</definition>
+        <argsstring>()</argsstring>
+        <name>getGestionnairesImbrications</name>
+        <qualifiedname>general.ObjetDi.getGestionnairesImbrications</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1667" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1667" bodyend="1669"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a13430043faa6f6e9794d46938d9822a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, String &gt;</type>
+        <definition>HashMap&lt; String, String &gt; general.ObjetDi.getListeNomsPublics</definition>
+        <argsstring>()</argsstring>
+        <name>getListeNomsPublics</name>
+        <qualifiedname>general.ObjetDi.getListeNomsPublics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>renvoie une COPIE de la liste des paires (nom, nom public)</para>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1676" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1676" bodyend="1678"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a05df36a4f4bb090379ae2786be990d73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.add_nom_public</definition>
+        <argsstring>(String nomVariable, String nomPublic)</argsstring>
+        <name>add_nom_public</name>
+        <qualifiedname>general.ObjetDi.add_nom_public</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomPublic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1680" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1680" bodyend="1715"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a783e07f8e2b64b4892ed06b6964ee73f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.add_variable_visible</definition>
+        <argsstring>(String nomVariable)</argsstring>
+        <name>add_variable_visible</name>
+        <qualifiedname>general.ObjetDi.add_variable_visible</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1717" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1717" bodyend="1744"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a21addc0aebccabf2e7cecde52b564f5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Class</type>
+        <definition>Class general.ObjetDi.getTypeOfVariable</definition>
+        <argsstring>(String nomVariable)</argsstring>
+        <name>getTypeOfVariable</name>
+        <qualifiedname>general.ObjetDi.getTypeOfVariable</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1751" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1751" bodyend="1760"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6698fbca215239892da81c6e65cc35ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.ObjetDi.getData</definition>
+        <argsstring>(String nomVariable)</argsstring>
+        <name>getData</name>
+        <qualifiedname>general.ObjetDi.getData</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne la valeur stockée dans le nom de variable rentré Si pas trouvé dans les données simples, il y a une recherche dans les fk Si toujours pas trouvé, il recherche des listes, des objetDi dépendants, etc...</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est le nom de variable dont on veut le contenu, s&apos;il existe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null si pas trouvé; autrement, on peut avoir un primitif, un objetDi ou une liste ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1770" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1770" bodyend="1796"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a205a992d070027f7ee3eed47e92cdedb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.variable_existe</definition>
+        <argsstring>(String nomVariable)</argsstring>
+        <name>variable_existe</name>
+        <qualifiedname>general.ObjetDi.variable_existe</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indique si le nom de variable est connu dans cet objetDi</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est le nom de variable dont on veut le contenu, s&apos;il existe </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>si trouvé une telle variable dans les variables et sous-objets </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1804" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1804" bodyend="1822"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a3d374a4f1d0d5d32ced583d4119bb6f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.changer_nom_variable</definition>
+        <argsstring>(String ancien, String nouveau)</argsstring>
+        <name>changer_nom_variable</name>
+        <qualifiedname>general.ObjetDi.changer_nom_variable</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1Individu_1a1943bb81b6190871ca6c4877225db9d5">changer_nom_variable</reimplementedby>
+        <param>
+          <type>String</type>
+          <declname>ancien</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nouveau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de modifier le nom d&apos;une variable. Le contenu est reporté à la nouvelle variable. Il faut que l&apos;ancien existe déjà et que le nouveau soit non vide</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ancien</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>l&apos;ancien nom </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nouveau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nouveau nom qui doit être non vide, sinon IGNORÉ ! </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vrai si l&apos;opération réussit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1834" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1834" bodyend="1857"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a36d8849d1a65126de95e805dc23388e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.changer_nom_id</definition>
+        <argsstring>(String nouveau)</argsstring>
+        <name>changer_nom_id</name>
+        <qualifiedname>general.ObjetDi.changer_nom_id</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nouveau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de changer le nom de l&apos;id de variable représenté par ce hashObjet</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nouveau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est le nouveau nom </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true si l&apos;opération réussit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1866" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1866" bodyend="1877"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ac65d393205b173a0067e32e33cbecafd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.changer_nom_nom</definition>
+        <argsstring>(String nouveau)</argsstring>
+        <name>changer_nom_nom</name>
+        <qualifiedname>general.ObjetDi.changer_nom_nom</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nouveau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de changer le nom du libelle de variable représenté par ce hashObjet</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nouveau</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est le nouveau nom </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true si l&apos;opération réussit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1886" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1886" bodyend="1897"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a5c5351c23cedec8b4329a00ee641b168" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.updater_liste</definition>
+        <argsstring>(String type, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>updater_liste</name>
+        <qualifiedname>general.ObjetDi.updater_liste</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de mettre à jour une liste à partir d&apos;une hashLevis de détails</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le type de la liste </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashLevis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>liste de Levis </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1905" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1905" bodyend="1934"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a5b93b50c4b24fde4784400c53bcff250" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>ArrayList&lt; ObjetDi &gt; general.ObjetDi.getListe</definition>
+        <argsstring>(String nomTable)</argsstring>
+        <name>getListe</name>
+        <qualifiedname>general.ObjetDi.getListe</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne une copie de la liste contenant les éléments du type désiré</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ne nom de la variable désirée </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null si ce nom-là ne contient pas de liste </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1965" column="22" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1965" bodyend="1971"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aae36a208effa09ca2eeaa6660ae04002" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.ObjetDi.getIdName</definition>
+        <argsstring>()</argsstring>
+        <name>getIdName</name>
+        <qualifiedname>general.ObjetDi.getIdName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1974" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1974" bodyend="1976"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a78589347be90b3359d3ee335eb292964" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi general.ObjetDi.getNewInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getNewInstance</name>
+        <qualifiedname>general.ObjetDi.getNewInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1978" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1978" bodyend="1980"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a5e0971df98474b4f098b5e0a51247a7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.charger_donnees</definition>
+        <argsstring>(HashMap&lt; String, Object &gt; input, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>charger_donnees</name>
+        <qualifiedname>general.ObjetDi.charger_donnees</qualifiedname>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1982" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1982" bodyend="1984"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a99264a3c2cc0c9220966ee5b0378a619" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.ObjetDi.get</definition>
+        <argsstring>(String nomVariable)</argsstring>
+        <name>get</name>
+        <qualifiedname>general.ObjetDi.get</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne les valeurs stockées dans les données simples et les données non-attendues</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomVariable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>nom de variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null si pas trouvé dans hashDonnees ou hashDonneesNonAttendues </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1993" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1993" bodyend="1999"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a9fa51595364c2574f814bd53f4f099e0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>static ObjetDi general.ObjetDi.creer_objet_vide</definition>
+        <argsstring>()</argsstring>
+        <name>creer_objet_vide</name>
+        <qualifiedname>general.ObjetDi.creer_objet_vide</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="91" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="91" bodyend="113"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a1841d3d484d513531ed050b09f4e3de6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.initialiser_objetDi</definition>
+        <argsstring>()</argsstring>
+        <name>initialiser_objetDi</name>
+        <qualifiedname>general.ObjetDi.initialiser_objetDi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="347" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="347" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aef98d27f3537184e9066091576a8ec90" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.remplacer_noms_stockes</definition>
+        <argsstring>(String ancien, String nouveau)</argsstring>
+        <name>remplacer_noms_stockes</name>
+        <qualifiedname>general.ObjetDi.remplacer_noms_stockes</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>ancien</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nouveau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="381" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="381" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aa644ce344c50939d04633845b5adebf2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float general.ObjetDi.extraire_float</definition>
+        <argsstring>(Object value)</argsstring>
+        <name>extraire_float</name>
+        <qualifiedname>general.ObjetDi.extraire_float</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="532" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="532" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6569b87ef6551a156333b095fa7bc20f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float general.ObjetDi.extraire_int</definition>
+        <argsstring>(Object value)</argsstring>
+        <name>extraire_int</name>
+        <qualifiedname>general.ObjetDi.extraire_int</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="540" column="19" bodyfile="src/main/java/general/ObjetDi.java" bodystart="540" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ab55b0782b8a5cfcf88dfb2e974f7d232" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.ObjetDi.inserer_prudemment</definition>
+        <argsstring>(String nom, Object valeur)</argsstring>
+        <name>inserer_prudemment</name>
+        <qualifiedname>general.ObjetDi.inserer_prudemment</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>valeur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet d&apos;insérer la valeur à la variable stockée S&apos;il n&apos;existe pas de variable avec le nom indiqué, une nouvelle est créée avec le type de l&apos;objet valeur. Si le nom existe déjà, le type est vérifié</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valeur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la nouvelle valeur à attribuer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vrai si tout s&apos;est bien passé, false sinon </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="691" column="21" bodyfile="src/main/java/general/ObjetDi.java" bodystart="691" bodyend="759"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a5cc44c9212ff792d61aa76adfd9a8f75" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.inserer_directement</definition>
+        <argsstring>(String nom, Object nouvelleValeur, Object ancienneValeur)</argsstring>
+        <name>inserer_directement</name>
+        <qualifiedname>general.ObjetDi.inserer_directement</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>nouvelleValeur</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>ancienneValeur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="761" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="761" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a0423535a92ce23669900776464c9b378" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime general.ObjetDi.extraire_dateTime</definition>
+        <argsstring>(String s)</argsstring>
+        <name>extraire_dateTime</name>
+        <qualifiedname>general.ObjetDi.extraire_dateTime</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="787" column="27" bodyfile="src/main/java/general/ObjetDi.java" bodystart="787" bodyend="801"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1ab08dd86e72e9e4983b87a3d96e628e01" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.ObjetDi.extraire_date</definition>
+        <argsstring>(String s)</argsstring>
+        <name>extraire_date</name>
+        <qualifiedname>general.ObjetDi.extraire_date</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="803" column="23" bodyfile="src/main/java/general/ObjetDi.java" bodystart="803" bodyend="817"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a8eb95c3e2f2810ae018448ba4f361a34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.extraire_donnees_attendues</definition>
+        <argsstring>(HashMap&lt; String, Object &gt; input)</argsstring>
+        <name>extraire_donnees_attendues</name>
+        <qualifiedname>general.ObjetDi.extraire_donnees_attendues</qualifiedname>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1165" column="21" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1165" bodyend="1173"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a5d39db6c827e91aab854ff42ea604862" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.ecrire_rapport</definition>
+        <argsstring>(HashMap&lt; String, Object &gt; hashMap, ArrayList&lt; String &gt; clesUtilisees)</argsstring>
+        <name>ecrire_rapport</name>
+        <qualifiedname>general.ObjetDi.ecrire_rapport</qualifiedname>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashMap</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>clesUtilisees</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1224" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1224" bodyend="1231"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aa32a2cc3eba852d37e05b738c8a554aa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>ArrayList&lt; ObjetDi &gt; general.ObjetDi.transformer_liste</definition>
+        <argsstring>(String nomTable, ArrayList&lt; Object &gt; listeRecue, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>transformer_liste</name>
+        <qualifiedname>general.ObjetDi.transformer_liste</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>listeRecue</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1233" column="23" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1233" bodyend="1247"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a7d56523f9f7c907ffc7cb65fcd5b0c71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>ArrayList&lt; ObjetDi &gt; general.ObjetDi.transformer_en_objet</definition>
+        <argsstring>(String nomTable, ArrayList&lt;?&gt; hypoListe)</argsstring>
+        <name>transformer_en_objet</name>
+        <qualifiedname>general.ObjetDi.transformer_en_objet</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt;?&gt;</type>
+          <declname>hypoListe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1263" column="23" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1263" bodyend="1274"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aeed9434d1fea9e5c890e27c7279113db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.extraire_fk</definition>
+        <argsstring>(String nomTable, int id, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>extraire_fk</name>
+        <qualifiedname>general.ObjetDi.extraire_fk</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1305" column="21" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1305" bodyend="1331"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a9bf20400b0a56d292a10879924d2b058" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>HashMap&lt; String, Object &gt;</type>
+        <definition>HashMap&lt; String, Object &gt; general.ObjetDi.getHashModificationsSimple</definition>
+        <argsstring>()</argsstring>
+        <name>getHashModificationsSimple</name>
+        <qualifiedname>general.ObjetDi.getHashModificationsSimple</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>renvoie des données plus light que getHashModifications</para>
+<para><simplesect kind="return"><para>les mandatories sont traités, mais il n&apos;y a pas de listes et les sous objets ont juste leur id, sans la hashmap du sous-objet </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1444" column="21" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1444" bodyend="1488"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a90bac67e74d1db863f2370d8f2860030" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.ajouter_variable</definition>
+        <argsstring>(String nomVariable, ArrayList&lt; String &gt; arrayList)</argsstring>
+        <name>ajouter_variable</name>
+        <qualifiedname>general.ObjetDi.ajouter_variable</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nomVariable</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>arrayList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1746" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1746" bodyend="1749"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1aa1a64705e832597fd040b62dabc9d858" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; <ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref> &gt;</type>
+        <definition>ArrayList&lt; ObjetDi &gt; general.ObjetDi.generer_hashobjets</definition>
+        <argsstring>(List&lt; Object &gt; list, String nomTable, HashMap&lt; String, Object &gt; hashLevis)</argsstring>
+        <name>generer_hashobjets</name>
+        <qualifiedname>general.ObjetDi.generer_hashobjets</qualifiedname>
+        <param>
+          <type>List&lt; Object &gt;</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <param>
+          <type>HashMap&lt; String, Object &gt;</type>
+          <declname>hashLevis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1936" column="23" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1936" bodyend="1947"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6fa39ff9649d159ac134b81f266c7daf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.comment</definition>
+        <argsstring>(String msg, String outCode)</argsstring>
+        <name>comment</name>
+        <qualifiedname>general.ObjetDi.comment</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>outCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="1950" column="18" bodyfile="src/main/java/general/ObjetDi.java" bodystart="1950" bodyend="1956"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a054ee03aba92c2690dad5e4f3b363de4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.initialiser</definition>
+        <argsstring>(String nom, Object valeur)</argsstring>
+        <name>initialiser</name>
+        <qualifiedname>general.ObjetDi.initialiser</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <param>
+          <type>Object</type>
+          <declname>valeur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cette méthode permet d&apos;initialiser/reinitialiser les variables</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable ; ne peut être vide </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valeur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la valeur à insérer; ne peut être null </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="569" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="569" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1ObjetDi_1a6cf9158c3ba1bd80f26366b538688795" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.ObjetDi.initialiser_liste</definition>
+        <argsstring>(String nom)</argsstring>
+        <name>initialiser_liste</name>
+        <qualifiedname>general.ObjetDi.initialiser_liste</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cette méthode permet d&apos;initialiser/reinitialiser les listes</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>le nom de la variable ; ne peut être vide </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/ObjetDi.java" line="599" column="20" bodyfile="src/main/java/general/ObjetDi.java" bodystart="599" bodyend="607"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Comparable</label>
+      </node>
+      <node id="1">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>general.Individu</label>
+        <link refid="classgeneral_1_1Individu"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>general.calendrier.Evenement</label>
+        <link refid="classgeneral_1_1calendrier_1_1Evenement"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>general.calendrier.Indisponibilite</label>
+        <link refid="classgeneral_1_1calendrier_1_1Indisponibilite"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>general.calendrier.Trou</label>
+        <link refid="classgeneral_1_1calendrier_1_1Trou"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Serializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="2">
+        <label>Comparable</label>
+      </node>
+      <node id="5">
+        <label>HashMap&lt; String, String &gt;</label>
+      </node>
+      <node id="1">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>variablesVisibles</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>nomsPublics</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/ObjetDi.java" line="13" column="17" bodyfile="src/main/java/general/ObjetDi.java" bodystart="14" bodyend="2001"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1ObjetDi_1a05df36a4f4bb090379ae2786be990d73" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>add_nom_public</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a783e07f8e2b64b4892ed06b6964ee73f" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>add_variable_visible</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1828cbc021106f7812488ce236a9e127" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>addGestionnaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa86727fbfa008961c04857e2d319a290" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>addMandatory</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1b68ee5c21b4f1f29eff22347f8c82a3" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>addModification</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afdbb0643b4c82cf9baade201440c160e" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>ajouter_dans_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a90bac67e74d1db863f2370d8f2860030" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>ajouter_variable</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a36d8849d1a65126de95e805dc23388e9" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>changer_nom_id</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac65d393205b173a0067e32e33cbecafd" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>changer_nom_nom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3d374a4f1d0d5d32ced583d4119bb6f9" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>changer_nom_variable</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5e0971df98474b4f098b5e0a51247a7d" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>charger_donnees</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a35ba6f7671507de2096f39a9e83483ee" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>clear</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae3efa63f65754af5f32d9c419804be75" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>clearMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a222d3ccf13080b223a1167a41dd28ba6" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>clearModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a25567a2831eab82beb565d20f61c680d" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>clearSousObjets</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6fa39ff9649d159ac134b81f266c7daf" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>comment</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aefc6741114ee9f329992366b594192cf" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>compareTo</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aaa5ae83922d2f1394fb0e42ff02d871f" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>COULEUR</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9fa51595364c2574f814bd53f4f099e0" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>creer_objet_vide</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a35a78342c585a1ddce8fb9b02627312a" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>deleteSousObjets</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5d39db6c827e91aab854ff42ea604862" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>ecrire_rapport</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae255e854aa41b83d9329897f17dc155b" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>equals</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ab08dd86e72e9e4983b87a3d96e628e01" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>extraire_date</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a0423535a92ce23669900776464c9b378" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>extraire_dateTime</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8eb95c3e2f2810ae018448ba4f361a34" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>extraire_donnees_attendues</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aeed9434d1fea9e5c890e27c7279113db" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>extraire_fk</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa644ce344c50939d04633845b5adebf2" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>extraire_float</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6569b87ef6551a156333b095fa7bc20f" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>extraire_int</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa1a64705e832597fd040b62dabc9d858" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>generer_hashobjets</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a78c14cfd291b8dc561d8c660a1ebc702" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>gestionnairesImbrications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a99264a3c2cc0c9220966ee5b0378a619" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>get</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a201746dfde1966fa6ce30107a53e240a" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getAllData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ada50db2b80b7988b81a871c8bb3dbc57" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getCopy</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a12bc1528c0e8fee99a32b332f859ce90" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getCouleur</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8c4cbd1740b7980a88197633cbfb5f7a" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abfe1b190a41ad386655d74d4121d7055" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6698fbca215239892da81c6e65cc35ee" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a394410f5d78362d5bb8c0af04eef6932" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getFKIs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a01fb98109f9175d082107781a441ed8f" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getFKs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a73fcdb263606a5cdc355357888b443e5" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getGestionnairesImbrications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3be3f7048cc0c9876a79652fe6ecdb88" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getHashDependants</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a13c3b045be3e915bbd7f6762f926315d" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getHashListes</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a04aa1604026adc7a2d5232f04804171b" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getHashMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abcbdd8d784c51914d82ef111ec5acb68" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getHashModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9bf20400b0a56d292a10879924d2b058" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>getHashModificationsSimple</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6c54a0827c56e4bdd2a5f9550750ce3a" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getId</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aae36a208effa09ca2eeaa6660ae04002" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getIdName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3325e272d4e8849c3cc3abc18b79a26d" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getIdParent</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5b93b50c4b24fde4784400c53bcff250" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getListe</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a13430043faa6f6e9794d46938d9822a8" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getListeNomsPublics</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a78589347be90b3359d3ee335eb292964" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getNewInstance</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6f3e3a2e251a49c43790cc19a0040ec6" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getNom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afd705894affa7683a8d61368ad174779" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getNomFK</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae6a524a6d47d089b84a12a7937dd58c8" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getNomPublic</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5f581421162407637a1beea5e27f5d21" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getNomsModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a06087a189c8ccef31d484dabfb6faf88" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getNonAttendus</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4e76c6a98a07048763ac3a4188ff64b3" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getObjet</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afd8d202f01c64d5fe44bd95967440c15" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getObjetDependant</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa99cf3f8c4de7c4477c71027b8334b3c" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getObjetFromType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6dd698536324953839aea3de639a4408" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getObjetIntermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a777e624beb1fcd7d8e5f1b1e5ebda573" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getomsMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3c80d25be475c8e3b1980a62b51e3903" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getOnlyIDs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abc10f5f2ed0ead1a6e2c790bf9c7ddcf" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getParent</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa2d9ccee631e000308f580bb0f8d1591" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getPublicName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a773603c5296e1293f87b665fe9930c25" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getSimpleData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a2ec91c6c4ef1f0ec2ec2c8925c7a9eb0" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a21addc0aebccabf2e7cecde52b564f5a" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getTypeOfVariable</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac7e41fd987f64f513e6351100fa26900" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getVariableClass</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ab08ab8b499dbf15609cae22506e2a8cf" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>getVariablesVisibles</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4aca20d2c557710f30d5b379591e53cd" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>hashClassesDonnees</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9fd4fcdb07a86bec531c37df57758a1e" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>hashDependants</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a27589d3144fe16018d9b2ac24fac0a25" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>hashDonnees</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aeb114c5ba48c852e22c21ecb72b108da" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>hashDonneesNonAttendues</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a608dc44cabc8add7e996529b540ba1b1" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>hashFKIntermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a0b1b911533d165037ae98b6cb2e28024" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>hashFKs</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9d1417aa63a7fdce2e479def6f0873f1" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>hashListes</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a054ee03aba92c2690dad5e4f3b363de4" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>initialiser</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6cf9158c3ba1bd80f26366b538688795" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>initialiser_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1841d3d484d513531ed050b09f4e3de6" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>initialiser_objetDi</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9e70f4370dcc8699ad675232d9cea3db" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_dans_gestionnaireImbrication</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a286834e3d11c75b2d7e5deba20ae680b" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_dans_gestionnaireImbrication</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9f7d8b44b2fa8bcdb9927873f4247ea2" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_dependant</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5cc44c9212ff792d61aa76adfd9a8f75" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_directement</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1afce9296ebb00a91a355baa7e119be1c5" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_fk</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aacc9b6e2eeca3b439398e037357cbe97" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ab55b0782b8a5cfcf88dfb2e974f7d232" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_prudemment</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a7a24587a62404b8543e3aca64c7bd891" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_souplement_valeur</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1af6c4646bf216a60e213e009e1eb01c5d" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_valeur</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a443906de370c4ca81386b842740023d0" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>inserer_valeur_intermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa27a2b05178cfda83863dd1367a9b3b8" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>isModifie</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a611e8a9ce99154d2c3115f43ff64adf1" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>isModifie</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a16f1a41d6e8e4aea5ccd8fd3469fa58e" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>isParent</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1abbd15d1e65701c99c99961b24cd3594a" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>mandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1acc7dd0583ae413323796b92ad235ede4" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>modifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa1aa4881e7ed9496be8179bd355006bf" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>nomID</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5a30c7eb98943d5870b03bc070212587" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>nomNOM</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a43403e2cbc7655d89748795097025c97" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>nomsPublics</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a3b7b0f7865dfffba48244a1d40484c57" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>ObjetDi</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ac885b4694153adc64e9e31b8e46b624a" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>ObjetDi</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a216cb072a88539066bec1d542b021973" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>paires_NomsTables_NomsSpeciaux</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1895ed7b1daa179dd3fdc06174959c52" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>publicName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4f3b720645533a03346209dcb6463acc" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>putAll</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a08cf47bc67b8ea5cce6fd2dc689385bb" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>putAllExpected</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a39bb9240c9837e3115b2a7b00cb06433" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>reinitialiser</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a31f9e7e65a6cf03c1d51cd884197657a" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>remove</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae288edc9539c54d0da7c841c2dff215d" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>removeMandatory</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae2d87edac158b1b2c87f30430a0de49f" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>removeModification</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aef98d27f3537184e9066091576a8ec90" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>remplacer_noms_stockes</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1af9355929db1e0ee1c2eabfa3c20b4c6d" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>set_single_data</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8fc95efddd92b4832c1dca6b5762ede8" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setCouleur</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a2a0ab29526d37729e6033dc9e0c86a39" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setData</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9b7223c1b07586ce663298d1c614d4f1" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setDataFromHashLevis</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4a3d5facdd9ce514d62966e11ee66569" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setDependant</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a6c502465f577081ad37faf0046c4b8c1" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setFK</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a8122c517d5a5ae02f6812157b8994022" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setFKIntermediaire</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9af290af143437cc1fc827ce59f9a8a6" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setId</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aec6da3b01bc2b62f8b2459258f134b9b" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setMandatories</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4182d279d37fd506e1a567a44c3f6554" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setModifications</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a0c247ae0b7c8ebc583c706c723f5bdc6" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setNom</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae59e559564bec8d6b50d4f06ab59327c" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setParent</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ae868ac029aa7f6871719dcff37e4835c" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setPublicName</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a26bdc424bfb09120f36be44e621394b1" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setType</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a31b04d4fe5f2ff4688a773545f47bd63" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setVariableClass</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a1876ccbc5fbf782096b31cc37f3cc289" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>setVariablesVisibles</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a9b13218f30ad12246acb81a5e428edd3" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>toString</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a7d56523f9f7c907ffc7cb65fcd5b0c71" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>transformer_en_objet</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1aa32a2cc3eba852d37e05b738c8a554aa" prot="private" virt="non-virtual"><scope>general::ObjetDi</scope><name>transformer_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a4caaf58cdfa5c9fda92b6cd329b270f8" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>TYPE</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a5c5351c23cedec8b4329a00ee641b168" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>updater_liste</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1a205a992d070027f7ee3eed47e92cdedb" prot="public" virt="non-virtual"><scope>general::ObjetDi</scope><name>variable_existe</name></member>
+      <member refid="classgeneral_1_1ObjetDi_1ad9c0c5d849d5f3e937fb03664bccd35e" prot="protected" virt="non-virtual"><scope>general::ObjetDi</scope><name>variablesVisibles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

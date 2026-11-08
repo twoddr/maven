@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 public class AfficheurRequete {
 
+    /**
+     * Affiche les détails d'une requête
+     *
+     * @param in requête
+     * @return un texte qui reprend les infos de la requête
+     */
     public static String getDetails(ArrayList in) {
         StringBuilder retour = new StringBuilder("{");
         int i = 0;

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="interfacegeneral_1_1GestionnaireRetourBD" kind="interface" language="Java" prot="public">
+    <compoundname>general::GestionnaireRetourBD</compoundname>
+    <derivedcompoundref refid="classgeneral_1_1RetourBDExe" prot="public" virt="non-virtual">general.RetourBDExe</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacegeneral_1_1GestionnaireRetourBD_1a4e8459df0a937e2bcf9c30102761a911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.GestionnaireRetourBD.traitementRetour</definition>
+        <argsstring>(ArrayList p)</argsstring>
+        <name>traitementRetour</name>
+        <qualifiedname>general.GestionnaireRetourBD.traitementRetour</qualifiedname>
+        <reimplementedby refid="classgeneral_1_1RetourBDExe_1a969086c0693880289a6905b354694957">traitementRetour</reimplementedby>
+        <param>
+          <type>ArrayList</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/GestionnaireRetourBD.java" line="6" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>general.GestionnaireRetourBD</label>
+        <link refid="interfacegeneral_1_1GestionnaireRetourBD"/>
+      </node>
+      <node id="2">
+        <label>general.RetourBDExe</label>
+        <link refid="classgeneral_1_1RetourBDExe"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/main/java/general/GestionnaireRetourBD.java" line="5" column="18" bodyfile="src/main/java/general/GestionnaireRetourBD.java" bodystart="5" bodyend="7"/>
+    <listofallmembers>
+      <member refid="interfacegeneral_1_1GestionnaireRetourBD_1a4e8459df0a937e2bcf9c30102761a911" prot="public" virt="non-virtual"><scope>general::GestionnaireRetourBD</scope><name>traitementRetour</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

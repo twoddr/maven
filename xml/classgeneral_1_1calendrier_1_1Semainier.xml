@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1calendrier_1_1Semainier" kind="class" language="Java" prot="public">
+    <compoundname>general::calendrier::Semainier</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1Semainier_1a630d969f3e208d8e257092ae19683e7f" prot="private" static="no" mutable="no">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.localDate</definition>
+        <argsstring></argsstring>
+        <name>localDate</name>
+        <qualifiedname>general.calendrier.Semainier.localDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="8" column="23" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1a9f41897d144282fa577f3756cdd6f88e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.calendrier.Semainier.Semainier</definition>
+        <argsstring>(LocalDate date)</argsstring>
+        <name>Semainier</name>
+        <qualifiedname>general.calendrier.Semainier.Semainier</qualifiedname>
+        <param>
+          <type>LocalDate</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="10" column="12" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1a3165aa4660c678ef7cc8650a70917517" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.calendrier.Semainier.getNumeroSemaine</definition>
+        <argsstring>()</argsstring>
+        <name>getNumeroSemaine</name>
+        <qualifiedname>general.calendrier.Semainier.getNumeroSemaine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Donne le numéro de semaine</para>
+<para><simplesect kind="return"><para>le jour de l&apos;année divisé par 7 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="19" column="16" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1a7c5c0e65b00c4b1589c8d4bf2d76564d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.getLundi</definition>
+        <argsstring>()</argsstring>
+        <name>getLundi</name>
+        <qualifiedname>general.calendrier.Semainier.getLundi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="23" column="22" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1a85dd1356ddf636d31e41cae53468fc68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.getMardi</definition>
+        <argsstring>()</argsstring>
+        <name>getMardi</name>
+        <qualifiedname>general.calendrier.Semainier.getMardi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="29" column="22" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1a3405ecaa6b770d20336d228371693d21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.getMercredi</definition>
+        <argsstring>()</argsstring>
+        <name>getMercredi</name>
+        <qualifiedname>general.calendrier.Semainier.getMercredi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="35" column="22" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="35" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1af0ae243d726f2a44f3251ff83ef50368" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.getJeudi</definition>
+        <argsstring>()</argsstring>
+        <name>getJeudi</name>
+        <qualifiedname>general.calendrier.Semainier.getJeudi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="41" column="22" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1ac1a3e0cefa2e67cb5b5e62889abec203" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.getVendredi</definition>
+        <argsstring>()</argsstring>
+        <name>getVendredi</name>
+        <qualifiedname>general.calendrier.Semainier.getVendredi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="47" column="22" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1a20e4f414bbc7e0387dcccd930210ddac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.getSamedi</definition>
+        <argsstring>()</argsstring>
+        <name>getSamedi</name>
+        <qualifiedname>general.calendrier.Semainier.getSamedi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="53" column="22" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1Semainier_1afb2b50fe08ebfb0cc22db0cc0691349b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDate</type>
+        <definition>LocalDate general.calendrier.Semainier.getDimanche</definition>
+        <argsstring>()</argsstring>
+        <name>getDimanche</name>
+        <qualifiedname>general.calendrier.Semainier.getDimanche</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/Semainier.java" line="59" column="22" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="59" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/calendrier/Semainier.java" line="6" column="7" bodyfile="src/main/java/general/calendrier/Semainier.java" bodystart="6" bodyend="64"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1afb2b50fe08ebfb0cc22db0cc0691349b" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getDimanche</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1af0ae243d726f2a44f3251ff83ef50368" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getJeudi</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1a7c5c0e65b00c4b1589c8d4bf2d76564d" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getLundi</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1a85dd1356ddf636d31e41cae53468fc68" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getMardi</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1a3405ecaa6b770d20336d228371693d21" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getMercredi</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1a3165aa4660c678ef7cc8650a70917517" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getNumeroSemaine</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1a20e4f414bbc7e0387dcccd930210ddac" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getSamedi</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1ac1a3e0cefa2e67cb5b5e62889abec203" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>getVendredi</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1a630d969f3e208d8e257092ae19683e7f" prot="private" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>localDate</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1Semainier_1a9f41897d144282fa577f3756cdd6f88e" prot="public" virt="non-virtual"><scope>general::calendrier::Semainier</scope><name>Semainier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

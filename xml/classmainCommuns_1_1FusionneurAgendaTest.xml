@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classmainCommuns_1_1FusionneurAgendaTest" kind="class" language="Java" prot="public">
+    <compoundname>mainCommuns::FusionneurAgendaTest</compoundname>
+    <basecompoundref refid="interfacegeneral_1_1InformateurObjet" prot="public" virt="non-virtual">general.InformateurObjet</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a6eb76183ba950ab3d1a582162dee0b4a" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_TYPE</definition>
+        <argsstring></argsstring>
+        <name>NOM_TYPE</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_TYPE</qualifiedname>
+        <initializer>= &quot;type&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="19" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a8e23423870c12307be8c2c24a1ec3784" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_ID</definition>
+        <argsstring></argsstring>
+        <name>NOM_ID</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_ID</qualifiedname>
+        <initializer>= &quot;id&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="20" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a958291272f71a212c296a83531f565df" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_DESCRIPTION</definition>
+        <argsstring></argsstring>
+        <name>NOM_DESCRIPTION</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_DESCRIPTION</qualifiedname>
+        <initializer>= &quot;description&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="21" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a9403f7925892d36ff6209c4fe6f20be9" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_COULEUR</definition>
+        <argsstring></argsstring>
+        <name>NOM_COULEUR</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_COULEUR</qualifiedname>
+        <initializer>= &quot;couleurTexte&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="22" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1ac1dd823b86374042580199bc1e49a80a" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_IDINTERMEDIAIRE</definition>
+        <argsstring></argsstring>
+        <name>NOM_IDINTERMEDIAIRE</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_IDINTERMEDIAIRE</qualifiedname>
+        <initializer>= &quot;idIntermediaire&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="23" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1aa3997c5c0e03ea946234a14f1c7bbb36" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_DATEDU</definition>
+        <argsstring></argsstring>
+        <name>NOM_DATEDU</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_DATEDU</qualifiedname>
+        <initializer>= &quot;dateDu&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="24" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a78d6377b1f2bd5fb3b704741b4fc7b3a" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_DATEAU</definition>
+        <argsstring></argsstring>
+        <name>NOM_DATEAU</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_DATEAU</qualifiedname>
+        <initializer>= &quot;dateAu&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="25" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a390faf71e00aa6fbbb1d7b0c3244df8f" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_COULEUR_CADRE</definition>
+        <argsstring></argsstring>
+        <name>NOM_COULEUR_CADRE</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_COULEUR_CADRE</qualifiedname>
+        <initializer>= &quot;couleurCadre&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="26" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1ac9f1eac1d597ce95487d6b89817ea53d" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_COULEUR_FOND</definition>
+        <argsstring></argsstring>
+        <name>NOM_COULEUR_FOND</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_COULEUR_FOND</qualifiedname>
+        <initializer>= &quot;couleurFond&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="27" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a8f02b1b9f05fd8596c30aed1eaad573a" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String mainCommuns.FusionneurAgendaTest.NOM_LIEU</definition>
+        <argsstring></argsstring>
+        <name>NOM_LIEU</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.NOM_LIEU</qualifiedname>
+        <initializer>= &quot;lieu&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="28" column="33" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1af1e020ddcfa6bd135aa0acddb70888f6" prot="private" static="yes" mutable="no">
+        <type>ArrayList&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>ArrayList&lt;Evenement&gt; mainCommuns.FusionneurAgendaTest.evenements</definition>
+        <argsstring></argsstring>
+        <name>evenements</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.evenements</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="29" column="30" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a541af195bb3b5c8c0955cb4401252bca" prot="private" static="yes" mutable="no">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement mainCommuns.FusionneurAgendaTest.evenementIsole</definition>
+        <argsstring></argsstring>
+        <name>evenementIsole</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.evenementIsole</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="30" column="30" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmainCommuns_1_1FusionneurAgendaTest_1a3ca77405af811cf65e7cf16975b0f40d" prot="private" static="yes" mutable="no">
+        <type><ref refid="classmainCommuns_1_1FusionneurAgendaTest" kindref="compound">FusionneurAgendaTest</ref></type>
+        <definition>FusionneurAgendaTest mainCommuns.FusionneurAgendaTest.principal</definition>
+        <argsstring></argsstring>
+        <name>principal</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.principal</qualifiedname>
+        <initializer>= new <ref refid="classmainCommuns_1_1FusionneurAgendaTest" kindref="compound">FusionneurAgendaTest</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="31" column="41" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classmainCommuns_1_1FusionneurAgendaTest_1a60f6f8ce3ac77dc21419cea557e8be47" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mainCommuns.FusionneurAgendaTest.afficher_contenu_telescopeur</definition>
+        <argsstring>(FusionneurEvenements telescopeur, TreeSet&lt; Evenement &gt; resultat)</argsstring>
+        <name>afficher_contenu_telescopeur</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.afficher_contenu_telescopeur</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1FusionneurEvenements" kindref="compound">FusionneurEvenements</ref></type>
+          <declname>telescopeur</declname>
+        </param>
+        <param>
+          <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+          <declname>resultat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="33" column="25" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="33" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classmainCommuns_1_1FusionneurAgendaTest_1a394aabd7c52a611543856eca11650ba9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mainCommuns.FusionneurAgendaTest.afficher_contenu_fusionneur</definition>
+        <argsstring>(FusionneurAgendas fusionneur)</argsstring>
+        <name>afficher_contenu_fusionneur</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.afficher_contenu_fusionneur</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1FusionneurAgendas" kindref="compound">FusionneurAgendas</ref></type>
+          <declname>fusionneur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="44" column="25" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="44" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmainCommuns_1_1FusionneurAgendaTest_1a10bb0809364c77f10e4d387134f1fadf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mainCommuns.FusionneurAgendaTest.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.main</qualifiedname>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="53" column="24" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="53" bodyend="155"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmainCommuns_1_1FusionneurAgendaTest_1af8fbf15f1874c665ad997b7b040961e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref></type>
+        <definition>ObjetDi mainCommuns.FusionneurAgendaTest.getObjetFromType</definition>
+        <argsstring>(String nomTable)</argsstring>
+        <name>getObjetFromType</name>
+        <qualifiedname>mainCommuns.FusionneurAgendaTest.getObjetFromType</qualifiedname>
+        <reimplements refid="interfacegeneral_1_1InformateurObjet_1a46a228beaa7f6083921c4ff0d6f33e96">getObjetFromType</reimplements>
+        <param>
+          <type>String</type>
+          <declname>nomTable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="158" column="20" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="158" bodyend="160"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>general.InformateurObjet</label>
+        <link refid="interfacegeneral_1_1InformateurObjet"/>
+      </node>
+      <node id="1">
+        <label>mainCommuns.FusionneurAgendaTest</label>
+        <link refid="classmainCommuns_1_1FusionneurAgendaTest"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>general.InformateurObjet</label>
+        <link refid="interfacegeneral_1_1InformateurObjet"/>
+      </node>
+      <node id="1">
+        <label>mainCommuns.FusionneurAgendaTest</label>
+        <link refid="classmainCommuns_1_1FusionneurAgendaTest"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/mainCommuns/FusionneurAgendaTest.java" line="17" column="7" bodyfile="src/main/java/mainCommuns/FusionneurAgendaTest.java" bodystart="17" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a394aabd7c52a611543856eca11650ba9" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>afficher_contenu_fusionneur</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a60f6f8ce3ac77dc21419cea557e8be47" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>afficher_contenu_telescopeur</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a541af195bb3b5c8c0955cb4401252bca" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>evenementIsole</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1af1e020ddcfa6bd135aa0acddb70888f6" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>evenements</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1af8fbf15f1874c665ad997b7b040961e5" prot="public" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>getObjetFromType</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a10bb0809364c77f10e4d387134f1fadf" prot="public" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>main</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a9403f7925892d36ff6209c4fe6f20be9" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_COULEUR</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a390faf71e00aa6fbbb1d7b0c3244df8f" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_COULEUR_CADRE</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1ac9f1eac1d597ce95487d6b89817ea53d" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_COULEUR_FOND</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a78d6377b1f2bd5fb3b704741b4fc7b3a" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_DATEAU</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1aa3997c5c0e03ea946234a14f1c7bbb36" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_DATEDU</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a958291272f71a212c296a83531f565df" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_DESCRIPTION</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a8e23423870c12307be8c2c24a1ec3784" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_ID</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1ac1dd823b86374042580199bc1e49a80a" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_IDINTERMEDIAIRE</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a8f02b1b9f05fd8596c30aed1eaad573a" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_LIEU</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a6eb76183ba950ab3d1a582162dee0b4a" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>NOM_TYPE</name></member>
+      <member refid="classmainCommuns_1_1FusionneurAgendaTest_1a3ca77405af811cf65e7cf16975b0f40d" prot="private" virt="non-virtual"><scope>mainCommuns::FusionneurAgendaTest</scope><name>principal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

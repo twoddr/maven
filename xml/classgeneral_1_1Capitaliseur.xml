@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Capitaliseur" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>general::Capitaliseur</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1Capitaliseur_1ae8abeda4d79957cae7c6bc474da198b7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.Capitaliseur.capitaliser_initiales</definition>
+        <argsstring>(String s)</argsstring>
+        <name>capitaliser_initiales</name>
+        <qualifiedname>general.Capitaliseur.capitaliser_initiales</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Capitaliseur.java" line="4" column="26" bodyfile="src/main/java/general/Capitaliseur.java" bodystart="4" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/Capitaliseur.java" line="3" column="17" bodyfile="src/main/java/general/Capitaliseur.java" bodystart="3" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1Capitaliseur_1ae8abeda4d79957cae7c6bc474da198b7" prot="public" virt="non-virtual"><scope>general::Capitaliseur</scope><name>capitaliser_initiales</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -134,28 +134,25 @@ public class Individu extends ObjetCSA {
     }
 
     public void reinitialiser_individu() {
-        initialiser(LOGIN, "");
-        initialiser(nomNOM, "");
-        initialiser(PRENOM, "");
-        initialiser(ADRESSE, "");
-        initialiser(TVA, "");
-        initialiser(TEL, "");
-        initialiser(GSM, "");
-        initialiser(FAX, "");
-        initialiser(URL, "");
-        initialiser(COURRIEL, "");
-        initialiser(TITRE, "");
-        initialiser(MOT_DE_PASSE, "");
-        initialiser(GRADE, 0);
-        initialiser(CODE_POSTAL, 0);
-        initialiser(DATE_NAISSANCE, LocalDateTime.now());
-        initialiser(SEXE, "");
-        initialiser(COMMENTAIRES, "");
+        initialiser(LOGIN, "", "Login");
+        initialiser(nomNOM, "", "Nom");
+        initialiser(PRENOM, "", "Prénom");
+        initialiser(ADRESSE, "", "Adresse postale");
+        initialiser(TVA, "", "N° TVA");
+        initialiser(TEL, "", "Tél");
+        initialiser(GSM, "", "GSM");
+        initialiser(FAX, "", "Fax");
+        initialiser(URL, "", "Site web");
+        initialiser(COURRIEL, "", "Courriel");
+        initialiser(TITRE, "", "Titre");
+        initialiser(MOT_DE_PASSE, "", "Mot de passe");
+        initialiser(GRADE, 0, "Grade");
+        initialiser(CODE_POSTAL, 0, "Code postal");
+        initialiser(DATE_NAISSANCE, LocalDateTime.now(), "Date de naissance");
+        initialiser(SEXE, "", "Sexe");
+        initialiser(COMMENTAIRES, "", "Remarques");
 
-        add_nom_public(COURRIEL, "Courriel");
         add_variable_a_afficher(COURRIEL);
-        add_nom_public(nomNOM, "Nom");
-        add_nom_public(PRENOM, "Prénom");
         add_variable_a_afficher(PRENOM);
     }
 

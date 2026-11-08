@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1FormateurNumero" kind="class" language="Java" prot="public">
+    <compoundname>general::FormateurNumero</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1FormateurNumero_1a69ff114d340dc58e067766ea7a2f5d0c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int general.FormateurNumero.taille</definition>
+        <argsstring></argsstring>
+        <name>taille</name>
+        <qualifiedname>general.FormateurNumero.taille</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="4" column="12" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1FormateurNumero_1aaf11a00bd74030049cda69d9838742eb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int general.FormateurNumero.nombreAFormater</definition>
+        <argsstring></argsstring>
+        <name>nombreAFormater</name>
+        <qualifiedname>general.FormateurNumero.nombreAFormater</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="5" column="12" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="5" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1FormateurNumero_1a7571f9a22045c0a479dbcf1f48526a79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.FormateurNumero.FormateurNumero</definition>
+        <argsstring>(int nombre, int tailleSouhaitee)</argsstring>
+        <name>FormateurNumero</name>
+        <qualifiedname>general.FormateurNumero.FormateurNumero</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nombre</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tailleSouhaitee</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructeur à deux entrées les entrées sont enregistrées si la taille souhaitée est positive</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nombre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est le nombre à formater </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tailleSouhaitee</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>c&apos;est la taille désirée du string de sortie </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="17" column="8" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="17" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1FormateurNumero_1aedb19990cba20ac4d00a633cc4ce82f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.FormateurNumero.getNombreFormate</definition>
+        <argsstring>()</argsstring>
+        <name>getNombreFormate</name>
+        <qualifiedname>general.FormateurNumero.getNombreFormate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="24" column="15" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1FormateurNumero_1a83bfa97600953931a95fd9e0f93fd9f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.FormateurNumero.getTaille</definition>
+        <argsstring>()</argsstring>
+        <name>getTaille</name>
+        <qualifiedname>general.FormateurNumero.getTaille</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="31" column="12" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1FormateurNumero_1a825ac53019d332baa61558cdf2ae8a03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.FormateurNumero.getNombreAFormater</definition>
+        <argsstring>()</argsstring>
+        <name>getNombreAFormater</name>
+        <qualifiedname>general.FormateurNumero.getNombreAFormater</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="35" column="12" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1FormateurNumero_1a8114d6e01e9b2cd9d90efb3d53455fcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.FormateurNumero.setNombreAFormater</definition>
+        <argsstring>(int nombreAFormater)</argsstring>
+        <name>setNombreAFormater</name>
+        <qualifiedname>general.FormateurNumero.setNombreAFormater</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>nombreAFormater</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="39" column="13" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1FormateurNumero_1aa83982d767a8eb24bc2a37a3d1e3d550" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.FormateurNumero.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <qualifiedname>general.FormateurNumero.toString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/FormateurNumero.java" line="44" column="15" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="44" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/FormateurNumero.java" line="3" column="7" bodyfile="src/main/java/general/FormateurNumero.java" bodystart="3" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1FormateurNumero_1a7571f9a22045c0a479dbcf1f48526a79" prot="public" virt="non-virtual"><scope>general::FormateurNumero</scope><name>FormateurNumero</name></member>
+      <member refid="classgeneral_1_1FormateurNumero_1a825ac53019d332baa61558cdf2ae8a03" prot="public" virt="non-virtual"><scope>general::FormateurNumero</scope><name>getNombreAFormater</name></member>
+      <member refid="classgeneral_1_1FormateurNumero_1aedb19990cba20ac4d00a633cc4ce82f0" prot="public" virt="non-virtual"><scope>general::FormateurNumero</scope><name>getNombreFormate</name></member>
+      <member refid="classgeneral_1_1FormateurNumero_1a83bfa97600953931a95fd9e0f93fd9f4" prot="public" virt="non-virtual"><scope>general::FormateurNumero</scope><name>getTaille</name></member>
+      <member refid="classgeneral_1_1FormateurNumero_1aaf11a00bd74030049cda69d9838742eb" prot="private" virt="non-virtual"><scope>general::FormateurNumero</scope><name>nombreAFormater</name></member>
+      <member refid="classgeneral_1_1FormateurNumero_1a8114d6e01e9b2cd9d90efb3d53455fcb" prot="public" virt="non-virtual"><scope>general::FormateurNumero</scope><name>setNombreAFormater</name></member>
+      <member refid="classgeneral_1_1FormateurNumero_1a69ff114d340dc58e067766ea7a2f5d0c" prot="private" virt="non-virtual"><scope>general::FormateurNumero</scope><name>taille</name></member>
+      <member refid="classgeneral_1_1FormateurNumero_1aa83982d767a8eb24bc2a37a3d1e3d550" prot="public" virt="non-virtual"><scope>general::FormateurNumero</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

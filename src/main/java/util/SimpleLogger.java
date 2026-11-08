@@ -35,15 +35,39 @@ public class SimpleLogger {
         this.name = name;
     }
 
+    /**
+     * Retrieves a logger instance for the specified class.
+     * Uses the class name as the logger name.
+     *
+     * @param cls the class to create a logger for, may be null
+     * @return a SimpleLogger instance for the class
+     */
     public static SimpleLogger getLogger(Class<?> cls) {
         return getLogger(cls == null ? "null" : cls.getName());
     }
 
+    /**
+     * Retrieves a logger instance with the specified name.
+     * Uses a concurrent map to ensure thread-safe singleton behavior per name.
+     *
+     * @param name the name of the logger, must not be null
+     * @return a SimpleLogger instance with the given name
+     * @throws NullPointerException if name is null
+     */
     public static SimpleLogger getLogger(String name) {
         Objects.requireNonNull(name);
         return LOGGERS.computeIfAbsent(name, SimpleLogger::new);
     }
 
+    /**
+     * Initializes the global SimpleLogger configuration.
+     * Sets the minimum log level, output file, and console output preferences.
+     * Registers a shutdown hook to cleanly close file resources.
+     *
+     * @param level the minimum log level to output, null keeps current level
+     * @param file the log file path, null for file-only logging
+     * @param console whether to output to console, true enables console output
+     */
     public static synchronized void init(Level level, Path file, boolean console) {
         if (level != null) globalLevel = level;
         consoleOut = console;
@@ -77,6 +101,15 @@ public class SimpleLogger {
                 ", console=" + consoleOut + ")");
     }
 
+    /**
+     * Initializes SimpleLogger from a Properties object.
+     * Expected properties:
+     * - cm.logging.level: log level (ERROR, WARN, INFO, DEBUG)
+     * - cm.logging.file: log file path (optional)
+     * - cm.logging.console: console output flag (optional, defaults to true)
+     *
+     * @param props the properties configuration, null uses defaults
+     */
     public static void initFromProperties(Properties props) {
         if (props == null) {
             init(null, null, true);
@@ -104,14 +137,30 @@ public class SimpleLogger {
     }
 
     // Public helpers to query/change global log level and to close resources
+    /**
+     * Gets the current global minimum log level.
+     *
+     * @return the current global log level
+     */
     public static Level getLevel() {
         return globalLevel;
     }
 
+    /**
+     * Sets the global minimum log level.
+     * Only messages at this level or higher will be logged.
+     *
+     * @param lvl the new log level, null keeps current level
+     */
     public static void setLevel(Level lvl) {
         if (lvl != null) globalLevel = lvl;
     }
 
+    /**
+     * Closes the file writer and cleans up resources.
+     * This method is thread-safe and can be called multiple times.
+     * Automatically called during JVM shutdown via registered hook.
+     */
     public static synchronized void close() {
         try {
             if (fileWriter != null) {
@@ -180,22 +229,54 @@ public class SimpleLogger {
         }
     }
 
+    /**
+     * Logs an informational message.
+     * Only logged if INFO level is enabled globally.
+     *
+     * @param msg the message to log, may be null
+     */
     public void info(String msg) {
         log(Level.INFO, msg, null);
     }
 
+    /**
+     * Logs a debug message.
+     * Only logged if DEBUG level is enabled globally.
+     *
+     * @param msg the message to log, may be null
+     */
     public void debug(String msg) {
         log(Level.DEBUG, msg, null);
     }
 
+    /**
+     * Logs a warning message.
+     * Only logged if WARN level is enabled globally.
+     *
+     * @param msg the message to log, may be null
+     */
     public void warn(String msg) {
         log(Level.WARN, msg, null);
     }
 
+    /**
+     * Logs an error message.
+     * Only logged if ERROR level is enabled globally.
+     *
+     * @param msg the message to log, may be null
+     */
     public void error(String msg) {
         log(Level.ERROR, msg, null);
     }
 
+    /**
+     * Logs an error message with an associated throwable.
+     * The throwable's stack trace will be included in the log output.
+     * Only logged if ERROR level is enabled globally.
+     *
+     * @param msg the message to log, may be null
+     * @param t the throwable to log, may be null
+     */
     public void error(String msg, Throwable t) {
         log(Level.ERROR, msg, t);
     }

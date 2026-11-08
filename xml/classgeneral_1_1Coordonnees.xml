@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Coordonnees" kind="class" language="Java" prot="public">
+    <compoundname>general::Coordonnees</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1Coordonnees_1a173f0451046fc7f14597e4b4d25e99fd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int general.Coordonnees.x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>general.Coordonnees.x</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="6" column="17" bodyfile="src/main/java/general/Coordonnees.java" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1Coordonnees_1ae5d49a0807258db2b2eae8c82fd917b9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int general.Coordonnees.y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>general.Coordonnees.y</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="7" column="17" bodyfile="src/main/java/general/Coordonnees.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1a249ee14e7677d1575b073461a30c032b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Coordonnees.Coordonnees</definition>
+        <argsstring>()</argsstring>
+        <name>Coordonnees</name>
+        <qualifiedname>general.Coordonnees.Coordonnees</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="9" column="12" bodyfile="src/main/java/general/Coordonnees.java" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1a8080c7d9fc40e15a5bba1bd4f8a06909" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Coordonnees.Coordonnees</definition>
+        <argsstring>(int i, int j)</argsstring>
+        <name>Coordonnees</name>
+        <qualifiedname>general.Coordonnees.Coordonnees</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="13" column="12" bodyfile="src/main/java/general/Coordonnees.java" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1a87d3d8a8db2690c65982ace862fd9225" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean general.Coordonnees.equals</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>equals</name>
+        <qualifiedname>general.Coordonnees.equals</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="19" column="20" bodyfile="src/main/java/general/Coordonnees.java" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1a3a66493034b111f535183b6c5df1b0fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.Coordonnees.getX</definition>
+        <argsstring>()</argsstring>
+        <name>getX</name>
+        <qualifiedname>general.Coordonnees.getX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="27" column="16" bodyfile="src/main/java/general/Coordonnees.java" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1af246ba7a342be356241ded0c50877737" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Coordonnees.setX</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setX</name>
+        <qualifiedname>general.Coordonnees.setX</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="31" column="17" bodyfile="src/main/java/general/Coordonnees.java" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1a61f8bb9e3bc2b7e4f635e343039c4c30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int general.Coordonnees.getY</definition>
+        <argsstring>()</argsstring>
+        <name>getY</name>
+        <qualifiedname>general.Coordonnees.getY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="35" column="16" bodyfile="src/main/java/general/Coordonnees.java" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1afcaf6d5e351ffe6bde2d2e6b427fd9a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void general.Coordonnees.setY</definition>
+        <argsstring>(int y)</argsstring>
+        <name>setY</name>
+        <qualifiedname>general.Coordonnees.setY</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="39" column="17" bodyfile="src/main/java/general/Coordonnees.java" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Coordonnees_1a07fba661ebcbbe0d4d3fb6dee1a62ea4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; Integer &gt;</type>
+        <definition>ArrayList&lt; Integer &gt; general.Coordonnees.getCoordonnees</definition>
+        <argsstring>()</argsstring>
+        <name>getCoordonnees</name>
+        <qualifiedname>general.Coordonnees.getCoordonnees</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Coordonnees.java" line="43" column="22" bodyfile="src/main/java/general/Coordonnees.java" bodystart="43" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/Coordonnees.java" line="5" column="7" bodyfile="src/main/java/general/Coordonnees.java" bodystart="5" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1Coordonnees_1a249ee14e7677d1575b073461a30c032b" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>Coordonnees</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1a8080c7d9fc40e15a5bba1bd4f8a06909" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>Coordonnees</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1a87d3d8a8db2690c65982ace862fd9225" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>equals</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1a07fba661ebcbbe0d4d3fb6dee1a62ea4" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>getCoordonnees</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1a3a66493034b111f535183b6c5df1b0fc" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>getX</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1a61f8bb9e3bc2b7e4f635e343039c4c30" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>getY</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1af246ba7a342be356241ded0c50877737" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>setX</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1afcaf6d5e351ffe6bde2d2e6b427fd9a8" prot="public" virt="non-virtual"><scope>general::Coordonnees</scope><name>setY</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1a173f0451046fc7f14597e4b4d25e99fd" prot="private" virt="non-virtual"><scope>general::Coordonnees</scope><name>x</name></member>
+      <member refid="classgeneral_1_1Coordonnees_1ae5d49a0807258db2b2eae8c82fd917b9" prot="private" virt="non-virtual"><scope>general::Coordonnees</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

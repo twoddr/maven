@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1calendrier_1_1FusionneurEvenements" kind="class" language="Java" prot="public">
+    <compoundname>general::calendrier::FusionneurEvenements</compoundname>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurEvenements_1ab5e66d1f7d1f5e43b593e8bb273f02dd" prot="package" static="no" mutable="no">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement general.calendrier.FusionneurEvenements.nonPrioritaireGauche</definition>
+        <argsstring></argsstring>
+        <name>nonPrioritaireGauche</name>
+        <qualifiedname>general.calendrier.FusionneurEvenements.nonPrioritaireGauche</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="8" column="15" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a0eafdddfd75e1b93ff37bc83d3ddf404" prot="package" static="no" mutable="no">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement general.calendrier.FusionneurEvenements.nonPrioritaireDroite</definition>
+        <argsstring></argsstring>
+        <name>nonPrioritaireDroite</name>
+        <qualifiedname>general.calendrier.FusionneurEvenements.nonPrioritaireDroite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="8" column="36" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a20cacf00a8db412d0ac8fa04b135c3fe" prot="package" static="no" mutable="no">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement general.calendrier.FusionneurEvenements.prioritaire</definition>
+        <argsstring></argsstring>
+        <name>prioritaire</name>
+        <qualifiedname>general.calendrier.FusionneurEvenements.prioritaire</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="8" column="57" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a511e1b4d60b35aefb1c7fe53e63c1ff7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; <ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref> &gt;</type>
+        <definition>TreeSet&lt; Evenement &gt; general.calendrier.FusionneurEvenements.telescoper</definition>
+        <argsstring>(Evenement prio, Evenement nonPrioritaire)</argsstring>
+        <name>telescoper</name>
+        <qualifiedname>general.calendrier.FusionneurEvenements.telescoper</qualifiedname>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>prio</declname>
+        </param>
+        <param>
+          <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+          <declname>nonPrioritaire</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fait interagir deux événements de manière à éviter les chevauchements Il ne modifie pas les événements rentrés, donc il sort des clones</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>prio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>événement jugé prioritaire </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nonPrioritaire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>événement jugé non-prioritaire </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>une liste triée de max 3 événements, en fonction du résultat du télescopage </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="19" column="20" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="19" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a2013c1e8163aa26ea9ea18db0e374a72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement general.calendrier.FusionneurEvenements.getNonPrioritaireGauche</definition>
+        <argsstring>()</argsstring>
+        <name>getNonPrioritaireGauche</name>
+        <qualifiedname>general.calendrier.FusionneurEvenements.getNonPrioritaireGauche</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="77" column="22" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a6a64e82ab2f78c03dd01f77689414f1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement general.calendrier.FusionneurEvenements.getNonPrioritaireDroite</definition>
+        <argsstring>()</argsstring>
+        <name>getNonPrioritaireDroite</name>
+        <qualifiedname>general.calendrier.FusionneurEvenements.getNonPrioritaireDroite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="81" column="22" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1calendrier_1_1FusionneurEvenements_1acd63d212bcc4ec75168df6107ea364f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgeneral_1_1calendrier_1_1Evenement" kindref="compound">Evenement</ref></type>
+        <definition>Evenement general.calendrier.FusionneurEvenements.getPrioritaire</definition>
+        <argsstring>()</argsstring>
+        <name>getPrioritaire</name>
+        <qualifiedname>general.calendrier.FusionneurEvenements.getPrioritaire</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="85" column="22" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="85" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="4">
+        <label>Comparable</label>
+      </node>
+      <node id="7">
+        <label>HashMap&lt; String, String &gt;</label>
+      </node>
+      <node id="1">
+        <label>general.calendrier.FusionneurEvenements</label>
+        <link refid="classgeneral_1_1calendrier_1_1FusionneurEvenements"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>nonPrioritaireDroite</edgelabel>
+          <edgelabel>nonPrioritaireGauche</edgelabel>
+          <edgelabel>prioritaire</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>general.ObjetDi</label>
+        <link refid="classgeneral_1_1ObjetDi"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>variablesVisibles</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>nomsPublics</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>general.calendrier.Evenement</label>
+        <link refid="classgeneral_1_1calendrier_1_1Evenement"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Serializable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/main/java/general/calendrier/FusionneurEvenements.java" line="6" column="7" bodyfile="src/main/java/general/calendrier/FusionneurEvenements.java" bodystart="6" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a6a64e82ab2f78c03dd01f77689414f1b" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurEvenements</scope><name>getNonPrioritaireDroite</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a2013c1e8163aa26ea9ea18db0e374a72" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurEvenements</scope><name>getNonPrioritaireGauche</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurEvenements_1acd63d212bcc4ec75168df6107ea364f6" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurEvenements</scope><name>getPrioritaire</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a0eafdddfd75e1b93ff37bc83d3ddf404" prot="package" virt="non-virtual"><scope>general::calendrier::FusionneurEvenements</scope><name>nonPrioritaireDroite</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurEvenements_1ab5e66d1f7d1f5e43b593e8bb273f02dd" prot="package" virt="non-virtual"><scope>general::calendrier::FusionneurEvenements</scope><name>nonPrioritaireGauche</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a20cacf00a8db412d0ac8fa04b135c3fe" prot="package" virt="non-virtual"><scope>general::calendrier::FusionneurEvenements</scope><name>prioritaire</name></member>
+      <member refid="classgeneral_1_1calendrier_1_1FusionneurEvenements_1a511e1b4d60b35aefb1c7fe53e63c1ff7" prot="public" virt="non-virtual"><scope>general::calendrier::FusionneurEvenements</scope><name>telescoper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

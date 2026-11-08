@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1Duplicateur" kind="class" language="Java" prot="public">
+    <compoundname>general::Duplicateur</compoundname>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classgeneral_1_1Duplicateur_1a70c3265953179aec824d421a4805d932" prot="package" static="no" mutable="no">
+        <type>Object</type>
+        <definition>Object general.Duplicateur.objet</definition>
+        <argsstring></argsstring>
+        <name>objet</name>
+        <qualifiedname>general.Duplicateur.objet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Duplicateur.java" line="6" column="12" bodyfile="src/main/java/general/Duplicateur.java" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgeneral_1_1Duplicateur_1afedcc71e862141b3113e0e36c02d601e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>general.Duplicateur.Duplicateur</definition>
+        <argsstring>(Object x)</argsstring>
+        <name>Duplicateur</name>
+        <qualifiedname>general.Duplicateur.Duplicateur</qualifiedname>
+        <param>
+          <type>Object</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Duplicateur.java" line="8" column="12" bodyfile="src/main/java/general/Duplicateur.java" bodystart="8" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1Duplicateur_1aea15d02143636ea3c3696c8888294196" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Object</type>
+        <definition>Object general.Duplicateur.obtenirDuplicata</definition>
+        <argsstring>()</argsstring>
+        <name>obtenirDuplicata</name>
+        <qualifiedname>general.Duplicateur.obtenirDuplicata</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Duplicateur.java" line="12" column="19" bodyfile="src/main/java/general/Duplicateur.java" bodystart="12" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgeneral_1_1Duplicateur_1ab114158f26747559ba5c1d929b521d86" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String general.Duplicateur.creer_nouveau_nom</definition>
+        <argsstring>(String nom)</argsstring>
+        <name>creer_nouveau_nom</name>
+        <qualifiedname>general.Duplicateur.creer_nouveau_nom</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>nom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/Duplicateur.java" line="23" column="20" bodyfile="src/main/java/general/Duplicateur.java" bodystart="23" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/Duplicateur.java" line="4" column="7" bodyfile="src/main/java/general/Duplicateur.java" bodystart="4" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1Duplicateur_1ab114158f26747559ba5c1d929b521d86" prot="private" virt="non-virtual"><scope>general::Duplicateur</scope><name>creer_nouveau_nom</name></member>
+      <member refid="classgeneral_1_1Duplicateur_1afedcc71e862141b3113e0e36c02d601e" prot="public" virt="non-virtual"><scope>general::Duplicateur</scope><name>Duplicateur</name></member>
+      <member refid="classgeneral_1_1Duplicateur_1a70c3265953179aec824d421a4805d932" prot="package" virt="non-virtual"><scope>general::Duplicateur</scope><name>objet</name></member>
+      <member refid="classgeneral_1_1Duplicateur_1aea15d02143636ea3c3696c8888294196" prot="public" virt="non-virtual"><scope>general::Duplicateur</scope><name>obtenirDuplicata</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

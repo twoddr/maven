@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classgeneral_1_1AfficheurRequete" kind="class" language="Java" prot="public">
+    <compoundname>general::AfficheurRequete</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgeneral_1_1AfficheurRequete_1a62aa6866f569a17b52012ef036803eb0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.AfficheurRequete.getDetails</definition>
+        <argsstring>(ArrayList in)</argsstring>
+        <name>getDetails</name>
+        <qualifiedname>general.AfficheurRequete.getDetails</qualifiedname>
+        <param>
+          <type>ArrayList</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AfficheurRequete.java" line="7" column="26" bodyfile="src/main/java/general/AfficheurRequete.java" bodystart="7" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classgeneral_1_1AfficheurRequete_1afe32744506151cb676d68d34b47547ac" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>static Boolean general.AfficheurRequete.estBienFormatee</definition>
+        <argsstring>(ArrayList&lt;?&gt; requete, boolean verbose)</argsstring>
+        <name>estBienFormatee</name>
+        <qualifiedname>general.AfficheurRequete.estBienFormatee</qualifiedname>
+        <param>
+          <type>ArrayList&lt;?&gt;</type>
+          <declname>requete</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Permet de vérifier le formatage CSA de la requête (int, String, (arrayList))</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>requete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>requête à tester </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>commentaires affichés dans la console si true </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>conforme ou pas conforme </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AfficheurRequete.java" line="29" column="27" bodyfile="src/main/java/general/AfficheurRequete.java" bodystart="29" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgeneral_1_1AfficheurRequete_1abe06d3129285f49106fdf5656df2c311" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String general.AfficheurRequete.affiche_nombre_elts</definition>
+        <argsstring>(int i)</argsstring>
+        <name>affiche_nombre_elts</name>
+        <qualifiedname>general.AfficheurRequete.affiche_nombre_elts</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/main/java/general/AfficheurRequete.java" line="58" column="27" bodyfile="src/main/java/general/AfficheurRequete.java" bodystart="58" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/main/java/general/AfficheurRequete.java" line="5" column="7" bodyfile="src/main/java/general/AfficheurRequete.java" bodystart="5" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classgeneral_1_1AfficheurRequete_1abe06d3129285f49106fdf5656df2c311" prot="private" virt="non-virtual"><scope>general::AfficheurRequete</scope><name>affiche_nombre_elts</name></member>
+      <member refid="classgeneral_1_1AfficheurRequete_1afe32744506151cb676d68d34b47547ac" prot="public" virt="non-virtual"><scope>general::AfficheurRequete</scope><name>estBienFormatee</name></member>
+      <member refid="classgeneral_1_1AfficheurRequete_1a62aa6866f569a17b52012ef036803eb0" prot="public" virt="non-virtual"><scope>general::AfficheurRequete</scope><name>getDetails</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="InformateurObjet_8java" kind="file" language="Java">
+    <compoundname>InformateurObjet.java</compoundname>
+    <innerclass refid="interfacegeneral_1_1InformateurObjet" prot="public">general::InformateurObjet</innerclass>
+    <innernamespace refid="namespacegeneral">general</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">general;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="interfacegeneral_1_1InformateurObjet" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacegeneral_1_1InformateurObjet" kindref="compound">InformateurObjet</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classgeneral_1_1ObjetDi" kindref="compound">ObjetDi</ref><sp/><ref refid="interfacegeneral_1_1InformateurObjet_1a46a228beaa7f6083921c4ff0d6f33e96" kindref="member">getObjetFromType</ref>(String<sp/>nomTable);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/main/java/general/InformateurObjet.java"/>
+  </compounddef>
+</doxygen>
